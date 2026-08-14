@@ -1,0 +1,21 @@
+# Antigravity Engine Subrepo
+Antigravity_engine/
+
+# Runtime Control Plane & AOK Runtime
+.aok-runtime/
+.rcp_complexity_state.json
+RCP_sandboxes/
+
+# Dependencies
+node_modules/
+
+# Build & Distribution outputs
+dist/
+dist-web/
+.vite-cache/
+
+# Temporary & Log files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
