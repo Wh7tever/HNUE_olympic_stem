@@ -9,44 +9,236 @@
       "level_name": "Tiểu học (Cấp 1)",
       "period_duration_minutes": 35,
       "schedule": [
-        {"type": "activity", "period": null, "start_time": "07:00", "end_time": "07:30", "name": "Đón học sinh, ăn sáng"},
-        {"type": "activity", "period": null, "start_time": "07:30", "end_time": "07:40", "name": "Circle Time"},
-        {"type": "period", "period": 1, "start_time": "07:40", "end_time": "08:15", "name": "Tiết 1"},
-        {"type": "period", "period": 2, "start_time": "08:20", "end_time": "08:55", "name": "Tiết 2"},
-        {"type": "activity", "period": null, "start_time": "08:55", "end_time": "09:05", "name": "Ra chơi giữa giờ"},
-        {"type": "period", "period": 3, "start_time": "09:05", "end_time": "09:40", "name": "Tiết 3"},
-        {"type": "period", "period": 4, "start_time": "09:45", "end_time": "10:20", "name": "Tiết 4"},
-        {"type": "period", "period": 5, "start_time": "10:25", "end_time": "11:00", "name": "Tiết 5"},
-        {"type": "activity", "period": null, "start_time": "11:00", "end_time": "13:30", "name": "Ăn trưa, nghỉ trưa"},
-        {"type": "period", "period": 6, "start_time": "13:30", "end_time": "14:05", "name": "Tiết 6"},
-        {"type": "period", "period": 7, "start_time": "14:10", "end_time": "14:45", "name": "Tiết 7"},
-        {"type": "activity", "period": null, "start_time": "14:45", "end_time": "15:05", "name": "Ăn phụ chiều, ra chơi"},
-        {"type": "period", "period": 8, "start_time": "15:05", "end_time": "15:40", "name": "Tiết 8"},
-        {"type": "period", "period": 9, "start_time": "15:45", "end_time": "16:20", "name": "Tiết 9"},
-        {"type": "period", "period": 10, "start_time": "16:25", "end_time": "17:00", "name": "Tiết 10"},
-        {"type": "activity", "period": null, "start_time": "17:00", "end_time": "18:00", "name": "CLB năng khiếu / Trả học sinh"}
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "07:00",
+          "end_time": "07:30",
+          "name": "Đón học sinh, ăn sáng"
+        },
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "07:30",
+          "end_time": "07:40",
+          "name": "Circle Time"
+        },
+        {
+          "type": "period",
+          "period": 1,
+          "start_time": "07:40",
+          "end_time": "08:15",
+          "name": "Tiết 1"
+        },
+        {
+          "type": "period",
+          "period": 2,
+          "start_time": "08:20",
+          "end_time": "08:55",
+          "name": "Tiết 2"
+        },
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "08:55",
+          "end_time": "09:05",
+          "name": "Ra chơi giữa giờ"
+        },
+        {
+          "type": "period",
+          "period": 3,
+          "start_time": "09:05",
+          "end_time": "09:40",
+          "name": "Tiết 3"
+        },
+        {
+          "type": "period",
+          "period": 4,
+          "start_time": "09:45",
+          "end_time": "10:20",
+          "name": "Tiết 4"
+        },
+        {
+          "type": "period",
+          "period": 5,
+          "start_time": "10:25",
+          "end_time": "11:00",
+          "name": "Tiết 5"
+        },
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "11:00",
+          "end_time": "13:30",
+          "name": "Ăn trưa, nghỉ trưa"
+        },
+        {
+          "type": "period",
+          "period": 6,
+          "start_time": "13:30",
+          "end_time": "14:05",
+          "name": "Tiết 6"
+        },
+        {
+          "type": "period",
+          "period": 7,
+          "start_time": "14:10",
+          "end_time": "14:45",
+          "name": "Tiết 7"
+        },
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "14:45",
+          "end_time": "15:05",
+          "name": "Ăn phụ chiều, ra chơi"
+        },
+        {
+          "type": "period",
+          "period": 8,
+          "start_time": "15:05",
+          "end_time": "15:40",
+          "name": "Tiết 8"
+        },
+        {
+          "type": "period",
+          "period": 9,
+          "start_time": "15:45",
+          "end_time": "16:20",
+          "name": "Tiết 9"
+        },
+        {
+          "type": "period",
+          "period": 10,
+          "start_time": "16:25",
+          "end_time": "17:00",
+          "name": "Tiết 10"
+        },
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "17:00",
+          "end_time": "18:00",
+          "name": "CLB năng khiếu / Trả học sinh"
+        }
       ]
     },
     "secondary": {
       "level_name": "Trung học (THCS & THPT - Cấp 2 & Cấp 3)",
       "period_duration_minutes": 45,
       "schedule": [
-        {"type": "activity", "period": null, "start_time": "07:00", "end_time": "07:20", "name": "Ăn sáng"},
-        {"type": "activity", "period": null, "start_time": "07:20", "end_time": "07:30", "name": "Circle Time"},
-        {"type": "period", "period": 1, "start_time": "07:30", "end_time": "08:15", "name": "Tiết 1"},
-        {"type": "period", "period": 2, "start_time": "08:20", "end_time": "09:05", "name": "Tiết 2"},
-        {"type": "period", "period": 3, "start_time": "09:10", "end_time": "09:55", "name": "Tiết 3"},
-        {"type": "period", "period": 4, "start_time": "10:00", "end_time": "10:45", "name": "Tiết 4"},
-        {"type": "period", "period": 5, "start_time": "10:50", "end_time": "11:35", "name": "Tiết 5"},
-        {"type": "activity", "period": null, "start_time": "11:35", "end_time": "11:55", "name": "Ăn trưa"},
-        {"type": "activity", "period": null, "start_time": "12:00", "end_time": "13:20", "name": "Thiền, ngủ trưa"},
-        {"type": "period", "period": 6, "start_time": "13:30", "end_time": "14:15", "name": "Tiết 6"},
-        {"type": "period", "period": 7, "start_time": "14:20", "end_time": "15:05", "name": "Tiết 7"},
-        {"type": "activity", "period": null, "start_time": "15:05", "end_time": "15:20", "name": "Ăn phụ chiều, ra chơi"},
-        {"type": "period", "period": 8, "start_time": "15:20", "end_time": "16:05", "name": "Tiết 8"},
-        {"type": "period", "period": 9, "start_time": "16:10", "end_time": "16:55", "name": "Tiết 9"},
-        {"type": "period", "period": 10, "start_time": "17:00", "end_time": "17:45", "name": "Tiết 10"},
-        {"type": "activity", "period": null, "start_time": "17:45", "end_time": "18:30", "name": "Học sinh check out hoặc sinh hoạt CLB đăng ký, học bổ trợ, bồi giỏi..."}
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "07:00",
+          "end_time": "07:20",
+          "name": "Ăn sáng"
+        },
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "07:20",
+          "end_time": "07:30",
+          "name": "Circle Time"
+        },
+        {
+          "type": "period",
+          "period": 1,
+          "start_time": "07:30",
+          "end_time": "08:15",
+          "name": "Tiết 1"
+        },
+        {
+          "type": "period",
+          "period": 2,
+          "start_time": "08:20",
+          "end_time": "09:05",
+          "name": "Tiết 2"
+        },
+        {
+          "type": "period",
+          "period": 3,
+          "start_time": "09:10",
+          "end_time": "09:55",
+          "name": "Tiết 3"
+        },
+        {
+          "type": "period",
+          "period": 4,
+          "start_time": "10:00",
+          "end_time": "10:45",
+          "name": "Tiết 4"
+        },
+        {
+          "type": "period",
+          "period": 5,
+          "start_time": "10:50",
+          "end_time": "11:35",
+          "name": "Tiết 5"
+        },
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "11:35",
+          "end_time": "11:55",
+          "name": "Ăn trưa"
+        },
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "12:00",
+          "end_time": "13:20",
+          "name": "Thiền, ngủ trưa"
+        },
+        {
+          "type": "period",
+          "period": 6,
+          "start_time": "13:30",
+          "end_time": "14:15",
+          "name": "Tiết 6"
+        },
+        {
+          "type": "period",
+          "period": 7,
+          "start_time": "14:20",
+          "end_time": "15:05",
+          "name": "Tiết 7"
+        },
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "15:05",
+          "end_time": "15:20",
+          "name": "Ăn phụ chiều, ra chơi"
+        },
+        {
+          "type": "period",
+          "period": 8,
+          "start_time": "15:20",
+          "end_time": "16:05",
+          "name": "Tiết 8"
+        },
+        {
+          "type": "period",
+          "period": 9,
+          "start_time": "16:10",
+          "end_time": "16:55",
+          "name": "Tiết 9"
+        },
+        {
+          "type": "period",
+          "period": 10,
+          "start_time": "17:00",
+          "end_time": "17:45",
+          "name": "Tiết 10"
+        },
+        {
+          "type": "activity",
+          "period": null,
+          "start_time": "17:45",
+          "end_time": "18:30",
+          "name": "Học sinh check out hoặc sinh hoạt CLB đăng ký, học bổ trợ, bồi giỏi..."
+        }
       ]
     }
   },
@@ -258,8 +450,19 @@
       "shared_policy": "7A2 thừa hưởng toàn bộ môn học văn hóa cơ bản từ 7A1 (35 tiết)",
       "split_subject": "Prepare",
       "split_mechanism": {
-        "7A1": {"room": "A306", "teachers": ["Hoà", "Catie"]},
-        "7A2": {"room": "B202", "teachers": ["Mela"]}
+        "7A1": {
+          "room": "A306",
+          "teachers": [
+            "Hoà",
+            "Catie"
+          ]
+        },
+        "7A2": {
+          "room": "B202",
+          "teachers": [
+            "Mela"
+          ]
+        }
       },
       "extra_curriculum_7A2": "7A2 học thêm 5 tiết Tiếng Anh tăng cường buổi chiều do GVNN đảm nhiệm"
     },
@@ -268,8 +471,20 @@
       "shared_policy": "8A2 thừa hưởng toàn bộ môn học văn hóa cơ bản từ 8A1 (35 tiết)",
       "split_subject": "Prepare",
       "split_mechanism": {
-        "8A1": {"room": "A306", "teachers": ["Cybele", "Hoà"]},
-        "8A2": {"room": "B203", "teachers": ["Saloni", "Hoà"]}
+        "8A1": {
+          "room": "A306",
+          "teachers": [
+            "Cybele",
+            "Hoà"
+          ]
+        },
+        "8A2": {
+          "room": "B203",
+          "teachers": [
+            "Saloni",
+            "Hoà"
+          ]
+        }
       },
       "extra_curriculum_8A2": "8A2 học thêm 5 tiết Tiếng Anh tăng cường buổi chiều do GVNN đảm nhiệm"
     },
@@ -282,96 +497,192 @@
           "slot_id": 1,
           "day": 2,
           "period": 3,
-          "class_12A1": {"subject": "Hóa học", "teacher": "Nguyệt", "room": "A305"},
-          "class_12A2": {"subject": "Địa lí", "teacher": "Thiết", "room": "B205"},
+          "class_12A1": {
+            "subject": "Hóa học",
+            "teacher": "Nguyệt",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "Địa lí",
+            "teacher": "Thiết",
+            "room": "B205"
+          },
           "description": "12A1 Hóa học đối ứng 12A2 Địa lí"
         },
         {
           "slot_id": 2,
           "day": 2,
           "period": 4,
-          "class_12A1": {"subject": "Hóa học", "teacher": "Nguyệt", "room": "A305"},
-          "class_12A2": {"subject": "Địa lí", "teacher": "Thiết", "room": "B205"},
+          "class_12A1": {
+            "subject": "Hóa học",
+            "teacher": "Nguyệt",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "Địa lí",
+            "teacher": "Thiết",
+            "room": "B205"
+          },
           "description": "12A1 Hóa học đối ứng 12A2 Địa lí"
         },
         {
           "slot_id": 3,
           "day": 2,
           "period": 9,
-          "class_12A1": {"subject": "Global Success TC", "teacher": "Nhung", "room": "A305"},
-          "class_12A2": {"subject": "Lịch sử TC", "teacher": "Yến LS", "room": "B205"},
+          "class_12A1": {
+            "subject": "Global Success TC",
+            "teacher": "Nhung",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "Lịch sử TC",
+            "teacher": "Yến LS",
+            "room": "B205"
+          },
           "description": "12A1 Tiếng Anh Global Success Tăng Cường đối ứng 12A2 Lịch sử Tăng Cường"
         },
         {
           "slot_id": 4,
           "day": 2,
           "period": 10,
-          "class_12A1": {"subject": "Global Success TC", "teacher": "Nhung", "room": "A305"},
-          "class_12A2": {"subject": "Lịch sử TC", "teacher": "Yến LS", "room": "B205"},
+          "class_12A1": {
+            "subject": "Global Success TC",
+            "teacher": "Nhung",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "Lịch sử TC",
+            "teacher": "Yến LS",
+            "room": "B205"
+          },
           "description": "12A1 Tiếng Anh Global Success Tăng Cường đối ứng 12A2 Lịch sử Tăng Cường (Tiết 10 độc lập)"
         },
         {
           "slot_id": 5,
           "day": 3,
           "period": 3,
-          "class_12A1": {"subject": "Sinh học", "teacher": "Giang", "room": "A305"},
-          "class_12A2": {"subject": "Văn CĐ", "teacher": "Thuý", "room": "B205"},
+          "class_12A1": {
+            "subject": "Sinh học",
+            "teacher": "Giang",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "Văn CĐ",
+            "teacher": "Thuý",
+            "room": "B205"
+          },
           "description": "12A1 Sinh học đối ứng 12A2 Chuyên đề Ngữ văn"
         },
         {
           "slot_id": 6,
           "day": 3,
           "period": 9,
-          "class_12A1": {"subject": "Vật lí BT", "teacher": "Huy", "room": "A305"},
-          "class_12A2": {"subject": "Lịch sử BT", "teacher": "Yến LS", "room": "B205"},
+          "class_12A1": {
+            "subject": "Vật lí BT",
+            "teacher": "Huy",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "Lịch sử BT",
+            "teacher": "Yến LS",
+            "room": "B205"
+          },
           "description": "12A1 Bổ trợ Vật lí đối ứng 12A2 Bổ trợ Lịch sử"
         },
         {
           "slot_id": 7,
           "day": 4,
           "period": 1,
-          "class_12A1": {"subject": "Sinh học", "teacher": "Giang", "room": "A305"},
-          "class_12A2": {"subject": "GD KT - PL", "teacher": "Thuỷ", "room": "B205"},
+          "class_12A1": {
+            "subject": "Sinh học",
+            "teacher": "Giang",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "GD KT - PL",
+            "teacher": "Thuỷ",
+            "room": "B205"
+          },
           "description": "12A1 Sinh học đối ứng 12A2 Kinh tế & Pháp luật"
         },
         {
           "slot_id": 8,
           "day": 4,
           "period": 2,
-          "class_12A1": {"subject": "Hóa học", "teacher": "Nguyệt", "room": "A305"},
-          "class_12A2": {"subject": "GD KT - PL", "teacher": "Thuỷ", "room": "B205"},
+          "class_12A1": {
+            "subject": "Hóa học",
+            "teacher": "Nguyệt",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "GD KT - PL",
+            "teacher": "Thuỷ",
+            "room": "B205"
+          },
           "description": "12A1 Hóa học đối ứng 12A2 Kinh tế & Pháp luật"
         },
         {
           "slot_id": 9,
           "day": 5,
           "period": 7,
-          "class_12A1": {"subject": "Hoá học BT", "teacher": "Nguyệt", "room": "A305"},
-          "class_12A2": {"subject": "GD KT-PL BT", "teacher": "Thuỷ", "room": "B205"},
+          "class_12A1": {
+            "subject": "Hoá học BT",
+            "teacher": "Nguyệt",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "GD KT-PL BT",
+            "teacher": "Thuỷ",
+            "room": "B205"
+          },
           "description": "12A1 Bổ trợ Hóa học đối ứng 12A2 Bổ trợ Kinh tế & Pháp luật"
         },
         {
           "slot_id": 10,
           "day": 5,
           "period": 8,
-          "class_12A1": {"subject": "Hoá học BT", "teacher": "Nguyệt", "room": "A305"},
-          "class_12A2": {"subject": "GD KT-PL BT", "teacher": "Thuỷ", "room": "B205"},
+          "class_12A1": {
+            "subject": "Hoá học BT",
+            "teacher": "Nguyệt",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "GD KT-PL BT",
+            "teacher": "Thuỷ",
+            "room": "B205"
+          },
           "description": "12A1 Bổ trợ Hóa học đối ứng 12A2 Bổ trợ Kinh tế & Pháp luật"
         },
         {
           "slot_id": 11,
           "day": 5,
           "period": 9,
-          "class_12A1": {"subject": "Prepare BT", "teacher": "Charly", "room": "A305"},
-          "class_12A2": {"subject": "Địa lí BT", "teacher": "Thiết", "room": "B205"},
+          "class_12A1": {
+            "subject": "Prepare BT",
+            "teacher": "Charly",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "Địa lí BT",
+            "teacher": "Thiết",
+            "room": "B205"
+          },
           "description": "12A1 Bổ trợ Prepare đối ứng 12A2 Bổ trợ Địa lí"
         },
         {
           "slot_id": 12,
           "day": 6,
           "period": 9,
-          "class_12A1": {"subject": "Prepare BT", "teacher": "Charly", "room": "A305"},
-          "class_12A2": {"subject": "Sinh học BT", "teacher": "Giang", "room": "B205"},
+          "class_12A1": {
+            "subject": "Prepare BT",
+            "teacher": "Charly",
+            "room": "A305"
+          },
+          "class_12A2": {
+            "subject": "Sinh học BT",
+            "teacher": "Giang",
+            "room": "B205"
+          },
           "description": "12A1 Bổ trợ Prepare đối ứng 12A2 Bổ trợ Sinh học"
         }
       ]
@@ -550,5 +861,234 @@
         "assistant_teacher": "Chi"
       }
     ]
-  }
+  },
+  "grade_12_elective_pairs": [
+    {
+      "index": 1,
+      "day": "Thứ 2",
+      "period": "Tiết 3",
+      "class_12A1": {
+        "subject": "Hóa học",
+        "teacher": "Nguyệt",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "Địa lí",
+        "teacher": "Thiết",
+        "room": "Phòng B205"
+      },
+      "property": "Chính khóa",
+      "status": "✓ Khớp 1-1"
+    },
+    {
+      "index": 2,
+      "day": "Thứ 2",
+      "period": "Tiết 4",
+      "class_12A1": {
+        "subject": "Hóa học",
+        "teacher": "Nguyệt",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "Địa lí",
+        "teacher": "Thiết",
+        "room": "Phòng B205"
+      },
+      "property": "Chính khóa",
+      "status": "✓ Khớp 1-1"
+    },
+    {
+      "index": 3,
+      "day": "Thứ 2",
+      "period": "Tiết 9",
+      "class_12A1": {
+        "subject": "Global Success TC",
+        "teacher": "Nhung",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "Lịch sử TC",
+        "teacher": "Yến LS",
+        "room": "Phòng B205"
+      },
+      "property": "Tăng cường",
+      "status": "✓ Khớp 1-1"
+    },
+    {
+      "index": 4,
+      "day": "Thứ 2",
+      "period": "Tiết 10",
+      "class_12A1": {
+        "subject": "Global Success TC",
+        "teacher": "Nhung",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "Lịch sử TC",
+        "teacher": "Yến LS",
+        "room": "Phòng B205"
+      },
+      "property": "Tiết 10 độc lập",
+      "status": "✓ Khớp 1-1"
+    },
+    {
+      "index": 5,
+      "day": "Thứ 3",
+      "period": "Tiết 3",
+      "class_12A1": {
+        "subject": "Sinh học",
+        "teacher": "Giang",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "Văn CĐ",
+        "teacher": "Thuý",
+        "room": "Phòng B205"
+      },
+      "property": "Chuyên đề",
+      "status": "✓ Khớp 1-1"
+    },
+    {
+      "index": 6,
+      "day": "Thứ 3",
+      "period": "Tiết 9",
+      "class_12A1": {
+        "subject": "Vật lí BT",
+        "teacher": "Huy",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "Lịch sử BT",
+        "teacher": "Yến LS",
+        "room": "Phòng B205"
+      },
+      "property": "Bổ trợ cuối ngày",
+      "status": "✓ Khớp 1-1"
+    },
+    {
+      "index": 7,
+      "day": "Thứ 4",
+      "period": "Tiết 1",
+      "class_12A1": {
+        "subject": "Sinh học",
+        "teacher": "Giang",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "GD KT - PL",
+        "teacher": "Thuỷ",
+        "room": "Phòng B205"
+      },
+      "property": "Chính khóa",
+      "status": "✓ Khớp 1-1"
+    },
+    {
+      "index": 8,
+      "day": "Thứ 4",
+      "period": "Tiết 2",
+      "class_12A1": {
+        "subject": "Hóa học",
+        "teacher": "Nguyệt",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "GD KT - PL",
+        "teacher": "Thuỷ",
+        "room": "Phòng B205"
+      },
+      "property": "Chính khóa",
+      "status": "✓ Khớp 1-1"
+    },
+    {
+      "index": 9,
+      "day": "Thứ 5",
+      "period": "Tiết 7",
+      "class_12A1": {
+        "subject": "Hoá học BT",
+        "teacher": "Nguyệt",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "GD KT-PL BT",
+        "teacher": "Thuỷ",
+        "room": "Phòng B205"
+      },
+      "property": "Bổ trợ buổi chiều",
+      "status": "✓ Khớp 1-1"
+    },
+    {
+      "index": 10,
+      "day": "Thứ 5",
+      "period": "Tiết 8",
+      "class_12A1": {
+        "subject": "Hoá học BT",
+        "teacher": "Nguyệt",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "GD KT-PL BT",
+        "teacher": "Thuỷ",
+        "room": "Phòng B205"
+      },
+      "property": "Bổ trợ buổi chiều",
+      "status": "✓ Khớp 1-1"
+    },
+    {
+      "index": 11,
+      "day": "Thứ 5",
+      "period": "Tiết 9",
+      "class_12A1": {
+        "subject": "Prepare BT",
+        "teacher": "Charly",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "Địa lí BT",
+        "teacher": "Thiết",
+        "room": "Phòng B205"
+      },
+      "property": "Bổ trợ cuối ngày",
+      "status": "✓ Khớp 1-1"
+    },
+    {
+      "index": 12,
+      "day": "Thứ 6",
+      "period": "Tiết 9",
+      "class_12A1": {
+        "subject": "Prepare BT",
+        "teacher": "Charly",
+        "room": "Phòng A305"
+      },
+      "class_12A2": {
+        "subject": "Sinh học BT",
+        "teacher": "Giang",
+        "room": "Phòng B205"
+      },
+      "property": "Bổ trợ cuối ngày",
+      "status": "✓ Khớp 1-1"
+    }
+  ],
+  "merge_pairs": [
+    {
+      "pair_name": "7A1 & 7A2",
+      "room": "Phòng B202",
+      "shared_periods": 35,
+      "shared_subjects": "Toán, Ngữ văn, KHTN, Lịch sử - Địa lí, GDCD, Tin học, GDTC, Âm nhạc, Global Success",
+      "split_rule": "Tách duy nhất môn Prepare: 7A1 sang A306 (Hoà, Catie), 7A2 tại B202 (Mela)."
+    },
+    {
+      "pair_name": "8A1 & 8A2",
+      "room": "Phòng B203",
+      "shared_periods": 35,
+      "shared_subjects": "Toán, Ngữ văn, KHTN, Lịch sử - Địa lí, GDCD, Tin học, GDTC, Âm nhạc, Global Success",
+      "split_rule": "Tách duy nhất môn Prepare: 8A1 sang A306 (Cybele, Hoà), 8A2 tại B203 (Saloni, Hoà)."
+    },
+    {
+      "pair_name": "12A1 & 12A2",
+      "room": "Phòng B205",
+      "shared_periods": 33,
+      "shared_subjects": "Toán học (Duy), Ngữ văn (Thuý), GDTC & GDQPAN (Liên), TNHN (Thuý), Chào cờ, SHL",
+      "split_rule": "Tách toàn bộ các môn phân ban tự chọn và bổ trợ (12 cặp đối ứng đối ngẫu 1-1)."
+    }
+  ]
 }

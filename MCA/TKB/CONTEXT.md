@@ -77,3 +77,49 @@
   - Người dùng thay đổi thông tin giáo viên, phòng học, hoặc phân công: **Chỉ cần chỉnh sửa trực tiếp file JSON trong `config/`**.
   - Chạy `python -X utf8 E:\Antigravity\MCA\TKB\build_tkb_master.py` để tự động kiểm toán toàn vẹn và tạo lại Master Workbook ngay lập tức mà không cần can thiệp mã nguồn.
 
+## Standard Excel Input Template & 25-Constraint Framework (Update 2026-09-05 - Current)
+
+- **Pedagogical Constraint Encyclopaedia:** [TKB_MCA_CONSTRAINT_CATALOGUE.md](file:///E:/Antigravity/MCA/TKB/TKB_MCA_CONSTRAINT_CATALOGUE.md) (21.171 bytes)
+  - 10 chương quy chuẩn mã hóa toàn diện 25 quy tắc sư phạm của trường Marie Curie:
+    1. Chào cờ Tiết 1 sáng Thứ 2 (18 lớp).
+    2. SHL C1 và HĐTN C2/C3 Tiết 5 sáng Thứ 6.
+    3. GVCN C1 dạy liền khối, môn giống nhau cạnh nhau, nghỉ chiều T6 (SHCM) + 1 buổi tự chọn khác (trừ sáng T2); có mục điền môn khác.
+    4. GVNN dồn >= 2 tiết/buổi (ưu tiên 3-4 tiết); Cô Catie chỉ dạy buổi sáng.
+    5. Tiết Bổ trợ (BT) xếp cuối chiều.
+    6. GDTC cách ngày (T3+T5 hoặc T4+T6), tránh trưa nắng, ưu tiên sáng sớm hoặc cuối chiều.
+    7. Stem & Robotic C1 xếp 2 tiết kép (cặp 2-3, 6-7, 8-9).
+    8. Phân bổ môn đều cả tuần.
+    9. Quản lý lệch múi giờ C1 (35m) vs C2/3 (45m), chặn xung đột thời gian thực C1 P4 (9:45-10:20) vs C2/3 P3 (9:10-9:55) cho GV liên cấp (Yên, Phương Anh).
+    10. Bổ trợ C1 giữ 2 tiết cuối chiều.
+    11. GVCN C1 dạy >= 3 tiết/buổi sáng để quản lý lớp.
+    12. Danh bạ 8 GVCN C1 (Liễu, Hạnh, Tiểu Hà, Khánh Linh, Chín, Chiến, Hải, Hiền).
+    13. HĐTN C2/C3: P1 sáng T2, P5 sáng T6, 1 tiết cuối chiều linh hoạt.
+    14. Stem C2 & Nhiệm vụ ăn bán trú C1: Tránh P5 sáng và P7 chiều cho Phó Chủ nhiệm C1 (ăn trưa 11:00, ăn chiều 14:45).
+    15. Danh bạ 8 Phó Chủ nhiệm C1 (Phương Anh, Chi, Ngọc, Lê, Lam, Thu, Liên).
+    16. Cô Quyến (Toán) nghỉ trọn vẹn Thứ 4.
+    17. Khối 7 & 8: Global Success học chung; Prepare tách phòng A306 (CLC 4 tiết) và 5 tiết Song ngữ ở cuối chiều.
+    18. GVNN dồn lịch tập trung.
+    19. Toán & Văn THCS/THPT: Cặp 2 tiết kép (90 phút) để kiểm tra định kỳ.
+    20. Tiếng Anh & các môn THCS phân bổ đều.
+    21. Họp 3 Tổ chuyên môn (Tự nhiên, Xã hội, Tiếng Anh): Bố trí tiết trống chung.
+    22. Bổ trợ Khối 12: Giữ đúng vị trí 12 cặp đối ứng theo master hiện tại.
+    23. Khóa cứng lịch GV Thỉnh giảng: Quyến (nghỉ T4), Thủy (sáng T4 + T5), Thiết (sáng T2 + T5), Yến LS (các tiết chỉ định), Duy (nghỉ sáng T2).
+    24 & 25. Các điểm làm rõ từ Nhà trường: Giờ họp tổ bất kỳ tiết nào trống; Ma trận Khối 12 giữ nguyên đối ứng 1-1; Nghỉ GVCN buổi bất kỳ; Môn khác GVCN lấy trực tiếp từ TKB.
+
+- **Standard Excel Input Template Workbook:** [TEMPLATE_NHAP_LIEU_TKB_MCA.xlsx](file:///E:/Antigravity/MCA/TKB/TEMPLATE_NHAP_LIEU_TKB_MCA.xlsx) (30.865 bytes)
+  - Sheet 1: `HUONG_DAN_SU_DUNG` (Quy trình 3 bước, mã màu chuẩn Marie Curie).
+  - Sheet 2: `BANG_QUY_TAC_RANG_BUOC` (Bách khoa 25 quy tắc và ma trận 12 cặp lớp 12).
+  - Sheet 3: `KHAI_BAO_GIAO_VIEN` (43 GV, công thức tính tổng tự động, mục ghi chú ràng buộc).
+  - Sheet 4: `KHAI_BAO_LOP_HOC` (18 lớp học, phòng cơ sở, định mức tiết, GVCN và Phó CN).
+  - Sheet 5: `PHAN_CONG_GIANG_DAY` (Ma trận môn học theo lớp, GV chính, trợ giảng, môn khác của GVCN).
+  - Sheet 6: `TACH_GHEP_LOP` (Cấu hình ghép lớp văn hóa và ma trận 12 cặp đối ứng phân ban 12).
+  - Sheet 7: `LUOI_THOI_KHOA_BIEU_MAU` (Khung lưới TKB mẫu kèm Tiết 10 độc lập).
+  - Generator: `E:\Antigravity\MCA\TKB\generate_excel_template.py`.
+
+- **Template Loader & Deep Audit Engine:** [loader_template.py](file:///E:/Antigravity/MCA/TKB/loader_template.py)
+  - Tự động nạp dữ liệu từ `TEMPLATE_NHAP_LIEU_TKB_MCA.xlsx`.
+  - Thực hiện 4 bài kiểm toán sâu (Toán học 711 tiết, Khóa lịch GV thỉnh giảng, Đối ngẫu 12 cặp Lớp 12, Lệch múi giờ C1/C2).
+  - Tự động đồng bộ ngược lại vào `config/teacher_registry.json` và `config/timetable_rules.json`.
+  - Đạt 100% PASS (0 Errors, 0 Warnings).
+
+
