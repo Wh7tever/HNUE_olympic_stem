@@ -2,9 +2,9 @@
   "metadata": {
     "academic_year": "2026-2027",
     "school": "Marie Curie Academy (MCA)",
-    "generated_at": "2026-09-05 22:42:50",
+    "generated_at": "2026-09-05 22:44:58",
     "solver_status": "OPTIMAL",
-    "solve_duration_seconds": 1.43,
+    "solve_duration_seconds": 1.28,
     "total_classes": 18,
     "total_teachers": 43,
     "total_periods": 703
