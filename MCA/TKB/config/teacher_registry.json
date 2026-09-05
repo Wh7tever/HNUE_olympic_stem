@@ -14,12 +14,13 @@
       "honorific": "Cô Liễu",
       "department": "Tiểu học",
       "homeroom": "1A1",
+      "vice_homeroom": null,
       "base_periods": 26,
       "adjustments": 0,
       "total_periods": 26,
       "official_assignment": "Toán học (1A1) + Tiếng Việt (1A1) + TN - XH (1A1) + HĐTN (1A1) + Bổ trợ Toán (1A1) + Bổ trợ T.Việt (1A1)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học"
+        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
       ]
     },
     {
@@ -29,12 +30,13 @@
       "honorific": "Cô Hạnh",
       "department": "Tiểu học",
       "homeroom": "1A2",
+      "vice_homeroom": null,
       "base_periods": 26,
       "adjustments": 0,
       "total_periods": 26,
       "official_assignment": "Toán học (1A2) + Tiếng Việt (1A2) + Đạo đức (1A2) + TN - XH (1A2) + HĐTN (1A2) + Chào cờ (1A2) + Bổ trợ Toán (1A2) + Bổ trợ T.Việt (1A2)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học"
+        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
       ]
     },
     {
@@ -44,12 +46,13 @@
       "honorific": "Cô Tiểu Hà",
       "department": "Tiểu học",
       "homeroom": "2A1",
+      "vice_homeroom": null,
       "base_periods": 26,
       "adjustments": 0,
       "total_periods": 26,
       "official_assignment": "Toán học (2A1) + Tiếng Việt (2A1) + TN - XH (2A1) + HĐTN (2A1) + Bổ trợ Toán (2A1) + Bổ trợ T.Việt (2A1)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học"
+        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
       ]
     },
     {
@@ -59,12 +62,13 @@
       "honorific": "Cô Khánh Linh",
       "department": "Tiểu học",
       "homeroom": "2A2",
+      "vice_homeroom": null,
       "base_periods": 23,
       "adjustments": 0,
       "total_periods": 23,
       "official_assignment": "Toán học (2A2) + Tiếng Việt (2A2) + Chào cờ (2A2) + Sinh hoạt lớp (2A2) + Bổ trợ Toán (2A2) + Bổ trợ T.Việt (2A2)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học"
+        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
       ]
     },
     {
@@ -74,12 +78,13 @@
       "honorific": "Cô Chín",
       "department": "Tiểu học",
       "homeroom": "3A1",
+      "vice_homeroom": null,
       "base_periods": 26,
       "adjustments": 0,
       "total_periods": 26,
       "official_assignment": "Toán học (3A1) + Tiếng Việt (3A1) + TN - XH (3A1) + Chào cờ (3A1) + Sinh hoạt lớp (3A1) + Bổ trợ Toán (3A1) + Bổ trợ T.Việt (3A1)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học"
+        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
       ]
     },
     {
@@ -89,12 +94,13 @@
       "honorific": "Thầy Chiến",
       "department": "Tiểu học",
       "homeroom": "3A2",
+      "vice_homeroom": null,
       "base_periods": 26,
       "adjustments": 0,
       "total_periods": 26,
       "official_assignment": "Toán học (3A2) + Tiếng Việt (3A2) + Đạo đức (3A2) + TN - XH (3A2) + HĐTN (3A2) + Chào cờ (3A2) + Bổ trợ Toán (3A2) + Bổ trợ T.Việt (3A2) + Công nghệ (3A2)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học"
+        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
       ]
     },
     {
@@ -104,12 +110,13 @@
       "honorific": "Cô Hải",
       "department": "Tiểu học",
       "homeroom": "4A1",
+      "vice_homeroom": null,
       "base_periods": 26,
       "adjustments": 0,
       "total_periods": 26,
       "official_assignment": "Toán học (4A1) + Tiếng Việt (4A1) + LS - ĐL (4A1) + Khoa học (4A1) + HĐTN (4A1) + Chào cờ (4A1) + Bổ trợ Toán (4A1) + Bổ trợ T.Việt (4A1)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học"
+        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
       ]
     },
     {
@@ -119,12 +126,13 @@
       "honorific": "Cô Hiền",
       "department": "Tiểu học",
       "homeroom": "5A1",
+      "vice_homeroom": null,
       "base_periods": 26,
       "adjustments": 0,
       "total_periods": 26,
       "official_assignment": "Toán học (5A1) + Tiếng Việt (5A1) + LS - ĐL (5A1) + Khoa học (5A1) + HĐTN (5A1) + Chào cờ (5A1) + Bổ trợ Toán (5A1) + Bổ trợ T.Việt (5A1)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học"
+        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
       ]
     },
     {
@@ -134,6 +142,7 @@
       "honorific": "Cô Chi",
       "department": "Tiểu học",
       "homeroom": null,
+      "vice_homeroom": "1A2",
       "base_periods": 20,
       "adjustments": 0,
       "total_periods": 20,
@@ -149,6 +158,7 @@
       "honorific": "Cô Vũ Hà",
       "department": "Tiếng Anh",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 16,
       "adjustments": 0,
       "total_periods": 16,
@@ -162,8 +172,9 @@
       "honorific": "Cô Hồng",
       "department": "Tiếng Anh",
       "homeroom": null,
-      "base_periods": 16,
-      "adjustments": 2,
+      "vice_homeroom": null,
+      "base_periods": 18,
+      "adjustments": 0,
       "total_periods": 18,
       "official_assignment": "Maths (1A2) + Science (1A2) + Global English (1A2) + Bright Ideas (5A1) + Global Success (5A1, 11A1) + Bổ trợ T.Anh (1A2, 5A1, 11A1) + Prepare (11A1)",
       "constraints": [
@@ -177,6 +188,7 @@
       "honorific": "Cô Nguyễn Linh",
       "department": "Tiếng Anh",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 16,
       "adjustments": 0,
       "total_periods": 16,
@@ -190,6 +202,7 @@
       "honorific": "Thầy Nghĩa",
       "department": "Nghệ thuật",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 12,
       "adjustments": 0,
       "total_periods": 12,
@@ -205,6 +218,7 @@
       "honorific": "Cô Lê",
       "department": "Nghệ thuật",
       "homeroom": null,
+      "vice_homeroom": "3A1",
       "base_periods": 9,
       "adjustments": 0,
       "total_periods": 9,
@@ -220,12 +234,13 @@
       "honorific": "Cô Yên",
       "department": "Tin học",
       "homeroom": "7A1",
+      "vice_homeroom": null,
       "base_periods": 21,
       "adjustments": 0,
       "total_periods": 21,
       "official_assignment": "Tin học (1A1, 1A2, 2A1, 2A2, 3A1, 3A2, 4A1, 5A1, 6A1, 7A1, 8A1, 9A1, 10A1, 11A1, 12A1) + HĐTN (7A1)",
       "constraints": [
-        "Phụ trách toàn bộ 15 lớp môn Tin học (C1, C2, C3) tại phòng máy"
+        "Giáo viên liên cấp: Tránh xếp Tiết 4 C1 (9:45-10:20) và Tiết 3 C2 (9:10-9:55)"
       ]
     },
     {
@@ -235,6 +250,7 @@
       "honorific": "Cô Thu",
       "department": "Giáo dục Thể chất",
       "homeroom": null,
+      "vice_homeroom": "4A1",
       "base_periods": 17,
       "adjustments": 0,
       "total_periods": 17,
@@ -250,6 +266,7 @@
       "honorific": "Thầy Bình",
       "department": "Nghệ thuật",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 4,
       "adjustments": 0,
       "total_periods": 4,
@@ -265,12 +282,13 @@
       "honorific": "Cô Phương Anh",
       "department": "STEM & Khoa học",
       "homeroom": null,
+      "vice_homeroom": "1A1",
       "base_periods": 12,
       "adjustments": 0,
       "total_periods": 12,
       "official_assignment": "Stem & Robotic (1A1, 1A2, 5A1, 6A1, 7A1, 8A1, 9A1) + Chào cờ (1A1) + Sinh hoạt lớp (1A1)",
       "constraints": [
-        "Giảng dạy tại phòng chức năng Stem"
+        "Giáo viên liên cấp: Tránh xếp Tiết 4 C1 (9:45-10:20) và Tiết 3 C2 (9:10-9:55)"
       ]
     },
     {
@@ -280,6 +298,7 @@
       "honorific": "Cô Ngọc",
       "department": "STEM & Công nghệ",
       "homeroom": null,
+      "vice_homeroom": "2A1",
       "base_periods": 14,
       "adjustments": 0,
       "total_periods": 14,
@@ -295,6 +314,7 @@
       "honorific": "Cô Liên",
       "department": "Giáo dục Thể chất & QPAN",
       "homeroom": null,
+      "vice_homeroom": "5A1",
       "base_periods": 18,
       "adjustments": 0,
       "total_periods": 18,
@@ -310,8 +330,9 @@
       "honorific": "Thầy Du",
       "department": "Ngữ văn & Xã hội",
       "homeroom": null,
-      "base_periods": 15,
-      "adjustments": 2,
+      "vice_homeroom": null,
+      "base_periods": 17,
+      "adjustments": 0,
       "total_periods": 17,
       "official_assignment": "Ngữ văn (10A1) + GDĐP (6A1, 7A1, 8A1, 9A1, 10A1, 11A1, 12A1) + Bổ trợ Văn (10A1) + Bồi giỏi Văn (10A1)",
       "constraints": [
@@ -325,12 +346,12 @@
       "honorific": "Cô Quyến",
       "department": "Toán học",
       "homeroom": null,
-      "base_periods": 22,
-      "adjustments": 3,
+      "vice_homeroom": null,
+      "base_periods": 25,
+      "adjustments": 0,
       "total_periods": 25,
       "official_assignment": "Toán học (6A1, 10A1, 11A1) + Bổ trợ Toán (10A1, 11A1) + Bồi giỏi Toán (10A1)",
       "constraints": [
-        "Giảng dạy Toán chính khóa và bổ trợ nâng cao 6A1, 10A1, 11A1",
         "Khóa lịch: Nghỉ trọn vẹn cả ngày Thứ 4"
       ]
     },
@@ -341,8 +362,9 @@
       "honorific": "Cô Phương",
       "department": "Tiếng Anh",
       "homeroom": null,
-      "base_periods": 5,
-      "adjustments": 2,
+      "vice_homeroom": null,
+      "base_periods": 7,
+      "adjustments": 0,
       "total_periods": 7,
       "official_assignment": "Global Success (10A1) + Prepare (10A1) + Bổ trợ T.Anh (10A1) + Bồi giỏi Tiếng Anh (10A1)",
       "constraints": [
@@ -356,13 +378,13 @@
       "honorific": "Cô Yến LS",
       "department": "Lịch sử",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 8,
       "adjustments": 0,
       "total_periods": 8,
       "official_assignment": "Lịch sử (10A1, 11A1, 12A1) + Lịch sử TC (12A2) + Lịch sử BT (12A2)",
       "constraints": [
-        "Đảm nhiệm phân ban Xã hội 12A2 đối ứng Tự nhiên 12A1",
-        "Lịch thỉnh giảng: Tiết 9-10 T2, Tiết 9 T3, Tiết 4 T4, Tiết 5 T5, Tiết 4-5-8 T6"
+        "Thỉnh giảng: Tiết 9-10 T2, Tiết 9 T3, Tiết 4 T4, Tiết 5 T5, Tiết 4-5-8 T6"
       ]
     },
     {
@@ -372,6 +394,7 @@
       "honorific": "Thầy Huy",
       "department": "Vật lí & Công nghệ",
       "homeroom": "10A1",
+      "vice_homeroom": null,
       "base_periods": 19,
       "adjustments": 0,
       "total_periods": 19,
@@ -387,13 +410,13 @@
       "honorific": "Cô Thiết",
       "department": "Địa lí",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 11,
       "adjustments": 0,
       "total_periods": 11,
       "official_assignment": "Địa lí (6A1, 7A1, 8A1, 9A1, 10A1, 12A2) + Địa lí BT (12A2)",
       "constraints": [
-        "Phụ trách Địa lí THCS & phân ban Xã hội 12A2",
-        "Lịch thỉnh giảng: Chỉ dạy sáng Thứ 2 và cả ngày Thứ 5"
+        "Thỉnh giảng: Chỉ dạy sáng Thứ 2 và cả ngày Thứ 5"
       ]
     },
     {
@@ -403,13 +426,13 @@
       "honorific": "Cô Thuỷ",
       "department": "Giáo dục Kinh tế - Pháp luật",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 6,
       "adjustments": 0,
       "total_periods": 6,
       "official_assignment": "GD KT - PL (10A1, 12A2) + GD KT-PL BT (12A2)",
       "constraints": [
-        "Phụ trách môn Kinh tế - Pháp luật phân ban Xã hội 12A2",
-        "Lịch thỉnh giảng: Chỉ dạy sáng Thứ 4 và cả ngày Thứ 5"
+        "Thỉnh giảng: Chỉ dạy sáng Thứ 4 và cả ngày Thứ 5"
       ]
     },
     {
@@ -419,8 +442,9 @@
       "honorific": "Cô Thuý",
       "department": "Ngữ văn",
       "homeroom": "12A1",
-      "base_periods": 18,
-      "adjustments": 2,
+      "vice_homeroom": null,
+      "base_periods": 20,
+      "adjustments": 0,
       "total_periods": 20,
       "official_assignment": "Ngữ văn (11A1, 12A1) + TNHN (12A1) + Văn CĐ (12A2) + Bổ trợ Văn (11A1)",
       "constraints": [
@@ -434,6 +458,7 @@
       "honorific": "Cô Giang",
       "department": "Sinh học & Công nghệ",
       "homeroom": "11A1",
+      "vice_homeroom": null,
       "base_periods": 14,
       "adjustments": 0,
       "total_periods": 14,
@@ -449,6 +474,7 @@
       "honorific": "Cô Nguyệt",
       "department": "Hóa học & Công nghệ",
       "homeroom": "6A1",
+      "vice_homeroom": null,
       "base_periods": 17,
       "adjustments": 0,
       "total_periods": 17,
@@ -464,12 +490,13 @@
       "honorific": "Thầy Duy",
       "department": "Toán học",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 9,
       "adjustments": 0,
       "total_periods": 9,
       "official_assignment": "Toán học (12A1)",
       "constraints": [
-        "Khóa sáng Thứ 2, phụ trách Toán khối 12"
+        "Khóa lịch: Nghỉ sáng Thứ 2 (học chuyên môn / công tác)"
       ]
     },
     {
@@ -479,6 +506,7 @@
       "honorific": "Cô Nhung",
       "department": "Tiếng Anh",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 11,
       "adjustments": 0,
       "total_periods": 11,
@@ -494,6 +522,7 @@
       "honorific": "Cô Hương",
       "department": "Ngữ văn & GDCD",
       "homeroom": "9A1",
+      "vice_homeroom": null,
       "base_periods": 17,
       "adjustments": 0,
       "total_periods": 17,
@@ -509,6 +538,7 @@
       "honorific": "Cô Hoà",
       "department": "Tiếng Anh",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 19,
       "adjustments": 0,
       "total_periods": 19,
@@ -524,6 +554,7 @@
       "honorific": "Cô Nga",
       "department": "Ngữ văn & GDCD",
       "homeroom": "8A1",
+      "vice_homeroom": null,
       "base_periods": 17,
       "adjustments": 0,
       "total_periods": 17,
@@ -539,6 +570,7 @@
       "honorific": "Cô Huyền",
       "department": "Toán học",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 18,
       "adjustments": 0,
       "total_periods": 18,
@@ -554,6 +586,7 @@
       "honorific": "Cô Nhung LS",
       "department": "Lịch sử",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 6,
       "adjustments": 0,
       "total_periods": 6,
@@ -569,6 +602,7 @@
       "honorific": "GVNN Cô Cybele",
       "department": "Giáo viên Nước ngoài",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 13,
       "adjustments": 0,
       "total_periods": 13,
@@ -584,14 +618,13 @@
       "honorific": "GVNN Cô Catie",
       "department": "Giáo viên Nước ngoài",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 15,
       "adjustments": 0,
       "total_periods": 15,
       "official_assignment": "Bright Ideas (3A1, 4A1, 5A1) + Prepare (7A1)",
       "constraints": [
-        "Dạy phân ban tách lớp 7A1 tại A306",
-        "Chỉ dạy buổi sáng, không dạy buổi chiều",
-        "gom 3-4 tiết/buổi"
+        "Khóa lịch: Chỉ dạy các buổi sáng, tuyệt đối không dạy chiều"
       ]
     },
     {
@@ -601,6 +634,7 @@
       "honorific": "GVNN Thầy Vincent",
       "department": "Giáo viên Nước ngoài",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 18,
       "adjustments": 0,
       "total_periods": 18,
@@ -616,6 +650,7 @@
       "honorific": "GVNN Cô Mela",
       "department": "Giáo viên Nước ngoài",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 15,
       "adjustments": 0,
       "total_periods": 15,
@@ -631,6 +666,7 @@
       "honorific": "GVNN Thầy Charly",
       "department": "Giáo viên Nước ngoài",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 12,
       "adjustments": 0,
       "total_periods": 12,
@@ -646,6 +682,7 @@
       "honorific": "GVNN Cô Saloni",
       "department": "Giáo viên Nước ngoài",
       "homeroom": null,
+      "vice_homeroom": null,
       "base_periods": 15,
       "adjustments": 0,
       "total_periods": 15,

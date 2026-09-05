@@ -1013,7 +1013,7 @@
         "teacher": "Thuỷ",
         "room": "Phòng B205"
       },
-      "property": "Bổ trợ buổi chiều",
+      "property": "Bổ trợ chiều",
       "status": "✓ Khớp 1-1"
     },
     {
@@ -1030,7 +1030,7 @@
         "teacher": "Thuỷ",
         "room": "Phòng B205"
       },
-      "property": "Bổ trợ buổi chiều",
+      "property": "Bổ trợ chiều",
       "status": "✓ Khớp 1-1"
     },
     {
@@ -1073,14 +1073,14 @@
       "pair_name": "7A1 & 7A2",
       "room": "Phòng B202",
       "shared_periods": 35,
-      "shared_subjects": "Toán, Ngữ văn, KHTN, Lịch sử - Địa lí, GDCD, Tin học, GDTC, Âm nhạc, Global Success",
+      "shared_subjects": "Toán, Văn, KHTN, Lịch sử - Địa lí, GDCD, Tin học, GDTC, Âm nhạc, Global Success",
       "split_rule": "Tách duy nhất môn Prepare: 7A1 sang A306 (Hoà, Catie), 7A2 tại B202 (Mela)."
     },
     {
       "pair_name": "8A1 & 8A2",
       "room": "Phòng B203",
       "shared_periods": 35,
-      "shared_subjects": "Toán, Ngữ văn, KHTN, Lịch sử - Địa lí, GDCD, Tin học, GDTC, Âm nhạc, Global Success",
+      "shared_subjects": "Toán, Văn, KHTN, Lịch sử - Địa lí, GDCD, Tin học, GDTC, Âm nhạc, Global Success",
       "split_rule": "Tách duy nhất môn Prepare: 8A1 sang A306 (Cybele, Hoà), 8A2 tại B203 (Saloni, Hoà)."
     },
     {
@@ -1089,6 +1089,57 @@
       "shared_periods": 33,
       "shared_subjects": "Toán học (Duy), Ngữ văn (Thuý), GDTC & GDQPAN (Liên), TNHN (Thuý), Chào cờ, SHL",
       "split_rule": "Tách toàn bộ các môn phân ban tự chọn và bổ trợ (12 cặp đối ứng đối ngẫu 1-1)."
+    }
+  ],
+  "rule_toggles": [
+    {
+      "stt": 1,
+      "rule_name": "Chào cờ đồng bộ đầu tuần",
+      "timeframe": "Thứ 2 - Tiết 1",
+      "status": "BẬT",
+      "description": "Toàn bộ 18 lớp học đồng loạt thực hiện nghi lễ Chào cờ tại Tiết 1 sáng Thứ 2."
+    },
+    {
+      "stt": 2,
+      "rule_name": "Sinh hoạt lớp (C1) & HĐTN (C2, C3)",
+      "timeframe": "Thứ 6 - Tiết 5",
+      "status": "BẬT",
+      "description": "Toàn trường tổng kết tuần học vào Tiết 5 sáng Thứ 6. GVCN trực tiếp quản lý lớp."
+    },
+    {
+      "stt": 3,
+      "rule_name": "GVCN Cấp 1 nghỉ SHCM Tiểu học",
+      "timeframe": "Chiều Thứ 6",
+      "status": "BẬT",
+      "description": "Toàn bộ 8 GVCN Tiểu học không được xếp tiết dạy vào chiều Thứ 6 để sinh hoạt chuyên môn."
+    },
+    {
+      "stt": 4,
+      "rule_name": "Tiết Bổ trợ (BT) bắt buộc xếp cuối chiều",
+      "timeframe": "Tiết 8, 9 hoặc 10",
+      "status": "BẬT",
+      "description": "Các tiết Bổ trợ kiến thức (BT) chỉ được xếp vào các tiết cuối cùng của buổi chiều, cấm xếp buổi sáng."
+    },
+    {
+      "stt": 5,
+      "rule_name": "Giáo dục thể chất cách ngày",
+      "timeframe": "Thứ 3+5 hoặc Thứ 4+6",
+      "status": "BẬT",
+      "description": "Xếp giãn cách tối thiểu 1 ngày giữa 2 tiết thể dục trong tuần. Tránh các tiết trưa nắng (P4, P5, P6)."
+    },
+    {
+      "stt": 6,
+      "rule_name": "Stem & Robotic Cấp 1 xếp tiết kép",
+      "timeframe": "Cặp {P2,P3}, {P6,P7} hoặc {P8,P9}",
+      "status": "BẬT",
+      "description": "Bắt buộc xếp liền 2 tiết thực hành liên tiếp. Cấm xếp tiết đơn lẻ."
+    },
+    {
+      "stt": 7,
+      "rule_name": "Tiết 10 độc lập Cấp 2 & Cấp 3",
+      "timeframe": "17:00 - 17:45 hàng ngày",
+      "status": "BẬT",
+      "description": "Dành cho các lớp có định mức lớn hoặc bồi dưỡng học sinh giỏi (10A1, 11A1, 12A1, 12A2)."
     }
   ]
 }
