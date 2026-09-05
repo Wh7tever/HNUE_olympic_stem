@@ -99,6 +99,7 @@ class CompactTemplateLoader:
         self.parse_merges_electives_and_toggles()
 
         # 5. Deep Audits
+        self.verify_class_equilibrium()
         self.verify_equilibrium()
         self.verify_visiting_teacher_locks()
         self.verify_grade12_duel_matrix()
@@ -169,6 +170,19 @@ class CompactTemplateLoader:
         total_p = sum(a["periods"] for a in self.assignments)
         print(f"[PASS] 2. Ingested {len(self.assignments)} teaching assignments from PHAN_CONG_MON_HOC (Total periods: {total_p}).")
 
+    SLOT_COLUMNS = [
+        (7, 2, "Sang", "T2_Sang"),
+        (8, 2, "Chieu", "T2_Chieu"),
+        (9, 3, "Sang", "T3_Sang"),
+        (10, 3, "Chieu", "T3_Chieu"),
+        (11, 4, "Sang", "T4_Sang"),
+        (12, 4, "Chieu", "T4_Chieu"),
+        (13, 5, "Sang", "T5_Sang"),
+        (14, 5, "Chieu", "T5_Chieu"),
+        (15, 6, "Sang", "T6_Sang"),
+        (16, 6, "Chieu", "T6_Chieu"),
+    ]
+
     def parse_teachers(self):
         ws = self.wb["GIAO_VIEN_LICH_BAN"]
         self.teachers = []
@@ -182,9 +196,17 @@ class CompactTemplateLoader:
             dept = ws.cell(r, 4).value
             hr = ws.cell(r, 5).value
             pcn = ws.cell(r, 6).value
-            unavail = ws.cell(r, 7).value
-            formula_cell = ws.cell(r, 8).value
-            note = ws.cell(r, 9).value
+
+            blocked_sessions = []
+            blocked_slots = []
+            for col_idx, day, sess, sname in self.SLOT_COLUMNS:
+                v = ws.cell(r, col_idx).value
+                if v and str(v).strip().upper() == "X":
+                    blocked_sessions.append((day, sess))
+                    blocked_slots.append(sname)
+
+            formula_cell = ws.cell(r, 17).value
+            note = ws.cell(r, 18).value
 
             tname_str = str(tname).strip() if tname else ""
             
@@ -197,14 +219,16 @@ class CompactTemplateLoader:
                 "department": str(dept).strip() if dept else "",
                 "homeroom": str(hr).strip() if hr else None,
                 "vice_homeroom": str(pcn).strip() if pcn else None,
-                "unavailability": str(unavail).strip() if unavail else "",
+                "blocked_sessions": blocked_sessions,
+                "blocked_slots": blocked_slots,
+                "unavailability": ", ".join(blocked_slots),
                 "formula": str(formula_cell) if formula_cell else "",
                 "total_periods": eval_periods,
                 "note": str(note).strip() if note else ""
             })
             r += 1
 
-        print(f"[PASS] 3. Ingested {len(self.teachers)} teachers from GIAO_VIEN_LICH_BAN (Evaluated via dynamic SUMIF).")
+        print(f"[PASS] 3. Ingested {len(self.teachers)} teachers from GIAO_VIEN_LICH_BAN (Evaluated via 10-slot Checkbox Matrix & SUMIF).")
 
     def parse_merges_electives_and_toggles(self):
         ws = self.wb["TACH_GHEP_VA_PHAN_BAN"]
@@ -279,6 +303,50 @@ class CompactTemplateLoader:
 
         print(f"[PASS] 4. Ingested {len(self.merge_pairs)} merge pairs, {len(self.elective_pairs)} duel pairs, and {len(self.rule_toggles)} rule toggles from TACH_GHEP_VA_PHAN_BAN.")
 
+    def verify_class_equilibrium(self):
+        print(f"\n--- [AUDIT 0] CÂN BẰNG ĐỊNH MỨC 18 LỚP HỌC (806 TIẾT) ---")
+        TARGETS = {
+            "1A1": 45, "1A2": 50, "2A1": 45, "2A2": 50,
+            "3A1": 45, "3A2": 50, "4A1": 45, "5A1": 45,
+            "6A1": 39, "7A1": 39, "7A2": 44, "8A1": 39, "8A2": 44,
+            "9A1": 44, "10A1": 47, "11A1": 45, "12A1": 45, "12A2": 45
+        }
+        class_actual = defaultdict(int)
+        for a in self.assignments:
+            c = a["class_name"]
+            p = a["periods"]
+            if c == "7A1, 7A2":
+                class_actual["7A1"] += p
+                class_actual["7A2"] += p
+            elif c == "8A1, 8A2":
+                class_actual["8A1"] += p
+                class_actual["8A2"] += p
+            elif c == "12A1, 12A2":
+                class_actual["12A1"] += p
+                class_actual["12A2"] += p
+            else:
+                class_actual[c] += p
+
+        mismatches = []
+        for cname, target in TARGETS.items():
+            actual = class_actual.get(cname, 0)
+            diff = actual - target
+            st = "✓ ĐỦ" if diff == 0 else (f"✗ THỪA {diff}" if diff > 0 else f"✗ THIẾU {-diff}")
+            print(f"  - Lớp {cname:>5}: Chuẩn {target:>2}t | Phân công {actual:>2}t | {st}")
+            if diff != 0:
+                mismatches.append((cname, target, actual))
+
+        tot_target = sum(TARGETS.values())
+        tot_actual = sum(class_actual.values())
+        print(f"Tổng cộng: Chuẩn {tot_target} tiết | Thực tế phân công {tot_actual} tiết")
+
+        if mismatches or tot_actual != 806:
+            err = f"CLASS EQUILIBRIUM MISMATCH: {mismatches} (Total: {tot_actual} vs {tot_target})"
+            self.errors.append(err)
+            print(f"[FAIL] {err}")
+        else:
+            print(f"[PASS] Toàn bộ 18/18 lớp học khớp 100% định mức chuẩn (806/806 tiết)!")
+
     def verify_equilibrium(self):
         print(f"\n--- [AUDIT 1] TOÀN TRƯỜNG CÂN BẰNG TOÁN HỌC ---")
         total_teacher_periods = sum(t["total_periods"] for t in self.teachers)
@@ -293,45 +361,75 @@ class CompactTemplateLoader:
             print(f"[PASS] Khớp tuyệt đối 711/711 tiết phân công toàn trường!")
 
     def verify_visiting_teacher_locks(self):
-        print(f"\n--- [AUDIT 2] KHÓA CỨNG GIÁO VIÊN THỈNH GIẢNG & LỊCH BẬN ---")
+        print(f"\n--- [AUDIT 2] KHÓA CỨNG GIÁO VIÊN THỈNH GIẢNG & LỊCH BẬN (10-SLOT MATRIX) ---")
         teacher_map = {t["display_name"]: t for t in self.teachers}
 
-        # 1. Cô Quyến: Off Wednesday
+        # 1. Cô Quyến: Off Wednesday (T4_Sang, T4_Chieu)
         if "Quyến" in teacher_map:
             t = teacher_map["Quyến"]
-            has_lock = "thứ 4" in t["unavailability"].lower() or "thứ tư" in t["unavailability"].lower()
-            print(f"- Cô Quyến: {t['total_periods']} tiết | Lịch bận: {t['unavailability']} | Khóa Thứ 4: {'✓ PASS' if has_lock else '✗ FAIL'}")
+            has_lock = (4, "Sang") in t["blocked_sessions"] and (4, "Chieu") in t["blocked_sessions"]
+            print(f"- Cô Quyến: {t['total_periods']} tiết | Khóa Thứ 4: {'✓ PASS' if has_lock else '✗ FAIL'} ({t['blocked_slots']})")
             if not has_lock:
                 self.errors.append("Cô Quyến missing Wednesday off lock.")
 
-        # 2. Thầy Duy: Off Monday am
+        # 2. Thầy Duy: Off Monday am (T2_Sang)
         if "Duy" in teacher_map:
             t = teacher_map["Duy"]
-            has_lock = "thứ 2" in t["unavailability"].lower()
-            print(f"- Thầy Duy: {t['total_periods']} tiết | Lịch bận: {t['unavailability']} | Khóa sáng T2: {'✓ PASS' if has_lock else '✗ FAIL'}")
+            has_lock = (2, "Sang") in t["blocked_sessions"]
+            print(f"- Thầy Duy: {t['total_periods']} tiết | Khóa sáng T2: {'✓ PASS' if has_lock else '✗ FAIL'} ({t['blocked_slots']})")
+            if not has_lock:
+                self.errors.append("Thầy Duy missing Monday morning lock.")
 
-        # 3. Cô Catie: Morning only
+        # 3. Cô Catie: Morning only (all 5 afternoons blocked)
         if "Catie" in teacher_map:
             t = teacher_map["Catie"]
-            has_lock = "sáng" in t["unavailability"].lower()
-            print(f"- Cô Catie: {t['total_periods']} tiết | Lịch bận: {t['unavailability']} | Chỉ dạy sáng: {'✓ PASS' if has_lock else '✗ FAIL'}")
+            afternoons = [(d, "Chieu") for d in [2, 3, 4, 5, 6]]
+            has_lock = all(s in t["blocked_sessions"] for s in afternoons)
+            print(f"- Cô Catie: {t['total_periods']} tiết | Chỉ dạy sáng: {'✓ PASS' if has_lock else '✗ FAIL'} ({t['blocked_slots']})")
+            if not has_lock:
+                self.errors.append("Cô Catie missing afternoon locks.")
 
-        # 4. Cô Thuỷ: Wed am + Thu
+        # 4. Cô Thuỷ: Available ONLY Wed am + all Thu (Blocked on all other 7 sessions)
         if "Thuỷ" in teacher_map:
             t = teacher_map["Thuỷ"]
-            print(f"- Cô Thuỷ: {t['total_periods']} tiết | Lịch bận: {t['unavailability']} | Đúng lịch: ✓ PASS")
+            avail = [(d, s) for d in [2, 3, 4, 5, 6] for s in ["Sang", "Chieu"] if (d, s) not in t["blocked_sessions"]]
+            has_lock = sorted(avail) == sorted([(4, "Sang"), (5, "Sang"), (5, "Chieu")])
+            print(f"- Cô Thuỷ: {t['total_periods']} tiết | Dạy duy nhất (T4_Sang, T5_Sang, T5_Chieu): {'✓ PASS' if has_lock else '✗ FAIL'} (Khóa 7 buổi)")
+            if not has_lock:
+                self.errors.append("Cô Thuỷ missing required locks.")
 
-        # 5. Cô Thiết: Mon am + Thu
+        # 5. Cô Thiết: Available ONLY Mon am + all Thu (Blocked on all other 7 sessions)
         if "Thiết" in teacher_map:
             t = teacher_map["Thiết"]
-            print(f"- Cô Thiết: {t['total_periods']} tiết | Lịch bận: {t['unavailability']} | Đúng lịch: ✓ PASS")
+            avail = [(d, s) for d in [2, 3, 4, 5, 6] for s in ["Sang", "Chieu"] if (d, s) not in t["blocked_sessions"]]
+            has_lock = sorted(avail) == sorted([(2, "Sang"), (5, "Sang"), (5, "Chieu")])
+            print(f"- Cô Thiết: {t['total_periods']} tiết | Dạy duy nhất (T2_Sang, T5_Sang, T5_Chieu): {'✓ PASS' if has_lock else '✗ FAIL'} (Khóa 7 buổi)")
+            if not has_lock:
+                self.errors.append("Cô Thiết missing required locks.")
 
-        # 6. Cô Yến LS: Exact slots
+        # 6. Cô Yến LS: Available ONLY Mon pm + Tue pm (Blocked on all other 8 sessions)
         if "Yến LS" in teacher_map:
             t = teacher_map["Yến LS"]
-            print(f"- Cô Yến LS: {t['total_periods']} tiết | Lịch bận: {t['unavailability']} | Đúng lịch: ✓ PASS")
+            avail = [(d, s) for d in [2, 3, 4, 5, 6] for s in ["Sang", "Chieu"] if (d, s) not in t["blocked_sessions"]]
+            has_lock = sorted(avail) == sorted([(2, "Chieu"), (3, "Chieu")])
+            print(f"- Cô Yến LS: {t['total_periods']} tiết | Dạy duy nhất (T2_Chieu, T3_Chieu): {'✓ PASS' if has_lock else '✗ FAIL'} (Khóa 8 buổi)")
+            if not has_lock:
+                self.errors.append("Cô Yến LS missing required locks.")
 
-        print("[PASS] 100% giáo viên thỉnh giảng & chuyên môn đã được khóa lịch an toàn.")
+        # 7. 8 Primary GVCNs: Off Friday afternoon (T6_Chieu)
+        primary_gvcns = ["Liễu", "Hạnh", "Tiểu Hà", "Khánh Linh", "Chín", "Chiến", "Hải", "Hiền"]
+        missing_gvcn_locks = []
+        for gname in primary_gvcns:
+            if gname in teacher_map:
+                if (6, "Chieu") not in teacher_map[gname]["blocked_sessions"]:
+                    missing_gvcn_locks.append(gname)
+        if missing_gvcn_locks:
+            self.errors.append(f"Primary GVCNs missing Friday afternoon lock: {missing_gvcn_locks}")
+            print(f"- 8 GVCN Tiểu học nghỉ Chiều Thứ 6: ✗ FAIL ({missing_gvcn_locks})")
+        else:
+            print(f"- 8/8 GVCN Tiểu học: Đã khóa nghỉ Chiều Thứ 6 an toàn: ✓ PASS")
+
+        print("[PASS] 100% giáo viên thỉnh giảng & GVCN đã được kiểm toán ma trận lịch bận an toàn.")
 
     def verify_grade12_duel_matrix(self):
         print(f"\n--- [AUDIT 3] MA TRẬN ĐỐI NGẪU 12 CẶP PHÂN BAN LỚP 12 ---")
@@ -393,13 +491,16 @@ class CompactTemplateLoader:
                 "adjustments": 0,
                 "total_periods": t["total_periods"],
                 "official_assignment": meta.get("official_assignment", ""),
-                "constraints": [t["unavailability"]] if t["unavailability"] else []
+                "constraints": t["blocked_slots"],
+                "blocked_sessions": t["blocked_sessions"],
+                "blocked_slots": t["blocked_slots"],
+                "note": t["note"]
             })
         reg["teachers"] = formatted_teachers
 
         with open(TEACHER_REG_FILE, "w", encoding="utf-8") as f:
             json.dump(reg, f, ensure_ascii=False, indent=2)
-        print(f"[PASS] Đã đồng bộ {len(formatted_teachers)} giáo viên vào {TEACHER_REG_FILE}")
+        print(f"[PASS] Đã đồng bộ {len(formatted_teachers)} giáo viên (kèm blocked_sessions) vào {TEACHER_REG_FILE}")
 
         # 2. Update timetable_rules.json
         if os.path.exists(RULES_FILE):
@@ -411,6 +512,14 @@ class CompactTemplateLoader:
         rules["grade_12_elective_pairs"] = self.elective_pairs
         rules["merge_pairs"] = self.merge_pairs
         rules["rule_toggles"] = self.rule_toggles
+        rules["class_targets"] = {
+            "1A1": 45, "1A2": 50, "2A1": 45, "2A2": 50,
+            "3A1": 45, "3A2": 50, "4A1": 45, "5A1": 45,
+            "6A1": 39, "7A1": 39, "7A2": 44, "8A1": 39, "8A2": 44,
+            "9A1": 44, "10A1": 47, "11A1": 45, "12A1": 45, "12A2": 45
+        }
+        rules["total_class_periods"] = 806
+        rules["total_teacher_periods"] = 711
 
         with open(RULES_FILE, "w", encoding="utf-8") as f:
             json.dump(rules, f, ensure_ascii=False, indent=2)

@@ -20,8 +20,18 @@
       "total_periods": 26,
       "official_assignment": "Toán học (1A1) + Tiếng Việt (1A1) + TN - XH (1A1) + HĐTN (1A1) + Bổ trợ Toán (1A1) + Bổ trợ T.Việt (1A1)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
-      ]
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T6_Chieu"
+      ],
+      "note": "T6_Chieu"
     },
     {
       "id": "T02",
@@ -36,8 +46,18 @@
       "total_periods": 26,
       "official_assignment": "Toán học (1A2) + Tiếng Việt (1A2) + Đạo đức (1A2) + TN - XH (1A2) + HĐTN (1A2) + Chào cờ (1A2) + Bổ trợ Toán (1A2) + Bổ trợ T.Việt (1A2)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
-      ]
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T6_Chieu"
+      ],
+      "note": "T6_Chieu"
     },
     {
       "id": "T03",
@@ -52,8 +72,18 @@
       "total_periods": 26,
       "official_assignment": "Toán học (2A1) + Tiếng Việt (2A1) + TN - XH (2A1) + HĐTN (2A1) + Bổ trợ Toán (2A1) + Bổ trợ T.Việt (2A1)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
-      ]
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T6_Chieu"
+      ],
+      "note": "T6_Chieu"
     },
     {
       "id": "T04",
@@ -68,8 +98,18 @@
       "total_periods": 23,
       "official_assignment": "Toán học (2A2) + Tiếng Việt (2A2) + Chào cờ (2A2) + Sinh hoạt lớp (2A2) + Bổ trợ Toán (2A2) + Bổ trợ T.Việt (2A2)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
-      ]
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T6_Chieu"
+      ],
+      "note": "T6_Chieu"
     },
     {
       "id": "T05",
@@ -84,8 +124,18 @@
       "total_periods": 26,
       "official_assignment": "Toán học (3A1) + Tiếng Việt (3A1) + TN - XH (3A1) + Chào cờ (3A1) + Sinh hoạt lớp (3A1) + Bổ trợ Toán (3A1) + Bổ trợ T.Việt (3A1)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
-      ]
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T6_Chieu"
+      ],
+      "note": "T6_Chieu"
     },
     {
       "id": "T06",
@@ -100,8 +150,18 @@
       "total_periods": 26,
       "official_assignment": "Toán học (3A2) + Tiếng Việt (3A2) + Đạo đức (3A2) + TN - XH (3A2) + HĐTN (3A2) + Chào cờ (3A2) + Bổ trợ Toán (3A2) + Bổ trợ T.Việt (3A2) + Công nghệ (3A2)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
-      ]
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T6_Chieu"
+      ],
+      "note": "T6_Chieu"
     },
     {
       "id": "T07",
@@ -116,8 +176,18 @@
       "total_periods": 26,
       "official_assignment": "Toán học (4A1) + Tiếng Việt (4A1) + LS - ĐL (4A1) + Khoa học (4A1) + HĐTN (4A1) + Chào cờ (4A1) + Bổ trợ Toán (4A1) + Bổ trợ T.Việt (4A1)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
-      ]
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T6_Chieu"
+      ],
+      "note": "T6_Chieu"
     },
     {
       "id": "T08",
@@ -132,8 +202,18 @@
       "total_periods": 26,
       "official_assignment": "Toán học (5A1) + Tiếng Việt (5A1) + LS - ĐL (5A1) + Khoa học (5A1) + HĐTN (5A1) + Chào cờ (5A1) + Bổ trợ Toán (5A1) + Bổ trợ T.Việt (5A1)",
       "constraints": [
-        "Khóa chiều Thứ 6 sinh hoạt chuyên môn Tiểu học + Nghỉ 1 buổi tự chọn"
-      ]
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T6_Chieu"
+      ],
+      "note": "T6_Chieu"
     },
     {
       "id": "T09",
@@ -147,9 +227,10 @@
       "adjustments": 0,
       "total_periods": 20,
       "official_assignment": "Đạo đức (1A1, 2A1, 2A2, 3A1, 4A1, 5A1) + TN - XH (2A2) + HĐTN (2A2, 3A1) + Sinh hoạt lớp (1A2) + Bổ trợ Toán (4A1, 5A1) + Bổ trợ T.Việt (4A1, 5A1) + Công nghệ (3A1)",
-      "constraints": [
-        "Đồng giảng 8 tiết bổ trợ với Cô Hải (4A1) và Cô Hiền (5A1)"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T10",
@@ -163,7 +244,10 @@
       "adjustments": 0,
       "total_periods": 16,
       "official_assignment": "Maths (2A2) + Science (2A2) + Global English (2A2) + Bright Ideas (1A1, 2A1) + Global Success (1A1, 2A1) + Bổ trợ T.Anh (1A1, 2A1, 2A2)",
-      "constraints": []
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T11",
@@ -177,9 +261,10 @@
       "adjustments": 0,
       "total_periods": 18,
       "official_assignment": "Maths (1A2) + Science (1A2) + Global English (1A2) + Bright Ideas (5A1) + Global Success (5A1, 11A1) + Bổ trợ T.Anh (1A2, 5A1, 11A1) + Prepare (11A1)",
-      "constraints": [
-        "Giảng dạy xuyên khối Cấp 1 và Cấp 3"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T12",
@@ -193,7 +278,10 @@
       "adjustments": 0,
       "total_periods": 16,
       "official_assignment": "Maths (3A2) + Science (3A2) + Global English (3A2) + Bright Ideas (3A1, 4A1) + Global Success (3A1, 4A1) + Bổ trợ T.Anh (3A1, 3A2, 4A1)",
-      "constraints": []
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T13",
@@ -207,9 +295,10 @@
       "adjustments": 0,
       "total_periods": 12,
       "official_assignment": "Âm nhạc (1A1, 1A2, 2A1, 2A2, 3A1, 3A2, 4A1, 5A1, 6A1, 7A1, 8A1, 9A1)",
-      "constraints": [
-        "Phụ trách Âm nhạc toàn trường từ Cấp 1 đến Cấp 2"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T14",
@@ -223,9 +312,10 @@
       "adjustments": 0,
       "total_periods": 9,
       "official_assignment": "Mỹ thuật (1A1, 1A2, 2A1, 2A2, 3A1, 3A2, 4A1, 5A1) + Sinh hoạt lớp (3A2)",
-      "constraints": [
-        "Phụ trách Mỹ thuật Tiểu học"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T15",
@@ -239,9 +329,10 @@
       "adjustments": 0,
       "total_periods": 21,
       "official_assignment": "Tin học (1A1, 1A2, 2A1, 2A2, 3A1, 3A2, 4A1, 5A1, 6A1, 7A1, 8A1, 9A1, 10A1, 11A1, 12A1) + HĐTN (7A1)",
-      "constraints": [
-        "Giáo viên liên cấp: Tránh xếp Tiết 4 C1 (9:45-10:20) và Tiết 3 C2 (9:10-9:55)"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T16",
@@ -255,9 +346,10 @@
       "adjustments": 0,
       "total_periods": 17,
       "official_assignment": "GDTC (1A1, 1A2, 2A1, 2A2, 3A1, 3A2, 4A1, 5A1) + Sinh hoạt lớp (4A1)",
-      "constraints": [
-        "Phụ trách GDTC Tiểu học tại sân trường/nhà đa năng"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T17",
@@ -271,9 +363,10 @@
       "adjustments": 0,
       "total_periods": 4,
       "official_assignment": "Mỹ thuật (6A1, 7A1, 8A1, 9A1)",
-      "constraints": [
-        "Phụ trách Mỹ thuật THCS"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T18",
@@ -287,9 +380,10 @@
       "adjustments": 0,
       "total_periods": 12,
       "official_assignment": "Stem & Robotic (1A1, 1A2, 5A1, 6A1, 7A1, 8A1, 9A1) + Chào cờ (1A1) + Sinh hoạt lớp (1A1)",
-      "constraints": [
-        "Giáo viên liên cấp: Tránh xếp Tiết 4 C1 (9:45-10:20) và Tiết 3 C2 (9:10-9:55)"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T19",
@@ -303,9 +397,10 @@
       "adjustments": 0,
       "total_periods": 14,
       "official_assignment": "Stem & Robotic (2A1, 2A2, 3A1, 3A2, 4A1) + Chào cờ (2A1) + Sinh hoạt lớp (2A1) + Công nghệ (4A1, 5A1)",
-      "constraints": [
-        "Giảng dạy tại phòng chức năng Stem"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T20",
@@ -319,9 +414,10 @@
       "adjustments": 0,
       "total_periods": 18,
       "official_assignment": "GDTC (6A1, 7A1, 8A1, 9A1, 10A1, 11A1, 12A1) + Sinh hoạt lớp (5A1) + GD QPAN (10A1, 11A1, 12A1)",
-      "constraints": [
-        "Phụ trách Thể chất & GDQPAN khối Trung học"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T21",
@@ -335,9 +431,10 @@
       "adjustments": 0,
       "total_periods": 17,
       "official_assignment": "Ngữ văn (10A1) + GDĐP (6A1, 7A1, 8A1, 9A1, 10A1, 11A1, 12A1) + Bổ trợ Văn (10A1) + Bồi giỏi Văn (10A1)",
-      "constraints": [
-        "Phụ trách GDĐP toàn bộ khối THCS và THPT"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T22",
@@ -352,8 +449,24 @@
       "total_periods": 25,
       "official_assignment": "Toán học (6A1, 10A1, 11A1) + Bổ trợ Toán (10A1, 11A1) + Bồi giỏi Toán (10A1)",
       "constraints": [
-        "Khóa lịch: Nghỉ trọn vẹn cả ngày Thứ 4"
-      ]
+        "T4_Sang",
+        "T4_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          4,
+          "Sang"
+        ],
+        [
+          4,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T4_Sang",
+        "T4_Chieu"
+      ],
+      "note": "T4_Sang; T4_Chieu"
     },
     {
       "id": "T23",
@@ -367,9 +480,10 @@
       "adjustments": 0,
       "total_periods": 7,
       "official_assignment": "Global Success (10A1) + Prepare (10A1) + Bổ trợ T.Anh (10A1) + Bồi giỏi Tiếng Anh (10A1)",
-      "constraints": [
-        "Phụ trách Tiếng Anh chuyên sâu khối 10"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T24",
@@ -384,8 +498,60 @@
       "total_periods": 8,
       "official_assignment": "Lịch sử (10A1, 11A1, 12A1) + Lịch sử TC (12A2) + Lịch sử BT (12A2)",
       "constraints": [
-        "Thỉnh giảng: Tiết 9-10 T2, Tiết 9 T3, Tiết 4 T4, Tiết 5 T5, Tiết 4-5-8 T6"
-      ]
+        "T2_Sang",
+        "T3_Sang",
+        "T4_Sang",
+        "T4_Chieu",
+        "T5_Sang",
+        "T5_Chieu",
+        "T6_Sang",
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          2,
+          "Sang"
+        ],
+        [
+          3,
+          "Sang"
+        ],
+        [
+          4,
+          "Sang"
+        ],
+        [
+          4,
+          "Chieu"
+        ],
+        [
+          5,
+          "Sang"
+        ],
+        [
+          5,
+          "Chieu"
+        ],
+        [
+          6,
+          "Sang"
+        ],
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T2_Sang",
+        "T3_Sang",
+        "T4_Sang",
+        "T4_Chieu",
+        "T5_Sang",
+        "T5_Chieu",
+        "T6_Sang",
+        "T6_Chieu"
+      ],
+      "note": "T2_Sang; T3_Sang; T4_Sang; T4_Chieu; T5_Sang; T5_Chieu; T6_Sang; T6_Chieu"
     },
     {
       "id": "T25",
@@ -399,9 +565,10 @@
       "adjustments": 0,
       "total_periods": 19,
       "official_assignment": "Vật lí (6A1, 7A1, 8A1, 9A1, 10A1, 11A1, 12A1) + TNHN (10A1) + Công nghệ (8A1, 9A1) + Vật lí BT (12A1)",
-      "constraints": [
-        "GVCN 10A1, phụ trách Vật lí toàn trường"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T26",
@@ -416,8 +583,54 @@
       "total_periods": 11,
       "official_assignment": "Địa lí (6A1, 7A1, 8A1, 9A1, 10A1, 12A2) + Địa lí BT (12A2)",
       "constraints": [
-        "Thỉnh giảng: Chỉ dạy sáng Thứ 2 và cả ngày Thứ 5"
-      ]
+        "T2_Chieu",
+        "T3_Sang",
+        "T3_Chieu",
+        "T4_Sang",
+        "T4_Chieu",
+        "T6_Sang",
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          2,
+          "Chieu"
+        ],
+        [
+          3,
+          "Sang"
+        ],
+        [
+          3,
+          "Chieu"
+        ],
+        [
+          4,
+          "Sang"
+        ],
+        [
+          4,
+          "Chieu"
+        ],
+        [
+          6,
+          "Sang"
+        ],
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T2_Chieu",
+        "T3_Sang",
+        "T3_Chieu",
+        "T4_Sang",
+        "T4_Chieu",
+        "T6_Sang",
+        "T6_Chieu"
+      ],
+      "note": "T2_Chieu; T3_Sang; T3_Chieu; T4_Sang; T4_Chieu; T6_Sang; T6_Chieu"
     },
     {
       "id": "T27",
@@ -432,8 +645,54 @@
       "total_periods": 6,
       "official_assignment": "GD KT - PL (10A1, 12A2) + GD KT-PL BT (12A2)",
       "constraints": [
-        "Thỉnh giảng: Chỉ dạy sáng Thứ 4 và cả ngày Thứ 5"
-      ]
+        "T2_Sang",
+        "T2_Chieu",
+        "T3_Sang",
+        "T3_Chieu",
+        "T4_Chieu",
+        "T6_Sang",
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          2,
+          "Sang"
+        ],
+        [
+          2,
+          "Chieu"
+        ],
+        [
+          3,
+          "Sang"
+        ],
+        [
+          3,
+          "Chieu"
+        ],
+        [
+          4,
+          "Chieu"
+        ],
+        [
+          6,
+          "Sang"
+        ],
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T2_Sang",
+        "T2_Chieu",
+        "T3_Sang",
+        "T3_Chieu",
+        "T4_Chieu",
+        "T6_Sang",
+        "T6_Chieu"
+      ],
+      "note": "T2_Sang; T2_Chieu; T3_Sang; T3_Chieu; T4_Chieu; T6_Sang; T6_Chieu"
     },
     {
       "id": "T28",
@@ -447,9 +706,10 @@
       "adjustments": 0,
       "total_periods": 20,
       "official_assignment": "Ngữ văn (11A1, 12A1) + TNHN (12A1) + Văn CĐ (12A2) + Bổ trợ Văn (11A1)",
-      "constraints": [
-        "GVCN Khối 12, phụ trách Ngữ văn THPT"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T29",
@@ -463,9 +723,10 @@
       "adjustments": 0,
       "total_periods": 14,
       "official_assignment": "Sinh học (6A1, 7A1, 8A1, 9A1, 11A1, 12A1) + TNHN (11A1) + Công nghệ (7A1) + Sinh học BT (12A2)",
-      "constraints": [
-        "GVCN 11A1, phụ trách Sinh học toàn trường"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T30",
@@ -479,9 +740,10 @@
       "adjustments": 0,
       "total_periods": 17,
       "official_assignment": "Hóa học (6A1, 7A1, 8A1, 9A1, 11A1, 12A1) + HĐTN (6A1) + Công nghệ (6A1) + Hoá học BT (12A1)",
-      "constraints": [
-        "GVCN 6A1, phụ trách Hóa học toàn trường"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T31",
@@ -496,8 +758,18 @@
       "total_periods": 9,
       "official_assignment": "Toán học (12A1)",
       "constraints": [
-        "Khóa lịch: Nghỉ sáng Thứ 2 (học chuyên môn / công tác)"
-      ]
+        "T2_Sang"
+      ],
+      "blocked_sessions": [
+        [
+          2,
+          "Sang"
+        ]
+      ],
+      "blocked_slots": [
+        "T2_Sang"
+      ],
+      "note": "T2_Sang"
     },
     {
       "id": "T32",
@@ -511,9 +783,10 @@
       "adjustments": 0,
       "total_periods": 11,
       "official_assignment": "Global Success (9A1, 12A1) + Prepare (9A1) + Global Success TC (12A1)",
-      "constraints": [
-        "Phụ trách Tiếng Anh 9A1 và phân ban Tự nhiên 12A1 tại A305"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T33",
@@ -527,9 +800,10 @@
       "adjustments": 0,
       "total_periods": 17,
       "official_assignment": "Ngữ văn (6A1, 9A1) + HĐTN (9A1) + GDCD (6A1, 9A1)",
-      "constraints": [
-        "GVCN 9A1, phụ trách Ngữ văn THCS"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T34",
@@ -543,9 +817,10 @@
       "adjustments": 0,
       "total_periods": 19,
       "official_assignment": "Global Success (6A1, 7A1, 8A1) + Prepare (6A1, 7A1, 7A2, 8A1, 8A2)",
-      "constraints": [
-        "Phụ trách Tiếng Anh THCS và các tiết Prepare tách phòng A306"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T35",
@@ -559,9 +834,10 @@
       "adjustments": 0,
       "total_periods": 17,
       "official_assignment": "Ngữ văn (7A1, 8A1) + HĐTN (8A1) + GDCD (7A1, 8A1)",
-      "constraints": [
-        "GVCN 8A1, phụ trách Ngữ văn Khối 7 & 8"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T36",
@@ -575,9 +851,10 @@
       "adjustments": 0,
       "total_periods": 18,
       "official_assignment": "Toán học (7A1, 8A1, 9A1)",
-      "constraints": [
-        "Phụ trách Toán THCS Khối 7, 8, 9"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T37",
@@ -591,9 +868,10 @@
       "adjustments": 0,
       "total_periods": 6,
       "official_assignment": "Lịch sử (6A1, 7A1, 8A1, 9A1)",
-      "constraints": [
-        "Phụ trách Lịch sử toàn bộ khối THCS"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T38",
@@ -607,9 +885,10 @@
       "adjustments": 0,
       "total_periods": 13,
       "official_assignment": "Bright Ideas (1A1) + Prepare (6A1, 8A1, 10A1)",
-      "constraints": [
-        "Dạy phân ban tách lớp 8A1 tại A306"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T39",
@@ -624,8 +903,42 @@
       "total_periods": 15,
       "official_assignment": "Bright Ideas (3A1, 4A1, 5A1) + Prepare (7A1)",
       "constraints": [
-        "Khóa lịch: Chỉ dạy các buổi sáng, tuyệt đối không dạy chiều"
-      ]
+        "T2_Chieu",
+        "T3_Chieu",
+        "T4_Chieu",
+        "T5_Chieu",
+        "T6_Chieu"
+      ],
+      "blocked_sessions": [
+        [
+          2,
+          "Chieu"
+        ],
+        [
+          3,
+          "Chieu"
+        ],
+        [
+          4,
+          "Chieu"
+        ],
+        [
+          5,
+          "Chieu"
+        ],
+        [
+          6,
+          "Chieu"
+        ]
+      ],
+      "blocked_slots": [
+        "T2_Chieu",
+        "T3_Chieu",
+        "T4_Chieu",
+        "T5_Chieu",
+        "T6_Chieu"
+      ],
+      "note": "T2_Chieu; T3_Chieu; T4_Chieu; T5_Chieu; T6_Chieu"
     },
     {
       "id": "T40",
@@ -639,9 +952,10 @@
       "adjustments": 0,
       "total_periods": 18,
       "official_assignment": "Maths (1A2, 2A2, 3A2) + Science (1A2, 2A2, 3A2)",
-      "constraints": [
-        "Dạy chương trình Quốc tế Toán & Khoa học Song ngữ Tiểu học"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T41",
@@ -655,9 +969,10 @@
       "adjustments": 0,
       "total_periods": 15,
       "official_assignment": "Global English (2A2) + Bright Ideas (2A1) + Prepare (7A2)",
-      "constraints": [
-        "Dạy phân ban tách lớp 7A2 tại phòng B202"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T42",
@@ -671,9 +986,10 @@
       "adjustments": 0,
       "total_periods": 12,
       "official_assignment": "Prepare (9A1, 11A1) + Prepare BT (12A1)",
-      "constraints": [
-        "Dạy phân ban tách lớp 12A1 tại phòng A305"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     },
     {
       "id": "T43",
@@ -687,9 +1003,10 @@
       "adjustments": 0,
       "total_periods": 15,
       "official_assignment": "Global English (1A2, 3A2) + Prepare (8A2)",
-      "constraints": [
-        "Dạy phân ban tách lớp 8A2 tại phòng B203"
-      ]
+      "constraints": [],
+      "blocked_sessions": [],
+      "blocked_slots": [],
+      "note": ""
     }
   ]
 }
