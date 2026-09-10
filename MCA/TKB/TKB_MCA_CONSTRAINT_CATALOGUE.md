@@ -101,8 +101,8 @@ Marie Curie Academy vận hành 2 khung thời lượng tiết học không đ�
      * Lớp 4A1 (Cô Hải đứng chính + Cô Chi trợ giảng): Tiết 8 Thứ 2, Tiết 8 Thứ 3, Tiết 8 Thứ 5, Tiết 9 Thứ 5.
      * Lớp 5A1 (Cô Hiền đứng chính + Cô Chi trợ giảng): Tiết 8 Thứ 2, Tiết 8 Thứ 3, Tiết 8 Thứ 5, Tiết 9 Thứ 5.
 7. **Ràng buộc giờ ăn trưa & ăn chiều của Phó Chủ Nhiệm:**
-   - Hết Tiết 5 buổi sáng (11:00) và hết Tiết 7 buổi chiều (14:45), các cô Phó Chủ nhiệm phải trực tiếp đón và chăm sóc học sinh ăn trưa / ăn phụ chiều.
-   - **Hệ quả xếp lịch:** Cấm xếp các cô Phó Chủ nhiệm dạy tiết cuối sáng hoặc tiết 7 chiều ở cấp 2/3 nếu trùng khung giờ chăm sóc ăn uống học sinh.
+   - Hết Tiết 5 buổi sáng (11:00) và hết Tiết 7 buổi chiều (14:45), các cô Phó Chủ nhiệm phải trực tiếp đón và chăm sóc học sinh ăn trưa / ăn phụ chiều (14:45 - 15:05).
+   - **Ràng buộc cứng sinh tử:** **CÔ THU (PCN 4A1) VÀ CÔ LIÊN (PCN 5A1) TUYỆT ĐỐI KHÔNG ĐƯỢC XẾP DẠY TIẾT 2 BUỔI CHIỀU KHỐI THCS & THPT (TIẾT 7 — 14:20 ĐẾN 15:05)** ở tất cả các ngày trong tuần (Thứ 2 đến Thứ 6). Khung giờ này đè 20 phút lên giờ ăn phụ chiều của học sinh Cấp 1 (14:45 - 15:05). Hệ thống tự động khóa cứng 100% các biến $X[\text{Thu}, d, t=6] = 0$ và $X[\text{Liên}, d, t=6] = 0$ tại cấp 2, 3.
 
 ---
 

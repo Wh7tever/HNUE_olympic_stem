@@ -346,10 +346,13 @@
       "adjustments": 0,
       "total_periods": 17,
       "official_assignment": "GDTC (1A1, 1A2, 2A1, 2A2, 3A1, 3A2, 4A1, 5A1) + Sinh hoạt lớp (4A1)",
-      "constraints": [],
+      "constraints": [
+        "CAM_TIET_7_THCS_THPT_TRUC_AN_CHIEU_C1"
+      ],
+      "blocked_secondary_periods": [7],
       "blocked_sessions": [],
       "blocked_slots": [],
-      "note": ""
+      "note": "Phó chủ nhiệm 4A1: Không dạy Tiết 2 chiều THCS/THPT (Tiết 7: 14:20-15:05) vì trực đón học sinh ăn phụ chiều C1 (14:45-15:05)"
     },
     {
       "id": "T17",
@@ -414,10 +417,13 @@
       "adjustments": 0,
       "total_periods": 18,
       "official_assignment": "GDTC (6A1, 7A1, 8A1, 9A1, 10A1, 11A1, 12A1) + Sinh hoạt lớp (5A1) + GD QPAN (10A1, 11A1, 12A1)",
-      "constraints": [],
+      "constraints": [
+        "CAM_TIET_7_THCS_THPT_TRUC_AN_CHIEU_C1"
+      ],
+      "blocked_secondary_periods": [7],
       "blocked_sessions": [],
       "blocked_slots": [],
-      "note": ""
+      "note": "Phó chủ nhiệm 5A1: Không dạy Tiết 2 chiều THCS/THPT (Tiết 7: 14:20-15:05) vì trực đón học sinh ăn phụ chiều C1 (14:45-15:05)"
     },
     {
       "id": "T21",

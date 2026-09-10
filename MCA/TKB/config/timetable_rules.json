@@ -1140,6 +1140,13 @@
       "timeframe": "17:00 - 17:45 hàng ngày",
       "status": "BẬT",
       "description": "Dành cho các lớp có định mức lớn hoặc bồi dưỡng học sinh giỏi (10A1, 11A1, 12A1, 12A2)."
+    },
+    {
+      "stt": 8,
+      "rule_name": "Phó Chủ nhiệm Tiểu học khóa Tiết 7 THCS/THPT (Trực ăn phụ chiều C1)",
+      "timeframe": "14:20 - 15:05 hàng ngày",
+      "status": "BẬT",
+      "description": "Cô Thu (PCN 4A1) và Cô Liên (PCN 5A1) không dạy Tiết 2 chiều THCS/THPT (Tiết 7) do trùng giờ chăm sóc học sinh C1 ăn phụ chiều (14:45 - 15:05)."
     }
   ],
   "class_targets": {

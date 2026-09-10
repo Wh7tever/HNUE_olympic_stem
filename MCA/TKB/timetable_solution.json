@@ -2,9 +2,9 @@
   "metadata": {
     "academic_year": "2026-2027",
     "school": "Marie Curie Academy (MCA)",
-    "generated_at": "2026-09-05 22:44:58",
+    "generated_at": "2026-09-10 15:10:40",
     "solver_status": "OPTIMAL",
-    "solve_duration_seconds": 1.28,
+    "solve_duration_seconds": 1.2,
     "total_classes": 18,
     "total_teachers": 43,
     "total_periods": 703
@@ -27,11 +27,11 @@
           "is_double": false
         },
         "Tiết 3": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Liễu",
+          "subject": "Âm nhạc",
+          "lead_teacher": "Nghĩa",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 4": {
           "subject": "Tiếng Việt",
@@ -48,14 +48,14 @@
           "is_double": true
         },
         "Tiết 6": {
-          "subject": "Đạo đức",
-          "lead_teacher": "Chi",
+          "subject": "Bright Ideas",
+          "lead_teacher": "Vũ Hà",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 7": {
-          "subject": "Bổ trợ Toán",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Liễu",
           "co_teacher": "",
           "room": "",
@@ -69,11 +69,11 @@
           "is_double": true
         },
         "Tiết 9": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Vũ Hà",
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Liễu",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 10": null
       },
@@ -100,7 +100,7 @@
           "is_double": false
         },
         "Tiết 4": {
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Liễu",
           "co_teacher": "",
           "room": "",
@@ -121,63 +121,63 @@
           "is_double": true
         },
         "Tiết 7": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Liễu",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 8": {
-          "subject": "Bổ trợ Toán",
-          "lead_teacher": "Liễu",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 9": {
-          "subject": "Bổ trợ T.Việt",
-          "lead_teacher": "Liễu",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 10": null
-      },
-      "Thứ 4": {
-        "Tiết 1": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Liễu",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 2": {
-          "subject": "GDTC",
-          "lead_teacher": "Thu",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 3": {
-          "subject": "Tin học",
-          "lead_teacher": "Yên",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 4": {
           "subject": "Toán học",
           "lead_teacher": "Liễu",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
-        "Tiết 5": {
+        "Tiết 8": {
           "subject": "Tiếng Việt",
           "lead_teacher": "Liễu",
           "co_teacher": "",
           "room": "",
           "is_double": true
+        },
+        "Tiết 9": {
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Liễu",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 10": null
+      },
+      "Thứ 4": {
+        "Tiết 1": {
+          "subject": "TN - XH",
+          "lead_teacher": "Liễu",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 2": {
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Liễu",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 3": {
+          "subject": "TN - XH",
+          "lead_teacher": "Liễu",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 4": {
+          "subject": "Bright Ideas",
+          "lead_teacher": "Cybele",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 5": {
+          "subject": "HĐTN",
+          "lead_teacher": "Liễu",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
         },
         "Tiết 6": {
           "subject": "Bright Ideas",
@@ -187,21 +187,21 @@
           "is_double": false
         },
         "Tiết 7": {
-          "subject": "Tiếng Việt",
+          "subject": "Bổ trợ T.Việt",
           "lead_teacher": "Liễu",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 8": {
-          "subject": "Bổ trợ T.Anh",
-          "lead_teacher": "Vũ Hà",
+          "subject": "Bright Ideas",
+          "lead_teacher": "Cybele",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 9": {
-          "subject": "Tiếng Việt",
+          "subject": "Bổ trợ Toán",
           "lead_teacher": "Liễu",
           "co_teacher": "",
           "room": "",
@@ -211,25 +211,25 @@
       },
       "Thứ 5": {
         "Tiết 1": {
+          "subject": "GDTC",
+          "lead_teacher": "Thu",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 2": {
           "subject": "Toán học",
           "lead_teacher": "Liễu",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
-        "Tiết 2": {
-          "subject": "TN - XH",
-          "lead_teacher": "Liễu",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
         "Tiết 3": {
-          "subject": "TN - XH",
-          "lead_teacher": "Liễu",
+          "subject": "Stem & Robotic",
+          "lead_teacher": "Phương Anh",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 4": {
           "subject": "Bright Ideas",
@@ -239,21 +239,21 @@
           "is_double": false
         },
         "Tiết 5": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Cybele",
+          "subject": "Global Success",
+          "lead_teacher": "Vũ Hà",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 6": {
-          "subject": "Toán học",
-          "lead_teacher": "Liễu",
+          "subject": "Đạo đức",
+          "lead_teacher": "Chi",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 7": {
-          "subject": "Tiếng Việt",
+          "subject": "Bổ trợ Toán",
           "lead_teacher": "Liễu",
           "co_teacher": "",
           "room": "",
@@ -277,29 +277,29 @@
       },
       "Thứ 6": {
         "Tiết 1": {
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Liễu",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 2": {
+          "subject": "Toán học",
+          "lead_teacher": "Liễu",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 3": {
           "subject": "Global Success",
           "lead_teacher": "Vũ Hà",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 2": {
-          "subject": "Âm nhạc",
-          "lead_teacher": "Nghĩa",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 3": {
-          "subject": "HĐTN",
-          "lead_teacher": "Liễu",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
         "Tiết 4": {
-          "subject": "Stem & Robotic",
-          "lead_teacher": "Phương Anh",
+          "subject": "Toán học",
+          "lead_teacher": "Liễu",
           "co_teacher": "",
           "room": "",
           "is_double": true
@@ -312,15 +312,15 @@
           "is_double": false
         },
         "Tiết 6": {
-          "subject": "Global Success",
-          "lead_teacher": "Vũ Hà",
+          "subject": "Stem & Robotic",
+          "lead_teacher": "Phương Anh",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 7": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Cybele",
+          "subject": "Tin học",
+          "lead_teacher": "Yên",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -333,11 +333,11 @@
           "is_double": false
         },
         "Tiết 9": {
-          "subject": "Stem & Robotic",
-          "lead_teacher": "Phương Anh",
+          "subject": "Bổ trợ T.Anh",
+          "lead_teacher": "Vũ Hà",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 10": null
       }
@@ -359,32 +359,32 @@
           "is_double": true
         },
         "Tiết 3": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Hạnh",
+          "subject": "Science",
+          "lead_teacher": "Vincent",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 4": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Hạnh",
+          "subject": "Science",
+          "lead_teacher": "Vincent",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 5": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Hạnh",
+          "subject": "Science",
+          "lead_teacher": "Vincent",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 6": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Hạnh",
+          "subject": "Global English",
+          "lead_teacher": "Saloni",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 7": {
           "subject": "Bổ trợ T.Anh",
@@ -394,22 +394,22 @@
           "is_double": false
         },
         "Tiết 8": {
-          "subject": "Tiếng Việt",
+          "subject": "Toán học",
           "lead_teacher": "Hạnh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 9": {
-          "subject": "Tiếng Việt",
+          "subject": "Bổ trợ T.Việt",
           "lead_teacher": "Hạnh",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 10": {
-          "subject": "Maths",
-          "lead_teacher": "Vincent",
+          "subject": "Mỹ thuật",
+          "lead_teacher": "Lê",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -418,42 +418,42 @@
       "Thứ 3": {
         "Tiết 1": {
           "subject": "Global English",
-          "lead_teacher": "Saloni",
+          "lead_teacher": "Hồng",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "Tiếng Việt",
+          "subject": "Toán học",
           "lead_teacher": "Hạnh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 3": {
+          "subject": "Toán học",
+          "lead_teacher": "Hạnh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 4": {
+          "subject": "Science",
+          "lead_teacher": "Hồng",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 5": {
           "subject": "TN - XH",
           "lead_teacher": "Hạnh",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 4": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Hạnh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 5": {
-          "subject": "Stem & Robotic",
-          "lead_teacher": "Phương Anh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
         "Tiết 6": {
-          "subject": "Global English",
-          "lead_teacher": "Hồng",
+          "subject": "GDTC",
+          "lead_teacher": "Thu",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -466,11 +466,11 @@
           "is_double": false
         },
         "Tiết 8": {
-          "subject": "Bổ trợ T.Việt",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Hạnh",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 9": {
           "subject": "Tiếng Việt",
@@ -480,11 +480,11 @@
           "is_double": true
         },
         "Tiết 10": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Hạnh",
+          "subject": "Global English",
+          "lead_teacher": "Hồng",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         }
       },
       "Thứ 4": {
@@ -503,90 +503,18 @@
           "is_double": true
         },
         "Tiết 3": {
-          "subject": "Global English",
-          "lead_teacher": "Saloni",
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Hạnh",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 4": {
-          "subject": "TN - XH",
-          "lead_teacher": "Hạnh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 5": {
-          "subject": "Science",
-          "lead_teacher": "Hồng",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 6": {
-          "subject": "Stem & Robotic",
-          "lead_teacher": "Phương Anh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 7": {
-          "subject": "Bổ trợ Toán",
-          "lead_teacher": "Hạnh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 8": {
-          "subject": "Bổ trợ Toán",
-          "lead_teacher": "Hạnh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 9": {
           "subject": "GDTC",
           "lead_teacher": "Thu",
           "co_teacher": "",
           "room": "",
           "is_double": false
-        },
-        "Tiết 10": {
-          "subject": "Bổ trợ T.Việt",
-          "lead_teacher": "Hạnh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        }
-      },
-      "Thứ 5": {
-        "Tiết 1": {
-          "subject": "Đạo đức",
-          "lead_teacher": "Hạnh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 2": {
-          "subject": "Global English",
-          "lead_teacher": "Saloni",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 3": {
-          "subject": "Mỹ thuật",
-          "lead_teacher": "Lê",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 4": {
-          "subject": "Toán học",
-          "lead_teacher": "Hạnh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
         },
         "Tiết 5": {
           "subject": "Tiếng Việt",
@@ -596,52 +524,124 @@
           "is_double": true
         },
         "Tiết 6": {
-          "subject": "HĐTN",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Hạnh",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 7": {
-          "subject": "GDTC",
-          "lead_teacher": "Thu",
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Hạnh",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 8": {
           "subject": "Global English",
-          "lead_teacher": "Hồng",
+          "lead_teacher": "Saloni",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 9": {
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Hạnh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 10": {
-          "subject": "Science",
+          "subject": "Bổ trợ Toán",
+          "lead_teacher": "Hạnh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        }
+      },
+      "Thứ 5": {
+        "Tiết 1": {
+          "subject": "HĐTN",
+          "lead_teacher": "Hạnh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 2": {
+          "subject": "Stem & Robotic",
+          "lead_teacher": "Phương Anh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 3": {
+          "subject": "Tin học",
+          "lead_teacher": "Yên",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 4": {
+          "subject": "Maths",
           "lead_teacher": "Vincent",
           "co_teacher": "",
           "room": "",
           "is_double": false
-        }
-      },
-      "Thứ 6": {
-        "Tiết 1": {
-          "subject": "Toán học",
+        },
+        "Tiết 5": {
+          "subject": "Tiếng Việt",
           "lead_teacher": "Hạnh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
+        "Tiết 6": {
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Hạnh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 7": {
+          "subject": "Bổ trợ T.Việt",
+          "lead_teacher": "Hạnh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 8": {
+          "subject": "Bổ trợ Toán",
+          "lead_teacher": "Hạnh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 9": {
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Hạnh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 10": {
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Hạnh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        }
+      },
+      "Thứ 6": {
+        "Tiết 1": {
+          "subject": "TN - XH",
+          "lead_teacher": "Hạnh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
         "Tiết 2": {
-          "subject": "Maths",
-          "lead_teacher": "Vincent",
+          "subject": "Đạo đức",
+          "lead_teacher": "Hạnh",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -654,8 +654,8 @@
           "is_double": false
         },
         "Tiết 4": {
-          "subject": "Âm nhạc",
-          "lead_teacher": "Nghĩa",
+          "subject": "Maths",
+          "lead_teacher": "Hồng",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -668,39 +668,39 @@
           "is_double": false
         },
         "Tiết 6": {
-          "subject": "Tin học",
-          "lead_teacher": "Yên",
+          "subject": "Maths",
+          "lead_teacher": "Vincent",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 7": {
-          "subject": "Science",
-          "lead_teacher": "Vincent",
+          "subject": "Âm nhạc",
+          "lead_teacher": "Nghĩa",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 8": {
-          "subject": "Science",
-          "lead_teacher": "Vincent",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 9": {
-          "subject": "Maths",
-          "lead_teacher": "Hồng",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 10": {
           "subject": "Global English",
           "lead_teacher": "Saloni",
           "co_teacher": "",
           "room": "",
           "is_double": false
+        },
+        "Tiết 9": {
+          "subject": "Global English",
+          "lead_teacher": "Saloni",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 10": {
+          "subject": "Stem & Robotic",
+          "lead_teacher": "Phương Anh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
         }
       }
     },
@@ -714,32 +714,32 @@
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "Tiếng Việt",
+          "subject": "Toán học",
           "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 3": {
-          "subject": "Tiếng Việt",
+          "subject": "Toán học",
           "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 4": {
-          "subject": "Đạo đức",
-          "lead_teacher": "Chi",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 5": {
           "subject": "Toán học",
           "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
           "is_double": true
+        },
+        "Tiết 5": {
+          "subject": "Đạo đức",
+          "lead_teacher": "Chi",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
         },
         "Tiết 6": {
           "subject": "Toán học",
@@ -756,14 +756,14 @@
           "is_double": true
         },
         "Tiết 8": {
-          "subject": "Toán học",
+          "subject": "TN - XH",
           "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 9": {
-          "subject": "Toán học",
+          "subject": "Bổ trợ Toán",
           "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
@@ -773,63 +773,63 @@
       },
       "Thứ 3": {
         "Tiết 1": {
-          "subject": "Toán học",
-          "lead_teacher": "Tiểu Hà",
+          "subject": "Global Success",
+          "lead_teacher": "Vũ Hà",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 2": {
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 3": {
-          "subject": "Âm nhạc",
-          "lead_teacher": "Nghĩa",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 4": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Mela",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 5": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Tiểu Hà",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 6": {
           "subject": "Stem & Robotic",
           "lead_teacher": "Ngọc",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
-        "Tiết 7": {
+        "Tiết 4": {
           "subject": "Tiếng Việt",
           "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
+        "Tiết 5": {
+          "subject": "TN - XH",
+          "lead_teacher": "Tiểu Hà",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 6": {
+          "subject": "Âm nhạc",
+          "lead_teacher": "Nghĩa",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 7": {
+          "subject": "Bổ trợ T.Việt",
+          "lead_teacher": "Tiểu Hà",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
         "Tiết 8": {
-          "subject": "Bổ trợ Toán",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 9": {
-          "subject": "Bổ trợ Toán",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
@@ -839,15 +839,15 @@
       },
       "Thứ 4": {
         "Tiết 1": {
-          "subject": "TN - XH",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 2": {
-          "subject": "Stem & Robotic",
-          "lead_teacher": "Ngọc",
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
           "is_double": true
@@ -881,11 +881,11 @@
           "is_double": true
         },
         "Tiết 7": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Tiểu Hà",
+          "subject": "Bright Ideas",
+          "lead_teacher": "Mela",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 8": {
           "subject": "Tiếng Việt",
@@ -895,74 +895,74 @@
           "is_double": true
         },
         "Tiết 9": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Tiểu Hà",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 10": null
-      },
-      "Thứ 5": {
-        "Tiết 1": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Tiểu Hà",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 2": {
-          "subject": "GDTC",
-          "lead_teacher": "Thu",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 3": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Mela",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 4": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Mela",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 5": {
-          "subject": "Tin học",
-          "lead_teacher": "Yên",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 6": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Vũ Hà",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 7": {
-          "subject": "Bổ trợ T.Việt",
-          "lead_teacher": "Tiểu Hà",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 8": {
           "subject": "Bổ trợ T.Anh",
           "lead_teacher": "Vũ Hà",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 9": {
+        "Tiết 10": null
+      },
+      "Thứ 5": {
+        "Tiết 1": {
+          "subject": "Toán học",
+          "lead_teacher": "Tiểu Hà",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 2": {
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Tiểu Hà",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 3": {
+          "subject": "Global Success",
+          "lead_teacher": "Vũ Hà",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 4": {
+          "subject": "HĐTN",
+          "lead_teacher": "Tiểu Hà",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 5": {
+          "subject": "GDTC",
+          "lead_teacher": "Thu",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 6": {
+          "subject": "Bright Ideas",
+          "lead_teacher": "Vũ Hà",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 7": {
           "subject": "Bổ trợ T.Việt",
           "lead_teacher": "Tiểu Hà",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 8": {
+          "subject": "Bổ trợ Toán",
+          "lead_teacher": "Tiểu Hà",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 9": {
+          "subject": "Bổ trợ T.Anh",
+          "lead_teacher": "Vũ Hà",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -971,29 +971,29 @@
       },
       "Thứ 6": {
         "Tiết 1": {
-          "subject": "HĐTN",
-          "lead_teacher": "Tiểu Hà",
+          "subject": "Tin học",
+          "lead_teacher": "Yên",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "TN - XH",
+          "subject": "Toán học",
           "lead_teacher": "Tiểu Hà",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 3": {
-          "subject": "Global Success",
-          "lead_teacher": "Vũ Hà",
+          "subject": "Bright Ideas",
+          "lead_teacher": "Mela",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 4": {
-          "subject": "Global Success",
-          "lead_teacher": "Vũ Hà",
+          "subject": "Bright Ideas",
+          "lead_teacher": "Mela",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -1006,29 +1006,29 @@
           "is_double": false
         },
         "Tiết 6": {
+          "subject": "Stem & Robotic",
+          "lead_teacher": "Ngọc",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 7": {
           "subject": "GDTC",
           "lead_teacher": "Thu",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 7": {
+        "Tiết 8": {
           "subject": "Mỹ thuật",
           "lead_teacher": "Lê",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 8": {
+        "Tiết 9": {
           "subject": "Bright Ideas",
           "lead_teacher": "Mela",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 9": {
-          "subject": "Bổ trợ T.Anh",
-          "lead_teacher": "Vũ Hà",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -1046,25 +1046,25 @@
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "Science",
-          "lead_teacher": "Vũ Hà",
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 3": {
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 4": {
-          "subject": "Mỹ thuật",
-          "lead_teacher": "Lê",
+          "subject": "Stem & Robotic",
+          "lead_teacher": "Ngọc",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 5": {
           "subject": "Tiếng Việt",
@@ -1074,32 +1074,32 @@
           "is_double": true
         },
         "Tiết 6": {
-          "subject": "Maths",
-          "lead_teacher": "Vũ Hà",
+          "subject": "Tin học",
+          "lead_teacher": "Yên",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 7": {
-          "subject": "Global English",
+          "subject": "Science",
           "lead_teacher": "Vũ Hà",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 8": {
-          "subject": "Bổ trợ T.Việt",
+          "subject": "Stem & Robotic",
+          "lead_teacher": "Ngọc",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 9": {
+          "subject": "Tiếng Việt",
           "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
-          "is_double": false
-        },
-        "Tiết 9": {
-          "subject": "Maths",
-          "lead_teacher": "Vincent",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 10": {
           "subject": "Tiếng Việt",
@@ -1111,7 +1111,7 @@
       },
       "Thứ 3": {
         "Tiết 1": {
-          "subject": "Maths",
+          "subject": "Science",
           "lead_teacher": "Vincent",
           "co_teacher": "",
           "room": "",
@@ -1119,62 +1119,62 @@
         },
         "Tiết 2": {
           "subject": "Global English",
-          "lead_teacher": "Vũ Hà",
+          "lead_teacher": "Mela",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 3": {
-          "subject": "Maths",
+          "subject": "Science",
           "lead_teacher": "Vincent",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 4": {
-          "subject": "Stem & Robotic",
-          "lead_teacher": "Ngọc",
+          "subject": "Science",
+          "lead_teacher": "Vincent",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 5": {
+          "subject": "Maths",
+          "lead_teacher": "Vincent",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 6": {
+          "subject": "Toán học",
+          "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
-        "Tiết 5": {
+        "Tiết 7": {
           "subject": "Tiếng Việt",
           "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
-        "Tiết 6": {
-          "subject": "TN - XH",
-          "lead_teacher": "Chi",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 7": {
-          "subject": "Stem & Robotic",
-          "lead_teacher": "Ngọc",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
         "Tiết 8": {
-          "subject": "Global English",
-          "lead_teacher": "Mela",
+          "subject": "Maths",
+          "lead_teacher": "Vincent",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 9": {
-          "subject": "Tiếng Việt",
+          "subject": "Bổ trợ Toán",
           "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 10": {
-          "subject": "Tiếng Việt",
+          "subject": "Toán học",
           "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
@@ -1183,121 +1183,49 @@
       },
       "Thứ 4": {
         "Tiết 1": {
-          "subject": "HĐTN",
-          "lead_teacher": "Chi",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 2": {
-          "subject": "Science",
+          "subject": "Maths",
           "lead_teacher": "Vincent",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 3": {
-          "subject": "Toán học",
-          "lead_teacher": "Khánh Linh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 4": {
+        "Tiết 2": {
           "subject": "Tiếng Việt",
           "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
-        "Tiết 5": {
+        "Tiết 3": {
           "subject": "Global English",
           "lead_teacher": "Mela",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 6": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Khánh Linh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 7": {
-          "subject": "Bổ trợ T.Anh",
-          "lead_teacher": "Vũ Hà",
+        "Tiết 4": {
+          "subject": "Global English",
+          "lead_teacher": "Mela",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 8": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Khánh Linh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 9": {
-          "subject": "Science",
-          "lead_teacher": "Vincent",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 10": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Khánh Linh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        }
-      },
-      "Thứ 5": {
-        "Tiết 1": {
+        "Tiết 5": {
           "subject": "GDTC",
           "lead_teacher": "Thu",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 2": {
+        "Tiết 6": {
           "subject": "Global English",
           "lead_teacher": "Mela",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 3": {
-          "subject": "Toán học",
-          "lead_teacher": "Khánh Linh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 4": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Khánh Linh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 5": {
-          "subject": "Science",
-          "lead_teacher": "Vincent",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 6": {
-          "subject": "Đạo đức",
-          "lead_teacher": "Chi",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
         "Tiết 7": {
-          "subject": "Bổ trợ Toán",
+          "subject": "Toán học",
           "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
@@ -1311,34 +1239,34 @@
           "is_double": false
         },
         "Tiết 9": {
-          "subject": "Bổ trợ Toán",
+          "subject": "Bổ trợ T.Việt",
           "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 10": {
-          "subject": "Tiếng Việt",
+          "subject": "Bổ trợ Toán",
           "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         }
       },
-      "Thứ 6": {
+      "Thứ 5": {
         "Tiết 1": {
-          "subject": "Tin học",
-          "lead_teacher": "Yên",
+          "subject": "TN - XH",
+          "lead_teacher": "Chi",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "Toán học",
-          "lead_teacher": "Khánh Linh",
+          "subject": "Maths",
+          "lead_teacher": "Vũ Hà",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 3": {
           "subject": "Toán học",
@@ -1348,25 +1276,25 @@
           "is_double": true
         },
         "Tiết 4": {
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 5": {
-          "subject": "Sinh hoạt lớp",
-          "lead_teacher": "Khánh Linh",
+          "subject": "HĐTN",
+          "lead_teacher": "Chi",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 6": {
-          "subject": "Global English",
-          "lead_teacher": "Mela",
+          "subject": "Toán học",
+          "lead_teacher": "Khánh Linh",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 7": {
           "subject": "Bổ trợ T.Anh",
@@ -1376,8 +1304,80 @@
           "is_double": false
         },
         "Tiết 8": {
+          "subject": "Toán học",
+          "lead_teacher": "Khánh Linh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 9": {
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Khánh Linh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 10": {
+          "subject": "Bổ trợ T.Anh",
+          "lead_teacher": "Vũ Hà",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        }
+      },
+      "Thứ 6": {
+        "Tiết 1": {
+          "subject": "Đạo đức",
+          "lead_teacher": "Chi",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 2": {
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Khánh Linh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 3": {
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Khánh Linh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 4": {
           "subject": "TN - XH",
           "lead_teacher": "Chi",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 5": {
+          "subject": "Sinh hoạt lớp",
+          "lead_teacher": "Khánh Linh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 6": {
+          "subject": "Mỹ thuật",
+          "lead_teacher": "Lê",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 7": {
+          "subject": "Global English",
+          "lead_teacher": "Vũ Hà",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 8": {
+          "subject": "GDTC",
+          "lead_teacher": "Thu",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -1390,8 +1390,8 @@
           "is_double": false
         },
         "Tiết 10": {
-          "subject": "GDTC",
-          "lead_teacher": "Thu",
+          "subject": "Global English",
+          "lead_teacher": "Vũ Hà",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -1422,11 +1422,11 @@
           "is_double": true
         },
         "Tiết 4": {
-          "subject": "Toán học",
-          "lead_teacher": "Chín",
+          "subject": "Đạo đức",
+          "lead_teacher": "Chi",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 5": {
           "subject": "Toán học",
@@ -1443,25 +1443,25 @@
           "is_double": true
         },
         "Tiết 7": {
-          "subject": "Âm nhạc",
-          "lead_teacher": "Nghĩa",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 8": {
           "subject": "Toán học",
           "lead_teacher": "Chín",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
-        "Tiết 9": {
-          "subject": "Bổ trợ Toán",
+        "Tiết 8": {
+          "subject": "Bổ trợ T.Việt",
           "lead_teacher": "Chín",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
+        },
+        "Tiết 9": {
+          "subject": "Âm nhạc",
+          "lead_teacher": "Nghĩa",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
         },
         "Tiết 10": null
       },
@@ -1474,11 +1474,11 @@
           "is_double": true
         },
         "Tiết 2": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Catie",
+          "subject": "Toán học",
+          "lead_teacher": "Chín",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 3": {
           "subject": "Bright Ideas",
@@ -1495,11 +1495,11 @@
           "is_double": false
         },
         "Tiết 5": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Catie",
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Chín",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 6": {
           "subject": "Tiếng Việt",
@@ -1516,18 +1516,18 @@
           "is_double": true
         },
         "Tiết 8": {
-          "subject": "Bổ trợ T.Anh",
-          "lead_teacher": "Nguyễn Linh",
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Chín",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 9": {
-          "subject": "Bổ trợ T.Anh",
-          "lead_teacher": "Nguyễn Linh",
+          "subject": "Tiếng Việt",
+          "lead_teacher": "Chín",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 10": null
       },
@@ -1540,25 +1540,25 @@
           "is_double": true
         },
         "Tiết 2": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Chín",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 3": {
-          "subject": "Đạo đức",
-          "lead_teacher": "Chi",
+          "subject": "Bright Ideas",
+          "lead_teacher": "Catie",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 4": {
+        "Tiết 3": {
           "subject": "Tiếng Việt",
           "lead_teacher": "Chín",
           "co_teacher": "",
           "room": "",
           "is_double": true
+        },
+        "Tiết 4": {
+          "subject": "Bright Ideas",
+          "lead_teacher": "Catie",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
         },
         "Tiết 5": {
           "subject": "Tiếng Việt",
@@ -1582,14 +1582,14 @@
           "is_double": true
         },
         "Tiết 8": {
-          "subject": "Tiếng Việt",
+          "subject": "Bổ trợ Toán",
           "lead_teacher": "Chín",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 9": {
-          "subject": "Tiếng Việt",
+          "subject": "Bổ trợ Toán",
           "lead_teacher": "Chín",
           "co_teacher": "",
           "room": "",
@@ -1606,8 +1606,8 @@
           "is_double": true
         },
         "Tiết 2": {
-          "subject": "TN - XH",
-          "lead_teacher": "Chín",
+          "subject": "Tin học",
+          "lead_teacher": "Yên",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -1620,32 +1620,32 @@
           "is_double": false
         },
         "Tiết 4": {
-          "subject": "GDTC",
-          "lead_teacher": "Thu",
+          "subject": "TN - XH",
+          "lead_teacher": "Chín",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 5": {
-          "subject": "Global Success",
-          "lead_teacher": "Nguyễn Linh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 6": {
           "subject": "Stem & Robotic",
           "lead_teacher": "Ngọc",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
-        "Tiết 7": {
-          "subject": "Bổ trợ Toán",
-          "lead_teacher": "Chín",
+        "Tiết 6": {
+          "subject": "GDTC",
+          "lead_teacher": "Thu",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
+        },
+        "Tiết 7": {
+          "subject": "Bổ trợ T.Anh",
+          "lead_teacher": "Nguyễn Linh",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
         },
         "Tiết 8": {
           "subject": "Bổ trợ T.Việt",
@@ -1655,8 +1655,8 @@
           "is_double": false
         },
         "Tiết 9": {
-          "subject": "Bổ trợ T.Việt",
-          "lead_teacher": "Chín",
+          "subject": "Bổ trợ T.Anh",
+          "lead_teacher": "Nguyễn Linh",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -1665,25 +1665,25 @@
       },
       "Thứ 6": {
         "Tiết 1": {
-          "subject": "Bright Ideas",
+          "subject": "Global Success",
           "lead_teacher": "Nguyễn Linh",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "Mỹ thuật",
-          "lead_teacher": "Lê",
+          "subject": "Bright Ideas",
+          "lead_teacher": "Nguyễn Linh",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 3": {
-          "subject": "Công nghệ",
-          "lead_teacher": "Chi",
+          "subject": "Stem & Robotic",
+          "lead_teacher": "Ngọc",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 4": {
           "subject": "Global Success",
@@ -1700,29 +1700,29 @@
           "is_double": false
         },
         "Tiết 6": {
-          "subject": "HĐTN",
-          "lead_teacher": "Chi",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 7": {
           "subject": "GDTC",
           "lead_teacher": "Thu",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 8": {
-          "subject": "Stem & Robotic",
-          "lead_teacher": "Ngọc",
+        "Tiết 7": {
+          "subject": "Công nghệ",
+          "lead_teacher": "Chi",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
+        },
+        "Tiết 8": {
+          "subject": "HĐTN",
+          "lead_teacher": "Chi",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
         },
         "Tiết 9": {
-          "subject": "Tin học",
-          "lead_teacher": "Yên",
+          "subject": "Mỹ thuật",
+          "lead_teacher": "Lê",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -1768,18 +1768,18 @@
           "is_double": true
         },
         "Tiết 6": {
-          "subject": "Âm nhạc",
-          "lead_teacher": "Nghĩa",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 7": {
           "subject": "Toán học",
           "lead_teacher": "Chiến",
           "co_teacher": "",
           "room": "",
           "is_double": true
+        },
+        "Tiết 7": {
+          "subject": "Âm nhạc",
+          "lead_teacher": "Nghĩa",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
         },
         "Tiết 8": {
           "subject": "Toán học",
@@ -1949,15 +1949,15 @@
       },
       "Thứ 5": {
         "Tiết 1": {
-          "subject": "Maths",
-          "lead_teacher": "Vincent",
+          "subject": "HĐTN",
+          "lead_teacher": "Chiến",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "Maths",
-          "lead_teacher": "Vincent",
+          "subject": "Công nghệ",
+          "lead_teacher": "Chiến",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -1970,15 +1970,15 @@
           "is_double": false
         },
         "Tiết 4": {
-          "subject": "HĐTN",
-          "lead_teacher": "Chiến",
+          "subject": "GDTC",
+          "lead_teacher": "Thu",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 5": {
-          "subject": "GDTC",
-          "lead_teacher": "Thu",
+          "subject": "Global English",
+          "lead_teacher": "Nguyễn Linh",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -1991,18 +1991,18 @@
           "is_double": false
         },
         "Tiết 7": {
-          "subject": "Bổ trợ Toán",
-          "lead_teacher": "Chiến",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 8": {
           "subject": "Bổ trợ T.Việt",
           "lead_teacher": "Chiến",
           "co_teacher": "",
           "room": "",
           "is_double": false
+        },
+        "Tiết 8": {
+          "subject": "Bổ trợ Toán",
+          "lead_teacher": "Chiến",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
         },
         "Tiết 9": {
           "subject": "Bổ trợ Toán",
@@ -2021,15 +2021,15 @@
       },
       "Thứ 6": {
         "Tiết 1": {
-          "subject": "Công nghệ",
-          "lead_teacher": "Chiến",
+          "subject": "GDTC",
+          "lead_teacher": "Thu",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "Global English",
-          "lead_teacher": "Nguyễn Linh",
+          "subject": "Maths",
+          "lead_teacher": "Vincent",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -2070,8 +2070,8 @@
           "is_double": false
         },
         "Tiết 8": {
-          "subject": "GDTC",
-          "lead_teacher": "Thu",
+          "subject": "Maths",
+          "lead_teacher": "Vincent",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -2123,18 +2123,18 @@
           "is_double": true
         },
         "Tiết 5": {
-          "subject": "Âm nhạc",
-          "lead_teacher": "Nghĩa",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 6": {
           "subject": "Toán học",
           "lead_teacher": "Hải",
           "co_teacher": "",
           "room": "",
           "is_double": true
+        },
+        "Tiết 6": {
+          "subject": "Âm nhạc",
+          "lead_teacher": "Nghĩa",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
         },
         "Tiết 7": {
           "subject": "Toán học",
@@ -2210,18 +2210,18 @@
           "is_double": true
         },
         "Tiết 8": {
-          "subject": "Bổ trợ T.Việt",
+          "subject": "Bổ trợ Toán",
           "lead_teacher": "Hải",
           "co_teacher": "Chi",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 9": {
-          "subject": "Bổ trợ T.Việt",
+          "subject": "Bổ trợ Toán",
           "lead_teacher": "Hải",
           "co_teacher": "Chi",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 10": null
       },
@@ -2248,18 +2248,18 @@
           "is_double": true
         },
         "Tiết 4": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Catie",
+          "subject": "Tin học",
+          "lead_teacher": "Yên",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 5": {
-          "subject": "Stem & Robotic",
-          "lead_teacher": "Ngọc",
+          "subject": "Bright Ideas",
+          "lead_teacher": "Catie",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 6": {
           "subject": "Stem & Robotic",
@@ -2269,22 +2269,22 @@
           "is_double": true
         },
         "Tiết 7": {
-          "subject": "Bổ trợ Toán",
-          "lead_teacher": "Hải",
-          "co_teacher": "Chi",
+          "subject": "Stem & Robotic",
+          "lead_teacher": "Ngọc",
+          "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 8": {
-          "subject": "Bổ trợ Toán",
-          "lead_teacher": "Hải",
-          "co_teacher": "Chi",
+          "subject": "Mỹ thuật",
+          "lead_teacher": "Lê",
+          "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 9": {
-          "subject": "Tin học",
-          "lead_teacher": "Yên",
+          "subject": "LS - ĐL",
+          "lead_teacher": "Hải",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -2293,8 +2293,8 @@
       },
       "Thứ 5": {
         "Tiết 1": {
-          "subject": "Mỹ thuật",
-          "lead_teacher": "Lê",
+          "subject": "LS - ĐL",
+          "lead_teacher": "Hải",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -2314,15 +2314,15 @@
           "is_double": false
         },
         "Tiết 4": {
-          "subject": "Khoa học",
-          "lead_teacher": "Hải",
+          "subject": "Bright Ideas",
+          "lead_teacher": "Catie",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 5": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Catie",
+          "subject": "Khoa học",
+          "lead_teacher": "Hải",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -2335,16 +2335,16 @@
           "is_double": false
         },
         "Tiết 7": {
-          "subject": "LS - ĐL",
+          "subject": "Bổ trợ T.Việt",
           "lead_teacher": "Hải",
-          "co_teacher": "",
+          "co_teacher": "Chi",
           "room": "",
           "is_double": false
         },
         "Tiết 8": {
-          "subject": "LS - ĐL",
+          "subject": "Bổ trợ T.Việt",
           "lead_teacher": "Hải",
-          "co_teacher": "",
+          "co_teacher": "Chi",
           "room": "",
           "is_double": false
         },
@@ -2359,8 +2359,8 @@
       },
       "Thứ 6": {
         "Tiết 1": {
-          "subject": "HĐTN",
-          "lead_teacher": "Hải",
+          "subject": "Công nghệ",
+          "lead_teacher": "Ngọc",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -2380,8 +2380,8 @@
           "is_double": false
         },
         "Tiết 4": {
-          "subject": "Công nghệ",
-          "lead_teacher": "Ngọc",
+          "subject": "HĐTN",
+          "lead_teacher": "Hải",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -2455,11 +2455,11 @@
           "is_double": true
         },
         "Tiết 5": {
-          "subject": "Toán học",
-          "lead_teacher": "Hiền",
+          "subject": "Âm nhạc",
+          "lead_teacher": "Nghĩa",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 6": {
           "subject": "Toán học",
@@ -2469,21 +2469,21 @@
           "is_double": true
         },
         "Tiết 7": {
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Hiền",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 8": {
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Hiền",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 9": {
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "lead_teacher": "Hiền",
           "co_teacher": "",
           "room": "",
@@ -2535,22 +2535,22 @@
           "is_double": true
         },
         "Tiết 7": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Hiền",
+          "subject": "Tin học",
+          "lead_teacher": "Yên",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 8": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Hiền",
+          "subject": "Stem & Robotic",
+          "lead_teacher": "Phương Anh",
           "co_teacher": "",
           "room": "",
           "is_double": true
         },
         "Tiết 9": {
-          "subject": "Tiếng Việt",
-          "lead_teacher": "Hiền",
+          "subject": "Stem & Robotic",
+          "lead_teacher": "Phương Anh",
           "co_teacher": "",
           "room": "",
           "is_double": true
@@ -2559,15 +2559,15 @@
       },
       "Thứ 4": {
         "Tiết 1": {
-          "subject": "Âm nhạc",
-          "lead_teacher": "Nghĩa",
+          "subject": "Mỹ thuật",
+          "lead_teacher": "Lê",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "Mỹ thuật",
-          "lead_teacher": "Lê",
+          "subject": "LS - ĐL",
+          "lead_teacher": "Hiền",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -2580,7 +2580,7 @@
           "is_double": false
         },
         "Tiết 4": {
-          "subject": "LS - ĐL",
+          "subject": "Khoa học",
           "lead_teacher": "Hiền",
           "co_teacher": "",
           "room": "",
@@ -2594,32 +2594,32 @@
           "is_double": false
         },
         "Tiết 6": {
-          "subject": "Tin học",
-          "lead_teacher": "Yên",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 7": {
-          "subject": "Khoa học",
-          "lead_teacher": "Hiền",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 8": {
           "subject": "HĐTN",
           "lead_teacher": "Hiền",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 9": {
+        "Tiết 7": {
           "subject": "Bổ trợ T.Việt",
           "lead_teacher": "Hiền",
           "co_teacher": "Chi",
           "room": "",
           "is_double": false
+        },
+        "Tiết 8": {
+          "subject": "Bổ trợ T.Việt",
+          "lead_teacher": "Hiền",
+          "co_teacher": "Chi",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 9": {
+          "subject": "Bổ trợ Toán",
+          "lead_teacher": "Hiền",
+          "co_teacher": "Chi",
+          "room": "",
+          "is_double": true
         },
         "Tiết 10": null
       },
@@ -2632,53 +2632,53 @@
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "Stem & Robotic",
-          "lead_teacher": "Phương Anh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 3": {
-          "subject": "Stem & Robotic",
-          "lead_teacher": "Phương Anh",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 4": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Catie",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 5": {
           "subject": "Global Success",
           "lead_teacher": "Hồng",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
+        "Tiết 3": {
+          "subject": "Global Success",
+          "lead_teacher": "Hồng",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
+        "Tiết 4": {
+          "subject": "Toán học",
+          "lead_teacher": "Hiền",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 5": {
+          "subject": "Bright Ideas",
+          "lead_teacher": "Catie",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
         "Tiết 6": {
+          "subject": "Toán học",
+          "lead_teacher": "Hiền",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 7": {
+          "subject": "Toán học",
+          "lead_teacher": "Hiền",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
+        "Tiết 8": {
           "subject": "GDTC",
           "lead_teacher": "Thu",
           "co_teacher": "",
           "room": "",
           "is_double": false
-        },
-        "Tiết 7": {
-          "subject": "Bổ trợ T.Việt",
-          "lead_teacher": "Hiền",
-          "co_teacher": "Chi",
-          "room": "",
-          "is_double": false
-        },
-        "Tiết 8": {
-          "subject": "Bổ trợ Toán",
-          "lead_teacher": "Hiền",
-          "co_teacher": "Chi",
-          "room": "",
-          "is_double": true
         },
         "Tiết 9": {
           "subject": "Bổ trợ Toán",
@@ -2691,15 +2691,15 @@
       },
       "Thứ 6": {
         "Tiết 1": {
-          "subject": "Công nghệ",
-          "lead_teacher": "Ngọc",
+          "subject": "Toán học",
+          "lead_teacher": "Hiền",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 2": {
-          "subject": "Bright Ideas",
-          "lead_teacher": "Hồng",
+          "subject": "Công nghệ",
+          "lead_teacher": "Ngọc",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -2726,7 +2726,7 @@
           "is_double": false
         },
         "Tiết 6": {
-          "subject": "Global Success",
+          "subject": "Bright Ideas",
           "lead_teacher": "Hồng",
           "co_teacher": "",
           "room": "",
@@ -3040,15 +3040,15 @@
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
-        "Tiết 7": {
+        "Tiết 7": null,
+        "Tiết 8": null,
+        "Tiết 9": {
           "subject": "GDTC",
           "lead_teacher": "Liên",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 8": null,
-        "Tiết 9": null,
         "Tiết 10": null
       }
     },
@@ -3068,13 +3068,7 @@
           "room": "",
           "is_double": true
         },
-        "Tiết 3": {
-          "subject": "Âm nhạc",
-          "lead_teacher": "Nghĩa",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
+        "Tiết 3": null,
         "Tiết 4": {
           "subject": "Sinh học",
           "lead_teacher": "Giang",
@@ -3127,8 +3121,8 @@
       },
       "Thứ 3": {
         "Tiết 1": {
-          "subject": "Ngữ văn",
-          "lead_teacher": "Nga",
+          "subject": "Âm nhạc",
+          "lead_teacher": "Nghĩa",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -3332,7 +3326,13 @@
           "room": "A306",
           "is_double": false
         },
-        "Tiết 3": null,
+        "Tiết 3": {
+          "subject": "Ngữ văn",
+          "lead_teacher": "Nga",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
         "Tiết 4": null,
         "Tiết 5": {
           "subject": "Prepare",
@@ -3364,13 +3364,7 @@
           "room": "",
           "is_double": true
         },
-        "Tiết 3": {
-          "subject": "Âm nhạc",
-          "lead_teacher": "Nghĩa",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        },
+        "Tiết 3": null,
         "Tiết 4": {
           "subject": "Sinh học",
           "lead_teacher": "Giang",
@@ -3423,8 +3417,8 @@
       },
       "Thứ 3": {
         "Tiết 1": {
-          "subject": "Ngữ văn",
-          "lead_teacher": "Nga",
+          "subject": "Âm nhạc",
+          "lead_teacher": "Nghĩa",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -3652,7 +3646,13 @@
           "room": "",
           "is_double": false
         },
-        "Tiết 3": null,
+        "Tiết 3": {
+          "subject": "Ngữ văn",
+          "lead_teacher": "Nga",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
         "Tiết 4": null,
         "Tiết 5": {
           "subject": "Prepare",
@@ -4609,15 +4609,15 @@
         },
         "Tiết 4": null,
         "Tiết 5": null,
-        "Tiết 6": {
+        "Tiết 6": null,
+        "Tiết 7": null,
+        "Tiết 8": {
           "subject": "GDTC",
           "lead_teacher": "Liên",
           "co_teacher": "",
           "room": "",
           "is_double": false
         },
-        "Tiết 7": null,
-        "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": null
       }
@@ -4883,11 +4883,11 @@
           "is_double": false
         },
         "Tiết 7": {
-          "subject": "GD QPAN",
-          "lead_teacher": "Liên",
+          "subject": "Bổ trợ Văn",
+          "lead_teacher": "Du",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
         "Tiết 8": {
           "subject": "GDTC",
@@ -4941,10 +4941,16 @@
           "is_double": false
         },
         "Tiết 5": null,
-        "Tiết 6": null,
+        "Tiết 6": {
+          "subject": "GD QPAN",
+          "lead_teacher": "Liên",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
+        },
         "Tiết 7": {
-          "subject": "Bổ trợ Văn",
-          "lead_teacher": "Du",
+          "subject": "Bổ trợ Toán",
+          "lead_teacher": "Quyến",
           "co_teacher": "",
           "room": "",
           "is_double": true
@@ -4957,13 +4963,7 @@
           "is_double": false
         },
         "Tiết 9": null,
-        "Tiết 10": {
-          "subject": "Bổ trợ Toán",
-          "lead_teacher": "Quyến",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        }
+        "Tiết 10": null
       }
     },
     "11A1": {
@@ -5248,11 +5248,11 @@
           "is_double": false
         },
         "Tiết 10": {
-          "subject": "Bổ trợ T.Anh",
-          "lead_teacher": "Hồng",
+          "subject": "Bổ trợ Văn",
+          "lead_teacher": "Thuý",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         }
       },
       "Thứ 6": {
@@ -5276,18 +5276,18 @@
           "is_double": true
         },
         "Tiết 8": {
-          "subject": "Bổ trợ Văn",
-          "lead_teacher": "Thuý",
-          "co_teacher": "",
-          "room": "",
-          "is_double": true
-        },
-        "Tiết 9": {
           "subject": "Bổ trợ Toán",
           "lead_teacher": "Quyến",
           "co_teacher": "",
           "room": "",
           "is_double": true
+        },
+        "Tiết 9": {
+          "subject": "Bổ trợ T.Anh",
+          "lead_teacher": "Hồng",
+          "co_teacher": "",
+          "room": "",
+          "is_double": false
         },
         "Tiết 10": {
           "subject": "Bổ trợ T.Anh",
@@ -5308,8 +5308,8 @@
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "GDĐP",
-          "lead_teacher": "Du",
+          "subject": "Vật lí",
+          "lead_teacher": "Huy",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -5329,8 +5329,8 @@
           "is_double": false
         },
         "Tiết 5": {
-          "subject": "Vật lí",
-          "lead_teacher": "Huy",
+          "subject": "GDĐP",
+          "lead_teacher": "Du",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -5343,18 +5343,18 @@
           "is_double": true
         },
         "Tiết 7": {
-          "subject": "Toán học",
-          "lead_teacher": "Duy",
+          "subject": "Tin học",
+          "lead_teacher": "Yên",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 8": {
-          "subject": "Toán học",
-          "lead_teacher": "Duy",
+          "subject": "Lịch sử",
+          "lead_teacher": "Yến LS",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 9": {
           "subject": "Global Success TC",
@@ -5422,8 +5422,8 @@
           "is_double": true
         },
         "Tiết 8": {
-          "subject": "Lịch sử",
-          "lead_teacher": "Yến LS",
+          "subject": "Tin học",
+          "lead_teacher": "Yên",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -5458,14 +5458,14 @@
           "room": "A305",
           "is_double": false
         },
-        "Tiết 3": null,
-        "Tiết 4": {
-          "subject": "Tin học",
-          "lead_teacher": "Yên",
+        "Tiết 3": {
+          "subject": "Toán học",
+          "lead_teacher": "Duy",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
+        "Tiết 4": null,
         "Tiết 5": {
           "subject": "TNHN",
           "lead_teacher": "Thuý",
@@ -5603,12 +5603,18 @@
           "room": "",
           "is_double": false
         },
-        "Tiết 4": null,
+        "Tiết 4": {
+          "subject": "Toán học",
+          "lead_teacher": "Duy",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
         "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": {
-          "subject": "Tin học",
-          "lead_teacher": "Yên",
+          "subject": "Vật lí",
+          "lead_teacher": "Huy",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -5621,13 +5627,7 @@
           "room": "A305",
           "is_double": false
         },
-        "Tiết 10": {
-          "subject": "Vật lí",
-          "lead_teacher": "Huy",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        }
+        "Tiết 10": null
       }
     },
     "12A2": {
@@ -5640,8 +5640,8 @@
           "is_double": false
         },
         "Tiết 2": {
-          "subject": "GDĐP",
-          "lead_teacher": "Du",
+          "subject": "Vật lí",
+          "lead_teacher": "Huy",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -5661,8 +5661,8 @@
           "is_double": false
         },
         "Tiết 5": {
-          "subject": "Vật lí",
-          "lead_teacher": "Huy",
+          "subject": "GDĐP",
+          "lead_teacher": "Du",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -5675,18 +5675,18 @@
           "is_double": true
         },
         "Tiết 7": {
-          "subject": "Toán học",
-          "lead_teacher": "Duy",
+          "subject": "Tin học",
+          "lead_teacher": "Yên",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 8": {
-          "subject": "Toán học",
-          "lead_teacher": "Duy",
+          "subject": "Lịch sử",
+          "lead_teacher": "Yến LS",
           "co_teacher": "",
           "room": "",
-          "is_double": true
+          "is_double": false
         },
         "Tiết 9": {
           "subject": "Lịch sử TC",
@@ -5754,8 +5754,8 @@
           "is_double": true
         },
         "Tiết 8": {
-          "subject": "Lịch sử",
-          "lead_teacher": "Yến LS",
+          "subject": "Tin học",
+          "lead_teacher": "Yên",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -5790,14 +5790,14 @@
           "room": "",
           "is_double": false
         },
-        "Tiết 3": null,
-        "Tiết 4": {
-          "subject": "Tin học",
-          "lead_teacher": "Yên",
+        "Tiết 3": {
+          "subject": "Toán học",
+          "lead_teacher": "Duy",
           "co_teacher": "",
           "room": "",
-          "is_double": false
+          "is_double": true
         },
+        "Tiết 4": null,
         "Tiết 5": {
           "subject": "TNHN",
           "lead_teacher": "Thuý",
@@ -5935,12 +5935,18 @@
           "room": "",
           "is_double": false
         },
-        "Tiết 4": null,
+        "Tiết 4": {
+          "subject": "Toán học",
+          "lead_teacher": "Duy",
+          "co_teacher": "",
+          "room": "",
+          "is_double": true
+        },
         "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": {
-          "subject": "Tin học",
-          "lead_teacher": "Yên",
+          "subject": "Vật lí",
+          "lead_teacher": "Huy",
           "co_teacher": "",
           "room": "",
           "is_double": false
@@ -5953,13 +5959,7 @@
           "room": "",
           "is_double": false
         },
-        "Tiết 10": {
-          "subject": "Vật lí",
-          "lead_teacher": "Huy",
-          "co_teacher": "",
-          "room": "",
-          "is_double": false
-        }
+        "Tiết 10": null
       }
     }
   },
@@ -5968,11 +5968,7 @@
       "Thứ 2": {
         "Tiết 1": null,
         "Tiết 2": null,
-        "Tiết 3": {
-          "class": "1A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
+        "Tiết 3": null,
         "Tiết 4": {
           "class": "1A1",
           "subject": "Tiếng Việt",
@@ -5986,7 +5982,7 @@
         "Tiết 6": null,
         "Tiết 7": {
           "class": "1A1",
-          "subject": "Bổ trợ Toán",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 8": {
@@ -5994,7 +5990,11 @@
           "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 9": null,
+        "Tiết 9": {
+          "class": "1A1",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
         "Tiết 10": null
       },
       "Thứ 3": {
@@ -6011,7 +6011,7 @@
         "Tiết 3": null,
         "Tiết 4": {
           "class": "1A1",
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 5": {
@@ -6026,17 +6026,17 @@
         },
         "Tiết 7": {
           "class": "1A1",
-          "subject": "Tiếng Việt",
+          "subject": "Toán học",
           "room": ""
         },
         "Tiết 8": {
           "class": "1A1",
-          "subject": "Bổ trợ Toán",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 9": {
           "class": "1A1",
-          "subject": "Bổ trợ T.Việt",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 10": null
@@ -6044,44 +6044,12 @@
       "Thứ 4": {
         "Tiết 1": {
           "class": "1A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": {
-          "class": "1A1",
-          "subject": "Toán học",
-          "room": ""
-        },
-        "Tiết 5": {
-          "class": "1A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 6": null,
-        "Tiết 7": {
-          "class": "1A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 8": null,
-        "Tiết 9": {
-          "class": "1A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 10": null
-      },
-      "Thứ 5": {
-        "Tiết 1": {
-          "class": "1A1",
-          "subject": "Toán học",
+          "subject": "TN - XH",
           "room": ""
         },
         "Tiết 2": {
           "class": "1A1",
-          "subject": "TN - XH",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 3": {
@@ -6090,15 +6058,39 @@
           "room": ""
         },
         "Tiết 4": null,
-        "Tiết 5": null,
-        "Tiết 6": {
+        "Tiết 5": {
+          "class": "1A1",
+          "subject": "HĐTN",
+          "room": ""
+        },
+        "Tiết 6": null,
+        "Tiết 7": {
+          "class": "1A1",
+          "subject": "Bổ trợ T.Việt",
+          "room": ""
+        },
+        "Tiết 8": null,
+        "Tiết 9": {
+          "class": "1A1",
+          "subject": "Bổ trợ Toán",
+          "room": ""
+        },
+        "Tiết 10": null
+      },
+      "Thứ 5": {
+        "Tiết 1": null,
+        "Tiết 2": {
           "class": "1A1",
           "subject": "Toán học",
           "room": ""
         },
+        "Tiết 3": null,
+        "Tiết 4": null,
+        "Tiết 5": null,
+        "Tiết 6": null,
         "Tiết 7": {
           "class": "1A1",
-          "subject": "Tiếng Việt",
+          "subject": "Bổ trợ Toán",
           "room": ""
         },
         "Tiết 8": {
@@ -6114,14 +6106,22 @@
         "Tiết 10": null
       },
       "Thứ 6": {
-        "Tiết 1": null,
-        "Tiết 2": null,
-        "Tiết 3": {
+        "Tiết 1": {
           "class": "1A1",
-          "subject": "HĐTN",
+          "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 4": null,
+        "Tiết 2": {
+          "class": "1A1",
+          "subject": "Toán học",
+          "room": ""
+        },
+        "Tiết 3": null,
+        "Tiết 4": {
+          "class": "1A1",
+          "subject": "Toán học",
+          "room": ""
+        },
         "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
@@ -6142,26 +6142,42 @@
           "subject": "Toán học",
           "room": ""
         },
+        "Tiết 3": null,
+        "Tiết 4": null,
+        "Tiết 5": null,
+        "Tiết 6": null,
+        "Tiết 7": null,
+        "Tiết 8": {
+          "class": "1A2",
+          "subject": "Toán học",
+          "room": ""
+        },
+        "Tiết 9": {
+          "class": "1A2",
+          "subject": "Bổ trợ T.Việt",
+          "room": ""
+        },
+        "Tiết 10": null
+      },
+      "Thứ 3": {
+        "Tiết 1": null,
+        "Tiết 2": {
+          "class": "1A2",
+          "subject": "Toán học",
+          "room": ""
+        },
         "Tiết 3": {
           "class": "1A2",
-          "subject": "Tiếng Việt",
+          "subject": "Toán học",
           "room": ""
         },
-        "Tiết 4": {
-          "class": "1A2",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
+        "Tiết 4": null,
         "Tiết 5": {
           "class": "1A2",
-          "subject": "Tiếng Việt",
+          "subject": "TN - XH",
           "room": ""
         },
-        "Tiết 6": {
-          "class": "1A2",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
+        "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": {
           "class": "1A2",
@@ -6174,42 +6190,6 @@
           "room": ""
         },
         "Tiết 10": null
-      },
-      "Thứ 3": {
-        "Tiết 1": null,
-        "Tiết 2": {
-          "class": "1A2",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 3": {
-          "class": "1A2",
-          "subject": "TN - XH",
-          "room": ""
-        },
-        "Tiết 4": {
-          "class": "1A2",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 5": null,
-        "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": {
-          "class": "1A2",
-          "subject": "Bổ trợ T.Việt",
-          "room": ""
-        },
-        "Tiết 9": {
-          "class": "1A2",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 10": {
-          "class": "1A2",
-          "subject": "Tiếng Việt",
-          "room": ""
-        }
       },
       "Thứ 4": {
         "Tiết 1": {
@@ -6222,44 +6202,12 @@
           "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 3": null,
-        "Tiết 4": {
+        "Tiết 3": {
           "class": "1A2",
-          "subject": "TN - XH",
+          "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 5": null,
-        "Tiết 6": null,
-        "Tiết 7": {
-          "class": "1A2",
-          "subject": "Bổ trợ Toán",
-          "room": ""
-        },
-        "Tiết 8": {
-          "class": "1A2",
-          "subject": "Bổ trợ Toán",
-          "room": ""
-        },
-        "Tiết 9": null,
-        "Tiết 10": {
-          "class": "1A2",
-          "subject": "Bổ trợ T.Việt",
-          "room": ""
-        }
-      },
-      "Thứ 5": {
-        "Tiết 1": {
-          "class": "1A2",
-          "subject": "Đạo đức",
-          "room": ""
-        },
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": {
-          "class": "1A2",
-          "subject": "Toán học",
-          "room": ""
-        },
+        "Tiết 4": null,
         "Tiết 5": {
           "class": "1A2",
           "subject": "Tiếng Việt",
@@ -6267,25 +6215,77 @@
         },
         "Tiết 6": {
           "class": "1A2",
-          "subject": "HĐTN",
+          "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 7": null,
+        "Tiết 7": {
+          "class": "1A2",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
         "Tiết 8": null,
         "Tiết 9": {
           "class": "1A2",
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 10": null
+        "Tiết 10": {
+          "class": "1A2",
+          "subject": "Bổ trợ Toán",
+          "room": ""
+        }
+      },
+      "Thứ 5": {
+        "Tiết 1": {
+          "class": "1A2",
+          "subject": "HĐTN",
+          "room": ""
+        },
+        "Tiết 2": null,
+        "Tiết 3": null,
+        "Tiết 4": null,
+        "Tiết 5": {
+          "class": "1A2",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
+        "Tiết 6": {
+          "class": "1A2",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
+        "Tiết 7": {
+          "class": "1A2",
+          "subject": "Bổ trợ T.Việt",
+          "room": ""
+        },
+        "Tiết 8": {
+          "class": "1A2",
+          "subject": "Bổ trợ Toán",
+          "room": ""
+        },
+        "Tiết 9": {
+          "class": "1A2",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
+        "Tiết 10": {
+          "class": "1A2",
+          "subject": "Tiếng Việt",
+          "room": ""
+        }
       },
       "Thứ 6": {
         "Tiết 1": {
           "class": "1A2",
-          "subject": "Toán học",
+          "subject": "TN - XH",
           "room": ""
         },
-        "Tiết 2": null,
+        "Tiết 2": {
+          "class": "1A2",
+          "subject": "Đạo đức",
+          "room": ""
+        },
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
@@ -6301,20 +6301,20 @@
         "Tiết 1": null,
         "Tiết 2": {
           "class": "2A1",
-          "subject": "Tiếng Việt",
+          "subject": "Toán học",
           "room": ""
         },
         "Tiết 3": {
           "class": "2A1",
-          "subject": "Tiếng Việt",
+          "subject": "Toán học",
           "room": ""
         },
-        "Tiết 4": null,
-        "Tiết 5": {
+        "Tiết 4": {
           "class": "2A1",
           "subject": "Toán học",
           "room": ""
         },
+        "Tiết 5": null,
         "Tiết 6": {
           "class": "2A1",
           "subject": "Toán học",
@@ -6327,48 +6327,48 @@
         },
         "Tiết 8": {
           "class": "2A1",
-          "subject": "Toán học",
+          "subject": "TN - XH",
           "room": ""
         },
         "Tiết 9": {
           "class": "2A1",
-          "subject": "Toán học",
+          "subject": "Bổ trợ Toán",
           "room": ""
         },
         "Tiết 10": null
       },
       "Thứ 3": {
-        "Tiết 1": {
-          "class": "2A1",
-          "subject": "Toán học",
-          "room": ""
-        },
+        "Tiết 1": null,
         "Tiết 2": {
           "class": "2A1",
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 3": null,
-        "Tiết 4": null,
-        "Tiết 5": {
+        "Tiết 4": {
           "class": "2A1",
           "subject": "Tiếng Việt",
+          "room": ""
+        },
+        "Tiết 5": {
+          "class": "2A1",
+          "subject": "TN - XH",
           "room": ""
         },
         "Tiết 6": null,
         "Tiết 7": {
           "class": "2A1",
-          "subject": "Tiếng Việt",
+          "subject": "Bổ trợ T.Việt",
           "room": ""
         },
         "Tiết 8": {
           "class": "2A1",
-          "subject": "Bổ trợ Toán",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 9": {
           "class": "2A1",
-          "subject": "Bổ trợ Toán",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 10": null
@@ -6376,10 +6376,14 @@
       "Thứ 4": {
         "Tiết 1": {
           "class": "2A1",
-          "subject": "TN - XH",
+          "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 2": null,
+        "Tiết 2": {
+          "class": "2A1",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
         "Tiết 3": {
           "class": "2A1",
           "subject": "Tiếng Việt",
@@ -6400,32 +6404,32 @@
           "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 7": {
-          "class": "2A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
+        "Tiết 7": null,
         "Tiết 8": {
           "class": "2A1",
           "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 9": {
-          "class": "2A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
+        "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 5": {
         "Tiết 1": {
           "class": "2A1",
+          "subject": "Toán học",
+          "room": ""
+        },
+        "Tiết 2": {
+          "class": "2A1",
           "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 2": null,
         "Tiết 3": null,
-        "Tiết 4": null,
+        "Tiết 4": {
+          "class": "2A1",
+          "subject": "HĐTN",
+          "room": ""
+        },
         "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": {
@@ -6433,23 +6437,19 @@
           "subject": "Bổ trợ T.Việt",
           "room": ""
         },
-        "Tiết 8": null,
-        "Tiết 9": {
+        "Tiết 8": {
           "class": "2A1",
-          "subject": "Bổ trợ T.Việt",
+          "subject": "Bổ trợ Toán",
           "room": ""
         },
+        "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 6": {
-        "Tiết 1": {
-          "class": "2A1",
-          "subject": "HĐTN",
-          "room": ""
-        },
+        "Tiết 1": null,
         "Tiết 2": {
           "class": "2A1",
-          "subject": "TN - XH",
+          "subject": "Toán học",
           "room": ""
         },
         "Tiết 3": null,
@@ -6469,36 +6469,16 @@
           "subject": "Chào cờ",
           "room": ""
         },
-        "Tiết 2": null,
+        "Tiết 2": {
+          "class": "2A2",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
         "Tiết 3": {
           "class": "2A2",
-          "subject": "Toán học",
-          "room": ""
-        },
-        "Tiết 4": null,
-        "Tiết 5": {
-          "class": "2A2",
           "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": {
-          "class": "2A2",
-          "subject": "Bổ trợ T.Việt",
-          "room": ""
-        },
-        "Tiết 9": null,
-        "Tiết 10": {
-          "class": "2A2",
-          "subject": "Tiếng Việt",
-          "room": ""
-        }
-      },
-      "Thứ 3": {
-        "Tiết 1": null,
-        "Tiết 2": null,
-        "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": {
           "class": "2A2",
@@ -6519,35 +6499,63 @@
           "room": ""
         }
       },
-      "Thứ 4": {
+      "Thứ 3": {
         "Tiết 1": null,
         "Tiết 2": null,
-        "Tiết 3": {
+        "Tiết 3": null,
+        "Tiết 4": null,
+        "Tiết 5": null,
+        "Tiết 6": {
           "class": "2A2",
           "subject": "Toán học",
           "room": ""
         },
-        "Tiết 4": {
+        "Tiết 7": {
           "class": "2A2",
           "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 5": null,
-        "Tiết 6": {
+        "Tiết 8": null,
+        "Tiết 9": {
           "class": "2A2",
-          "subject": "Tiếng Việt",
+          "subject": "Bổ trợ Toán",
           "room": ""
         },
-        "Tiết 7": null,
-        "Tiết 8": {
-          "class": "2A2",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 9": null,
         "Tiết 10": {
           "class": "2A2",
+          "subject": "Toán học",
+          "room": ""
+        }
+      },
+      "Thứ 4": {
+        "Tiết 1": null,
+        "Tiết 2": {
+          "class": "2A2",
           "subject": "Tiếng Việt",
+          "room": ""
+        },
+        "Tiết 3": null,
+        "Tiết 4": null,
+        "Tiết 5": null,
+        "Tiết 6": null,
+        "Tiết 7": {
+          "class": "2A2",
+          "subject": "Toán học",
+          "room": ""
+        },
+        "Tiết 8": {
+          "class": "2A2",
+          "subject": "Bổ trợ T.Việt",
+          "room": ""
+        },
+        "Tiết 9": {
+          "class": "2A2",
+          "subject": "Bổ trợ T.Việt",
+          "room": ""
+        },
+        "Tiết 10": {
+          "class": "2A2",
+          "subject": "Bổ trợ Toán",
           "room": ""
         }
       },
@@ -6565,45 +6573,37 @@
           "room": ""
         },
         "Tiết 5": null,
-        "Tiết 6": null,
-        "Tiết 7": {
+        "Tiết 6": {
           "class": "2A2",
-          "subject": "Bổ trợ Toán",
+          "subject": "Toán học",
           "room": ""
         },
+        "Tiết 7": null,
         "Tiết 8": {
           "class": "2A2",
-          "subject": "Bổ trợ T.Việt",
+          "subject": "Toán học",
           "room": ""
         },
         "Tiết 9": {
           "class": "2A2",
-          "subject": "Bổ trợ Toán",
-          "room": ""
-        },
-        "Tiết 10": {
-          "class": "2A2",
           "subject": "Tiếng Việt",
           "room": ""
-        }
+        },
+        "Tiết 10": null
       },
       "Thứ 6": {
         "Tiết 1": null,
         "Tiết 2": {
           "class": "2A2",
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 3": {
           "class": "2A2",
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 4": {
-          "class": "2A2",
-          "subject": "Toán học",
-          "room": ""
-        },
+        "Tiết 4": null,
         "Tiết 5": {
           "class": "2A2",
           "subject": "Sinh hoạt lớp",
@@ -6633,11 +6633,7 @@
           "subject": "Toán học",
           "room": ""
         },
-        "Tiết 4": {
-          "class": "3A1",
-          "subject": "Toán học",
-          "room": ""
-        },
+        "Tiết 4": null,
         "Tiết 5": {
           "class": "3A1",
           "subject": "Toán học",
@@ -6648,17 +6644,17 @@
           "subject": "Toán học",
           "room": ""
         },
-        "Tiết 7": null,
-        "Tiết 8": {
+        "Tiết 7": {
           "class": "3A1",
           "subject": "Toán học",
           "room": ""
         },
-        "Tiết 9": {
+        "Tiết 8": {
           "class": "3A1",
-          "subject": "Bổ trợ Toán",
+          "subject": "Bổ trợ T.Việt",
           "room": ""
         },
+        "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 3": {
@@ -6667,41 +6663,13 @@
           "subject": "Toán học",
           "room": ""
         },
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": null,
-        "Tiết 5": null,
-        "Tiết 6": {
-          "class": "3A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 7": {
-          "class": "3A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 8": null,
-        "Tiết 9": null,
-        "Tiết 10": null
-      },
-      "Thứ 4": {
-        "Tiết 1": {
-          "class": "3A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
         "Tiết 2": {
           "class": "3A1",
-          "subject": "Tiếng Việt",
+          "subject": "Toán học",
           "room": ""
         },
         "Tiết 3": null,
-        "Tiết 4": {
-          "class": "3A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
+        "Tiết 4": null,
         "Tiết 5": {
           "class": "3A1",
           "subject": "Tiếng Việt",
@@ -6725,6 +6693,46 @@
         "Tiết 9": {
           "class": "3A1",
           "subject": "Tiếng Việt",
+          "room": ""
+        },
+        "Tiết 10": null
+      },
+      "Thứ 4": {
+        "Tiết 1": {
+          "class": "3A1",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
+        "Tiết 2": null,
+        "Tiết 3": {
+          "class": "3A1",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
+        "Tiết 4": null,
+        "Tiết 5": {
+          "class": "3A1",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
+        "Tiết 6": {
+          "class": "3A1",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
+        "Tiết 7": {
+          "class": "3A1",
+          "subject": "Tiếng Việt",
+          "room": ""
+        },
+        "Tiết 8": {
+          "class": "3A1",
+          "subject": "Bổ trợ Toán",
+          "room": ""
+        },
+        "Tiết 9": {
+          "class": "3A1",
+          "subject": "Bổ trợ Toán",
           "room": ""
         },
         "Tiết 10": null
@@ -6735,34 +6743,26 @@
           "subject": "Toán học",
           "room": ""
         },
-        "Tiết 2": {
-          "class": "3A1",
-          "subject": "TN - XH",
-          "room": ""
-        },
+        "Tiết 2": null,
         "Tiết 3": {
           "class": "3A1",
           "subject": "TN - XH",
           "room": ""
         },
-        "Tiết 4": null,
-        "Tiết 5": null,
-        "Tiết 6": null,
-        "Tiết 7": {
+        "Tiết 4": {
           "class": "3A1",
-          "subject": "Bổ trợ Toán",
+          "subject": "TN - XH",
           "room": ""
         },
+        "Tiết 5": null,
+        "Tiết 6": null,
+        "Tiết 7": null,
         "Tiết 8": {
           "class": "3A1",
           "subject": "Bổ trợ T.Việt",
           "room": ""
         },
-        "Tiết 9": {
-          "class": "3A1",
-          "subject": "Bổ trợ T.Việt",
-          "room": ""
-        },
+        "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 6": {
@@ -6809,12 +6809,12 @@
           "subject": "Toán học",
           "room": ""
         },
-        "Tiết 6": null,
-        "Tiết 7": {
+        "Tiết 6": {
           "class": "3A2",
           "subject": "Toán học",
           "room": ""
         },
+        "Tiết 7": null,
         "Tiết 8": {
           "class": "3A2",
           "subject": "Toán học",
@@ -6900,24 +6900,28 @@
         "Tiết 10": null
       },
       "Thứ 5": {
-        "Tiết 1": null,
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": {
+        "Tiết 1": {
           "class": "3A2",
           "subject": "HĐTN",
           "room": ""
         },
+        "Tiết 2": {
+          "class": "3A2",
+          "subject": "Công nghệ",
+          "room": ""
+        },
+        "Tiết 3": null,
+        "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": {
           "class": "3A2",
-          "subject": "Bổ trợ Toán",
+          "subject": "Bổ trợ T.Việt",
           "room": ""
         },
         "Tiết 8": {
           "class": "3A2",
-          "subject": "Bổ trợ T.Việt",
+          "subject": "Bổ trợ Toán",
           "room": ""
         },
         "Tiết 9": {
@@ -6932,11 +6936,7 @@
         }
       },
       "Thứ 6": {
-        "Tiết 1": {
-          "class": "3A2",
-          "subject": "Công nghệ",
-          "room": ""
-        },
+        "Tiết 1": null,
         "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
@@ -6966,12 +6966,12 @@
           "subject": "Toán học",
           "room": ""
         },
-        "Tiết 5": null,
-        "Tiết 6": {
+        "Tiết 5": {
           "class": "4A1",
           "subject": "Toán học",
           "room": ""
         },
+        "Tiết 6": null,
         "Tiết 7": {
           "class": "4A1",
           "subject": "Toán học",
@@ -7027,12 +7027,12 @@
         },
         "Tiết 8": {
           "class": "4A1",
-          "subject": "Bổ trợ T.Việt",
+          "subject": "Bổ trợ Toán",
           "room": ""
         },
         "Tiết 9": {
           "class": "4A1",
-          "subject": "Bổ trợ T.Việt",
+          "subject": "Bổ trợ Toán",
           "room": ""
         },
         "Tiết 10": null
@@ -7056,29 +7056,29 @@
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
-        "Tiết 7": {
+        "Tiết 7": null,
+        "Tiết 8": null,
+        "Tiết 9": {
           "class": "4A1",
-          "subject": "Bổ trợ Toán",
+          "subject": "LS - ĐL",
           "room": ""
         },
-        "Tiết 8": {
-          "class": "4A1",
-          "subject": "Bổ trợ Toán",
-          "room": ""
-        },
-        "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 5": {
-        "Tiết 1": null,
+        "Tiết 1": {
+          "class": "4A1",
+          "subject": "LS - ĐL",
+          "room": ""
+        },
         "Tiết 2": null,
         "Tiết 3": null,
-        "Tiết 4": {
+        "Tiết 4": null,
+        "Tiết 5": {
           "class": "4A1",
           "subject": "Khoa học",
           "room": ""
         },
-        "Tiết 5": null,
         "Tiết 6": {
           "class": "4A1",
           "subject": "Khoa học",
@@ -7086,26 +7086,26 @@
         },
         "Tiết 7": {
           "class": "4A1",
-          "subject": "LS - ĐL",
+          "subject": "Bổ trợ T.Việt",
           "room": ""
         },
         "Tiết 8": {
           "class": "4A1",
-          "subject": "LS - ĐL",
+          "subject": "Bổ trợ T.Việt",
           "room": ""
         },
         "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 6": {
-        "Tiết 1": {
+        "Tiết 1": null,
+        "Tiết 2": null,
+        "Tiết 3": null,
+        "Tiết 4": {
           "class": "4A1",
           "subject": "HĐTN",
           "room": ""
         },
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
@@ -7132,11 +7132,7 @@
           "subject": "Toán học",
           "room": ""
         },
-        "Tiết 5": {
-          "class": "5A1",
-          "subject": "Toán học",
-          "room": ""
-        },
+        "Tiết 5": null,
         "Tiết 6": {
           "class": "5A1",
           "subject": "Toán học",
@@ -7144,17 +7140,17 @@
         },
         "Tiết 7": {
           "class": "5A1",
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 8": {
           "class": "5A1",
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 9": {
           "class": "5A1",
-          "subject": "Toán học",
+          "subject": "Tiếng Việt",
           "room": ""
         },
         "Tiết 10": null
@@ -7190,26 +7186,18 @@
           "subject": "Tiếng Việt",
           "room": ""
         },
-        "Tiết 7": {
-          "class": "5A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 8": {
-          "class": "5A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
-        "Tiết 9": {
-          "class": "5A1",
-          "subject": "Tiếng Việt",
-          "room": ""
-        },
+        "Tiết 7": null,
+        "Tiết 8": null,
+        "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 4": {
         "Tiết 1": null,
-        "Tiết 2": null,
+        "Tiết 2": {
+          "class": "5A1",
+          "subject": "LS - ĐL",
+          "room": ""
+        },
         "Tiết 3": {
           "class": "5A1",
           "subject": "LS - ĐL",
@@ -7217,7 +7205,7 @@
         },
         "Tiết 4": {
           "class": "5A1",
-          "subject": "LS - ĐL",
+          "subject": "Khoa học",
           "room": ""
         },
         "Tiết 5": {
@@ -7225,20 +7213,24 @@
           "subject": "Khoa học",
           "room": ""
         },
-        "Tiết 6": null,
-        "Tiết 7": {
-          "class": "5A1",
-          "subject": "Khoa học",
-          "room": ""
-        },
-        "Tiết 8": {
+        "Tiết 6": {
           "class": "5A1",
           "subject": "HĐTN",
           "room": ""
         },
-        "Tiết 9": {
+        "Tiết 7": {
           "class": "5A1",
           "subject": "Bổ trợ T.Việt",
+          "room": ""
+        },
+        "Tiết 8": {
+          "class": "5A1",
+          "subject": "Bổ trợ T.Việt",
+          "room": ""
+        },
+        "Tiết 9": {
+          "class": "5A1",
+          "subject": "Bổ trợ Toán",
           "room": ""
         },
         "Tiết 10": null
@@ -7247,19 +7239,23 @@
         "Tiết 1": null,
         "Tiết 2": null,
         "Tiết 3": null,
-        "Tiết 4": null,
+        "Tiết 4": {
+          "class": "5A1",
+          "subject": "Toán học",
+          "room": ""
+        },
         "Tiết 5": null,
-        "Tiết 6": null,
+        "Tiết 6": {
+          "class": "5A1",
+          "subject": "Toán học",
+          "room": ""
+        },
         "Tiết 7": {
           "class": "5A1",
-          "subject": "Bổ trợ T.Việt",
+          "subject": "Toán học",
           "room": ""
         },
-        "Tiết 8": {
-          "class": "5A1",
-          "subject": "Bổ trợ Toán",
-          "room": ""
-        },
+        "Tiết 8": null,
         "Tiết 9": {
           "class": "5A1",
           "subject": "Bổ trợ Toán",
@@ -7268,7 +7264,11 @@
         "Tiết 10": null
       },
       "Thứ 6": {
-        "Tiết 1": null,
+        "Tiết 1": {
+          "class": "5A1",
+          "subject": "Toán học",
+          "room": ""
+        },
         "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
@@ -7294,16 +7294,16 @@
           "room": ""
         },
         "Tiết 4": {
+          "class": "3A1",
+          "subject": "Đạo đức",
+          "room": ""
+        },
+        "Tiết 5": {
           "class": "2A1",
           "subject": "Đạo đức",
           "room": ""
         },
-        "Tiết 5": null,
-        "Tiết 6": {
-          "class": "1A1",
-          "subject": "Đạo đức",
-          "room": ""
-        },
+        "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
@@ -7315,67 +7315,27 @@
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
-        "Tiết 6": {
-          "class": "2A2",
-          "subject": "TN - XH",
-          "room": ""
-        },
+        "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": {
           "class": "4A1",
-          "subject": "Bổ trợ T.Việt (Đồng giảng)",
+          "subject": "Bổ trợ Toán (Đồng giảng)",
           "room": ""
         },
         "Tiết 9": {
           "class": "4A1",
-          "subject": "Bổ trợ T.Việt (Đồng giảng)",
+          "subject": "Bổ trợ Toán (Đồng giảng)",
           "room": ""
         },
         "Tiết 10": null
       },
       "Thứ 4": {
-        "Tiết 1": {
-          "class": "2A2",
-          "subject": "HĐTN",
-          "room": ""
-        },
-        "Tiết 2": null,
-        "Tiết 3": {
-          "class": "3A1",
-          "subject": "Đạo đức",
-          "room": ""
-        },
-        "Tiết 4": null,
-        "Tiết 5": null,
-        "Tiết 6": null,
-        "Tiết 7": {
-          "class": "4A1",
-          "subject": "Bổ trợ Toán (Đồng giảng)",
-          "room": ""
-        },
-        "Tiết 8": {
-          "class": "4A1",
-          "subject": "Bổ trợ Toán (Đồng giảng)",
-          "room": ""
-        },
-        "Tiết 9": {
-          "class": "5A1",
-          "subject": "Bổ trợ T.Việt (Đồng giảng)",
-          "room": ""
-        },
-        "Tiết 10": null
-      },
-      "Thứ 5": {
         "Tiết 1": null,
         "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
-        "Tiết 6": {
-          "class": "2A2",
-          "subject": "Đạo đức",
-          "room": ""
-        },
+        "Tiết 6": null,
         "Tiết 7": {
           "class": "5A1",
           "subject": "Bổ trợ T.Việt (Đồng giảng)",
@@ -7383,7 +7343,43 @@
         },
         "Tiết 8": {
           "class": "5A1",
+          "subject": "Bổ trợ T.Việt (Đồng giảng)",
+          "room": ""
+        },
+        "Tiết 9": {
+          "class": "5A1",
           "subject": "Bổ trợ Toán (Đồng giảng)",
+          "room": ""
+        },
+        "Tiết 10": null
+      },
+      "Thứ 5": {
+        "Tiết 1": {
+          "class": "2A2",
+          "subject": "TN - XH",
+          "room": ""
+        },
+        "Tiết 2": null,
+        "Tiết 3": null,
+        "Tiết 4": null,
+        "Tiết 5": {
+          "class": "2A2",
+          "subject": "HĐTN",
+          "room": ""
+        },
+        "Tiết 6": {
+          "class": "1A1",
+          "subject": "Đạo đức",
+          "room": ""
+        },
+        "Tiết 7": {
+          "class": "4A1",
+          "subject": "Bổ trợ T.Việt (Đồng giảng)",
+          "room": ""
+        },
+        "Tiết 8": {
+          "class": "4A1",
+          "subject": "Bổ trợ T.Việt (Đồng giảng)",
           "room": ""
         },
         "Tiết 9": {
@@ -7394,28 +7390,32 @@
         "Tiết 10": null
       },
       "Thứ 6": {
-        "Tiết 1": null,
-        "Tiết 2": null,
-        "Tiết 3": {
-          "class": "3A1",
-          "subject": "Công nghệ",
+        "Tiết 1": {
+          "class": "2A2",
+          "subject": "Đạo đức",
           "room": ""
         },
-        "Tiết 4": null,
+        "Tiết 2": null,
+        "Tiết 3": null,
+        "Tiết 4": {
+          "class": "2A2",
+          "subject": "TN - XH",
+          "room": ""
+        },
         "Tiết 5": {
           "class": "1A2",
           "subject": "Sinh hoạt lớp",
           "room": ""
         },
-        "Tiết 6": {
+        "Tiết 6": null,
+        "Tiết 7": {
           "class": "3A1",
-          "subject": "HĐTN",
+          "subject": "Công nghệ",
           "room": ""
         },
-        "Tiết 7": null,
         "Tiết 8": {
-          "class": "2A2",
-          "subject": "TN - XH",
+          "class": "3A1",
+          "subject": "HĐTN",
           "room": ""
         },
         "Tiết 9": null,
@@ -7425,39 +7425,31 @@
     "Vũ Hà": {
       "Thứ 2": {
         "Tiết 1": null,
-        "Tiết 2": {
-          "class": "2A2",
-          "subject": "Science",
-          "room": ""
-        },
+        "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": {
-          "class": "2A2",
-          "subject": "Maths",
-          "room": ""
-        },
-        "Tiết 7": {
-          "class": "2A2",
-          "subject": "Global English",
-          "room": ""
-        },
-        "Tiết 8": null,
-        "Tiết 9": {
           "class": "1A1",
           "subject": "Bright Ideas",
           "room": ""
         },
+        "Tiết 7": {
+          "class": "2A2",
+          "subject": "Science",
+          "room": ""
+        },
+        "Tiết 8": null,
+        "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 3": {
-        "Tiết 1": null,
-        "Tiết 2": {
-          "class": "2A2",
-          "subject": "Global English",
+        "Tiết 1": {
+          "class": "2A1",
+          "subject": "Global Success",
           "room": ""
         },
+        "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
@@ -7474,65 +7466,69 @@
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
-        "Tiết 7": {
-          "class": "2A2",
+        "Tiết 7": null,
+        "Tiết 8": null,
+        "Tiết 9": {
+          "class": "2A1",
           "subject": "Bổ trợ T.Anh",
           "room": ""
         },
-        "Tiết 8": {
-          "class": "1A1",
-          "subject": "Bổ trợ T.Anh",
-          "room": ""
-        },
-        "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 5": {
         "Tiết 1": null,
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": null,
-        "Tiết 5": null,
-        "Tiết 6": {
-          "class": "2A1",
-          "subject": "Bright Ideas",
+        "Tiết 2": {
+          "class": "2A2",
+          "subject": "Maths",
           "room": ""
         },
-        "Tiết 7": null,
-        "Tiết 8": {
-          "class": "2A1",
-          "subject": "Bổ trợ T.Anh",
-          "room": ""
-        },
-        "Tiết 9": null,
-        "Tiết 10": null
-      },
-      "Thứ 6": {
-        "Tiết 1": {
-          "class": "1A1",
-          "subject": "Global Success",
-          "room": ""
-        },
-        "Tiết 2": null,
         "Tiết 3": {
           "class": "2A1",
           "subject": "Global Success",
           "room": ""
         },
-        "Tiết 4": {
-          "class": "2A1",
+        "Tiết 4": null,
+        "Tiết 5": {
+          "class": "1A1",
           "subject": "Global Success",
           "room": ""
         },
-        "Tiết 5": null,
         "Tiết 6": {
-          "class": "1A1",
-          "subject": "Global Success",
+          "class": "2A1",
+          "subject": "Bright Ideas",
           "room": ""
         },
         "Tiết 7": {
           "class": "2A2",
           "subject": "Bổ trợ T.Anh",
+          "room": ""
+        },
+        "Tiết 8": null,
+        "Tiết 9": {
+          "class": "2A1",
+          "subject": "Bổ trợ T.Anh",
+          "room": ""
+        },
+        "Tiết 10": {
+          "class": "2A2",
+          "subject": "Bổ trợ T.Anh",
+          "room": ""
+        }
+      },
+      "Thứ 6": {
+        "Tiết 1": null,
+        "Tiết 2": null,
+        "Tiết 3": {
+          "class": "1A1",
+          "subject": "Global Success",
+          "room": ""
+        },
+        "Tiết 4": null,
+        "Tiết 5": null,
+        "Tiết 6": null,
+        "Tiết 7": {
+          "class": "2A2",
+          "subject": "Global English",
           "room": ""
         },
         "Tiết 8": {
@@ -7541,11 +7537,15 @@
           "room": ""
         },
         "Tiết 9": {
-          "class": "2A1",
+          "class": "1A1",
           "subject": "Bổ trợ T.Anh",
           "room": ""
         },
-        "Tiết 10": null
+        "Tiết 10": {
+          "class": "2A2",
+          "subject": "Global English",
+          "room": ""
+        }
       }
     },
     "Hồng": {
@@ -7566,16 +7566,20 @@
         "Tiết 10": null
       },
       "Thứ 3": {
-        "Tiết 1": null,
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": null,
-        "Tiết 5": null,
-        "Tiết 6": {
+        "Tiết 1": {
           "class": "1A2",
           "subject": "Global English",
           "room": ""
         },
+        "Tiết 2": null,
+        "Tiết 3": null,
+        "Tiết 4": {
+          "class": "1A2",
+          "subject": "Science",
+          "room": ""
+        },
+        "Tiết 5": null,
+        "Tiết 6": null,
         "Tiết 7": {
           "class": "1A2",
           "subject": "Bổ trợ T.Anh",
@@ -7587,18 +7591,18 @@
           "subject": "Prepare",
           "room": ""
         },
-        "Tiết 10": null
+        "Tiết 10": {
+          "class": "1A2",
+          "subject": "Global English",
+          "room": ""
+        }
       },
       "Thứ 4": {
         "Tiết 1": null,
         "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
-        "Tiết 5": {
-          "class": "1A2",
-          "subject": "Science",
-          "room": ""
-        },
+        "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": {
@@ -7623,41 +7627,37 @@
           "subject": "Global Success",
           "room": ""
         },
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": null,
-        "Tiết 5": {
+        "Tiết 2": {
           "class": "5A1",
           "subject": "Global Success",
           "room": ""
         },
-        "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": {
-          "class": "1A2",
-          "subject": "Global English",
+        "Tiết 3": {
+          "class": "5A1",
+          "subject": "Global Success",
           "room": ""
         },
+        "Tiết 4": null,
+        "Tiết 5": null,
+        "Tiết 6": null,
+        "Tiết 7": null,
+        "Tiết 8": null,
         "Tiết 9": null,
-        "Tiết 10": {
-          "class": "11A1",
-          "subject": "Bổ trợ T.Anh",
-          "room": ""
-        }
+        "Tiết 10": null
       },
       "Thứ 6": {
         "Tiết 1": null,
-        "Tiết 2": {
-          "class": "5A1",
-          "subject": "Bright Ideas",
+        "Tiết 2": null,
+        "Tiết 3": null,
+        "Tiết 4": {
+          "class": "1A2",
+          "subject": "Maths",
           "room": ""
         },
-        "Tiết 3": null,
-        "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": {
           "class": "5A1",
-          "subject": "Global Success",
+          "subject": "Bright Ideas",
           "room": ""
         },
         "Tiết 7": {
@@ -7671,8 +7671,8 @@
           "room": ""
         },
         "Tiết 9": {
-          "class": "1A2",
-          "subject": "Maths",
+          "class": "11A1",
+          "subject": "Bổ trợ T.Anh",
           "room": ""
         },
         "Tiết 10": {
@@ -7703,16 +7703,8 @@
         "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
-        "Tiết 8": {
-          "class": "3A1",
-          "subject": "Bổ trợ T.Anh",
-          "room": ""
-        },
-        "Tiết 9": {
-          "class": "3A1",
-          "subject": "Bổ trợ T.Anh",
-          "room": ""
-        },
+        "Tiết 8": null,
+        "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 4": {
@@ -7745,8 +7737,8 @@
         },
         "Tiết 4": null,
         "Tiết 5": {
-          "class": "3A1",
-          "subject": "Global Success",
+          "class": "3A2",
+          "subject": "Global English",
           "room": ""
         },
         "Tiết 6": {
@@ -7754,20 +7746,28 @@
           "subject": "Global English",
           "room": ""
         },
-        "Tiết 7": null,
+        "Tiết 7": {
+          "class": "3A1",
+          "subject": "Bổ trợ T.Anh",
+          "room": ""
+        },
         "Tiết 8": null,
-        "Tiết 9": null,
+        "Tiết 9": {
+          "class": "3A1",
+          "subject": "Bổ trợ T.Anh",
+          "room": ""
+        },
         "Tiết 10": null
       },
       "Thứ 6": {
         "Tiết 1": {
           "class": "3A1",
-          "subject": "Bright Ideas",
+          "subject": "Global Success",
           "room": ""
         },
         "Tiết 2": {
-          "class": "3A2",
-          "subject": "Global English",
+          "class": "3A1",
+          "subject": "Bright Ideas",
           "room": ""
         },
         "Tiết 3": {
@@ -7821,7 +7821,7 @@
           "room": ""
         },
         "Tiết 3": {
-          "class": "7A1, 7A2",
+          "class": "1A1",
           "subject": "Âm nhạc",
           "room": ""
         },
@@ -7831,46 +7831,50 @@
           "room": ""
         },
         "Tiết 5": {
-          "class": "4A1",
+          "class": "5A1",
           "subject": "Âm nhạc",
           "room": ""
         },
         "Tiết 6": {
-          "class": "3A2",
+          "class": "4A1",
           "subject": "Âm nhạc",
           "room": ""
         },
         "Tiết 7": {
-          "class": "3A1",
+          "class": "3A2",
           "subject": "Âm nhạc",
           "room": ""
         },
         "Tiết 8": null,
-        "Tiết 9": null,
+        "Tiết 9": {
+          "class": "3A1",
+          "subject": "Âm nhạc",
+          "room": ""
+        },
         "Tiết 10": null
       },
       "Thứ 3": {
-        "Tiết 1": null,
+        "Tiết 1": {
+          "class": "7A1, 7A2",
+          "subject": "Âm nhạc",
+          "room": ""
+        },
         "Tiết 2": null,
-        "Tiết 3": {
+        "Tiết 3": null,
+        "Tiết 4": null,
+        "Tiết 5": null,
+        "Tiết 6": {
           "class": "2A1",
           "subject": "Âm nhạc",
           "room": ""
         },
-        "Tiết 4": null,
-        "Tiết 5": null,
-        "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 4": {
-        "Tiết 1": {
-          "class": "5A1",
-          "subject": "Âm nhạc",
-          "room": ""
-        },
+        "Tiết 1": null,
         "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
@@ -7895,20 +7899,16 @@
       },
       "Thứ 6": {
         "Tiết 1": null,
-        "Tiết 2": {
-          "class": "1A1",
-          "subject": "Âm nhạc",
-          "room": ""
-        },
+        "Tiết 2": null,
         "Tiết 3": null,
-        "Tiết 4": {
+        "Tiết 4": null,
+        "Tiết 5": null,
+        "Tiết 6": null,
+        "Tiết 7": {
           "class": "1A2",
           "subject": "Âm nhạc",
           "room": ""
         },
-        "Tiết 5": null,
-        "Tiết 6": null,
-        "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": {
           "class": "2A2",
@@ -7927,17 +7927,17 @@
           "room": ""
         },
         "Tiết 3": null,
-        "Tiết 4": {
-          "class": "2A2",
-          "subject": "Mỹ thuật",
-          "room": ""
-        },
+        "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
-        "Tiết 10": null
+        "Tiết 10": {
+          "class": "1A2",
+          "subject": "Mỹ thuật",
+          "room": ""
+        }
       },
       "Thứ 3": {
         "Tiết 1": null,
@@ -7952,18 +7952,22 @@
         "Tiết 10": null
       },
       "Thứ 4": {
-        "Tiết 1": null,
-        "Tiết 2": {
+        "Tiết 1": {
           "class": "5A1",
           "subject": "Mỹ thuật",
           "room": ""
         },
+        "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
-        "Tiết 8": null,
+        "Tiết 8": {
+          "class": "4A1",
+          "subject": "Mỹ thuật",
+          "room": ""
+        },
         "Tiết 9": {
           "class": "3A2",
           "subject": "Mỹ thuật",
@@ -7972,17 +7976,9 @@
         "Tiết 10": null
       },
       "Thứ 5": {
-        "Tiết 1": {
-          "class": "4A1",
-          "subject": "Mỹ thuật",
-          "room": ""
-        },
+        "Tiết 1": null,
         "Tiết 2": null,
-        "Tiết 3": {
-          "class": "1A2",
-          "subject": "Mỹ thuật",
-          "room": ""
-        },
+        "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
@@ -7993,11 +7989,7 @@
       },
       "Thứ 6": {
         "Tiết 1": null,
-        "Tiết 2": {
-          "class": "3A1",
-          "subject": "Mỹ thuật",
-          "room": ""
-        },
+        "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": {
@@ -8005,14 +7997,22 @@
           "subject": "Sinh hoạt lớp",
           "room": ""
         },
-        "Tiết 6": null,
-        "Tiết 7": {
+        "Tiết 6": {
+          "class": "2A2",
+          "subject": "Mỹ thuật",
+          "room": ""
+        },
+        "Tiết 7": null,
+        "Tiết 8": {
           "class": "2A1",
           "subject": "Mỹ thuật",
           "room": ""
         },
-        "Tiết 8": null,
-        "Tiết 9": null,
+        "Tiết 9": {
+          "class": "3A1",
+          "subject": "Mỹ thuật",
+          "room": ""
+        },
         "Tiết 10": null
       }
     },
@@ -8039,8 +8039,16 @@
           "subject": "Tin học",
           "room": ""
         },
-        "Tiết 6": null,
-        "Tiết 7": null,
+        "Tiết 6": {
+          "class": "2A2",
+          "subject": "Tin học",
+          "room": ""
+        },
+        "Tiết 7": {
+          "class": "12A1, 12A2",
+          "subject": "Tin học",
+          "room": ""
+        },
         "Tiết 8": null,
         "Tiết 9": {
           "class": "9A1",
@@ -8068,8 +8076,16 @@
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": null,
+        "Tiết 7": {
+          "class": "5A1",
+          "subject": "Tin học",
+          "room": ""
+        },
+        "Tiết 8": {
+          "class": "12A1, 12A2",
+          "subject": "Tin học",
+          "room": ""
+        },
         "Tiết 9": null,
         "Tiết 10": {
           "class": "3A2",
@@ -8088,13 +8104,9 @@
           "subject": "HĐTN",
           "room": ""
         },
-        "Tiết 3": {
-          "class": "1A1",
-          "subject": "Tin học",
-          "room": ""
-        },
+        "Tiết 3": null,
         "Tiết 4": {
-          "class": "12A1, 12A2",
+          "class": "4A1",
           "subject": "Tin học",
           "room": ""
         },
@@ -8103,30 +8115,26 @@
           "subject": "HĐTN",
           "room": ""
         },
-        "Tiết 6": {
-          "class": "5A1",
-          "subject": "Tin học",
-          "room": ""
-        },
+        "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
-        "Tiết 9": {
-          "class": "4A1",
-          "subject": "Tin học",
-          "room": ""
-        },
+        "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 5": {
         "Tiết 1": null,
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": null,
-        "Tiết 5": {
-          "class": "2A1",
+        "Tiết 2": {
+          "class": "3A1",
           "subject": "Tin học",
           "room": ""
         },
+        "Tiết 3": {
+          "class": "1A2",
+          "subject": "Tin học",
+          "room": ""
+        },
+        "Tiết 4": null,
+        "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
@@ -8135,7 +8143,7 @@
       },
       "Thứ 6": {
         "Tiết 1": {
-          "class": "2A2",
+          "class": "2A1",
           "subject": "Tin học",
           "room": ""
         },
@@ -8143,22 +8151,14 @@
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
-        "Tiết 6": {
-          "class": "1A2",
-          "subject": "Tin học",
-          "room": ""
-        },
+        "Tiết 6": null,
         "Tiết 7": {
-          "class": "12A1, 12A2",
+          "class": "1A1",
           "subject": "Tin học",
           "room": ""
         },
         "Tiết 8": null,
-        "Tiết 9": {
-          "class": "3A1",
-          "subject": "Tin học",
-          "room": ""
-        },
+        "Tiết 9": null,
         "Tiết 10": null
       }
     },
@@ -8185,7 +8185,11 @@
         },
         "Tiết 4": null,
         "Tiết 5": null,
-        "Tiết 6": null,
+        "Tiết 6": {
+          "class": "1A2",
+          "subject": "GDTC",
+          "room": ""
+        },
         "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
@@ -8193,57 +8197,53 @@
       },
       "Thứ 4": {
         "Tiết 1": null,
-        "Tiết 2": {
-          "class": "1A1",
-          "subject": "GDTC",
-          "room": ""
-        },
-        "Tiết 3": null,
-        "Tiết 4": null,
-        "Tiết 5": null,
-        "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": null,
-        "Tiết 9": {
-          "class": "1A2",
-          "subject": "GDTC",
-          "room": ""
-        },
-        "Tiết 10": null
-      },
-      "Thứ 5": {
-        "Tiết 1": {
-          "class": "2A2",
-          "subject": "GDTC",
-          "room": ""
-        },
-        "Tiết 2": {
-          "class": "2A1",
-          "subject": "GDTC",
-          "room": ""
-        },
+        "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": {
-          "class": "3A1",
+          "class": "1A2",
           "subject": "GDTC",
           "room": ""
         },
         "Tiết 5": {
+          "class": "2A2",
+          "subject": "GDTC",
+          "room": ""
+        },
+        "Tiết 6": null,
+        "Tiết 7": null,
+        "Tiết 8": null,
+        "Tiết 9": null,
+        "Tiết 10": null
+      },
+      "Thứ 5": {
+        "Tiết 1": {
+          "class": "1A1",
+          "subject": "GDTC",
+          "room": ""
+        },
+        "Tiết 2": null,
+        "Tiết 3": null,
+        "Tiết 4": {
           "class": "3A2",
           "subject": "GDTC",
           "room": ""
         },
+        "Tiết 5": {
+          "class": "2A1",
+          "subject": "GDTC",
+          "room": ""
+        },
         "Tiết 6": {
+          "class": "3A1",
+          "subject": "GDTC",
+          "room": ""
+        },
+        "Tiết 7": null,
+        "Tiết 8": {
           "class": "5A1",
           "subject": "GDTC",
           "room": ""
         },
-        "Tiết 7": {
-          "class": "1A2",
-          "subject": "GDTC",
-          "room": ""
-        },
-        "Tiết 8": null,
         "Tiết 9": {
           "class": "4A1",
           "subject": "GDTC",
@@ -8252,7 +8252,11 @@
         "Tiết 10": null
       },
       "Thứ 6": {
-        "Tiết 1": null,
+        "Tiết 1": {
+          "class": "3A2",
+          "subject": "GDTC",
+          "room": ""
+        },
         "Tiết 2": {
           "class": "4A1",
           "subject": "GDTC",
@@ -8266,17 +8270,17 @@
           "room": ""
         },
         "Tiết 6": {
-          "class": "2A1",
-          "subject": "GDTC",
-          "room": ""
-        },
-        "Tiết 7": {
           "class": "3A1",
           "subject": "GDTC",
           "room": ""
         },
+        "Tiết 7": {
+          "class": "2A1",
+          "subject": "GDTC",
+          "room": ""
+        },
         "Tiết 8": {
-          "class": "3A2",
+          "class": "2A2",
           "subject": "GDTC",
           "room": ""
         },
@@ -8285,11 +8289,7 @@
           "subject": "GDTC",
           "room": ""
         },
-        "Tiết 10": {
-          "class": "2A2",
-          "subject": "GDTC",
-          "room": ""
-        }
+        "Tiết 10": null
       }
     },
     "Bình": {
@@ -8408,15 +8408,19 @@
         "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
-        "Tiết 5": {
-          "class": "1A2",
+        "Tiết 5": null,
+        "Tiết 6": null,
+        "Tiết 7": null,
+        "Tiết 8": {
+          "class": "5A1",
           "subject": "Stem & Robotic",
           "room": ""
         },
-        "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": null,
-        "Tiết 9": null,
+        "Tiết 9": {
+          "class": "5A1",
+          "subject": "Stem & Robotic",
+          "room": ""
+        },
         "Tiết 10": null
       },
       "Thứ 4": {
@@ -8425,11 +8429,7 @@
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
-        "Tiết 6": {
-          "class": "1A2",
-          "subject": "Stem & Robotic",
-          "room": ""
-        },
+        "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
@@ -8438,12 +8438,12 @@
       "Thứ 5": {
         "Tiết 1": null,
         "Tiết 2": {
-          "class": "5A1",
+          "class": "1A2",
           "subject": "Stem & Robotic",
           "room": ""
         },
         "Tiết 3": {
-          "class": "5A1",
+          "class": "1A1",
           "subject": "Stem & Robotic",
           "room": ""
         },
@@ -8459,25 +8459,25 @@
         "Tiết 1": null,
         "Tiết 2": null,
         "Tiết 3": null,
-        "Tiết 4": {
-          "class": "1A1",
-          "subject": "Stem & Robotic",
-          "room": ""
-        },
+        "Tiết 4": null,
         "Tiết 5": {
           "class": "1A1",
           "subject": "Sinh hoạt lớp",
           "room": ""
         },
-        "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": null,
-        "Tiết 9": {
+        "Tiết 6": {
           "class": "1A1",
           "subject": "Stem & Robotic",
           "room": ""
         },
-        "Tiết 10": null
+        "Tiết 7": null,
+        "Tiết 8": null,
+        "Tiết 9": null,
+        "Tiết 10": {
+          "class": "1A2",
+          "subject": "Stem & Robotic",
+          "room": ""
+        }
       }
     },
     "Ngọc": {
@@ -8489,6 +8489,30 @@
         },
         "Tiết 2": null,
         "Tiết 3": null,
+        "Tiết 4": {
+          "class": "2A2",
+          "subject": "Stem & Robotic",
+          "room": ""
+        },
+        "Tiết 5": null,
+        "Tiết 6": null,
+        "Tiết 7": null,
+        "Tiết 8": {
+          "class": "2A2",
+          "subject": "Stem & Robotic",
+          "room": ""
+        },
+        "Tiết 9": null,
+        "Tiết 10": null
+      },
+      "Thứ 3": {
+        "Tiết 1": null,
+        "Tiết 2": null,
+        "Tiết 3": {
+          "class": "2A1",
+          "subject": "Stem & Robotic",
+          "room": ""
+        },
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
@@ -8497,37 +8521,9 @@
         "Tiết 9": null,
         "Tiết 10": null
       },
-      "Thứ 3": {
-        "Tiết 1": null,
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": {
-          "class": "2A2",
-          "subject": "Stem & Robotic",
-          "room": ""
-        },
-        "Tiết 5": null,
-        "Tiết 6": {
-          "class": "2A1",
-          "subject": "Stem & Robotic",
-          "room": ""
-        },
-        "Tiết 7": {
-          "class": "2A2",
-          "subject": "Stem & Robotic",
-          "room": ""
-        },
-        "Tiết 8": null,
-        "Tiết 9": null,
-        "Tiết 10": null
-      },
       "Thứ 4": {
         "Tiết 1": null,
-        "Tiết 2": {
-          "class": "2A1",
-          "subject": "Stem & Robotic",
-          "room": ""
-        },
+        "Tiết 2": null,
         "Tiết 3": {
           "class": "3A2",
           "subject": "Stem & Robotic",
@@ -8538,17 +8534,17 @@
           "subject": "Stem & Robotic",
           "room": ""
         },
-        "Tiết 5": {
-          "class": "4A1",
-          "subject": "Stem & Robotic",
-          "room": ""
-        },
+        "Tiết 5": null,
         "Tiết 6": {
           "class": "4A1",
           "subject": "Stem & Robotic",
           "room": ""
         },
-        "Tiết 7": null,
+        "Tiết 7": {
+          "class": "4A1",
+          "subject": "Stem & Robotic",
+          "room": ""
+        },
         "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": null
@@ -8558,12 +8554,12 @@
         "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
-        "Tiết 5": null,
-        "Tiết 6": {
+        "Tiết 5": {
           "class": "3A1",
           "subject": "Stem & Robotic",
           "room": ""
         },
+        "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
@@ -8571,29 +8567,33 @@
       },
       "Thứ 6": {
         "Tiết 1": {
-          "class": "5A1",
-          "subject": "Công nghệ",
-          "room": ""
-        },
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": {
           "class": "4A1",
           "subject": "Công nghệ",
           "room": ""
         },
+        "Tiết 2": {
+          "class": "5A1",
+          "subject": "Công nghệ",
+          "room": ""
+        },
+        "Tiết 3": {
+          "class": "3A1",
+          "subject": "Stem & Robotic",
+          "room": ""
+        },
+        "Tiết 4": null,
         "Tiết 5": {
           "class": "2A1",
           "subject": "Sinh hoạt lớp",
           "room": ""
         },
-        "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": {
-          "class": "3A1",
+        "Tiết 6": {
+          "class": "2A1",
           "subject": "Stem & Robotic",
           "room": ""
         },
+        "Tiết 7": null,
+        "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": null
       }
@@ -8674,11 +8674,7 @@
           "subject": "GDTC",
           "room": ""
         },
-        "Tiết 7": {
-          "class": "10A1",
-          "subject": "GD QPAN",
-          "room": ""
-        },
+        "Tiết 7": null,
         "Tiết 8": {
           "class": "10A1",
           "subject": "GDTC",
@@ -8718,31 +8714,35 @@
           "room": ""
         },
         "Tiết 6": {
+          "class": "10A1",
+          "subject": "GD QPAN",
+          "room": ""
+        },
+        "Tiết 7": null,
+        "Tiết 8": {
           "class": "9A1",
           "subject": "GDTC",
           "room": ""
         },
-        "Tiết 7": {
+        "Tiết 9": {
           "class": "6A1",
           "subject": "GDTC",
           "room": ""
         },
-        "Tiết 8": null,
-        "Tiết 9": null,
         "Tiết 10": null
       }
     },
     "Du": {
       "Thứ 2": {
         "Tiết 1": null,
-        "Tiết 2": {
+        "Tiết 2": null,
+        "Tiết 3": null,
+        "Tiết 4": null,
+        "Tiết 5": {
           "class": "12A1, 12A2",
           "subject": "GDĐP",
           "room": ""
         },
-        "Tiết 3": null,
-        "Tiết 4": null,
-        "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
@@ -8828,7 +8828,11 @@
           "subject": "GDĐP",
           "room": ""
         },
-        "Tiết 7": null,
+        "Tiết 7": {
+          "class": "10A1",
+          "subject": "Bổ trợ Văn",
+          "room": ""
+        },
         "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": {
@@ -8852,11 +8856,7 @@
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
-        "Tiết 7": {
-          "class": "10A1",
-          "subject": "Bổ trợ Văn",
-          "room": ""
-        },
+        "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": null
@@ -9010,18 +9010,18 @@
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": null,
-        "Tiết 9": {
+        "Tiết 7": {
+          "class": "10A1",
+          "subject": "Bổ trợ Toán",
+          "room": ""
+        },
+        "Tiết 8": {
           "class": "11A1",
           "subject": "Bổ trợ Toán",
           "room": ""
         },
-        "Tiết 10": {
-          "class": "10A1",
-          "subject": "Bổ trợ Toán",
-          "room": ""
-        }
+        "Tiết 9": null,
+        "Tiết 10": null
       }
     },
     "Phương": {
@@ -9127,7 +9127,11 @@
           "room": ""
         },
         "Tiết 7": null,
-        "Tiết 8": null,
+        "Tiết 8": {
+          "class": "12A1, 12A2",
+          "subject": "Lịch sử",
+          "room": ""
+        },
         "Tiết 9": {
           "class": "12A2",
           "subject": "Lịch sử TC",
@@ -9155,11 +9159,7 @@
           "subject": "Lịch sử",
           "room": ""
         },
-        "Tiết 8": {
-          "class": "12A1, 12A2",
-          "subject": "Lịch sử",
-          "room": ""
-        },
+        "Tiết 8": null,
         "Tiết 9": {
           "class": "12A2",
           "subject": "Lịch sử BT",
@@ -9215,7 +9215,11 @@
           "subject": "Vật lí",
           "room": ""
         },
-        "Tiết 2": null,
+        "Tiết 2": {
+          "class": "12A1, 12A2",
+          "subject": "Vật lí",
+          "room": ""
+        },
         "Tiết 3": {
           "class": "11A1",
           "subject": "Vật lí",
@@ -9226,11 +9230,7 @@
           "subject": "Vật lí",
           "room": ""
         },
-        "Tiết 5": {
-          "class": "12A1, 12A2",
-          "subject": "Vật lí",
-          "room": ""
-        },
+        "Tiết 5": null,
         "Tiết 6": {
           "class": "11A1",
           "subject": "Vật lí",
@@ -9336,14 +9336,14 @@
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": null,
-        "Tiết 9": null,
-        "Tiết 10": {
+        "Tiết 7": {
           "class": "12A1, 12A2",
           "subject": "Vật lí",
           "room": ""
-        }
+        },
+        "Tiết 8": null,
+        "Tiết 9": null,
+        "Tiết 10": null
       }
     },
     "Thiết": {
@@ -9657,7 +9657,11 @@
           "subject": "Ngữ văn",
           "room": ""
         },
-        "Tiết 10": null
+        "Tiết 10": {
+          "class": "11A1",
+          "subject": "Bổ trợ Văn",
+          "room": ""
+        }
       },
       "Thứ 6": {
         "Tiết 1": null,
@@ -9671,11 +9675,7 @@
           "subject": "Bổ trợ Văn",
           "room": ""
         },
-        "Tiết 8": {
-          "class": "11A1",
-          "subject": "Bổ trợ Văn",
-          "room": ""
-        },
+        "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": null
       }
@@ -9940,16 +9940,8 @@
           "subject": "Toán học",
           "room": ""
         },
-        "Tiết 7": {
-          "class": "12A1, 12A2",
-          "subject": "Toán học",
-          "room": ""
-        },
-        "Tiết 8": {
-          "class": "12A1, 12A2",
-          "subject": "Toán học",
-          "room": ""
-        },
+        "Tiết 7": null,
+        "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": null
       },
@@ -9992,7 +9984,11 @@
       "Thứ 4": {
         "Tiết 1": null,
         "Tiết 2": null,
-        "Tiết 3": null,
+        "Tiết 3": {
+          "class": "12A1, 12A2",
+          "subject": "Toán học",
+          "room": ""
+        },
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
@@ -10017,7 +10013,11 @@
         "Tiết 1": null,
         "Tiết 2": null,
         "Tiết 3": null,
-        "Tiết 4": null,
+        "Tiết 4": {
+          "class": "12A1, 12A2",
+          "subject": "Toán học",
+          "room": ""
+        },
         "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
@@ -10434,11 +10434,7 @@
         }
       },
       "Thứ 3": {
-        "Tiết 1": {
-          "class": "7A1, 7A2",
-          "subject": "Ngữ văn",
-          "room": ""
-        },
+        "Tiết 1": null,
         "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
@@ -10520,7 +10516,11 @@
       "Thứ 6": {
         "Tiết 1": null,
         "Tiết 2": null,
-        "Tiết 3": null,
+        "Tiết 3": {
+          "class": "7A1, 7A2",
+          "subject": "Ngữ văn",
+          "room": ""
+        },
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
@@ -10803,7 +10803,11 @@
           "subject": "Prepare",
           "room": ""
         },
-        "Tiết 4": null,
+        "Tiết 4": {
+          "class": "1A1",
+          "subject": "Bright Ideas",
+          "room": ""
+        },
         "Tiết 5": null,
         "Tiết 6": {
           "class": "1A1",
@@ -10811,7 +10815,11 @@
           "room": ""
         },
         "Tiết 7": null,
-        "Tiết 8": null,
+        "Tiết 8": {
+          "class": "1A1",
+          "subject": "Bright Ideas",
+          "room": ""
+        },
         "Tiết 9": null,
         "Tiết 10": null
       },
@@ -10824,11 +10832,7 @@
           "subject": "Bright Ideas",
           "room": ""
         },
-        "Tiết 5": {
-          "class": "1A1",
-          "subject": "Bright Ideas",
-          "room": ""
-        },
+        "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": {
           "class": "8A1",
@@ -10854,11 +10858,7 @@
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
-        "Tiết 7": {
-          "class": "1A1",
-          "subject": "Bright Ideas",
-          "room": ""
-        },
+        "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": null
@@ -10879,11 +10879,7 @@
       },
       "Thứ 3": {
         "Tiết 1": null,
-        "Tiết 2": {
-          "class": "3A1",
-          "subject": "Bright Ideas",
-          "room": ""
-        },
+        "Tiết 2": null,
         "Tiết 3": {
           "class": "3A1",
           "subject": "Bright Ideas",
@@ -10894,11 +10890,7 @@
           "subject": "Bright Ideas",
           "room": ""
         },
-        "Tiết 5": {
-          "class": "3A1",
-          "subject": "Bright Ideas",
-          "room": ""
-        },
+        "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
@@ -10907,14 +10899,22 @@
       },
       "Thứ 4": {
         "Tiết 1": null,
-        "Tiết 2": null,
+        "Tiết 2": {
+          "class": "3A1",
+          "subject": "Bright Ideas",
+          "room": ""
+        },
         "Tiết 3": null,
         "Tiết 4": {
+          "class": "3A1",
+          "subject": "Bright Ideas",
+          "room": ""
+        },
+        "Tiết 5": {
           "class": "4A1",
           "subject": "Bright Ideas",
           "room": ""
         },
-        "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
@@ -10938,12 +10938,12 @@
           "room": ""
         },
         "Tiết 4": {
-          "class": "5A1",
+          "class": "4A1",
           "subject": "Bright Ideas",
           "room": ""
         },
         "Tiết 5": {
-          "class": "4A1",
+          "class": "5A1",
           "subject": "Bright Ideas",
           "room": ""
         },
@@ -10990,50 +10990,66 @@
       "Thứ 2": {
         "Tiết 1": null,
         "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": null,
-        "Tiết 5": null,
-        "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": null,
-        "Tiết 9": {
-          "class": "2A2",
-          "subject": "Maths",
-          "room": ""
-        },
-        "Tiết 10": {
-          "class": "1A2",
-          "subject": "Maths",
-          "room": ""
-        }
-      },
-      "Thứ 3": {
-        "Tiết 1": {
-          "class": "2A2",
-          "subject": "Maths",
-          "room": ""
-        },
-        "Tiết 2": null,
         "Tiết 3": {
-          "class": "2A2",
-          "subject": "Maths",
+          "class": "1A2",
+          "subject": "Science",
           "room": ""
         },
-        "Tiết 4": null,
-        "Tiết 5": null,
+        "Tiết 4": {
+          "class": "1A2",
+          "subject": "Science",
+          "room": ""
+        },
+        "Tiết 5": {
+          "class": "1A2",
+          "subject": "Science",
+          "room": ""
+        },
         "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": null
       },
-      "Thứ 4": {
-        "Tiết 1": null,
-        "Tiết 2": {
+      "Thứ 3": {
+        "Tiết 1": {
           "class": "2A2",
           "subject": "Science",
           "room": ""
         },
+        "Tiết 2": null,
+        "Tiết 3": {
+          "class": "2A2",
+          "subject": "Science",
+          "room": ""
+        },
+        "Tiết 4": {
+          "class": "2A2",
+          "subject": "Science",
+          "room": ""
+        },
+        "Tiết 5": {
+          "class": "2A2",
+          "subject": "Maths",
+          "room": ""
+        },
+        "Tiết 6": null,
+        "Tiết 7": null,
+        "Tiết 8": {
+          "class": "2A2",
+          "subject": "Maths",
+          "room": ""
+        },
+        "Tiết 9": null,
+        "Tiết 10": null
+      },
+      "Thứ 4": {
+        "Tiết 1": {
+          "class": "2A2",
+          "subject": "Maths",
+          "room": ""
+        },
+        "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": {
@@ -11052,45 +11068,29 @@
           "room": ""
         },
         "Tiết 8": null,
-        "Tiết 9": {
-          "class": "2A2",
-          "subject": "Science",
-          "room": ""
-        },
+        "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 5": {
-        "Tiết 1": {
-          "class": "3A2",
-          "subject": "Maths",
-          "room": ""
-        },
-        "Tiết 2": {
-          "class": "3A2",
-          "subject": "Maths",
-          "room": ""
-        },
+        "Tiết 1": null,
+        "Tiết 2": null,
         "Tiết 3": null,
-        "Tiết 4": null,
-        "Tiết 5": {
-          "class": "2A2",
-          "subject": "Science",
+        "Tiết 4": {
+          "class": "1A2",
+          "subject": "Maths",
           "room": ""
         },
+        "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
-        "Tiết 10": {
-          "class": "1A2",
-          "subject": "Science",
-          "room": ""
-        }
+        "Tiết 10": null
       },
       "Thứ 6": {
         "Tiết 1": null,
         "Tiết 2": {
-          "class": "1A2",
+          "class": "3A2",
           "subject": "Maths",
           "room": ""
         },
@@ -11101,15 +11101,15 @@
         },
         "Tiết 4": null,
         "Tiết 5": null,
-        "Tiết 6": null,
-        "Tiết 7": {
+        "Tiết 6": {
           "class": "1A2",
-          "subject": "Science",
+          "subject": "Maths",
           "room": ""
         },
+        "Tiết 7": null,
         "Tiết 8": {
-          "class": "1A2",
-          "subject": "Science",
+          "class": "3A2",
+          "subject": "Maths",
           "room": ""
         },
         "Tiết 9": {
@@ -11135,57 +11135,53 @@
       },
       "Thứ 3": {
         "Tiết 1": null,
-        "Tiết 2": null,
-        "Tiết 3": null,
-        "Tiết 4": {
-          "class": "2A1",
-          "subject": "Bright Ideas",
-          "room": ""
-        },
-        "Tiết 5": null,
-        "Tiết 6": null,
-        "Tiết 7": null,
-        "Tiết 8": {
+        "Tiết 2": {
           "class": "2A2",
           "subject": "Global English",
           "room": ""
         },
-        "Tiết 9": null,
-        "Tiết 10": null
-      },
-      "Thứ 4": {
-        "Tiết 1": null,
-        "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
-        "Tiết 5": {
-          "class": "2A2",
-          "subject": "Global English",
-          "room": ""
-        },
+        "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": null
       },
-      "Thứ 5": {
+      "Thứ 4": {
         "Tiết 1": null,
-        "Tiết 2": {
+        "Tiết 2": null,
+        "Tiết 3": {
           "class": "2A2",
           "subject": "Global English",
           "room": ""
         },
-        "Tiết 3": {
-          "class": "2A1",
-          "subject": "Bright Ideas",
-          "room": ""
-        },
         "Tiết 4": {
+          "class": "2A2",
+          "subject": "Global English",
+          "room": ""
+        },
+        "Tiết 5": null,
+        "Tiết 6": {
+          "class": "2A2",
+          "subject": "Global English",
+          "room": ""
+        },
+        "Tiết 7": {
           "class": "2A1",
           "subject": "Bright Ideas",
           "room": ""
         },
+        "Tiết 8": null,
+        "Tiết 9": null,
+        "Tiết 10": null
+      },
+      "Thứ 5": {
+        "Tiết 1": null,
+        "Tiết 2": null,
+        "Tiết 3": null,
+        "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": {
           "class": "7A2",
@@ -11224,21 +11220,25 @@
           "subject": "Prepare",
           "room": ""
         },
-        "Tiết 3": null,
-        "Tiết 4": null,
-        "Tiết 5": null,
-        "Tiết 6": {
-          "class": "2A2",
-          "subject": "Global English",
-          "room": ""
-        },
-        "Tiết 7": null,
-        "Tiết 8": {
+        "Tiết 3": {
           "class": "2A1",
           "subject": "Bright Ideas",
           "room": ""
         },
-        "Tiết 9": null,
+        "Tiết 4": {
+          "class": "2A1",
+          "subject": "Bright Ideas",
+          "room": ""
+        },
+        "Tiết 5": null,
+        "Tiết 6": null,
+        "Tiết 7": null,
+        "Tiết 8": null,
+        "Tiết 9": {
+          "class": "2A1",
+          "subject": "Bright Ideas",
+          "room": ""
+        },
         "Tiết 10": null
       }
     },
@@ -11359,18 +11359,18 @@
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
-        "Tiết 6": null,
+        "Tiết 6": {
+          "class": "1A2",
+          "subject": "Global English",
+          "room": ""
+        },
         "Tiết 7": null,
         "Tiết 8": null,
         "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 3": {
-        "Tiết 1": {
-          "class": "1A2",
-          "subject": "Global English",
-          "room": ""
-        },
+        "Tiết 1": null,
         "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
@@ -11384,26 +11384,22 @@
       "Thứ 4": {
         "Tiết 1": null,
         "Tiết 2": null,
-        "Tiết 3": {
-          "class": "1A2",
-          "subject": "Global English",
-          "room": ""
-        },
+        "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
         "Tiết 6": null,
         "Tiết 7": null,
-        "Tiết 8": null,
+        "Tiết 8": {
+          "class": "1A2",
+          "subject": "Global English",
+          "room": ""
+        },
         "Tiết 9": null,
         "Tiết 10": null
       },
       "Thứ 5": {
         "Tiết 1": null,
-        "Tiết 2": {
-          "class": "1A2",
-          "subject": "Global English",
-          "room": ""
-        },
+        "Tiết 2": null,
         "Tiết 3": null,
         "Tiết 4": null,
         "Tiết 5": null,
@@ -11465,13 +11461,17 @@
           "subject": "Global English",
           "room": ""
         },
-        "Tiết 8": null,
-        "Tiết 9": null,
-        "Tiết 10": {
+        "Tiết 8": {
           "class": "1A2",
           "subject": "Global English",
           "room": ""
-        }
+        },
+        "Tiết 9": {
+          "class": "1A2",
+          "subject": "Global English",
+          "room": ""
+        },
+        "Tiết 10": null
       }
     }
   }

@@ -296,7 +296,18 @@ class UniversalMCATimetableSolver:
                         self.model.Add(self.X[a["id"], d, t] == 0)
 
         # ----------------------------------------------------------------------
-        # 14. Soft Objective: Minimize Teacher Idle Gaps (Lửng tiết)
+        # 14. Vice-Homeroom Afternoon Snack Duty (Tiết 7 THCS/THPT lock for Thu & Liên)
+        # ----------------------------------------------------------------------
+        # Thu (PCN 4A1) and Liên (PCN 5A1) must supervise primary afternoon snack (14:45 - 15:05),
+        # which collides with Secondary Period 7 (14:20 - 15:05, t=6). Lock t=6 for all secondary classes!
+        for a in self.assignments:
+            if a["lead_teacher"] in ["Thu", "Liên"] or a["co_teacher"] in ["Thu", "Liên"]:
+                if any(c in SECONDARY_CLASSES for c in a["classes"]):
+                    for d in DAYS:
+                        self.model.Add(self.X[a["id"], d, 6] == 0)
+
+        # ----------------------------------------------------------------------
+        # 15. Soft Objective: Minimize Teacher Idle Gaps (Lửng tiết)
         # ----------------------------------------------------------------------
         gap_vars = []
         for g in all_t_names:
