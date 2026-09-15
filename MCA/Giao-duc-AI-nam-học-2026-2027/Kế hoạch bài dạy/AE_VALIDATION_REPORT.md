@@ -10,12 +10,17 @@
 
 #### 1. Verified Output?
 - **Đạt:** Đã chạy lệnh kiểm tra thực tế bằng PowerShell và Python.
-- **Bằng chứng:** Thư mục `E:\Antigravity\MCA\Giao-duc-AI-nam-học-2026-2027\Kế hoạch bài dạy` chứa đầy đủ 13 tệp markdown:
-  - 1 tệp tổng thể: `KHGD_Chuyen_de_AI_12_Khoi_Tong_the.md` (30.9 KB)
-  - 5 tệp Tiểu học: `KHBD_AI_Lop_01.md` đến `KHBD_AI_Lop_05.md` (~68 KB/tệp)
-  - 4 tệp THCS: `KHBD_AI_Lop_06.md` đến `KHBD_AI_Lop_09.md` (~97 KB/tệp)
-  - 3 tệp THPT: `KHBD_AI_Lop_10.md` đến `KHBD_AI_Lop_12.md` (~112 KB/tệp)
-  - Tổng dung lượng: 1.098,2 KB (~1.1 MB), với hơn 5.200 dòng văn bản chuẩn hóa.
+- **Bằng chứng:** Thư mục `E:\Antigravity\MCA\Giao-duc-AI-nam-học-2026-2027\Kế hoạch bài dạy` chứa đầy đủ 26 tệp tài liệu sư phạm song hành (13 tệp Markdown + 13 tệp Microsoft Word .docx):
+  - **Định dạng Markdown (.md):** 13 tệp (~1.1 MB, 11.523 dòng):
+    - 1 tệp tổng thể: `KHGD_Chuyen_de_AI_12_Khoi_Tong_the.md` (30.9 KB)
+    - 5 tệp Tiểu học: `KHBD_AI_Lop_01.md` đến `KHBD_AI_Lop_05.md` (~68 KB/tệp)
+    - 4 tệp THCS: `KHBD_AI_Lop_06.md` đến `KHBD_AI_Lop_09.md` (~97 KB/tệp)
+    - 3 tệp THPT: `KHBD_AI_Lop_10.md` đến `KHBD_AI_Lop_12.md` (~112 KB/tệp)
+  - **Định dạng Microsoft Word (.docx):** 13 tệp (~860 KB, 8.715 đoạn, 24 bảng ma trận & phân phối):
+    - Căn lề chuẩn Nghị định 30/2020/NĐ-CP (Trái 2.5cm, Phải 1.5cm, Trên 2.0cm, Dưới 2.0cm).
+    - Phông chữ Times New Roman 13pt, dãn dòng 1.15, ngắt trang độc lập cho từng bài học.
+    - Footer tự động hiển thị số trang động (`Trang {PAGE} / {NUMPAGES}`).
+    - Header trường Marie Curie Academy (MCA) đồng bộ, sẵn sàng in ấn và lưu trữ giáo án.
 
 #### 2. No Regression?
 - **Đạt:** Không có sự hồi quy nào xảy ra. Đã chạy bộ kiểm tra toàn diện `Test-RCPHealth.ps1` (37/37 checks PASS) và `Invoke-AEPreflight.ps1` (8/8 checks PASS). Toàn bộ hệ thống Runtime Control Plane của Host OS giữ nguyên vẹn 100%.
