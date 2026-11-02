@@ -108,129 +108,137 @@
 
 ---
 
-### 2. CẤP TRUNG HỌC CƠ SỞ (CHUẨN CÔNG VĂN 5512/BGDĐT-GDTrH)
+### 2. CẤP TRUNG HỌC CƠ SỞ (THCS — CHUẨN CÔNG VĂN 5512/BGDĐT-GDTrH)
+*Căn cứ tài liệu Hướng dẫn chuyên đề AI THCS (Bộ GD&ĐT, GS.TS. Lê Hoài Bắc chủ biên) và Phụ lục F chuyển tiếp năm đầu.*
 
-#### A. KHỐI 6 (12 tiết — Kiến trúc AI, Dữ liệu, Thuật toán & Quyền riêng tư)
-| Tiết | Tên bài dạy (SGK NXBGDVN) | Mã YCCĐ cốt lõi | Vị trí / Thiết bị | Sản phẩm học tập |
+#### A. KHỐI 6 (12 tiết — "Làm quen và nhận diện")
+| Tiết | Tên bài dạy (Chuẩn Bộ GD&ĐT) | Mã YCCĐ cốt lõi | Hình thức / Thiết bị | Sản phẩm học tập |
 |:---:|---|---|---|---|
-| 1 | Giới thiệu AI & Lược sử phát triển | `6.A1.1`, `6.A1.2` | Lớp học (Slide, video) | Dòng thời gian lịch sử AI từ Turing đến LLM |
-| 2 | Thói quen "Con người quyết định cuối cùng" | `6.A1.2`, `6.A1.3` | Lớp học (Tình huống thực tế) | Phiếu kiểm chứng thông tin AI đối chiếu SGK |
-| 3 | Con người ra quyết định cùng AI | `6.A3.1`, `6.A3.2` | Lớp học (Ra quyết định) | Bài tập phân tích gợi ý lộ trình bản đồ số |
-| 4 | Quyền riêng tư và bảo vệ dữ liệu cá nhân | `6.A3.3`, `6.A3.4` | Lớp học (Pháp luật số) | Sơ đồ tài sản dữ liệu cá nhân & cách bảo vệ |
-| 5 | Mặt tích cực và hạn chế của tính năng AI | `6.B1.1`, `6.B2.1` | Lớp học (Bộ câu hỏi kiểm tra) | Bảng đánh giá an toàn của 3 ứng dụng phổ biến |
-| 6 | Kiến trúc cơ bản của AI: Dữ liệu & Thuật toán | `6.C1.1` | Phòng máy / Trực quan | Sơ đồ luồng xử lý: Input -> Model -> Output |
-| 7 | Tác động hai mặt của AI đến đời sống | `6.C1.2` | Lớp học (Thảo luận) | Bảng phân tích thuật toán đề xuất video gây nghiện |
-| 8 | Phân biệt công nghệ có AI và không có AI | `6.C2.1`, `6.C2.2` | Lớp học (Phân tích thiết bị) | Bảng so sánh máy tính bỏ túi vs trợ lý ảo |
-| 9 | Các công nghệ AI quen thuộc (CV, NLP, Speech) | `6.C3.1` | Phòng máy (Demo công nghệ) | Báo cáo trải nghiệm nhận dạng giọng nói |
-| 10 | Lựa chọn sử dụng AI phù hợp trong học tập | `6.D1.1` | Lớp học (Quy chế học thuật) | Quy tắc dùng AI luyện ngoại ngữ, cấm chép văn |
-| 11 | Giới hạn của AI so với con người | `6.D2.1` | Lớp học (Tư duy phản biện) | Bài luận ngắn: Vì sao AI không có sự thấu cảm |
-| 12 | Dự án AI sáng tạo: Thiết kế giải pháp hỗ trợ học tập | `6.D1.1`, `6.D2.1` | Không gian sáng tạo MCA | Bản thiết kế mô hình kết hợp người + AI |
+| 1 | AI là sản phẩm do con người tạo ra | `6.A1.1, 6.A3.2` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
+| 2 | AI là công cụ hỗ trợ; con người quyết định cuối cùng | `6.A1.2, 6.A3.1, 6.A1.3` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
+| 3 | Dữ liệu cá nhân là tài sản của mỗi người | `6.A3.3` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
+| 4 | Quyền riêng tư và cách ứng phó ban đầu | `6.A3.4` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
+| 5 | Mặt tốt và mặt xấu của một tính năng AI | `6.B1.1` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
+| 6 | Kiểm tra an toàn, minh bạch trước khi dùng AI | `6.B2.1` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
+| 7 | Dữ liệu, thuật toán và cách AI hoạt động | `6.C1.1` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
+| 8 | Nhận biết công cụ và công nghệ AI thông dụng | `6.C2.1, 6.C2.2, 6.C3.1` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
+| 9 | Tác động tích cực và tiêu cực của AI trong cuộc sống | `6.C1.2` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
+| 10 | Lựa chọn sử dụng AI phù hợp | `6.D1.1` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
+| 11 | Giới hạn của AI so với con người | `6.D2.1` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
+| 12 | Tổng kết: trải nghiệm và chia sẻ cuối năm | `6.A1.1` | Lớp học / TV thông minh | Phiếu học tập & Bảng nhận diện |
 
-#### B. KHỐI 7 (12 tiết — Quyền tự chủ, Dữ liệu sạch & Học có giám sát)
-| Tiết | Tên bài dạy | Mã YCCĐ cốt lõi | Vị trí / Thiết bị | Sản phẩm học tập |
+#### B. KHỐI 7 (12 tiết — "Sử dụng có kiểm soát")
+| Tiết | Tên bài dạy (Chuẩn Bộ GD&ĐT) | Mã YCCĐ cốt lõi | Hình thức / Thiết bị | Sản phẩm học tập |
 |:---:|---|---|---|---|
-| 1 | Quyền ra quyết định và đạo đức công nghệ | `7.A1.1` | Lớp học (Nghiên cứu án lệ) | Bản phân tích tình huống AI xét tuyển học bổng |
-| 2 | Hậu quả khi thiếu xác thực của con người | `7.A1.2` | Lớp học (Fact-checking) | Báo cáo các sự cố do tin tưởng mù quáng vào AI |
-| 3 | Tác hại khi để AI tự động quyết định hoàn toàn | `7.A2.1`, `7.A2.2` | Lớp học (Pháp lý công nghệ) | Sơ đồ phân định ranh giới tự động hóa |
-| 4 | Quyền tự chủ của con người trong môi trường số | `7.A3.1`, `7.A3.2` | Lớp học (Tranh biện) | Bài phát biểu bảo vệ quyền tự chủ học tập |
-| 5 | Tiêu chí đánh giá mức độ an toàn của ứng dụng AI | `7.B2.1`, `7.B2.2` | Lớp học (Xây dựng tiêu chuẩn)| Bảng kiểm 6 tiêu chuẩn an toàn cho app trường học |
-| 6 | Cam kết trách nhiệm & Khai báo trung thực khi dùng AI | `7.B3.1` | Lớp học (Liêm chính) | Mẫu khai báo sử dụng AI trong bài kiểm tra dự án |
-| 7 | Vấn đề đạo đức từ dữ liệu huấn luyện | `7.C4.1` | Phòng máy (Khảo sát dữ liệu) | Báo cáo thực nghiệm dữ liệu thiếu gây định kiến |
-| 8 | Quy trình huấn luyện mô hình học máy | `7.C5.1` | Phòng máy (Gán nhãn dữ liệu) | Bộ dữ liệu 50 hình ảnh đã được làm sạch và dán nhãn |
-| 9 | Các phương pháp học của AI (Có giám sát vs Không giám sát) | `7.C5.2` | Phòng máy (Mô phỏng thuật toán)| Sơ đồ phân biệt học từ ví dụ vs tự tìm quy luật |
-| 10 | Ý tưởng dự án AI giải quyết vấn đề trường học | `7.D1.1` | Lớp học (Lập kế hoạch) | Bản đề cương dự án Chatbot hỗ trợ tân học sinh |
-| 11 | Lập kế hoạch thiết kế sản phẩm AI theo nhóm | `7.D2.1` | Không gian STEM MCA | Bảng phân công nhiệm vụ và tiến độ dự án nhóm |
-| 12 | Báo cáo đề cương và sản phẩm mẫu của dự án | `7.D2.1` | Hội trường / Trình bày | Slide thuyết trình giải pháp AI trường học |
+| 1 | Vì sao con người cần giữ quyền ra quyết định | `7.A1.1` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
+| 2 | Xác thực kết quả do AI cung cấp | `7.A1.2` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
+| 3 | Tác hại khi để AI quyết định cuối cùng | `7.A2.1, 7.A2.2` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
+| 4 | Quyền tự chủ của con người và AI | `7.A3.1, 7.A3.2` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
+| 5 | Đánh giá ứng dụng AI an toàn, có đạo đức | `7.B2.1, 7.B2.2` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
+| 6 | Liêm chính học thuật khi dùng AI | `7.B3.1` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
+| 7 | Cách AI học từ dữ liệu | `7.C5.1` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
+| 8 | Một số cách học của AI | `7.C5.2` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
+| 9 | Đạo đức dữ liệu huấn luyện AI | `7.C4.1` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
+| 10 | Xác định vấn đề và phạm vi cho dự án AI | `7.D1.1` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
+| 11 | Lập kế hoạch dự án AI theo nhóm | `7.D2.1` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
+| 12 | Trình bày kế hoạch dự án và tổng kết | `7.A1.1` | Lớp học / Phòng máy | Phiếu xác thực & Sơ đồ thuật toán học máy |
 
-#### C. KHỐI 8 (12 tiết — Thị giác máy tính, Xử lý ngôn ngữ, Nhận diện cảm xúc & Deepfake)
-| Tiết | Tên bài dạy | Mã YCCĐ cốt lõi | Vị trí / Thiết bị | Sản phẩm học tập |
+#### C. KHỐI 8 (12 tiết — "Hiểu nguyên lí, phòng tránh rủi ro")
+| Tiết | Tên bài dạy (Chuẩn Bộ GD&ĐT) | Mã YCCĐ cốt lõi | Hình thức / Thiết bị | Sản phẩm học tập |
 |:---:|---|---|---|---|
-| 1 | Những lĩnh vực AI không thể thay thế con người | `8.A1.1` | Lớp học (Giao lưu hướng nghiệp)| Tọa đàm vai trò người thầy và bác sĩ thời AI |
-| 2 | Rủi ro suy giảm tư duy phản biện do lạm dụng GenAI | `8.A1.2` | Lớp học (Tranh biện) | Bài nghiên cứu tác động của việc copy câu trả lời AI |
-| 3 | Nguy cơ bị theo dõi, thao túng hành vi người dùng | `8.A2.1`, `8.A2.2` | Lớp học (Phân tích thuật toán)| Sơ đồ cách mạng xã hội dùng AI giữ chân người xem |
-| 4 | Trách nhiệm pháp lý của người tạo và người dùng AI | `8.A3.1`, `8.A3.2` | Lớp học (Án lệ vi phạm mạng) | Phân tích vụ việc giả danh tống tiền bằng AI |
-| 5 | Trách nhiệm giải trình (AI Accountability) | `8.A3.3` | Lớp học (Phương pháp khoa học)| Mẫu nhật ký giải trình nguồn gốc bài tập nghiên cứu |
-| 6 | Nhận diện rủi ro lừa đảo Deepfake giọng nói và hình ảnh | `8.B1.1`, `8.B2.1` | Lớp học (An ninh số) | Cẩm nang 5 bước phòng chống lừa đảo Deepfake |
-| 7 | Đạo đức trong lập trình và phát triển sản phẩm AI | `8.B3.1` | Lớp học (Bộ quy tắc đạo đức) | Bản cam kết đạo đức lập trình viên nhí MCA |
-| 8 | Cơ chế hoạt động của chức năng "Đọc - Nghe - Nhìn" | `8.C1.1` | Phòng máy (Phân tích kỹ thuật)| Sơ đồ giải mã âm thanh thành sóng và chữ viết |
-| 9 | Nhận diện cảm xúc qua thị giác và giọng nói | `8.C5.1` | Phòng máy (Thử nghiệm webcam) | Báo cáo đo độ chính xác nhận diện nét mặt vui/buồn |
-| 10 | Xác định bài toán thực tế cần giải quyết bằng AI | `8.D1.1` | Lớp học (Phân tích nhu cầu) | Phiếu khảo sát nhu cầu phân loại sách thư viện MCA |
-| 11 | Thiết kế kịch bản hội thoại (UX) cho Chatbot | `8.D2.1` | Phòng máy (Thiết kế luồng) | Sơ đồ cây hội thoại giải đáp môn học |
-| 12 | Triển khai và đánh giá sản phẩm Chatbot thử nghiệm | `8.D2.1` | Phòng máy (Kiểm thử thực tế) | Bản demo Chatbot chạy thử nghiệm trên nền tảng mở |
+| 1 | Một số lĩnh vực AI không nên thay thế con người | `8.A1.1` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
+| 2 | Rủi ro khi lạm dụng AI tạo sinh | `8.A1.2` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
+| 3 | Nguy cơ bị hệ thống AI theo dõi, thao túng | `8.A2.1, 8.A2.2` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
+| 4 | Trách nhiệm pháp lí và trách nhiệm giải trình | `8.A3.1, 8.A3.2, 8.A3.3` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
+| 5 | Nhận diện và phân loại rủi ro khi sử dụng AI | `8.B1.1` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
+| 6 | Bảo vệ dữ liệu cá nhân và tôn trọng bản quyền | `8.B2.1` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
+| 7 | Trách nhiệm đạo đức khi phát triển AI | `8.B3.1` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
+| 8 | Cách AI thực hiện chức năng đọc, nghe, nhìn | `8.C1.1` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
+| 9 | Cách AI nhận diện cảm xúc | `8.C5.1` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
+| 10 | Xác định vấn đề thực tế có thể giải quyết bằng AI | `8.D1.1` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
+| 11 | Thiết kế kịch bản hội thoại cho sản phẩm AI | `8.D2.1` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
+| 12 | Tổng kết: chia sẻ kịch bản và tự đánh giá năng lực AI lớp 8 | `8.A1.1` | Phòng máy / Lớp học | Kịch bản hội thoại AI & Phiếu đánh giá rủi ro |
 
-#### D. KHỐI 9 (12 tiết — Kiểm thử, Tối ưu dữ liệu, Định kiến thuật toán & Nghề nghiệp tương lai)
-| Tiết | Tên bài dạy | Mã YCCĐ cốt lõi | Vị trí / Thiết bị | Sản phẩm học tập |
+#### D. KHỐI 9 (12 tiết — "Vận dụng và định hướng")
+| Tiết | Tên bài dạy (Chuẩn Bộ GD&ĐT) | Mã YCCĐ cốt lõi | Hình thức / Thiết bị | Sản phẩm học tập |
 |:---:|---|---|---|---|
-| 1 | Thách thức xã hội trong kỷ nguyên trí tuệ nhân tạo | `9.A1.1`, `9.A2.1` | Lớp học (Toàn cầu hóa) | Báo cáo tác động của tự động hóa tới thị trường việc làm |
-| 2 | Thiên vị và thành kiến trong thuật toán AI (Bias) | `9.A2.2` | Lớp học (Phân tích dữ liệu) | Bài thực hành tìm điểm mù thiên kiến trong tuyển dụng |
-| 3 | Năng lực cốt lõi của công dân số thế kỷ 21 | `9.A3.1`, `9.A3.2` | Lớp học (Phát triển cá nhân) | Kế hoạch tự học suốt đời kết hợp công cụ AI |
-| 4 | AI và định hướng nghề nghiệp tương lai | `9.A3.4` | Lớp học (Hướng nghiệp) | Bản đồ nghề nghiệp mới: Kỹ sư Prompt, Chuyên viên dữ liệu |
-| 5 | Vai trò kiểm soát và giám sát cộng đồng đối với AI | `9.B2.1`, `9.B2.2` | Lớp học (Quản trị số) | Đề xuất giải pháp giám sát thông tin rác trên mạng |
-| 6 | Kỹ năng kiểm chứng nội dung số đa nguồn | `9.B2.3` | Lớp học (Kỹ năng báo chí) | Báo cáo đối chiếu tin tức AI tạo ra với nguồn xác thực |
-| 7 | Kiến tạo dữ liệu công bằng và phi định kiến | `9.B3.1`, `9.B3.2` | Lớp học (Thiết kế tập mẫu) | Phương án cân bằng dữ liệu nam/nữ, vùng miền |
-| 8 | Đề xuất ý tưởng giải pháp AI sáng tạo | `9.C2.1` | Không gian sáng tạo MCA | Bản đề xuất dự án AI hỗ trợ điểm danh học sinh |
-| 9 | Kỹ thuật làm sạch và nâng cao chất lượng dữ liệu | `9.C4.1` | Phòng máy (Xử lý tập dữ liệu)| Bảng số liệu trước và sau khi lọc nhiễu dữ liệu |
-| 10 | Vai trò đồng sáng tạo và dẫn dắt của con người | `9.D1.1` | Lớp học (Triết lý công nghệ) | Sơ đồ quy trình con người làm chủ vòng đời AI |
-| 11 | Phương pháp kiểm thử và đánh giá sản phẩm AI | `9.D2.1` | Phòng máy (Test ma trận) | Ma trận kiểm thử độ chính xác (Confusion Matrix đơn giản)|
-| 12 | Tổng kết dự án AI cấp THCS & Triển lãm khoa học | `9.D2.1` | Hội trường trường MCA | Báo cáo tổng kết dự án học tập nhóm lớp 9 |
+| 1 | Thách thức xã hội trong kỉ nguyên AI | `9.A1.1, 9.A2.1` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
+| 2 | Thiên vị và thành kiến trong AI | `9.A2.2` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
+| 3 | Năng lực con người cần rèn luyện trong thế giới có AI | `9.A3.1` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
+| 4 | Định hướng học tập và nghề nghiệp trong kỉ nguyên AI | `9.A3.3, 9.A3.4, 9.A3.2` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
+| 5 | Trách nhiệm người dùng và vai trò giám sát cộng đồng | `9.B2.1, 9.B2.2` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
+| 6 | Nhận diện và ứng phó với nội dung giả mạo | `9.B2.3` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
+| 7 | Kiến tạo AI công bằng | `9.B3.1, 9.B3.2` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
+| 8 | Đề xuất ý tưởng dự án AI cuối cấp | `9.C2.1` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
+| 9 | Cách cải thiện chất lượng bộ dữ liệu | `9.C4.1` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
+| 10 | Con người đồng sáng tạo và dẫn dắt AI | `9.D1.1` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
+| 11 | Một số cách kiểm tra, đánh giá sản phẩm AI | `9.D2.1` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
+| 12 | Tổng kết cấp học: trình bày ý tưởng dự án và hồ sơ năng lực AI bốn năm THCS | `9.A1.1` | Không gian STEM MCA | Dự án AI cuối cấp & Portfolio 4 năm THCS |
 
 ---
 
-### 3. CẤP TRUNG HỌC PHỔ THÔNG (CHUẨN CÔNG VĂN 5512/BGDĐT-GDTrH)
+### 3. CẤP TRUNG HỌC PHỔ THÔNG (THPT — CHUẨN CÔNG VĂN 5512/BGDĐT-GDTrH)
+*Căn cứ tài liệu Hướng dẫn chuyên đề AI THPT (Bộ GD&ĐT, GS.TS. Lê Hoài Bắc chủ biên) và Phụ lục F chuyển tiếp năm đầu.*
 
-#### A. KHỐI 10 (12 tiết — AI Tạo Sinh, LLM, Prompt Engineering & Pháp lý số)
-| Tiết | Tên bài dạy (SGK NXBGDVN) | Mã YCCĐ cốt lõi | Vị trí / Thiết bị | Sản phẩm học tập |
+#### A. KHỐI 10 (12 tiết — "Biết sử dụng có phương pháp")
+| Tiết | Tên bài dạy (Chuẩn Bộ GD&ĐT) | Mã YCCĐ cốt lõi | Hình thức / Thiết bị | Sản phẩm học tập |
 |:---:|---|---|---|---|
-| 1 | Khái niệm AI, AI hẹp (ANI) và Trí tuệ tổng quát (AGI)| `10.A1.1`, `10.A1.2` | Lớp học (Slide phân tích) | Bảng so sánh đặc điểm, giới hạn của ANI và AGI |
-| 2 | Rủi ro xã hội và yêu cầu kiểm soát của con người | `10.A2.1` | Lớp học (Nghiên cứu án lệ) | Bài thu hoạch đánh giá rủi ro thuật toán tín nhiệm xã hội |
-| 3 | Khung pháp luật số: Luật An ninh mạng & Luật Dữ liệu | `10.A3.1` | Lớp học (Hội thảo chuyên đề)| Infographic tóm tắt quyền dữ liệu cá nhân tại Việt Nam |
-| 4 | Tuân thủ quy định và xử lý vi phạm bản quyền AI | `10.B2.1` | Lớp học (Tình huống pháp lý)| Bản quy chế sử dụng AI học thuật dành cho khối THPT |
-| 5 | Bản chất kỹ thuật của AI tạo sinh (Generative AI) | `10.C3.3` | Lớp học / Phòng máy | Sơ đồ cơ chế sinh văn bản xác suất của mô hình ngôn ngữ |
-| 6 | Cấu trúc mô hình ngôn ngữ lớn (LLM) & Dữ liệu huấn luyện| `10.C4.1` | Phòng máy (Phân tích dữ liệu)| Báo cáo phân tích chất lượng tập văn bản huấn luyện LLM |
-| 7 | Kỹ năng thiết kế câu lệnh chuẩn (Prompt Engineering)| `10.C3.1`, `10.C3.2` | Phòng máy (Thực hành Prompt)| Bộ sưu tập 5 cấu trúc Prompt mẫu cho các môn học |
-| 8 | Ứng dụng AI tạo sinh trong tự học và nghiên cứu | `10.C2.3` | Phòng máy (Học tập cá nhân)| Sản phẩm tóm tắt tài liệu khoa học kèm phản biện |
-| 9 | Ảo giác AI (Hallucination) và phương pháp xác minh | `10.C3.2`, `10.B2.1` | Phòng máy (Thực nghiệm Fact)| Bảng bóc tách 3 lỗi ngụy biện / ảo giác trong văn bản AI |
-| 10 | Đạo đức trong thiết kế và ứng dụng AI thực tế | `10.B3.1` | Lớp học (Tranh biện đạo đức)| Luận điểm tranh biện về sở hữu trí tuệ của tác phẩm do AI vẽ |
-| 11 | Môi trường phát triển và cấu trúc hệ thống AI | `10.D1.1`, `10.D2.1` | Phòng máy (Khám phá công cụ)| Sơ đồ cấu trúc hệ thống phân tích phản hồi học sinh |
-| 12 | Báo cáo bài tập dự án AI Lớp 10 | `10.D2.2` | Phòng hội thảo MCA | Hồ sơ dự án ứng dụng AI giải quyết bài toán địa phương |
+| 1 | AI trong học tập và đời sống | `10.C2.1, 10.C2.2, 10.C2.3` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
+| 2 | Phân biệt AI tạo sinh với AI phân loại, dự đoán | `10.C3.3` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
+| 3 | Con người trong một hệ thống AI cụ thể | `10.A1.1` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
+| 4 | Vì sao con người cần kiểm soát AI? | `10.A1.2` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
+| 5 | Rủi ro của AI và các quy định bảo vệ người dùng | `10.A2.1, 10.A3.1` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
+| 6 | Nhận biết hành vi vi phạm khi sử dụng AI | `10.B2.1` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
+| 7 | Đạo đức trong thiết kế và vận hành AI | `10.B3.1` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
+| 8 | Đặt prompt phù hợp với nhiệm vụ | `10.C3.1, 10.C3.2` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
+| 9 | Chất lượng dữ liệu ảnh hưởng đến AI như thế nào? | `10.C4.1` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
+| 10 | Thực hành giải quyết một nhiệm vụ gần gũi bằng AI | `10.C2.1, 10.C3.2` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
+| 11 | Mục tiêu và các thành phần của hệ thống AI | `10.D1.1, 10.D2.1` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
+| 12 | Một số vấn đề khi vận hành hệ thống AI và tổng kết | `10.D2.2` | Phòng máy MCA | Kỹ thuật Prompt phân tầng & Bản thiết kế AI |
 
-#### B. KHỐI 11 (12 tiết — Mạng Nơ-ron, Kỹ thuật RAG, Tinh chỉnh & Phát triển bền vững)
-| Tiết | Tên bài dạy | Mã YCCĐ cốt lõi | Vị trí / Thiết bị | Sản phẩm học tập |
+#### B. KHỐI 11 (12 tiết — "Hiểu sâu nguyên lí & kiến trúc hệ thống")
+| Tiết | Tên bài dạy (Chuẩn Bộ GD&ĐT) | Mã YCCĐ cốt lõi | Hình thức / Thiết bị | Sản phẩm học tập |
 |:---:|---|---|---|---|
-| 1 | Quy trình sử dụng AI an toàn trong trường học | `11.A1.1`, `11.A1.2` | Lớp học (Thiết kế quy trình)| Sơ đồ quy trình 4 bước kiểm duyệt nội dung trước khi công bố |
-| 2 | Phát triển AI bền vững và công bằng xã hội | `11.A2.1`, `11.A2.2` | Lớp học (Kinh tế số) | Báo cáo tiêu thụ năng lượng và tác động môi trường của trung tâm dữ liệu AI |
-| 3 | Quyền của người dùng đối với dữ liệu cá nhân | `11.A3.1` | Lớp học (Nghị định 13) | Hướng dẫn quyền yêu cầu xóa/chỉnh sửa dữ liệu cá nhân |
-| 4 | Nhận diện sự cố pháp lý và an toàn thông tin AI | `11.B2.1` | Lớp học (Phân tích rủi ro)| Bảng ma trận ma rủi ro bảo mật thông tin trong trường |
-| 5 | Phương pháp thiết kế công cụ AI hỗ trợ học tập | `11.C2.1`, `11.C2.2` | Phòng máy (Phân tích tính năng)| Bản đặc tả yêu cầu phần mềm trợ lý học tập môn Toán |
-| 6 | Kỹ thuật Prompt nâng cao: Ràng buộc & Chia nhỏ nhiệm vụ| `11.C3.1` | Phòng máy (Prompting chuỗi) | Chuỗi Prompt 3 bước phân tích văn học phức hợp |
-| 7 | Khám phá cách vận hành của hệ thống NLP & Computer Vision| `11.C3.2` | Phòng máy (Mô phỏng kiến trúc)| Sơ đồ kiến trúc trích xuất đặc trưng hình ảnh |
-| 8 | Khái niệm Mạng nơ-ron nhân tạo (Artificial Neural Networks)| `11.C5.1` | Phòng máy (TensorFlow Playground)| Mô phỏng trực quan mạng nơ-ron phân loại 2 lớp dữ liệu |
-| 9 | Thuật toán phân cụm (Clustering) và phân lớp (Classification)| `11.C5.2` | Phòng máy (Khoa học dữ liệu)| Biểu đồ trực quan hóa gom nhóm sở thích học sinh |
-| 10 | Kỹ thuật sinh nội dung tăng cường bằng truy xuất (RAG)| `11.C3.1` | Phòng máy (Khám phá RAG) | Sơ đồ giải thích vì sao RAG giúp giảm ảo giác AI |
-| 11 | Thiết kế và vận hành tổng thể một giải pháp AI | `11.D1.1`, `11.D2.1` | Phòng máy (Thiết kế hệ thống)| Bản thiết kế giải pháp AI hỏi đáp dựa trên cẩm nang MCA |
-| 12 | Báo cáo dự án tối ưu hóa hệ thống AI học sinh | `11.D2.1` | Không gian STEM MCA | Báo cáo thử nghiệm và đo lường độ trễ của hệ thống |
+| 1 | AI hỗ trợ nâng cao năng lực và quyền kiểm soát của con người | `11.A1.2` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
+| 2 | Quy trình sử dụng AI an toàn và nhận diện rủi ro | `11.A1.1, 11.B2.1` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
+| 3 | AI hỗ trợ học tập và đề xuất tính năng công cụ | `11.C2.1, 11.C2.2` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
+| 4 | Nhận biết kỹ thuật prompt nâng cao qua ví dụ | `11.C3.1` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
+| 5 | Quyền của người dùng dữ liệu trong hệ thống AI | `11.A3.1` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
+| 6 | Một số công nghệ AI quen thuộc | `11.C3.2` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
+| 7 | Ứng dụng phân lớp và phân cụm trong đời sống | `11.C5.2` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
+| 8 | Ứng dụng mạng nơ-ron nhân tạo | `11.C5.1` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
+| 9 | AI vì lợi ích xã hội: bền vững và công bằng | `11.A2.1, 11.A2.2` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
+| 10 | Thiết kế tổng thể một hệ thống AI | `11.D1.1` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
+| 11 | Các thành phần của hệ thống AI phối hợp như thế nào? | `11.D2.1` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
+| 12 | Trình bày phương án hệ thống AI và tổng kết | `11.D1.1, 11.D2.1` | Phòng máy MCA | Sơ đồ mạng nơ-ron & Mô hình phân lớp phân cụm |
 
-#### C. KHỐI 12 (12 tiết — Hệ thống Tác nhân (AI Agent), Tối ưu mô hình & Dự án cộng đồng)
-| Tiết | Tên bài dạy | Mã YCCĐ cốt lõi | Vị trí / Thiết bị | Sản phẩm học tập |
+#### C. KHỐI 12 (12 tiết — "Làm chủ, đánh giá & kiến tạo có trách nhiệm")
+| Tiết | Tên bài dạy (Chuẩn Bộ GD&ĐT) | Mã YCCĐ cốt lõi | Hình thức / Thiết bị | Sản phẩm học tập |
 |:---:|---|---|---|---|
-| 1 | Quyền kiểm soát của con người trong vòng đời hệ thống AI| `12.A1.1`, `12.A1.2` | Lớp học (Triết học công nghệ)| Bản phân tích Human-in-the-loop trong hệ thống tự động |
-| 2 | Trách nhiệm giải trình đối với các quyết định của AI | `12.A1.3` | Lớp học (Tình huống pháp lý)| Hồ sơ audit kiểm toán tính minh bạch của thuật toán |
-| 3 | Các nguyên tắc đạo đức trong thiết kế sản phẩm AI | `12.A2.1` | Lớp học (Tiêu chuẩn UNESCO) | Bộ quy tắc đạo đức thiết kế công nghệ MCA AI Ethics |
-| 4 | Trách nhiệm công dân trong hệ sinh thái số toàn cầu | `12.A3.1`, `12.B3.1` | Lớp học (Hội thảo diễn đàn)| Tuyên ngôn công dân số trách nhiệm của học sinh lớp 12 |
-| 5 | Đánh giá mức độ rủi ro hệ thống của công nghệ AI | `12.B2.1` | Lớp học (Đánh giá tác động) | Báo cáo phân loại rủi ro theo khung AI Act chuẩn quốc tế |
-| 6 | Yêu cầu kỹ thuật cho công cụ AI hỗ trợ cộng đồng | `12.C2.1` | Phòng máy (Khảo sát cộng đồng)| Bản đặc tả kỹ thuật dự án AI tra cứu xe buýt học sinh |
-| 7 | Các công cụ mã nguồn mở phát triển AI (Teachable Machine, TF.js)| `12.C3.1` | Phòng máy (Công cụ mã nguồn mở)| Môi trường lập trình web nhúng mô hình AI trực tiếp |
-| 8 | Tùy chỉnh hệ thống và hiện tượng Quá khớp (Overfitting)| `12.C3.2` | Phòng máy (Thực nghiệm sai số)| Đồ thị biểu diễn sai số Loss và phương pháp khắc phục |
-| 9 | Khái niệm và cấu trúc cơ bản của Tác nhân AI (AI Agent)| `12.D2.1` | Phòng máy (Kiến trúc Agent) | Sơ đồ luồng Agent: Cảm nhận -> Lập kế hoạch -> Hành động |
-| 10 | Giải pháp hệ thống AI phục vụ bài toán thực tiễn | `12.D1.1` | Phòng máy / Nhóm dự án | Bản thiết kế kiến trúc AI Agent hỗ trợ phân luồng giao thông cổng trường |
-| 11 | Phân công vai trò trong nhóm phát triển sản phẩm AI | `12.D2.1` | Không gian sáng tạo MCA | Hồ sơ phân vai: Quản lý sản phẩm, Kỹ sư dữ liệu, Kiểm thử |
-| 12 | Báo cáo bảo vệ dự án tốt nghiệp Chuyên đề AI Lớp 12 | `12.D1.1`, `12.D2.1` | Hội trường Marie Curie | Báo cáo toàn văn và demo sản phẩm giải pháp AI hoàn chỉnh |
+| 1 | AI có thể hỗ trợ việc gì? Lựa chọn ý tưởng công cụ AI | `12.C2.1` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
+| 2 | Phương án thiết kế và vận hành hệ thống AI | `12.D1.1` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
+| 3 | Vai trò các bên trong phát triển sản phẩm AI | `12.D2.1` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
+| 4 | Nhận biết một số công cụ phát triển AI | `12.C3.1` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
+| 5 | Làm thế nào biết hệ thống AI có hiệu quả? | `12.C3.2` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
+| 6 | Mức độ rủi ro khi sử dụng AI | `12.B2.1` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
+| 7 | Nguyên tắc đạo đức trong thiết kế, phát triển AI | `12.A2.1` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
+| 8 | Quyền kiểm soát của con người trong vòng đời AI | `12.A1.1` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
+| 9 | Vai trò con người và AI trong quá trình ra quyết định
+Kiểm tra trách nhiệm giải trình khi sử dụng AI | `12.A1.2, 12.A1.3` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
+| 10 | Quyền và trách nhiệm trong hệ sinh thái AI | `12.B3.1` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
+| 11 | Trách nhiệm công dân trong xã hội có AI | `12.A3.1` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
+| 12 | Tổng kết: Ý tưởng AI hữu ích, an toàn và có trách nhiệm | `12.C2.1, 12.A1.1, 12.B2.1, 12.A3.1` | Hội trường / Lab số MCA | Hồ sơ giải trình AI & Ý tưởng AI cộng đồng |
 
 ---
 
-## III. HƯỚNG DẪN TỔ CHỨC VÀ ĐÁNH GIÁ CHUYÊN MÔN
-1. **Phân công giáo viên:** Tổ Tin học đóng vai trò nòng cốt về chuyên môn. Đối với các lớp khối Tiểu học, giáo viên Tin học phối hợp cùng giáo viên chủ nhiệm hướng dẫn thực hành và chuẩn bị học liệu trực quan.
-2. **Kế hoạch bài dạy:** Giáo viên giảng dạy tải kế hoạch bài dạy chi tiết của từng khối lớp tương ứng (`KHBD_AI_Lop_01.md` đến `KHBD_AI_Lop_12.md`) trong thư mục này để thực hiện.
-3. **Đánh giá học sinh:**
-   - Không tổ chức bài kiểm tra lấy điểm số riêng.
-   - Đánh giá bằng nhận xét định kỳ theo quá trình tham gia hoạt động và chất lượng sản phẩm học tập theo hồ sơ minh chứng.
+## III. QUY CHUẨN VÀ NGUYÊN TẮC KIỂM TRA ĐÁNH GIÁ (THEO KHUNG 2422)
+1. **Không cho điểm số, không lập sổ điểm riêng:** Đánh giá quá trình dựa trên quan sát hành vi, mức độ hợp tác và chất lượng sản phẩm học tập theo 3 mức (Cần hỗ trợ thêm – Đáp ứng – Đáp ứng tốt).
+2. **Hồ sơ học tập (Portfolio):** Mỗi học sinh trang bị 1 bìa hồ sơ giấy hoặc thư mục số trên Google Drive trường để lưu giữ sản phẩm AI cả năm.
+3. **Liêm chính học thuật:** Tuyệt đối không dùng AI để gian lận hay làm thay bài tập; hình thành thói quen trích dẫn minh bạch.
+
+---
+
+## IV. TỔ CHỨC THỰC HIỆN VÀ PHÂN CÔNG TRÁCH NHIỆM
+- **Tổ Tin học - Công nghệ:** Chịu trách nhiệm chính về kế hoạch bài dạy và phương án kết nối chuyển tiếp năm đầu (Phụ lục F).
+- **Giáo viên chủ nhiệm & Giáo viên bộ môn:** Phối hợp định hướng học sinh sử dụng AI hỗ trợ học tập an toàn, có trách nhiệm.
+- **Bộ phận Quản trị Thiết bị & Mạng:** Đảm bảo đường truyền phòng máy và tài khoản dùng chung của nhà trường; sẵn sàng phương án ngoại tuyến Unplugged khi cần thiết.
