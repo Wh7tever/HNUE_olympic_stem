@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mô Hình 3D Sa Bàn Giao Thông Học Đường Thông Minh AI - Marie Curie Academy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      user-select: none;
+    }
+    #canvas-container {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+    }
+    /* UI Overlay */
+    .header-bar {
+      position: absolute;
+      top: 16px;
+      left: 20px;
+      z-index: 10;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 14px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      max-width: 480px;
+    }
+    .header-bar h1 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .header-bar p {
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+    .badge {
+      display: inline-block;
+      background: #0284c7;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-top: 6px;
+    }
+    /* Controls Panel */
+    .controls-panel {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 12px 20px;
+      border-radius: 40px;
+      display: flex;
+      gap: 12px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    }
+    .btn {
+      background: #1e293b;
+      color: #f8fafc;
+      border: 1px solid #334155;
+      padding: 10px 18px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background: #0284c7;
+      border-color: #38bdf8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(2, 132, 199, 0.4);
+    }
+    .btn.active {
+      background: #0284c7;
+      border-color: #38bdf8;
+    }
+    .btn-emergency {
+      background: #991b1b;
+      border-color: #ef4444;
+    }
+    .btn-emergency:hover {
+      background: #dc2626;
+      box-shadow: 0 4px 16px rgba(239, 68, 68, 0.5);
+    }
+    /* Stats & Legend Overlay */
+    .legend-panel {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      z-index: 10;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 12px;
+      max-width: 280px;
+    }
+    .legend-panel h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fbbf24;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      color: #cbd5e1;
+    }
+    .color-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .status-box {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid #334155;
+    }
+    .status-text {
+      font-size: 13px;
+      font-weight: 700;
+      color: #22c55e;
+    }
+    /* Camera Presets */
+    .camera-presets {
+      position: absolute;
+      left: 20px;
+      bottom: 24px;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .cam-btn {
+      background: rgba(30, 41, 59, 0.8);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 11px;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: all 0.2s;
+    }
+    .cam-btn:hover {
+      background: #0284c7;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-bar">
+    <h1>Sa Bàn Đèn Giao Thông Học Đường Thông Minh AI</h1>
+    <p>Trường Tiểu học, THCS và THPT Marie Curie — Dự án HNUE Olympic STEM 2026</p>
+    <span class="badge">Phương án 1: Webcam USB 45° Cần Vươn + Barie Servo Kép</span>
+  </div>
+
+  <div class="legend-panel">
+    <h3>Trạng Thái Hệ Thống</h3>
+    <div class="legend-item"><span class="color-dot" style="background:#ef4444;"></span> Đèn Xe: <b id="stat-car-light">XANH</b></div>
+    <div class="legend-item"><span class="color-dot" style="background:#22c55e;"></span> Đèn Đi Bộ: <b id="stat-ped-light">ĐỎ</b></div>
+    <div class="legend-item"><span class="color-dot" style="background:#0284c7;"></span> Cần Barie: <b id="stat-barie">ĐÓNG (0°)</b></div>
+    <div class="legend-item"><span class="color-dot" style="background:#38bdf8;"></span> Webcam AI: <b id="stat-camera">Góc 45° (Bật)</b></div>
+    <div class="status-box">
+      <div>Nhận diện AI: <span class="status-text" id="ai-detect">Đường Bình Thường (98%)</span></div>
+    </div>
+  </div>
+
+  <div class="camera-presets">
+    <button class="cam-btn" onclick="setCameraView('overview')">📷 Toàn Cảnh (3D)</button>
+    <button class="cam-btn" onclick="setCameraView('webcam')">🎯 Góc Nhìn Mắt AI (45°)</button>
+    <button class="cam-btn" onclick="setCameraView('barie')">🚧 Cận Cảnh Barie & Cổng</button>
+  </div>
+
+  <div class="controls-panel">
+    <button class="btn" id="btn-student" onclick="triggerStudentWalk()">
+      🙋 Học Sinh Xin Qua Đường
+    </button>
+    <button class="btn btn-emergency" id="btn-ambulance" onclick="triggerAmbulance()">
+      🚑 Xe Cứu Thương Khẩn Cấp
+    </button>
+    <button class="btn" id="btn-reset" onclick="resetToNormal()">
+      🔄 Chế Độ Bình Thường
+    </button>
+    <button class="btn" id="btn-fov" onclick="toggleFov()">
+      👁️ Ẩn/Hiện Vùng Quét AI
+    </button>
+  </div>
+
+  <div id="canvas-container"></div>
+
+  <!-- Three.js + OrbitControls -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <script>
+    // -------------------------------------------------------------
+    // THREE.JS SCENE SETUP
+    // -------------------------------------------------------------
+    const container = document.getElementById('canvas-container');
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0f172a);
+    scene.fog = new THREE.FogExp2(0x0f172a, 0.005);
+
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+    camera.position.set(70, 75, 90);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    container.appendChild(renderer.domElement);
+
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.maxPolarAngle = Math.PI / 2.05;
+    controls.target.set(0, 5, 0);
+
+    // -------------------------------------------------------------
+    // LIGHTING
+    // -------------------------------------------------------------
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.65);
+    scene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 0.85);
+    dirLight.position.set(60, 100, 40);
+    dirLight.castShadow = true;
+    dirLight.shadow.mapSize.width = 2048;
+    dirLight.shadow.mapSize.height = 2048;
+    dirLight.shadow.camera.near = 10;
+    dirLight.shadow.camera.far = 250;
+    dirLight.shadow.camera.left = -60;
+    dirLight.shadow.camera.right = 60;
+    dirLight.shadow.camera.top = 60;
+    dirLight.shadow.camera.bottom = -60;
+    scene.add(dirLight);
+
+    // -------------------------------------------------------------
+    // SA BÀN NGÃ TƯ 60cm x 80cm (Scale: 1 unit = 1 cm)
+    // -------------------------------------------------------------
+    // Base Board (Tấm gỗ / Carton 60 x 80, dày 2cm)
+    const baseGeo = new THREE.BoxGeometry(80, 2, 60);
+    const baseMat = new THREE.MeshStandardMaterial({ color: 0x64748b, roughness: 0.8 });
+    const baseMesh = new THREE.Mesh(baseGeo, baseMat);
+    baseMesh.position.y = -1;
+    baseMesh.receiveShadow = true;
+    scene.add(baseMesh);
+
+    // Sidewalk 1 (Cổng trường Marie Curie: Rộng 10cm, Dài 80cm, Cao 1.5cm)
+    const sidewalk1Geo = new THREE.BoxGeometry(80, 1.5, 10);
+    const sidewalkMat = new THREE.MeshStandardMaterial({ color: 0xcbd5e1, roughness: 0.6 });
+    const sidewalk1 = new THREE.Mesh(sidewalk1Geo, sidewalkMat);
+    sidewalk1.position.set(0, 0.75, 25);
+    sidewalk1.receiveShadow = true;
+    scene.add(sidewalk1);
+
+    // Sidewalk 2 (Đối diện cổng trường: Rộng 10cm, Dài 80cm)
+    const sidewalk2 = new THREE.Mesh(sidewalk1Geo, sidewalkMat);
+    sidewalk2.position.set(0, 0.75, -25);
+    sidewalk2.receiveShadow = true;
+    scene.add(sidewalk2);
+
+    // Lòng đường nhựa xe chạy (Rộng 40cm, Dài 80cm)
+    const roadGeo = new THREE.PlaneGeometry(80, 40);
+    const roadMat = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.9 });
+    const roadMesh = new THREE.Mesh(roadGeo, roadMat);
+    roadMesh.rotation.x = -Math.PI / 2;
+    roadMesh.position.y = 0.05;
+    roadMesh.receiveShadow = true;
+    scene.add(roadMesh);
+
+    // Vạch tim đường màu vàng nét đứt
+    for (let x = -36; x <= 36; x += 8) {
+      const lineGeo = new THREE.PlaneGeometry(4, 0.8);
+      const lineMat = new THREE.MeshBasicMaterial({ color: 0xfbbf24 });
+      const line = new THREE.Mesh(lineGeo, lineMat);
+      line.rotation.x = -Math.PI / 2;
+      line.position.set(x, 0.08, 0);
+      scene.add(line);
+    }
+
+    // Vạch kẻ đường đi bộ Zebra Crosswalk (Rộng 15cm, Bắc qua đường)
+    for (let z = -16; z <= 16; z += 4.5) {
+      const zGeo = new THREE.PlaneGeometry(12, 2.2);
+      const zMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+      const zMesh = new THREE.Mesh(zGeo, zMat);
+      zMesh.rotation.x = -Math.PI / 2;
+      zMesh.position.set(0, 0.09, z);
+      scene.add(zMesh);
+    }
+
+    // -------------------------------------------------------------
+    // CỔNG TRƯỜNG MARIE CURIE (Bìa carton trang trí)
+    // -------------------------------------------------------------
+    const gateGroup = new THREE.Group();
+    // 2 Trụ cổng xanh MCA
+    const pillarGeo = new THREE.BoxGeometry(4, 20, 4);
+    const gateMat = new THREE.MeshStandardMaterial({ color: 0x0284c7 });
+    const pillar1 = new THREE.Mesh(pillarGeo, gateMat);
+    pillar1.position.set(-15, 10, 27);
+    pillar1.castShadow = true;
+    gateGroup.add(pillar1);
+
+    const pillar2 = new THREE.Mesh(pillarGeo, gateMat);
+    pillar2.position.set(15, 10, 27);
+    pillar2.castShadow = true;
+    gateGroup.add(pillar2);
+
+    // Xà ngang cổng
+    const beamGeo = new THREE.BoxGeometry(34, 5, 4.5);
+    const beam = new THREE.Mesh(beamGeo, gateMat);
+    beam.position.set(0, 20, 27);
+    beam.castShadow = true;
+    gateGroup.add(beam);
+
+    // Biển tên vàng đồng
+    const signGeo = new THREE.BoxGeometry(26, 3, 0.5);
+    const signMat = new THREE.MeshStandardMaterial({ color: 0xd97706, roughness: 0.3, metalness: 0.5 });
+    const sign = new THREE.Mesh(signGeo, signMat);
+    sign.position.set(0, 20, 29.5);
+    gateGroup.add(sign);
+    scene.add(gateGroup);
+
+    // -------------------------------------------------------------
+    // CỘT ĐÈN GIAO THÔNG CHÍNH CÓ CẦN VƯƠN GẮN WEBCAM USB (Phương án 1)
+    // -------------------------------------------------------------
+    const mainPoleGroup = new THREE.Group();
+    mainPoleGroup.position.set(12, 0, -22);
+
+    // Thân cột chính (Cao 25cm)
+    const poleGeo = new THREE.CylinderGeometry(0.8, 1.0, 25, 16);
+    const poleMat = new THREE.MeshStandardMaterial({ color: 0x475569, metalness: 0.4 });
+    const mainPole = new THREE.Mesh(poleGeo, poleMat);
+    mainPole.position.y = 12.5;
+    mainPole.castShadow = true;
+    mainPoleGroup.add(mainPole);
+
+    // Cần vươn ngang dài 12cm vươn ra tim đường
+    const armGeo = new THREE.CylinderGeometry(0.5, 0.5, 14, 16);
+    const arm = new THREE.Mesh(armGeo, poleMat);
+    arm.rotation.x = Math.PI / 2;
+    arm.position.set(0, 24, 7);
+    arm.castShadow = true;
+    mainPoleGroup.add(arm);
+
+    // Hộp đèn xe ô tô (3 Đèn: Đỏ, Vàng, Xanh)
+    const lightBoxGeo = new THREE.BoxGeometry(2.5, 7, 2);
+    const boxMat = new THREE.MeshStandardMaterial({ color: 0x0f172a });
+    const lightBox = new THREE.Mesh(lightBoxGeo, boxMat);
+    lightBox.position.set(-1.8, 20, 0);
+    mainPoleGroup.add(lightBox);
+
+    // 3 Mắt đèn LED
+    const ledGeo = new THREE.SphereGeometry(0.6, 16, 16);
+    const carRedMat = new THREE.MeshBasicMaterial({ color: 0x330000 });
+    const carYellowMat = new THREE.MeshBasicMaterial({ color: 0x332200 });
+    const carGreenMat = new THREE.MeshBasicMaterial({ color: 0x00ff44 }); // Ban đầu xe xanh
+
+    const carRedLed = new THREE.Mesh(ledGeo, carRedMat);
+    carRedLed.position.set(-1.8, 22, 1.1);
+    mainPoleGroup.add(carRedLed);
+
+    const carYellowLed = new THREE.Mesh(ledGeo, carYellowMat);
+    carYellowLed.position.set(-1.8, 20, 1.1);
+    mainPoleGroup.add(carYellowLed);
+
+    const carGreenLed = new THREE.Mesh(ledGeo, carGreenMat);
+    carGreenLed.position.set(-1.8, 18, 1.1);
+    mainPoleGroup.add(carGreenLed);
+
+    // MẮT WEBCAM USB MINI GẮN ĐẦU CẦN VƯƠN (Nghiêng 45 độ)
+    const webcamGroup = new THREE.Group();
+    webcamGroup.position.set(0, 24, 14);
+    webcamGroup.rotation.x = Math.PI / 4; // 45 độ hướng xuống vạch kẻ đường
+
+    const camBodyGeo = new THREE.BoxGeometry(2.2, 1.6, 2.0);
+    const camBodyMat = new THREE.MeshStandardMaterial({ color: 0x0284c7 });
+    const camBody = new THREE.Mesh(camBodyGeo, camBodyMat);
+    webcamGroup.add(camBody);
+
+    const lensGeo = new THREE.CylinderGeometry(0.6, 0.7, 0.8, 16);
+    const lensMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, roughness: 0.1 });
+    const lens = new THREE.Mesh(lensGeo, lensMat);
+    lens.rotation.x = Math.PI / 2;
+    lens.position.z = 1.1;
+    webcamGroup.add(lens);
+
+    mainPoleGroup.add(webcamGroup);
+    scene.add(mainPoleGroup);
+
+    // NÓN GÓC QUÉT CAMERA FOV CONE (Bán trong suốt)
+    const fovGeo = new THREE.ConeGeometry(18, 30, 24, 1, true);
+    const fovMat = new THREE.MeshBasicMaterial({
+      color: 0x38bdf8,
+      transparent: true,
+      opacity: 0.22,
+      side: THREE.DoubleSide
+    });
+    const fovCone = new THREE.Mesh(fovGeo, fovMat);
+    fovCone.position.set(12, 12, -8);
+    fovCone.rotation.x = -Math.PI / 3.8;
+    scene.add(fovCone);
+
+    // -------------------------------------------------------------
+    // CỘT ĐÈN ĐI BỘ & CƠ CẤU RÀO CHẮN BARIE SERVO
+    // -------------------------------------------------------------
+    const pedPoleGroup = new THREE.Group();
+    pedPoleGroup.position.set(-8, 0, 22);
+
+    // Cột đèn đi bộ nhỏ (Cao 16cm)
+    const pedPoleGeo = new THREE.CylinderGeometry(0.5, 0.6, 16, 16);
+    const pedPole = new THREE.Mesh(pedPoleGeo, poleMat);
+    pedPole.position.y = 8;
+    pedPole.castShadow = true;
+    pedPoleGroup.add(pedPole);
+
+    // Hộp đèn người đi bộ (Đỏ / Xanh)
+    const pedBoxGeo = new THREE.BoxGeometry(1.8, 4.5, 1.5);
+    const pedBox = new THREE.Mesh(pedBoxGeo, boxMat);
+    pedBox.position.set(0, 14, 0);
+    pedPoleGroup.add(pedBox);
+
+    const pedRedMat = new THREE.MeshBasicMaterial({ color: 0xff0000 }); // Ban đầu cấm qua
+    const pedGreenMat = new THREE.MeshBasicMaterial({ color: 0x003300 });
+
+    const pedRedLed = new THREE.Mesh(ledGeo, pedRedMat);
+    pedRedLed.position.set(0, 15, 0.85);
+    pedPoleGroup.add(pedRedLed);
+
+    const pedGreenLed = new THREE.Mesh(ledGeo, pedGreenMat);
+    pedGreenLed.position.set(0, 13, 0.85);
+    pedPoleGroup.add(pedGreenLed);
+
+    // Động cơ Servo SG90 vỏ xanh
+    const servoGeo = new THREE.BoxGeometry(2.2, 2.5, 1.2);
+    const servoMat = new THREE.MeshStandardMaterial({ color: 0x0284c7 });
+    const servo = new THREE.Mesh(servoGeo, servoMat);
+    servo.position.set(0, 5, 0);
+    pedPoleGroup.add(servo);
+
+    // Nút bấm cơ học Failsafe màu đỏ
+    const btnGeo = new THREE.CylinderGeometry(0.4, 0.4, 0.4, 16);
+    const btnMat = new THREE.MeshBasicMaterial({ color: 0xef4444 });
+    const failsafeBtn = new THREE.Mesh(btnGeo, btnMat);
+    failsafeBtn.rotation.x = Math.PI / 2;
+    failsafeBtn.position.set(0, 9, 0.6);
+    pedPoleGroup.add(failsafeBtn);
+
+    // CẦN RÀO CHẮN BARIE AN TOÀN (Dài 22cm)
+    const bariePivot = new THREE.Group();
+    bariePivot.position.set(0, 5, 0.8);
+
+    const barieArmGeo = new THREE.CylinderGeometry(0.35, 0.35, 20, 16);
+    const barieMat = new THREE.MeshStandardMaterial({ color: 0xef4444 });
+    const barieArm = new THREE.Mesh(barieArmGeo, barieMat);
+    barieArm.rotation.z = Math.PI / 2;
+    barieArm.position.x = 10;
+    barieArm.castShadow = true;
+    bariePivot.add(barieArm);
+
+    // Sọc trắng phản quang trên cần barie
+    for (let bx = 3; bx <= 18; bx += 4) {
+      const stripeGeo = new THREE.CylinderGeometry(0.38, 0.38, 2, 16);
+      const stripeMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+      const stripe = new THREE.Mesh(stripeGeo, stripeMat);
+      stripe.rotation.z = Math.PI / 2;
+      stripe.position.x = bx;
+      bariePivot.add(stripe);
+    }
+
+    pedPoleGroup.add(bariePivot);
+    scene.add(pedPoleGroup);
+
+    // -------------------------------------------------------------
+    // MÔ HÌNH HỌC SINH & XE CỨU THƯƠNG
+    // -------------------------------------------------------------
+    // Học sinh
+    const studentGroup = new THREE.Group();
+    studentGroup.position.set(-4, 0.75, 24);
+
+    const bodyGeo = new THREE.CylinderGeometry(1.0, 1.2, 5, 16);
+    const bodyMat = new THREE.MeshStandardMaterial({ color: 0xdc2626 });
+    const body = new THREE.Mesh(bodyGeo, bodyMat);
+    body.position.y = 2.5;
+    body.castShadow = true;
+    studentGroup.add(body);
+
+    const headGeo = new THREE.SphereGeometry(1.1, 16, 16);
+    const headMat = new THREE.MeshStandardMaterial({ color: 0xfcd34d });
+    const head = new THREE.Mesh(headGeo, headMat);
+    head.position.y = 5.8;
+    studentGroup.add(head);
+
+    // Cánh tay giơ xin đường
+    const armSG = new THREE.CylinderGeometry(0.3, 0.3, 3.5, 16);
+    const armMesh = new THREE.Mesh(armSG, headMat);
+    armMesh.position.set(1.5, 4.5, 0);
+    armMesh.rotation.z = -Math.PI / 3;
+    studentGroup.add(armMesh);
+    scene.add(studentGroup);
+
+    // Mô hình xe cứu thương (Ambulance)
+    const ambGroup = new THREE.Group();
+    ambGroup.position.set(28, 1.5, -9);
+
+    const carBodyGeo = new THREE.BoxGeometry(12, 4.5, 6);
+    const carMat = new THREE.MeshStandardMaterial({ color: 0xffffff });
+    const car = new THREE.Mesh(carBodyGeo, carMat);
+    car.castShadow = true;
+    ambGroup.add(car);
+
+    // Đèn còi cứu thương nhấp nháy đỏ
+    const sirenGeo = new THREE.CylinderGeometry(0.6, 0.6, 0.8, 16);
+    const sirenMat = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+    const siren = new THREE.Mesh(sirenGeo, sirenMat);
+    siren.position.set(0, 2.6, 0);
+    ambGroup.add(siren);
+
+    scene.add(ambGroup);
+
+    // -------------------------------------------------------------
+    // INTERACTIVE LOGIC & STATE MACHINE
+    // -------------------------------------------------------------
+    let targetBarieAngle = 0; // 0 độ là đóng, Math.PI / 2 là 90 độ mở
+    let isFovVisible = true;
+
+    function updateLights(carColor, pedColor) {
+      carRedMat.color.setHex(carColor === 'red' ? 0xff0000 : 0x330000);
+      carYellowMat.color.setHex(carColor === 'yellow' ? 0xffbb00 : 0x332200);
+      carGreenMat.color.setHex(carColor === 'green' ? 0x00ff44 : 0x003300);
+
+      pedRedMat.color.setHex(pedColor === 'red' ? 0xff0000 : 0x330000);
+      pedGreenMat.color.setHex(pedColor === 'green' ? 0x00ff44 : 0x003300);
+
+      document.getElementById('stat-car-light').textContent = carColor.toUpperCase();
+      document.getElementById('stat-car-light').style.color = carColor === 'green' ? '#22c55e' : (carColor === 'yellow' ? '#fbbf24' : '#ef4444');
+
+      document.getElementById('stat-ped-light').textContent = pedColor.toUpperCase();
+      document.getElementById('stat-ped-light').style.color = pedColor === 'green' ? '#22c55e' : '#ef4444';
+    }
+
+    function triggerStudentWalk() {
+      document.getElementById('ai-detect').textContent = 'Học Sinh Xin Đường (96%)';
+      document.getElementById('ai-detect').style.color = '#38bdf8';
+      
+      // Đèn xe chuyển vàng trước
+      updateLights('yellow', 'red');
+      
+      setTimeout(() => {
+        updateLights('red', 'green');
+        targetBarieAngle = Math.PI / 2; // Mở cần barie 90 độ
+        document.getElementById('stat-barie').textContent = 'MỞ (90°) - CHO PHÉP QUA';
+        document.getElementById('stat-barie').style.color = '#22c55e';
+      }, 1000);
+    }
+
+    function triggerAmbulance() {
+      document.getElementById('ai-detect').textContent = 'Ưu Tiên Xe Cứu Thương (98%)';
+      document.getElementById('ai-detect').style.color = '#ef4444';
+      
+      // Ngay lập tức mở đèn xe xanh khẩn cấp, hạ barie
+      updateLights('green', 'red');
+      targetBarieAngle = 0; // Đóng cần barie
+      document.getElementById('stat-barie').textContent = 'ĐÓNG (0°) - CHẶN ĐƯỜNG';
+      document.getElementById('stat-barie').style.color = '#ef4444';
+    }
+
+    function resetToNormal() {
+      document.getElementById('ai-detect').textContent = 'Đường Bình Thường (98%)';
+      document.getElementById('ai-detect').style.color = '#22c55e';
+      updateLights('green', 'red');
+      targetBarieAngle = 0;
+      document.getElementById('stat-barie').textContent = 'ĐÓNG (0°)';
+      document.getElementById('stat-barie').style.color = '#0284c7';
+    }
+
+    function toggleFov() {
+      isFovVisible = !isFovVisible;
+      fovCone.visible = isFovVisible;
+      document.getElementById('stat-camera').textContent = isFovVisible ? 'Góc 45° (Bật)' : 'Tắt hiển thị';
+    }
+
+    function setCameraView(preset) {
+      if (preset === 'overview') {
+        camera.position.set(70, 75, 90);
+        controls.target.set(0, 5, 0);
+      } else if (preset === 'webcam') {
+        camera.position.set(12, 26, -8);
+        controls.target.set(0, 0, 15);
+      } else if (preset === 'barie') {
+        camera.position.set(-15, 12, 35);
+        controls.target.set(-8, 6, 22);
+      }
+    }
+
+    // -------------------------------------------------------------
+    // ANIMATION LOOP
+    // -------------------------------------------------------------
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Smooth barie rotation
+      bariePivot.rotation.z += (targetBarieAngle - bariePivot.rotation.z) * 0.08;
+
+      // Nhấp nháy đèn còi xe cứu thương
+      sirenMat.color.setHex((Date.now() % 400 < 200) ? 0xff0000 : 0x0000ff);
+
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>
