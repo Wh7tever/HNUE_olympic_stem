@@ -4,7 +4,8 @@ HỒ SƠ TỔNG HỢP TOÀN DIỆN VÀ KẾ HOẠCH TRIỂN KHAI DỰ ÁN STEM O
 Dự án: Hệ thống Đèn Giao Thông Học Đường Thông Minh Tích Hợp AI Vision & Rào Chắn Barie Tự Động
 Đơn vị: Trường Tiểu học, THCS và THPT Marie Curie Thái Bình
 Cuộc thi: HNUE Olympic STEM 2026 — Bảng Tiểu học
-Chuẩn thể thức: Nghị định 30/2020/NĐ-CP & Nhận diện thương hiệu Marie Curie Academy
+Chuẩn thể thức: Nghị định 30/2020/NĐ-CP
+Định dạng: CHỮ MÀU ĐEN 100%, KHÔNG ĐỔ MÀU NỀN CÁC Ô BẢNG TÍNH (CHUẨN IN ẤN HÀNH CHÍNH)
 """
 
 import os
@@ -18,21 +19,8 @@ from docx.oxml.ns import nsdecls, qn
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-# Bảng màu chuẩn nhận diện Marie Curie Academy
-COLOR_NAVY = RGBColor(27, 54, 93)      # #1B365D
-COLOR_GOLD = RGBColor(197, 160, 89)    # #C5A059
-COLOR_DARK = RGBColor(30, 41, 59)      # #1E293B
-COLOR_MUTED = RGBColor(100, 116, 139)  # #64748B
-HEX_PRIMARY = "1B365D"
-HEX_GOLD = "C5A059"
-HEX_LIGHT_BG = "F8FAFC"
-HEX_ALT_ROW = "F1F5F9"
-HEX_WARNING_BG = "FEF2F2"
-HEX_WARNING_BORDER = "EF4444"
-HEX_NOTE_BG = "F0FDF4"
-HEX_NOTE_BORDER = "22C55E"
-HEX_INFO_BG = "EFF6FF"
-HEX_INFO_BORDER = "3B82F6"
+# Màu chữ thuần đen chuẩn văn bản hành chính
+COLOR_BLACK = RGBColor(0, 0, 0)
 
 def set_cell_margins(cell, top=100, bottom=100, left=130, right=130):
     tcPr = cell._tc.get_or_add_tcPr()
@@ -44,15 +32,18 @@ def set_cell_margins(cell, top=100, bottom=100, left=130, right=130):
                       f'</w:tcMar>')
     tcPr.append(tcMar)
 
-def set_cell_shading(cell, color_hex="F8FAFC"):
-    shd = parse_xml(f'<w:shd {nsdecls("w")} w:fill="{color_hex}"/>')
-    cell._tc.get_or_add_tcPr().append(shd)
+def set_cell_no_shading(cell):
+    """Đảm bảo ô hoàn toàn không đổ màu nền (nền trắng trong suốt)"""
+    tcPr = cell._tc.get_or_add_tcPr()
+    shd = parse_xml(f'<w:shd {nsdecls("w")} w:fill="auto"/>')
+    tcPr.append(shd)
 
 def set_cell_valign(cell, val="center"):
     vAlign = parse_xml(f'<w:vAlign {nsdecls("w")} w:val="{val}"/>')
     cell._tc.get_or_add_tcPr().append(vAlign)
 
-def set_table_borders(table, color="CBD5E1", sz="4"):
+def set_table_borders(table, color="000000", sz="4"):
+    """Đường viền đơn mảnh màu đen chuẩn văn bản hành chính"""
     tblPr = table._tbl.tblPr
     tblBorders = parse_xml(f'<w:tblBorders {nsdecls("w")}>'
                            f'<w:top w:val="single" w:sz="{sz}" w:space="0" w:color="{color}"/>'
@@ -92,7 +83,7 @@ def add_page_number_to_header(header):
     run = p.add_run()
     run.font.name = 'Times New Roman'
     run.font.size = Pt(12)
-    run.font.color.rgb = COLOR_MUTED
+    run.font.color.rgb = COLOR_BLACK
     fld1 = parse_xml(r'<w:fldChar %s w:fldCharType="begin"/>' % nsdecls('w'))
     instr = parse_xml(r'<w:instrText %s xml:space="preserve"> PAGE </w:instrText>' % nsdecls('w'))
     fld2 = parse_xml(r'<w:fldChar %s w:fldCharType="separate"/>' % nsdecls('w'))
@@ -102,18 +93,19 @@ def add_page_number_to_header(header):
     run._r.append(fld2)
     run._r.append(fld3)
 
-def add_callout_box(doc, title, text, bg_hex=HEX_NOTE_BG, border_hex=HEX_NOTE_BORDER, title_color=COLOR_NAVY):
+def add_callout_box(doc, title, text):
+    """Khung ghi chú không đổ màu, chỉ có đường viền viền trái đậm màu đen"""
     tbl = doc.add_table(rows=1, cols=1)
     tbl.alignment = WD_TABLE_ALIGNMENT.CENTER
     cell = tbl.cell(0, 0)
     cell.width = Cm(16.0)
-    set_cell_margins(cell, top=120, bottom=120, left=160, right=160)
-    set_cell_shading(cell, bg_hex)
+    set_cell_margins(cell, top=100, bottom=100, left=150, right=150)
+    set_cell_no_shading(cell)
     
     tcPr = cell._tc.get_or_add_tcPr()
     tcBorders = parse_xml(f'<w:tcBorders {nsdecls("w")}>'
                           f'<w:top w:val="none"/>'
-                          f'<w:left w:val="single" w:sz="24" w:space="0" w:color="{border_hex}"/>'
+                          f'<w:left w:val="single" w:sz="18" w:space="0" w:color="000000"/>'
                           f'<w:bottom w:val="none"/>'
                           f'<w:right w:val="none"/>'
                           f'</w:tcBorders>')
@@ -127,12 +119,12 @@ def add_callout_box(doc, title, text, bg_hex=HEX_NOTE_BG, border_hex=HEX_NOTE_BO
     run_t.font.name = 'Times New Roman'
     run_t.font.size = Pt(12.5)
     run_t.font.bold = True
-    run_t.font.color.rgb = title_color
+    run_t.font.color.rgb = COLOR_BLACK
     
     run_b = p.add_run(text)
     run_b.font.name = 'Times New Roman'
     run_b.font.size = Pt(11.5)
-    run_b.font.color.rgb = COLOR_DARK
+    run_b.font.color.rgb = COLOR_BLACK
     
     p_after = doc.add_paragraph()
     p_after.paragraph_format.space_before = Pt(0)
@@ -147,7 +139,7 @@ def add_heading_1(doc, text):
     run.font.name = 'Times New Roman'
     run.font.size = Pt(14)
     run.font.bold = True
-    run.font.color.rgb = COLOR_NAVY
+    run.font.color.rgb = COLOR_BLACK
     return p
 
 def add_heading_2(doc, text):
@@ -159,7 +151,7 @@ def add_heading_2(doc, text):
     run.font.name = 'Times New Roman'
     run.font.size = Pt(13)
     run.font.bold = True
-    run.font.color.rgb = COLOR_GOLD
+    run.font.color.rgb = COLOR_BLACK
     return p
 
 def add_heading_3(doc, text):
@@ -171,7 +163,7 @@ def add_heading_3(doc, text):
     run.font.name = 'Times New Roman'
     run.font.size = Pt(12.5)
     run.font.bold = True
-    run.font.color.rgb = COLOR_DARK
+    run.font.color.rgb = COLOR_BLACK
     return p
 
 def add_body_p(doc, text, bold_prefix=None, space_after=5, italic=False):
@@ -186,13 +178,13 @@ def add_body_p(doc, text, bold_prefix=None, space_after=5, italic=False):
         r_pre.font.name = 'Times New Roman'
         r_pre.font.size = Pt(12.5)
         r_pre.font.bold = True
-        r_pre.font.color.rgb = COLOR_DARK
+        r_pre.font.color.rgb = COLOR_BLACK
         
     run = p.add_run(text)
     run.font.name = 'Times New Roman'
     run.font.size = Pt(12.5)
     run.font.italic = italic
-    run.font.color.rgb = COLOR_DARK
+    run.font.color.rgb = COLOR_BLACK
     return p
 
 def build_master_unified_document():
@@ -211,11 +203,11 @@ def build_master_unified_document():
     section.different_first_page_header_footer = True
     add_page_number_to_header(section.header)
     
-    # Thiết lập Normal style
+    # Thiết lập Normal style mặc định thuần đen
     style = doc.styles['Normal']
     style.font.name = 'Times New Roman'
     style.font.size = Pt(12.5)
-    style.font.color.rgb = COLOR_DARK
+    style.font.color.rgb = COLOR_BLACK
     style.paragraph_format.line_spacing = 1.15
     
     # ==========================================
@@ -227,42 +219,44 @@ def build_master_unified_document():
     
     cell_l = tbl_header.cell(0, 0)
     cell_l.width = Cm(7.5)
+    set_cell_no_shading(cell_l)
     p_l = cell_l.paragraphs[0]
     p_l.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p_l.paragraph_format.space_before = Pt(0)
     p_l.paragraph_format.space_after = Pt(2)
     p_l.paragraph_format.line_spacing = 1.05
     r = p_l.add_run("TRƯỜNG LIÊN CẤP MARIE CURIE\n")
-    r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True
+    r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = COLOR_BLACK
     r = p_l.add_run("TỔ STEM & CÔNG NGHỆ SỐ\n")
-    r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = COLOR_NAVY
+    r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = COLOR_BLACK
     r = p_l.add_run("Số: 10/HSTD-STEM-MCA")
-    r.font.name = 'Times New Roman'; r.font.size = Pt(10); r.font.italic = True
+    r.font.name = 'Times New Roman'; r.font.size = Pt(10); r.font.italic = True; r.font.color.rgb = COLOR_BLACK
     
     cell_r = tbl_header.cell(0, 1)
     cell_r.width = Cm(8.5)
+    set_cell_no_shading(cell_r)
     p_r = cell_r.paragraphs[0]
     p_r.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p_r.paragraph_format.space_before = Pt(0)
     p_r.paragraph_format.space_after = Pt(2)
     p_r.paragraph_format.line_spacing = 1.05
     r = p_r.add_run("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\n")
-    r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True
+    r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = COLOR_BLACK
     r = p_r.add_run("Độc lập – Tự do – Hạnh phúc\n")
-    r.font.name = 'Times New Roman'; r.font.size = Pt(11.5); r.font.bold = True; r.font.underline = True
+    r.font.name = 'Times New Roman'; r.font.size = Pt(11.5); r.font.bold = True; r.font.underline = True; r.font.color.rgb = COLOR_BLACK
     r = p_r.add_run("Thái Bình, ngày 10 tháng 11 năm 2026")
-    r.font.name = 'Times New Roman'; r.font.size = Pt(10); r.font.italic = True
+    r.font.name = 'Times New Roman'; r.font.size = Pt(10); r.font.italic = True; r.font.color.rgb = COLOR_BLACK
     
     p_div = doc.add_paragraph()
     p_div.paragraph_format.space_before = Pt(14)
     p_div.paragraph_format.space_after = Pt(3)
     p_div.alignment = WD_ALIGN_PARAGRAPH.CENTER
     r_title = p_div.add_run("HỒ SƠ TỔNG HỢP TOÀN DIỆN VÀ KẾ HOẠCH TRIỂN KHAI DỰ ÁN\n")
-    r_title.font.name = 'Times New Roman'; r_title.font.size = Pt(15); r_title.font.bold = True; r_title.font.color.rgb = COLOR_NAVY
+    r_title.font.name = 'Times New Roman'; r_title.font.size = Pt(15); r_title.font.bold = True; r_title.font.color.rgb = COLOR_BLACK
     r_sub = p_div.add_run("HỆ THỐNG ĐÈN GIAO THÔNG HỌC ĐƯỜNG THÔNG MINH TÍCH HỢP AI VISION & RÀO CHẮN BARIE TỰ ĐỘNG\n")
-    r_sub.font.name = 'Times New Roman'; r_sub.font.size = Pt(12.5); r_sub.font.bold = True; r_sub.font.color.rgb = COLOR_GOLD
+    r_sub.font.name = 'Times New Roman'; r_sub.font.size = Pt(12.5); r_sub.font.bold = True; r_sub.font.color.rgb = COLOR_BLACK
     r_event = p_div.add_run("(Tài liệu hợp nhất: Kế hoạch Tổng thể, Thiết kế Kỹ thuật, Dự toán BOM, Quy trình Thử nghiệm 4 Giai đoạn & Kịch bản Thi đấu)\nCuộc thi: HNUE Olympic STEM 2026 — Bảng Tiểu học (Khối 4 - 5)")
-    r_event.font.name = 'Times New Roman'; r_event.font.size = Pt(11); r_event.font.italic = True; r_event.font.color.rgb = COLOR_MUTED
+    r_event.font.name = 'Times New Roman'; r_event.font.size = Pt(11); r_event.font.italic = True; r_event.font.color.rgb = COLOR_BLACK
     
     # Thông tin nhóm
     p_info = doc.add_paragraph()
@@ -270,10 +264,10 @@ def build_master_unified_document():
     p_info.paragraph_format.space_after = Pt(10)
     p_info.paragraph_format.line_spacing = 1.15
     p_info.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = p_info.add_run("Nhóm tác giả: "); r.font.bold = True
-    r = p_info.add_run("Phạm Hữu Đạt (4A1 - Đội trưởng), Vũ Minh Quang (4A1), Vũ Ngọc An Đông (5A1)\n")
-    r = p_info.add_run("Cán bộ hướng dẫn kỹ thuật: "); r.font.bold = True
-    r = p_info.add_run("Thầy Lê Ngọc Anh (Tổ trưởng STEM) | Trường Tiểu học Marie Curie Thái Bình")
+    r = p_info.add_run("Nhóm tác giả: "); r.font.bold = True; r.font.color.rgb = COLOR_BLACK
+    r = p_info.add_run("Phạm Hữu Đạt (4A1 - Đội trưởng), Vũ Minh Quang (4A1), Vũ Ngọc An Đông (5A1)\n"); r.font.color.rgb = COLOR_BLACK
+    r = p_info.add_run("Cán bộ hướng dẫn kỹ thuật: "); r.font.bold = True; r.font.color.rgb = COLOR_BLACK
+    r = p_info.add_run("Thầy Lê Ngọc Anh (Tổ trưởng STEM) | Trường Tiểu học Marie Curie Thái Bình"); r.font.color.rgb = COLOR_BLACK
     
     # ==========================================
     # PHẦN I: TỔNG QUAN DỰ ÁN VÀ BỐI CẢNH
@@ -325,14 +319,15 @@ def build_master_unified_document():
     p_hdrs = ["Chân Shield", "Loại chân", "Thiết bị ngoại vi kết nối", "Chức năng hoạt động chi tiết"]
     p_widths = [Cm(2.2), Cm(2.8), Cm(4.5), Cm(6.5)]
     for i, h in enumerate(p_hdrs):
-        tbl_pin.rows[0].cells[i].width = p_widths[i]
-        set_cell_margins(tbl_pin.rows[0].cells[i], top=100, bottom=100, left=80, right=80)
-        set_cell_shading(tbl_pin.rows[0].cells[i], HEX_PRIMARY)
-        set_cell_valign(tbl_pin.rows[0].cells[i], "center")
-        p = tbl_pin.rows[0].cells[i].paragraphs[0]
+        c = tbl_pin.rows[0].cells[i]
+        c.width = p_widths[i]
+        set_cell_margins(c, top=100, bottom=100, left=80, right=80)
+        set_cell_no_shading(c)
+        set_cell_valign(c, "center")
+        p = c.paragraphs[0]
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         r = p.add_run(h)
-        r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = RGBColor(255, 255, 255)
+        r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = COLOR_BLACK
         
     pin_data = [
         ("D2", "Input Pullup", "Module Nút bấm cơ học Failsafe 3-pin", "Ngắt phần cứng INT0 kích hoạt chu kỳ an toàn khi camera mất kết nối."),
@@ -348,21 +343,20 @@ def build_master_unified_document():
     for r_idx, row_data in enumerate(pin_data):
         row = tbl_pin.add_row()
         set_row_cant_split(row)
-        bg = HEX_LIGHT_BG if r_idx % 2 == 0 else "FFFFFF"
         for c_idx, val in enumerate(row_data):
             c = row.cells[c_idx]
             c.width = p_widths[c_idx]
             set_cell_margins(c, top=80, bottom=80, left=80, right=80)
-            set_cell_shading(c, bg)
+            set_cell_no_shading(c)
             set_cell_valign(c, "center")
             p = c.paragraphs[0]
             p.paragraph_format.space_before = Pt(0)
             p.paragraph_format.space_after = Pt(0)
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER if c_idx in [0, 1] else WD_ALIGN_PARAGRAPH.LEFT
             r = p.add_run(val)
-            r.font.name = 'Times New Roman'; r.font.size = Pt(10.5)
+            r.font.name = 'Times New Roman'; r.font.size = Pt(10.5); r.font.color.rgb = COLOR_BLACK
             if c_idx == 0:
-                r.font.bold = True; r.font.color.rgb = COLOR_NAVY
+                r.font.bold = True
 
     # ==========================================
     # PHẦN III: TÍNH TOÁN KHOA HỌC STEM & ĐIỆN NĂNG
@@ -386,8 +380,7 @@ def build_master_unified_document():
     
     add_callout_box(doc, "CÔNG THỨC ĐỘNG HỌC TỔNG THỜI GIAN ĐÈN XANH NGƯỜI ĐI BỘ",
                     "T_ped_green = t_walk + t_buffer = (W / v_tb) + t_buffer = (8m / 0.8m/s) + 5s = 15 GIÂY.\n"
-                    "Thời gian 15 giây vừa đủ cho nhóm 4-6 học sinh qua đường an toàn, vừa không làm dòng xe cộ bị dồn ứ quá lâu gây ùn tắc giao thông cục bộ.",
-                    bg_hex=HEX_INFO_BG, border_hex=HEX_INFO_BORDER, title_color=COLOR_NAVY)
+                    "Thời gian 15 giây vừa đủ cho nhóm 4-6 học sinh qua đường an toàn, vừa không làm dòng xe cộ bị dồn ứ quá lâu gây ùn tắc giao thông cục bộ.")
 
     add_heading_2(doc, "3.3. Tính toán bộ lọc xác nhận AI Debounce 1.5 giây")
     add_body_p(doc, "Để triệt tiêu lỗi nhận diện ảo do người đi ngang qua ngẫu nhiên hoặc ánh sáng thay đổi:")
@@ -406,14 +399,15 @@ def build_master_unified_document():
     pw_hdrs = ["STT", "Phân nhánh & Thiết bị linh kiện", "Điện áp (V)", "Dòng tĩnh (mA)", "Dòng đỉnh (mA)", "Công suất đỉnh (W)"]
     pw_widths = [Cm(1.0), Cm(6.5), Cm(2.0), Cm(2.2), Cm(2.2), Cm(2.1)]
     for i, h in enumerate(pw_hdrs):
-        tbl_pwr.rows[0].cells[i].width = pw_widths[i]
-        set_cell_margins(tbl_pwr.rows[0].cells[i], top=100, bottom=100, left=60, right=60)
-        set_cell_shading(tbl_pwr.rows[0].cells[i], HEX_PRIMARY)
-        set_cell_valign(tbl_pwr.rows[0].cells[i], "center")
-        p = tbl_pwr.rows[0].cells[i].paragraphs[0]
+        c = tbl_pwr.rows[0].cells[i]
+        c.width = pw_widths[i]
+        set_cell_margins(c, top=100, bottom=100, left=60, right=60)
+        set_cell_no_shading(c)
+        set_cell_valign(c, "center")
+        p = c.paragraphs[0]
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         r = p.add_run(h)
-        r.font.name = 'Times New Roman'; r.font.size = Pt(10.5); r.font.bold = True; r.font.color.rgb = RGBColor(255, 255, 255)
+        r.font.name = 'Times New Roman'; r.font.size = Pt(10.5); r.font.bold = True; r.font.color.rgb = COLOR_BLACK
         
     pwr_data = [
         ("A", "NHÁNH 1: MẠCH ĐIỀU KHIỂN & SA BÀN (NANO SHIELD)", "5.0 V", "~70 mA", "~316 mA", "~1.58 W", True),
@@ -431,25 +425,20 @@ def build_master_unified_document():
         row = tbl_pwr.add_row()
         set_row_cant_split(row)
         is_grp = row_item[6]
-        bg = HEX_PRIMARY if (row_item[0] == "TỔNG") else (HEX_ALT_ROW if is_grp else (HEX_LIGHT_BG if r_idx % 2 == 0 else "FFFFFF"))
         for c_idx in range(6):
             c = row.cells[c_idx]
             c.width = pw_widths[c_idx]
             set_cell_margins(c, top=80, bottom=80, left=60, right=60)
-            set_cell_shading(c, bg)
+            set_cell_no_shading(c)
             set_cell_valign(c, "center")
             p = c.paragraphs[0]
             p.paragraph_format.space_before = Pt(0)
             p.paragraph_format.space_after = Pt(0)
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER if c_idx in [0, 2] else (WD_ALIGN_PARAGRAPH.RIGHT if c_idx >= 3 else WD_ALIGN_PARAGRAPH.LEFT)
             r = p.add_run(row_item[c_idx])
-            r.font.name = 'Times New Roman'; r.font.size = Pt(10.5)
+            r.font.name = 'Times New Roman'; r.font.size = Pt(10.5); r.font.color.rgb = COLOR_BLACK
             if is_grp:
                 r.font.bold = True
-                if row_item[0] == "TỔNG":
-                    r.font.color.rgb = RGBColor(255, 255, 255)
-                else:
-                    r.font.color.rgb = COLOR_NAVY
 
     add_body_p(doc, "Tổng dòng đỉnh toàn hệ thống chỉ đạt 466 mA, nằm hoàn toàn dưới ngưỡng giới hạn 500 mA của chuẩn USB 2.0 trên máy tính xách tay, đảm bảo an toàn tuyệt đối chống quá dòng.", italic=True)
 
@@ -459,8 +448,7 @@ def build_master_unified_document():
                     "Theo Datasheet của AMS1117, điện áp rơi cực tiểu (Dropout Voltage) là Vdrop ≈ 1.1V đến 1.3V.\n"
                     "Nếu lấy nguồn 5.0V từ sạc dự phòng cắm vào Jack DC, điện áp đầu ra cấp cho Shield và Servo chỉ còn:\n"
                     "       V_out = V_in - V_drop = 5.0V - 1.1V ≈ 3.9V!\n"
-                    "Tại mức 3.9V: Động cơ Servo SG90 (vốn yêu cầu 4.8V - 6.0V) sẽ bị suy giảm 60% lực kéo, rung bần bật, không nâng nổi cần Barie hoặc vi điều khiển ATmega328P bị reset liên tục!",
-                    bg_hex=HEX_WARNING_BG, border_hex=HEX_WARNING_BORDER, title_color=RGBColor(220, 38, 38))
+                    "Tại mức 3.9V: Động cơ Servo SG90 (vốn yêu cầu 4.8V - 6.0V) sẽ bị suy giảm 60% lực kéo, rung bần bật, không nâng nổi cần Barie hoặc vi điều khiển ATmega328P bị reset liên tục!")
                     
     add_body_p(doc, "Cáp Mini-USB cắm trực tiếp từ Laptop hoặc cổng Powered USB Hub vào cổng USB của Arduino Nano. Nguồn 5.0V đi qua diode Schottky MBR0520 (sụt áp chỉ 0.15V), cung cấp mức 4.85V phẳng mịn cho toàn bộ hàng chân 5V của Shield. Động cơ Servo hoạt động mạnh mẽ, không qua IC AMS1117. Lúc này Cáp USB-to-DC 5.5mm hoàn toàn không cần dùng (THỪA).", bold_prefix="• Phương án Chuẩn 1 (Tối ưu nhất — Khuyên dùng): ")
     add_body_p(doc, "Nếu muốn cấp nguồn riêng cho Jack DC trên Shield để sa bàn chạy độc lập không phụ thuộc máy tính: Bắt buộc nguồn cấp vào Jack DC phải là Adapter 9V-1A hoặc Hộp pin 2 cell 18650 (7.4V - 8.4V). Khi đó IC AMS1117 hạ áp từ 9V ra đúng chuẩn 5.0V ổn định.", bold_prefix="• Phương án Chuẩn 2 (Khi dùng nguồn ngoài cho Jack DC): ")
@@ -482,14 +470,15 @@ def build_master_unified_document():
     b_hdrs = ["STT", "Danh mục thiết bị / Vật tư", "Quy cách kỹ thuật", "SL", "Đơn giá (đ)", "Thành tiền (đ)"]
     b_widths = [Cm(1.0), Cm(5.2), Cm(4.3), Cm(1.2), Cm(2.2), Cm(2.3)]
     for i, h in enumerate(b_hdrs):
-        tbl_bom.rows[0].cells[i].width = b_widths[i]
-        set_cell_margins(tbl_bom.rows[0].cells[i], top=100, bottom=100, left=80, right=80)
-        set_cell_shading(tbl_bom.rows[0].cells[i], HEX_PRIMARY)
-        set_cell_valign(tbl_bom.rows[0].cells[i], "center")
-        p = tbl_bom.rows[0].cells[i].paragraphs[0]
+        c = tbl_bom.rows[0].cells[i]
+        c.width = b_widths[i]
+        set_cell_margins(c, top=100, bottom=100, left=80, right=80)
+        set_cell_no_shading(c)
+        set_cell_valign(c, "center")
+        p = c.paragraphs[0]
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         r = p.add_run(h)
-        r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = RGBColor(255, 255, 255)
+        r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = COLOR_BLACK
         
     bom_items = [
         ("I", "HỆ THỐNG MẠCH ĐIỀU KHIỂN & CẢM BIẾN", "", "", "", "192.000", True),
@@ -519,12 +508,11 @@ def build_master_unified_document():
         row = tbl_bom.add_row()
         set_row_cant_split(row)
         is_grp = item[6]
-        bg = HEX_PRIMARY if (item[0] == "TỔNG") else (HEX_ALT_ROW if is_grp else (HEX_LIGHT_BG if r_idx % 2 == 0 else "FFFFFF"))
         for c_idx in range(6):
             c = row.cells[c_idx]
             c.width = b_widths[c_idx]
             set_cell_margins(c, top=80, bottom=80, left=60, right=60)
-            set_cell_shading(c, bg)
+            set_cell_no_shading(c)
             set_cell_valign(c, "center")
             p = c.paragraphs[0]
             p.paragraph_format.space_before = Pt(0)
@@ -536,10 +524,9 @@ def build_master_unified_document():
                 elif c_idx > 1 and c_idx < 5: val = ""
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER if c_idx in [0, 3] else (WD_ALIGN_PARAGRAPH.RIGHT if c_idx in [4, 5] else WD_ALIGN_PARAGRAPH.LEFT)
             r = p.add_run(val)
-            r.font.name = 'Times New Roman'; r.font.size = Pt(11 if is_grp else 10.5)
+            r.font.name = 'Times New Roman'; r.font.size = Pt(11 if is_grp else 10.5); r.font.color.rgb = COLOR_BLACK
             if is_grp:
                 r.font.bold = True
-                r.font.color.rgb = RGBColor(255, 255, 255) if item[0] == "TỔNG" else COLOR_NAVY
 
     add_body_p(doc, "Tổng chi phí 415.000 VNĐ giúp tiết kiệm 58.5% (dư địa an toàn 585.000 VNĐ). Đã loại bỏ hoàn toàn Breadboard thừa và cáp USB-to-DC sụt áp, bổ sung kịp thời cần Barie balsa, dây Đực-Cái, module LED giao thông, cột đèn và xe cứu thương đồ chơi.", italic=True)
 
@@ -668,16 +655,16 @@ def build_master_unified_document():
         p_q.paragraph_format.space_after = Pt(2)
         p_q.paragraph_format.line_spacing = 1.15
         r = p_q.add_run(f"❓ {item_qa[0]}: \"{item_qa[1]}\"")
-        r.font.name = 'Times New Roman'; r.font.size = Pt(12); r.font.bold = True; r.font.color.rgb = COLOR_NAVY
+        r.font.name = 'Times New Roman'; r.font.size = Pt(12); r.font.bold = True; r.font.color.rgb = COLOR_BLACK
         
         p_a = doc.add_paragraph()
         p_a.paragraph_format.space_before = Pt(0)
         p_a.paragraph_format.space_after = Pt(6)
         p_a.paragraph_format.line_spacing = 1.15
         r_spk = p_a.add_run(f"👉 Trả lời ({item_qa[2]}): ")
-        r_spk.font.name = 'Times New Roman'; r_spk.font.size = Pt(12); r_spk.font.bold = True; r_spk.font.color.rgb = COLOR_GOLD
+        r_spk.font.name = 'Times New Roman'; r_spk.font.size = Pt(12); r_spk.font.bold = True; r_spk.font.color.rgb = COLOR_BLACK
         r_ans = p_a.add_run(f"\"{item_qa[3]}\"")
-        r_ans.font.name = 'Times New Roman'; r_ans.font.size = Pt(11.5); r_ans.font.italic = True
+        r_ans.font.name = 'Times New Roman'; r_ans.font.size = Pt(11.5); r_ans.font.italic = True; r_ans.font.color.rgb = COLOR_BLACK
 
     # ==========================================
     # PHẦN VIII: MA TRẬN PHÒNG NGỪA RỦI RO & CHỮ KÝ
@@ -695,14 +682,15 @@ def build_master_unified_document():
     pm_hdrs = ["Mã lỗi", "Rủi ro tiềm ẩn tại phòng thi", "Cơ chế phòng thủ kỹ thuật", "Bài test kiểm tra xác nhận"]
     pm_widths = [Cm(1.2), Cm(4.8), Cm(5.2), Cm(4.8)]
     for i, h in enumerate(pm_hdrs):
-        tbl_pm.rows[0].cells[i].width = pm_widths[i]
-        set_cell_margins(tbl_pm.rows[0].cells[i], top=100, bottom=100, left=80, right=80)
-        set_cell_shading(tbl_pm.rows[0].cells[i], HEX_PRIMARY)
-        set_cell_valign(tbl_pm.rows[0].cells[i], "center")
-        p = tbl_pm.rows[0].cells[i].paragraphs[0]
+        c = tbl_pm.rows[0].cells[i]
+        c.width = pm_widths[i]
+        set_cell_margins(c, top=100, bottom=100, left=80, right=80)
+        set_cell_no_shading(c)
+        set_cell_valign(c, "center")
+        p = c.paragraphs[0]
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         r = p.add_run(h)
-        r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = RGBColor(255, 255, 255)
+        r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = COLOR_BLACK
         
     pm_data = [
         ("F1", "Servo quay giật tải gây sụt áp làm treo chip CH340.", "Gắn 02 tụ bù 470µF/16V song song nguồn + cắm thẳng Mini-USB.", "Lấy tay giữ nhẹ cần barie khi quay, chip Arduino vẫn chạy bình thường."),
@@ -715,21 +703,20 @@ def build_master_unified_document():
     for r_idx, r_item in enumerate(pm_data):
         row = tbl_pm.add_row()
         set_row_cant_split(row)
-        bg = HEX_LIGHT_BG if r_idx % 2 == 0 else "FFFFFF"
         for c_idx, val in enumerate(r_item):
             c = row.cells[c_idx]
             c.width = pm_widths[c_idx]
             set_cell_margins(c, top=80, bottom=80, left=80, right=80)
-            set_cell_shading(c, bg)
+            set_cell_no_shading(c)
             set_cell_valign(c, "center")
             p = c.paragraphs[0]
             p.paragraph_format.space_before = Pt(0)
             p.paragraph_format.space_after = Pt(0)
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER if c_idx == 0 else WD_ALIGN_PARAGRAPH.LEFT
             r = p.add_run(val)
-            r.font.name = 'Times New Roman'; r.font.size = Pt(10.5)
+            r.font.name = 'Times New Roman'; r.font.size = Pt(10.5); r.font.color.rgb = COLOR_BLACK
             if c_idx == 0:
-                r.font.bold = True; r.font.color.rgb = RGBColor(220, 38, 38)
+                r.font.bold = True
 
     add_heading_2(doc, "8.2. Kết luận và Ký duyệt")
     add_body_p(doc, "Hồ sơ tổng hợp toàn diện đã tích hợp trọn vẹn toàn bộ các nghiên cứu, tính toán khoa học, dự toán kinh phí, quy trình 6 giai đoạn và kịch bản bảo vệ trước Hội đồng Giám khảo cuộc thi HNUE Olympic STEM 2026. Đội tuyển STEM Trường Liên cấp Marie Curie Thái Bình sẵn sàng 100% tham gia tranh tài với tinh thần sáng tạo, tự tin và quyết tâm giành thành tích cao nhất.")
@@ -751,18 +738,20 @@ def build_master_unified_document():
     for i, (t_top, t_bot) in enumerate(sign_titles):
         c_top = tbl_sign.cell(0, i)
         c_top.width = sign_widths[i]
+        set_cell_no_shading(c_top)
         p = c_top.paragraphs[0]
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         r = p.add_run(t_top)
-        r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = COLOR_NAVY
+        r.font.name = 'Times New Roman'; r.font.size = Pt(11); r.font.bold = True; r.font.color.rgb = COLOR_BLACK
         
         c_bot = tbl_sign.cell(1, i)
         c_bot.width = sign_widths[i]
+        set_cell_no_shading(c_bot)
         p_b = c_bot.paragraphs[0]
         p_b.paragraph_format.space_before = Pt(45)
         p_b.alignment = WD_ALIGN_PARAGRAPH.CENTER
         r_b = p_b.add_run(t_bot)
-        r_b.font.name = 'Times New Roman'; r_b.font.size = Pt(11); r_b.font.italic = (i == 0); r_b.font.bold = (i > 0)
+        r_b.font.name = 'Times New Roman'; r_b.font.size = Pt(11); r_b.font.italic = (i == 0); r_b.font.bold = (i > 0); r_b.font.color.rgb = COLOR_BLACK
         
     return doc
 
@@ -776,9 +765,9 @@ if __name__ == "__main__":
     
     docx_path_1 = os.path.join(out_dir_1, fname)
     doc.save(docx_path_1)
-    print(f"[OK] Saved Unified Master DOCX 1: {docx_path_1}")
+    print(f"[OK] Saved Monochrome Master DOCX 1: {docx_path_1}")
     
     if os.path.exists(out_dir_2):
         docx_path_2 = os.path.join(out_dir_2, fname)
         doc.save(docx_path_2)
-        print(f"[OK] Saved Unified Master DOCX 2: {docx_path_2}")
+        print(f"[OK] Saved Monochrome Master DOCX 2: {docx_path_2}")
