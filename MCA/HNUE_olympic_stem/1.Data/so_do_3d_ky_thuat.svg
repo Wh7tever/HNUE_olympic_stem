@@ -1,0 +1,314 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%" style="background:#f8fafc; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="sidewalkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="gateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="cameraFov" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Barie pattern -->
+    <pattern id="barieStripe" width="20" height="20" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#ef4444" stroke-width="10"/>
+      <line x1="10" y1="0" x2="10" y2="20" stroke="#ffffff" stroke-width="10"/>
+    </pattern>
+  </defs>
+
+  <!-- Title Block -->
+  <rect x="30" y="25" width="1140" height="85" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#dropShadow)"/>
+  <text x="600" y="58" font-size="20" font-weight="bold" fill="#0f172a" text-anchor="middle" letter-spacing="1">BẢN VẼ PHỐI CẢNH 3D SA BÀN ĐÈN GIAO THÔNG HỌC ĐƯỜNG THÔNG MINH AI</text>
+  <text x="600" y="88" font-size="14" fill="#475569" text-anchor="middle" font-style="italic">Dự án HNUE Olympic STEM 2026 — Phương án 1: Webcam USB Mini 45° Trên Cần Vươn + Rào Chắn Barie Kép</text>
+
+  <!-- Main Coordinate Origin (X0: 600, Y0: 480) Isometric axes: X=(cos30, sin30)=(0.866, 0.5), Y=(-cos30, sin30)=(-0.866, 0.5), Z=(0, -1) -->
+
+  <!-- Table Base Shadow -->
+  <polygon points="600,810 1020,565 600,320 180,565" fill="#000000" opacity="0.08"/>
+
+  <!-- SA BÀN BOARD 60cm x 80cm (Base Board 3D Thickness) -->
+  <!-- Bottom Edge -->
+  <polygon points="190,560 600,795 600,815 190,580" fill="#94a3b8"/>
+  <polygon points="600,795 1010,560 1010,580 600,815" fill="#64748b"/>
+  <!-- Top Surface of Sa Ban -->
+  <polygon points="600,330 1010,560 600,795 190,560" fill="url(#sidewalkGrad)" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- ROADWAY (Lòng đường xe chạy rộng 40cm, chạy từ Y+ sang Y-) -->
+  <!-- Road Polygon -->
+  <polygon points="435,425 845,655 765,700 355,470" fill="url(#roadGrad)"/>
+
+  <!-- Yellow Center Dashed Lines (Vạch tim đường nét đứt) -->
+  <line x1="395" y1="447" x2="425" y2="464" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="455" y1="481" x2="485" y2="498" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="515" y1="515" x2="545" y2="532" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="575" y1="549" x2="605" y2="566" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="635" y1="583" x2="665" y2="600" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="695" y1="617" x2="725" y2="634" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="755" y1="651" x2="785" y2="668" stroke="#fbbf24" stroke-width="3"/>
+
+  <!-- ZEBRA CROSSWALK (Vạch đi bộ qua đường màu trắng) -->
+  <g fill="#ffffff">
+    <polygon points="560,495 590,512 580,518 550,501"/>
+    <polygon points="575,504 605,521 595,527 565,510"/>
+    <polygon points="590,513 620,530 610,536 580,519"/>
+    <polygon points="605,522 635,539 625,545 595,528"/>
+    <polygon points="620,531 650,548 640,554 610,537"/>
+    <polygon points="635,540 665,557 655,563 625,546"/>
+    <polygon points="650,549 680,566 670,572 640,555"/>
+  </g>
+
+  <!-- SIDEWALK CURB 3D EDGES -->
+  <!-- School Sidewalk Curb -->
+  <polygon points="355,470 765,700 765,708 355,478" fill="#cbd5e1" stroke="#94a3b8" stroke-width="0.5"/>
+  <!-- Opposite Sidewalk Curb -->
+  <polygon points="435,425 845,655 845,663 435,433" fill="#94a3b8" stroke="#64748b" stroke-width="0.5"/>
+
+  <!-- CỔNG TRƯỜNG MARIE CURIE (School Gate on Sidewalk 1) -->
+  <g id="SchoolGate" filter="url(#dropShadow)">
+    <!-- Gate Base Left -->
+    <polygon points="260,510 280,498 280,430 260,442" fill="#0284c7"/>
+    <polygon points="280,498 300,510 300,442 280,430" fill="#0369a1"/>
+    <!-- Gate Base Right -->
+    <polygon points="360,568 380,556 380,488 360,500" fill="#0284c7"/>
+    <polygon points="380,556 400,568 400,500 380,488" fill="#0369a1"/>
+    <!-- Arch Header Beam -->
+    <polygon points="250,445 390,525 390,495 250,415" fill="url(#gateGrad)"/>
+    <polygon points="250,415 390,495 410,483 270,403" fill="#38bdf8"/>
+    <polygon points="410,483 390,495 390,525 410,513" fill="#0369a1"/>
+    <!-- Gold Signboard -->
+    <polygon points="265,445 375,510 375,485 265,420" fill="url(#goldGrad)" stroke="#b45309" stroke-width="1"/>
+    <text x="320" y="468" font-size="11" font-weight="bold" fill="#78350f" text-anchor="middle" transform="rotate(30 320 468)">TRƯỜNG MARIE CURIE</text>
+  </g>
+
+  <!-- MÔ HÌNH HỌC SINH ĐỨNG CHỜ QUA ĐƯỜNG (Student Figure) -->
+  <g id="StudentFigure">
+    <!-- Shadow -->
+    <ellipse cx="510" cy="545" rx="12" ry="6" fill="#000000" opacity="0.3"/>
+    <!-- Body -->
+    <line x1="510" y1="540" x2="510" y2="505" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <!-- Shirt -->
+    <circle cx="510" cy="510" r="7" fill="#dc2626"/>
+    <!-- Head -->
+    <circle cx="510" cy="495" r="5" fill="#fcd34d"/>
+    <!-- Raised Hand (Xin đường) -->
+    <line x1="510" y1="510" x2="525" y2="490" stroke="#fcd34d" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Hand Wave Marker -->
+    <circle cx="525" cy="490" r="3" fill="#ef4444" filter="url(#softGlow)"/>
+  </g>
+
+  <!-- MÔ HÌNH XE CỨU THƯƠNG ĐỒ CHƠI (Ambulance Model) -->
+  <g id="AmbulanceToy" filter="url(#dropShadow)">
+    <!-- Shadow -->
+    <polygon points="680,620 740,655 710,672 650,637" fill="#000000" opacity="0.3"/>
+    <!-- Car Body -->
+    <polygon points="660,610 720,645 720,625 660,590" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.5"/>
+    <polygon points="720,645 745,630 745,610 720,625" fill="#e2e8f0"/>
+    <polygon points="660,590 720,625 745,610 685,575" fill="#ffffff"/>
+    <!-- Red Cross -->
+    <line x1="690" y1="610" x2="700" y2="616" stroke="#ef4444" stroke-width="3"/>
+    <line x1="695" y1="607" x2="695" y2="619" stroke="#ef4444" stroke-width="3"/>
+    <!-- Siren Light -->
+    <circle cx="705" cy="590" r="3.5" fill="#ef4444" filter="url(#softGlow)"/>
+  </g>
+
+  <!-- CỘT ĐÈN NGƯỜI ĐI BỘ & CƠ CẤU BARIE SERVO (Pedestrian Pole + Barrier) -->
+  <g id="PedestrianPole">
+    <!-- Shadow -->
+    <ellipse cx="540" cy="565" rx="8" ry="4" fill="#000000" opacity="0.3"/>
+    <!-- Pole (Cao 18cm) -->
+    <line x1="540" y1="565" x2="540" y2="440" stroke="#475569" stroke-width="4.5" stroke-linecap="round"/>
+    
+    <!-- Servo SG90 Housing (Hộp động cơ Servo) -->
+    <rect x="532" y="525" width="16" height="20" rx="3" fill="#0284c7" stroke="#0369a1" stroke-width="1"/>
+    <!-- Failsafe Button (Nút bấm cơ học) -->
+    <circle cx="540" cy="505" r="4" fill="#ef4444" stroke="#ffffff" stroke-width="1"/>
+    
+    <!-- RÀO CHẮN BARIE AN TOÀN (Làm bằng ống hút sọc phản quang Đỏ - Trắng) -->
+    <!-- Trạng thái: Nâng góc 45 độ mô phỏng chuyển động -->
+    <line x1="540" y1="535" x2="625" y2="505" stroke="url(#barieStripe)" stroke-width="5" stroke-linecap="round" filter="url(#dropShadow)"/>
+    <circle cx="540" cy="535" r="3.5" fill="#0f172a"/>
+
+    <!-- Pedestrian Light Box (2 Đèn: Đỏ & Xanh) -->
+    <rect x="530" y="435" width="16" height="28" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <circle cx="538" cy="444" r="4.5" fill="#334155"/> <!-- Đèn đỏ tắt -->
+    <circle cx="538" cy="454" r="4.5" fill="#22c55e" filter="url(#softGlow)"/> <!-- Đèn xanh sáng -->
+    <!-- Buzzer Speaker -->
+    <circle cx="540" cy="470" r="3" fill="#d97706"/>
+  </g>
+
+  <!-- CỘT ĐÈN GIAO THÔNG CHÍNH CÓ CẦN VƯƠN GẮN WEBCAM USB (Main Pole + Gantry Arm + Webcam) -->
+  <g id="MainGantryTrafficPole">
+    <!-- Base Shadow -->
+    <ellipse cx="740" cy="450" rx="10" ry="5" fill="#000000" opacity="0.35"/>
+    
+    <!-- Cột chính thép xám cao 25cm (Z-axis) -->
+    <line x1="740" y1="450" x2="740" y2="240" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Cần vươn ngang dài 12cm vươn ra tim đường (hướng về phía Y+) -->
+    <line x1="740" y1="245" x2="640" y2="305" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+    <line x1="740" y1="270" x2="685" y2="275" stroke="#475569" stroke-width="2.5"/> <!-- Thanh giằng chéo -->
+
+    <!-- HỘP ĐÈN GIAO THÔNG Ô TÔ (3 Đèn: Đỏ, Vàng, Xanh) -->
+    <rect x="710" y="270" width="18" height="42" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#dropShadow)"/>
+    <circle cx="719" cy="279" r="4.5" fill="#ef4444" filter="url(#softGlow)"/> <!-- Đèn đỏ sáng dừng xe -->
+    <circle cx="719" cy="291" r="4.5" fill="#475569"/> <!-- Đèn vàng tắt -->
+    <circle cx="719" cy="303" r="4.5" fill="#475569"/> <!-- Đèn xanh tắt -->
+
+    <!-- MẮT WEBCAM USB MINI (Gắn trên đầu cần vươn, nghiêng 45 độ soi xuống vạch kẻ) -->
+    <g transform="translate(640, 305) rotate(45)">
+      <!-- Vỏ Webcam nhỏ xíu -->
+      <rect x="-8" y="-6" width="16" height="12" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <!-- Mắt kính ống kính thủy tinh -->
+      <circle cx="0" cy="0" r="3.5" fill="#0284c7" filter="url(#softGlow)"/>
+      <circle cx="0" cy="0" r="1.5" fill="#ffffff"/>
+      <!-- Đèn LED trạng thái camera hoạt động -->
+      <circle cx="5" cy="-3" r="1" fill="#22c55e"/>
+    </g>
+
+    <!-- NÓN QUAN SÁT THỊ GIÁC AI (CAMERA FOV CONE) -->
+    <!-- Thể hiện góc quét 45 độ bao phủ trọn vẹn khu vực vạch đi bộ -->
+    <polygon points="640,305 520,530 690,560" fill="url(#cameraFov)" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4,4"/>
+    <text x="635" y="420" font-size="12" font-weight="bold" fill="#0284c7" text-anchor="middle">Góc quét AI 45°</text>
+  </g>
+
+  <!-- HỘP KỸ THUẬT ARDUINO NANO DƯỚI GẦM SA BÀN -->
+  <g id="UndergroundElectronics" transform="translate(260, 680)">
+    <!-- Hộp mica / bìa bảo vệ -->
+    <polygon points="0,0 80,45 80,85 0,40" fill="#1e293b" opacity="0.85"/>
+    <polygon points="80,45 150,5 150,45 80,85" fill="#0f172a" opacity="0.85"/>
+    <polygon points="0,0 80,45 150,5 70,-40" fill="#334155" opacity="0.85" stroke="#38bdf8" stroke-width="1"/>
+    <!-- Bo mạch Arduino Nano màu xanh dương bên trong -->
+    <polygon points="35,5 75,28 110,8 70,-15" fill="#0284c7" stroke="#38bdf8" stroke-width="0.8"/>
+    <!-- Chip ATmega328P đen -->
+    <polygon points="60,3 75,12 85,6 70,-3" fill="#0f172a"/>
+    <!-- Đèn LED nguồn nhấp nháy -->
+    <circle cx="50" cy="15" r="2" fill="#ef4444" filter="url(#softGlow)"/>
+    <text x="75" y="65" font-size="11" font-weight="bold" fill="#38bdf8" text-anchor="middle">Arduino Nano 5V</text>
+  </g>
+
+  <!-- 2 TUYẾN DÂY CÁP USB RIÊNG BIỆT NỐI VỀ LAPTOP (HARDWARE TOPOLOGY CHUẨN) -->
+  <!-- TUYẾN 1: CÁP USB WEBCAM MINI (Từ đỉnh cần vươn cắm thẳng vào Cổng USB 1 của Laptop) -->
+  <path d="M 640 185 Q 670 190 670 250 T 670 420 Q 670 560 520 620 T 300 680 T 175 700" fill="none" stroke="#0284c7" stroke-width="3" stroke-linecap="round"/>
+  <!-- Nhãn Cáp Webcam -->
+  <rect x="440" y="575" width="195" height="22" rx="5" fill="#0284c7" opacity="0.95"/>
+  <text x="445" y="590" font-size="10.5" font-weight="bold" fill="#ffffff" stroke="none">Cáp USB Webcam (Cấp 150mA &amp; Video)</text>
+
+  <!-- TUYẾN 2: CÁP USB ARDUINO NANO (Từ Hộp điều khiển cắm vào Cổng USB 2 của Laptop) -->
+  <path d="M 340 700 Q 280 730 230 730 T 160 740" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-dasharray="6,4" stroke-linecap="round"/>
+  <!-- Nhãn Cáp Arduino -->
+  <rect x="220" y="740" width="185" height="20" rx="4" fill="#8b5cf6" opacity="0.95"/>
+  <text x="225" y="754" font-size="9.5" font-weight="bold" fill="#ffffff" stroke="none">Cáp USB Arduino (Cấp 316mA &amp; Serial)</text>
+
+  <!-- LAPTOP TRẠM GIÁM SÁT AI (Bên ngoài sa bàn) -->
+  <g id="LaptopStation" transform="translate(60, 640)">
+    <!-- Đế máy tính -->
+    <polygon points="30,80 130,135 180,105 80,50" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1"/>
+    <!-- Màn hình mở góc 110 độ -->
+    <polygon points="80,50 180,105 180,25 80,-30" fill="#0f172a" stroke="#475569" stroke-width="1.5" filter="url(#dropShadow)"/>
+    <!-- Màn hình hiển thị Teachable Machine UI -->
+    <polygon points="85,45 175,95 175,30 85,-20" fill="#0284c7"/>
+    <!-- Thanh xác suất AI nhảy số -->
+    <rect x="95" y="3" width="70" height="7" fill="#22c55e" transform="skewY(29)"/>
+    <text x="130" y="22" font-size="9" font-weight="bold" fill="#ffffff" transform="rotate(29 130 22)">AI: Student 96%</text>
+    <text x="105" y="150" font-size="12" font-weight="bold" fill="#0f172a">Laptop Trạm AI</text>
+    <text x="105" y="166" font-size="10" fill="#64748b">(Chạy Offline TF.js)</text>
+  </g>
+
+  <!-- KÍCH THƯỚC ĐỊNH LƯỢNG (DIMENSION CALLOUTS - FIXED CLEAN TYPOGRAPHY) -->
+  <g stroke="#dc2626" stroke-width="1.5">
+    <!-- Kích thước chiều dài sa bàn 80cm -->
+    <line x1="160" y1="565" x2="570" y2="800"/>
+    <line x1="160" y1="555" x2="160" y2="575"/>
+    <line x1="570" y1="790" x2="570" y2="810"/>
+
+    <!-- Kích thước chiều rộng sa bàn 60cm -->
+    <line x1="620" y1="800" x2="1030" y2="565"/>
+    <line x1="620" y1="790" x2="620" y2="810"/>
+    <line x1="1030" y1="555" x2="1030" y2="575"/>
+
+    <!-- Kích thước lòng đường 40cm -->
+    <line x1="775" y1="710" x2="855" y2="665"/>
+
+    <!-- Chiều cao cột đèn 25cm -->
+    <line x1="760" y1="450" x2="760" y2="240"/>
+    <line x1="755" y1="450" x2="765" y2="450"/>
+    <line x1="755" y1="240" x2="765" y2="240"/>
+  </g>
+  <g fill="#b91c1c" stroke="none" font-weight="bold" font-size="12">
+    <rect x="330" y="685" width="125" height="20" rx="4" fill="#fee2e2" opacity="0.9" transform="rotate(30 350 700)"/>
+    <text x="350" y="700" font-size="13" transform="rotate(30 350 700)">Chiều dài: 80 cm</text>
+
+    <rect x="820" y="685" width="130" height="20" rx="4" fill="#fee2e2" opacity="0.9" transform="rotate(-30 840 700)"/>
+    <text x="840" y="700" font-size="13" transform="rotate(-30 840 700)">Chiều rộng: 60 cm</text>
+
+    <rect x="825" y="700" width="95" height="20" rx="4" fill="#fee2e2" opacity="0.9"/>
+    <text x="830" y="715">Đường: 40 cm</text>
+
+    <rect x="765" y="335" width="75" height="20" rx="4" fill="#fee2e2" opacity="0.9"/>
+    <text x="770" y="350">Cao: 25 cm</text>
+
+    <rect x="585" y="475" width="80" height="20" rx="4" fill="#fee2e2" opacity="0.9"/>
+    <text x="590" y="490">Barie: 22 cm</text>
+  </g>
+
+  <!-- BẢNG CHÚ THÍCH CÔNG NGHỆ & LINH KIỆN (LEGEND BOX) -->
+  <g transform="translate(860, 40)" filter="url(#dropShadow)">
+    <rect x="0" y="0" width="310" height="270" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="0" y="0" width="310" height="35" rx="8" fill="#0f172a"/>
+    <text x="155" y="23" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">CHÚ THÍCH KỸ THUẬT SA BÀN</text>
+    
+    <!-- Item 1 -->
+    <circle cx="25" cy="55" r="6" fill="#0284c7"/>
+    <text x="40" y="60" font-size="12" font-weight="bold" fill="#0f172a">1. Mắt Webcam USB Mini rời</text>
+    <text x="40" y="75" font-size="11" fill="#475569">Gắn cần vươn, nghiêng 45° soi vạch kẻ</text>
+
+    <!-- Item 2 -->
+    <circle cx="25" cy="100" r="6" fill="#ef4444"/>
+    <text x="40" y="105" font-size="12" font-weight="bold" fill="#0f172a">2. Cột Đèn Giao Thông 3 Màu</text>
+    <text x="40" y="120" font-size="11" fill="#475569">LED 5mm siêu sáng, trở hạn dòng 220Ω</text>
+
+    <!-- Item 3 -->
+    <circle cx="25" cy="145" r="6" fill="#22c55e"/>
+    <text x="40" y="150" font-size="12" font-weight="bold" fill="#0f172a">3. Rào Chắn Barie An Toàn Kép</text>
+    <text x="40" y="165" font-size="11" fill="#475569">Động cơ Servo SG90 + Ống hút siêu nhẹ 2.5g</text>
+
+    <!-- Item 4 -->
+    <circle cx="25" cy="190" r="6" fill="#f59e0b"/>
+    <text x="40" y="195" font-size="12" font-weight="bold" fill="#0f172a">4. Nút Bấm Cơ Học Failsafe</text>
+    <text x="40" y="210" font-size="11" fill="#475569">Dự phòng khẩn cấp khi camera trục trặc</text>
+
+    <!-- Item 5 -->
+    <circle cx="25" cy="235" r="6" fill="#6366f1"/>
+    <text x="40" y="240" font-size="12" font-weight="bold" fill="#0f172a">5. Mạch Arduino Nano 5V USB</text>
+    <text x="40" y="255" font-size="11" fill="#475569">Giấu ngầm dưới sa bàn, ăn dòng chỉ 316mA</text>
+  </g>
+
+  <!-- Watermark Marie Curie -->
+  <text x="600" y="875" font-size="12" fill="#94a3b8" text-anchor="middle" font-style="italic">Bản quyền thiết kế kỹ thuật thuộc Đội tuyển STEM Marie Curie Academy — Cuộc thi HNUE Olympic STEM 2026</text>
+</svg>

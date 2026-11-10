@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trạm Giám Sát AI & Cổng Giao Tiếp Web Serial - Marie Curie Academy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 24px;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    header {
+      background: #1e293b;
+      padding: 20px 24px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 18px;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    header p {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 24px;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .card h2 {
+      font-size: 15px;
+      color: #fbbf24;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 8px;
+    }
+    /* Video Box */
+    #webcam-container {
+      width: 100%;
+      height: 340px;
+      background: #0f172a;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed #475569;
+      position: relative;
+    }
+    #webcam-container canvas, #webcam-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Controls & Inputs */
+    .form-group {
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+    }
+    input[type="text"] {
+      width: 100%;
+      background: #0f172a;
+      border: 1px solid #475569;
+      color: #f8fafc;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .btn {
+      background: #0284c7;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn:hover {
+      background: #0369a1;
+      transform: translateY(-1px);
+    }
+    .btn-serial {
+      background: #16a34a;
+    }
+    .btn-serial:hover {
+      background: #15803d;
+    }
+    .btn-disconnect {
+      background: #dc2626;
+    }
+    /* Confidence Bars */
+    .class-item {
+      margin-bottom: 14px;
+    }
+    .class-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+    .bar-bg {
+      height: 12px;
+      background: #0f172a;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid #334155;
+    }
+    .bar-fill {
+      height: 100%;
+      width: 0%;
+      background: #38bdf8;
+      transition: width 0.1s ease;
+    }
+    /* Status Box */
+    .status-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .badge-disconnected { background: #991b1b; color: #fecaca; }
+    .badge-connected { background: #166534; color: #bbf7d0; }
+    /* Console Log */
+    #serial-log {
+      height: 140px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 10px;
+      font-family: 'Consolas', monospace;
+      font-size: 11px;
+      color: #38bdf8;
+      overflow-y: auto;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div>
+        <h1>TRẠM GIÁM SÁT THỊ GIÁC AI & CỔNG TRUYỀN THÔNG ARDUINO</h1>
+        <p>Trường Tiểu học, THCS và THPT Marie Curie — Cuộc thi HNUE Olympic STEM 2026</p>
+      </div>
+      <div>
+        Cổng USB: <span id="usb-status" class="status-badge badge-disconnected">CHƯA KẾT NỐI</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- CỘT 1: WEBCAM VÀ NHẬN DIỆN THỜI GIAN THỰC -->
+      <div class="card">
+        <h2>1. Mắt Camera Quan Sát Ngã Tư (Góc 45°)</h2>
+        <div id="webcam-container">
+          <span style="color:#64748b;">Chưa bật camera...</span>
+        </div>
+        <div class="btn-row">
+          <button class="btn" onclick="initAI()">▶️ Khởi Động Camera & AI</button>
+          <button class="btn btn-serial" id="btn-serial-connect" onclick="connectSerial()">🔌 Kết Nối Cổng USB Arduino</button>
+        </div>
+      </div>
+
+      <!-- CỘT 2: CẤU HÌNH MÔ HÌNH VÀ THANH XÁC SUẤT -->
+      <div class="card">
+        <h2>2. Trọng Số AI & Lệnh Điều Khiển</h2>
+        
+        <div class="form-group">
+          <label>Đường link Mô hình Google Teachable Machine:</label>
+          <input type="text" id="model-url" value="https://teachablemachine.withgoogle.com/models/sample/" placeholder="Dán link mô hình của bạn hoặc để trống dùng model cục bộ">
+        </div>
+
+        <div id="label-container">
+          <div class="class-item">
+            <div class="class-label"><span>0. Đường Bình Thường (Normal)</span><b id="conf-0">0%</b></div>
+            <div class="bar-bg"><div class="bar-fill" id="bar-0"></div></div>
+          </div>
+          <div class="class-item">
+            <div class="class-label"><span>1. Học Sinh Xin Đường (Student)</span><b id="conf-1">0%</b></div>
+            <div class="bar-bg"><div class="bar-fill" id="bar-1" style="background:#22c55e;"></div></div>
+          </div>
+          <div class="class-item">
+            <div class="class-label"><span>2. Xe Cứu Thương (Ambulance)</span><b id="conf-2">0%</b></div>
+            <div class="bar-bg"><div class="bar-fill" id="bar-2" style="background:#ef4444;"></div></div>
+          </div>
+        </div>
+
+        <h2 style="margin-top:20px;">3. Nhật Ký Truyền Dữ Liệu Serial (USB)</h2>
+        <div id="serial-log">Chờ kết nối cổng Serial...</div>
+        
+        <div class="btn-row" style="margin-top:10px;">
+          <button class="btn" style="background:#475569;" onclick="sendSerialCommand('1')">Test gửi lệnh '1' (Học sinh)</button>
+          <button class="btn" style="background:#991b1b;" onclick="sendSerialCommand('2')">Test gửi lệnh '2' (Cứu thương)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thư viện TensorFlow.js và Teachable Machine -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+  <script>
+    let model, webcam, maxPredictions;
+    let serialPort, serialWriter;
+    let studentConsecutiveFrames = 0;
+    const CONFIDENCE_THRESHOLD = 0.85; // Ngưỡng xác suất 85%
+    const DEBOUNCE_FRAMES = 22;        // 1.5 giây với camera 15fps
+
+    function logSerial(msg) {
+      const log = document.getElementById('serial-log');
+      const time = new Date().toLocaleTimeString();
+      log.innerHTML += `[${time}] ${msg}<br>`;
+      log.scrollTop = log.scrollHeight;
+    }
+
+    // -------------------------------------------------------------
+    // 1. KHỞI TẠO MÔ HÌNH AI TEACHABLE MACHINE
+    // -------------------------------------------------------------
+    async function initAI() {
+      let modelURL = document.getElementById('model-url').value.trim();
+      if (!modelURL.endsWith('/')) modelURL += '/';
+      
+      const checkpointURL = modelURL + 'model.json';
+      const metadataURL = modelURL + 'metadata.json';
+
+      logSerial("Đang nạp mô hình AI từ: " + modelURL);
+
+      try {
+        model = await tmImage.load(checkpointURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+
+        // Cấu hình Webcam
+        const flip = true; // Lật gương camera
+        webcam = new tmImage.Webcam(400, 300, flip);
+        await webcam.setup();
+        await webcam.play();
+        window.requestAnimationFrame(loopAI);
+
+        const container = document.getElementById('webcam-container');
+        container.innerHTML = '';
+        container.appendChild(webcam.canvas);
+
+        logSerial("Khởi động Camera và AI thành công! Đang quét...");
+      } catch (err) {
+        logSerial("LỖI NẠP AI: " + err.message + ". Bạn có thể test thủ công bằng nút Test bên dưới!");
+      }
+    }
+
+    async function loopAI() {
+      webcam.update();
+      await predictAI();
+      window.requestAnimationFrame(loopAI);
+    }
+
+    async function predictAI() {
+      if (!model) return;
+      const prediction = await model.predict(webcam.canvas);
+
+      let highestProb = 0;
+      let highestClass = '';
+
+      for (let i = 0; i < maxPredictions; i++) {
+        const prob = prediction[i].probability;
+        const percent = Math.round(prob * 100);
+
+        // Cập nhật thanh xác suất UI
+        const confText = document.getElementById(`conf-${i}`);
+        const barFill = document.getElementById(`bar-${i}`);
+        if (confText && barFill) {
+          confText.textContent = `${percent}%`;
+          barFill.style.width = `${percent}%`;
+        }
+
+        if (prob > highestProb) {
+          highestProb = prob;
+          highestClass = prediction[i].className;
+        }
+      }
+
+      // LOGIC DEBOUNCE VÀ GỬI LỆNH XUỐNG ARDUINO
+      // Class 1: Học sinh xin đường
+      if (prediction[1] && prediction[1].probability >= CONFIDENCE_THRESHOLD) {
+        studentConsecutiveFrames++;
+        if (studentConsecutiveFrames === DEBOUNCE_FRAMES) {
+          logSerial("AI XÁC NHẬN: Học sinh xin đường (1.5s liên tục) -> Gửi lệnh '1' xuống Arduino!");
+          sendSerialCommand('1');
+        }
+      } else {
+        studentConsecutiveFrames = 0;
+      }
+
+      // Class 2: Xe cứu thương khẩn cấp
+      if (prediction[2] && prediction[2].probability >= CONFIDENCE_THRESHOLD) {
+        logSerial("AI XÁC NHẬN: Xe cứu thương khẩn cấp -> Gửi lệnh '2' tức thì!");
+        sendSerialCommand('2');
+      }
+    }
+
+    // -------------------------------------------------------------
+    // 2. KẾT NỐI VỚI CỔNG USB ARDUINO BẰNG WEB SERIAL API
+    // -------------------------------------------------------------
+    async function connectSerial() {
+      if (!('serial' in navigator)) {
+        alert("Trình duyệt của bạn không hỗ trợ Web Serial API. Vui lòng dùng Google Chrome, Edge hoặc Cốc Cốc!");
+        return;
+      }
+
+      try {
+        serialPort = await navigator.serial.requestPort();
+        await serialPort.open({ baudRate: 9600 });
+
+        const textEncoder = new TextEncoderStream();
+        const writableStreamClosed = textEncoder.readable.pipeTo(serialPort.writable);
+        serialWriter = textEncoder.writable.getWriter();
+
+        document.getElementById('usb-status').textContent = 'ĐÃ KẾT NỐI ARDUINO';
+        document.getElementById('usb-status').className = 'status-badge badge-connected';
+        document.getElementById('btn-serial-connect').textContent = '🔌 Đã Kết Nối Cổng USB';
+        logSerial("Kết nối thành công với cổng USB Arduino tốc độ 9600 bps!");
+
+        // Gửi nhịp sống còn (Heartbeat) định kỳ 1.5 giây để tránh Watchdog
+        setInterval(() => {
+          sendSerialCommand('0');
+        }, 1500);
+
+      } catch (err) {
+        logSerial("Lỗi kết nối Serial: " + err.message);
+      }
+    }
+
+    async function sendSerialCommand(cmdChar) {
+      if (serialWriter) {
+        try {
+          await serialWriter.write(cmdChar);
+          logSerial(`[SERIAL_TX] Đã truyền ký tự: '${cmdChar}'`);
+        } catch (e) {
+          logSerial("Lỗi truyền Serial: " + e.message);
+        }
+      } else {
+        logSerial(`[SIMULATION] Không có cáp USB, mô phỏng lệnh: '${cmdChar}'`);
+      }
+    }
+  </script>
+</body>
+</html>
