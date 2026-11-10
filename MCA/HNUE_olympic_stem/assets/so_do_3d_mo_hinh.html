@@ -226,28 +226,80 @@
       scene.add(zMesh);
     }
 
-    // 2. CỔNG TRƯỜNG MARIE CURIE (Đặt trên mặt vỉa hè y = 1.5)
+    // 2. CỔNG TRƯỜNG MARIE CURIE ACADEMY THEO ĐÚNG ẢNH THỰC TẾ (Cổng vòm đất nung)
     const gateGroup = new THREE.Group();
-    const pillarGeo = new THREE.BoxGeometry(4, 20, 4);
-    const gateMat = new THREE.MeshStandardMaterial({ color: 0x0284c7 });
-    const pillar1 = new THREE.Mesh(pillarGeo, gateMat);
-    pillar1.position.set(-15, 11.5, 27);
-    gateGroup.add(pillar1);
+    gateGroup.position.set(-2, 1.5, 27);
 
-    const pillar2 = new THREE.Mesh(pillarGeo, gateMat);
-    pillar2.position.set(15, 11.5, 27);
-    gateGroup.add(pillar2);
+    const terracottaMat = new THREE.MeshStandardMaterial({
+      color: 0xbf573f, // Màu cam đất nung đặc trưng của Marie Curie Academy
+      roughness: 0.85,
+      metalness: 0.05
+    });
 
-    const beam = new THREE.Mesh(new THREE.BoxGeometry(34, 5, 4.5), gateMat);
-    beam.position.set(0, 21.5, 27);
-    gateGroup.add(beam);
+    // Tạo khối tường vòm chính (Grand Arch)
+    const archShape = new THREE.Shape();
+    archShape.moveTo(-16, 0);
+    archShape.lineTo(18, 0);
+    archShape.lineTo(18, 22);
+    archShape.lineTo(12, 24);
+    archShape.lineTo(-14, 23);
+    archShape.lineTo(-16, 18);
+    archShape.closePath();
 
-    const sign = new THREE.Mesh(
-      new THREE.BoxGeometry(26, 3, 0.5),
-      new THREE.MeshStandardMaterial({ color: 0xd97706, roughness: 0.3, metalness: 0.5 })
+    // Khoét vòm cổng chính (R = 7, tâm x = -4, y = 7)
+    const archHole = new THREE.Path();
+    archHole.moveTo(-11, 0);
+    archHole.lineTo(-11, 7);
+    archHole.absarc(-4, 7, 7, Math.PI, 0, true);
+    archHole.lineTo(3, 0);
+    archHole.closePath();
+    archShape.holes.push(archHole);
+
+    // Khoét vòm cửa sổ phụ bên phải (R = 2.5, tâm x = 11, y = 6)
+    const winHole = new THREE.Path();
+    winHole.moveTo(8.5, 3.5);
+    winHole.lineTo(8.5, 6);
+    winHole.absarc(11, 6, 2.5, Math.PI, 0, true);
+    winHole.lineTo(13.5, 3.5);
+    winHole.closePath();
+    archShape.holes.push(winHole);
+
+    const extrudeSettings = { depth: 3.5, bevelEnabled: true, bevelSegments: 3, steps: 1, bevelSize: 0.2, bevelThickness: 0.2 };
+    const gateWall = new THREE.Mesh(new THREE.ExtrudeGeometry(archShape, extrudeSettings), terracottaMat);
+    gateWall.castShadow = true;
+    gateWall.receiveShadow = true;
+    gateGroup.add(gateWall);
+
+    // Cổng sắt xếp lồng bên trong vòm chính
+    const ironGateMat = new THREE.MeshStandardMaterial({ color: 0x334155, metalness: 0.7, roughness: 0.3 });
+    for (let gx = -10.5; gx <= 2.5; gx += 1.2) {
+      const bar = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 10, 8), ironGateMat);
+      bar.position.set(gx, 5, 1.8);
+      gateGroup.add(bar);
+    }
+
+    // Biển chữ nổi kim loại vàng "MARIE CURIE ACADEMY" trên mặt tường
+    const signCanvas = document.createElement('canvas');
+    signCanvas.width = 512;
+    signCanvas.height = 256;
+    const sCtx = signCanvas.getContext('2d');
+    sCtx.fillStyle = '#bf573f';
+    sCtx.fillRect(0, 0, 512, 256);
+    sCtx.font = '900 48px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+    sCtx.fillStyle = '#fbbf24'; // Màu vàng kim loại
+    sCtx.textAlign = 'center';
+    sCtx.textBaseline = 'middle';
+    sCtx.fillText('MARIE CURIE', 256, 85);
+    sCtx.font = '900 42px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+    sCtx.fillText('ACADEMY', 256, 155);
+    const signTex = new THREE.CanvasTexture(signCanvas);
+    const signPlate = new THREE.Mesh(
+      new THREE.PlaneGeometry(7.5, 3.8),
+      new THREE.MeshStandardMaterial({ map: signTex, roughness: 0.4, metalness: 0.3 })
     );
-    sign.position.set(0, 21.5, 29.5);
-    gateGroup.add(sign);
+    signPlate.position.set(11, 13.5, 3.8);
+    gateGroup.add(signPlate);
+
     scene.add(gateGroup);
 
     // 3. CỘT ĐÈN GIAO THÔNG CHÍNH (Cao 25cm, Cần vươn chuẩn 12cm theo hồ sơ)
@@ -383,38 +435,97 @@
     pedPoleGroup.add(bariePivot);
     scene.add(pedPoleGroup);
 
-    // 6. MÔ HÌNH HỌC SINH & XE CỨU THƯƠNG
+    // 6. MÔ HÌNH HỌC SINH TIỂU HỌC & XE CỨU THƯƠNG THỰC TẾ
     const studentGroup = new THREE.Group();
     studentGroup.position.set(-2, 1.5, 24);
-    const body = new THREE.Mesh(
-      new THREE.CylinderGeometry(1.0, 1.2, 5, 16),
-      new THREE.MeshStandardMaterial({ color: 0xdc2626 })
-    );
-    body.position.y = 2.5;
+
+    // Áo trắng đồng phục học sinh Marie Curie
+    const shirtMat = new THREE.MeshStandardMaterial({ color: 0xffffff });
+    const body = new THREE.Mesh(new THREE.CylinderGeometry(0.9, 1.1, 3.2, 16), shirtMat);
+    body.position.y = 3.6;
     studentGroup.add(body);
 
-    const headMat = new THREE.MeshStandardMaterial({ color: 0xfcd34d });
-    const head = new THREE.Mesh(new THREE.SphereGeometry(1.1, 16, 16), headMat);
+    // Quần / Váy xanh tím than
+    const pantsMat = new THREE.MeshStandardMaterial({ color: 0x1e3a8a });
+    const pants = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 0.9, 2.0, 16), pantsMat);
+    pants.position.y = 1.0;
+    studentGroup.add(pants);
+
+    // Khăn quàng đỏ
+    const scarfMat = new THREE.MeshStandardMaterial({ color: 0xef4444 });
+    const scarf = new THREE.Mesh(new THREE.ConeGeometry(0.8, 1.2, 8), scarfMat);
+    scarf.position.set(0, 4.5, 0.6);
+    scarf.rotation.x = Math.PI / 6;
+    studentGroup.add(scarf);
+
+    // Đầu & Tóc
+    const skinMat = new THREE.MeshStandardMaterial({ color: 0xfcd34d, roughness: 0.6 });
+    const head = new THREE.Mesh(new THREE.SphereGeometry(1.0, 16, 16), skinMat);
     head.position.y = 5.8;
     studentGroup.add(head);
 
-    const studentArm = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.3, 3.5, 16), headMat);
-    studentArm.position.set(1.5, 4.5, 0);
-    studentArm.rotation.z = -Math.PI / 3;
-    studentGroup.add(studentArm);
+    const hairMat = new THREE.MeshStandardMaterial({ color: 0x0f172a });
+    const hair = new THREE.Mesh(new THREE.SphereGeometry(1.05, 16, 16, 0, Math.PI * 2, 0, Math.PI / 2), hairMat);
+    hair.position.y = 5.9;
+    studentGroup.add(hair);
+
+    // Cánh tay giơ lên xin đường (Right Arm Raised)
+    const armRight = new THREE.Mesh(new THREE.CylinderGeometry(0.25, 0.25, 3.2, 16), skinMat);
+    armRight.position.set(1.4, 5.0, 0);
+    armRight.rotation.z = -Math.PI / 3;
+    studentGroup.add(armRight);
+
+    // Ba lô học sinh màu xanh dương đeo sau lưng
+    const bagMat = new THREE.MeshStandardMaterial({ color: 0x0284c7 });
+    const backpack = new THREE.Mesh(new THREE.BoxGeometry(1.4, 2.2, 1.2), bagMat);
+    backpack.position.set(0, 3.6, -1.1);
+    studentGroup.add(backpack);
+
     scene.add(studentGroup);
 
+    // Xe van cứu thương chi tiết
     const ambGroup = new THREE.Group();
     ambGroup.position.set(32, 1.5, -9);
-    const car = new THREE.Mesh(
-      new THREE.BoxGeometry(12, 4.5, 6),
-      new THREE.MeshStandardMaterial({ color: 0xffffff })
-    );
-    ambGroup.add(car);
+
+    const carMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.2 });
+    const carBody = new THREE.Mesh(new THREE.BoxGeometry(12, 4.2, 5.5), carMat);
+    carBody.position.y = 2.1;
+    ambGroup.add(carBody);
+
+    const glassMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, roughness: 0.1 });
+    const windshield = new THREE.Mesh(new THREE.BoxGeometry(2, 2.2, 5.2), glassMat);
+    windshield.position.set(-4.5, 3.2, 0);
+    ambGroup.add(windshield);
+
+    const redStripeMat = new THREE.MeshStandardMaterial({ color: 0xdc2626 });
+    const stripeL = new THREE.Mesh(new THREE.BoxGeometry(11.8, 0.8, 0.1), redStripeMat);
+    stripeL.position.set(0, 2.0, 2.8);
+    ambGroup.add(stripeL);
+    const stripeR = stripeL.clone();
+    stripeR.position.set(0, 2.0, -2.8);
+    ambGroup.add(stripeR);
+
+    // 4 Bánh xe lốp cao su
+    const tireMat = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.8 });
+    const rimMat = new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.8 });
+    const wheelPositions = [
+      [-3.5, 0.8, 2.7], [3.5, 0.8, 2.7],
+      [-3.5, 0.8, -2.7], [3.5, 0.8, -2.7]
+    ];
+    wheelPositions.forEach(([wx, wy, wz]) => {
+      const tire = new THREE.Mesh(new THREE.CylinderGeometry(1.0, 1.0, 0.6, 16), tireMat);
+      tire.rotation.x = Math.PI / 2;
+      tire.position.set(wx, wy, wz);
+      const rim = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 0.62, 16), rimMat);
+      rim.rotation.x = Math.PI / 2;
+      rim.position.set(wx, wy, wz);
+      ambGroup.add(tire);
+      ambGroup.add(rim);
+    });
 
     const sirenMat = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-    const siren = new THREE.Mesh(new THREE.CylinderGeometry(0.6, 0.6, 0.8, 16), sirenMat);
-    siren.position.set(0, 2.6, 0);
+    const siren = new THREE.Mesh(new THREE.BoxGeometry(2.5, 0.7, 1.4), sirenMat);
+    siren.position.set(0, 4.6, 0);
     ambGroup.add(siren);
     scene.add(ambGroup);
 
