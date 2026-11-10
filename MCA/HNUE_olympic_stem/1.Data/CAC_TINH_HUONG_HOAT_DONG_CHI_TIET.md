@@ -113,18 +113,19 @@ Hệ thống Đèn giao thông học đường thông minh Marie Curie được 
 
 ---
 
-### 3. TÌNH HUỐNG 3: XE CỨU THƯƠNG / XE CỨU HỎA KHẨN CẤP ĐẾN (EMERGENCY OVERRIDE)
-* **Bối cảnh thực tế:** Trong khi học sinh đang chuẩn bị qua đường (hoặc đường đang có tín hiệu đèn đỏ), một chiếc xe cứu thương (hoặc xe chữa cháy) hú còi tiến nhanh về phía ngã tư.
-* **Cơ chế ngắt ưu tiên tuyệt đối (Preemption):**
-  - Mắt camera AI lập tức nhận dạng được hình dáng đặc trưng của xe cứu thương (`2_Ambulance_Emergency`) với độ chính xác trên 97%.
-  - Hệ thống **ngắt ngay lập tức mọi chu kỳ đang chạy dở**:
-    - Cần Barie lập tức hạ xuống chốt góc $0^\circ$ (hoặc giữ nguyên đóng) để ngăn học sinh bước xuống lòng đường.
-    - Đèn người đi bộ lập tức chuyển sang **ĐỎ**.
-    - Còi chip Buzzer phát tiếng còi dài cảnh báo học sinh lùi lại vị trí an toàn.
-    - Đèn ô tô lập tức bật **XANH KHẨN CẤP** để xe cứu thương đi qua ngã tư với thời gian chờ bằng 0!
-* **Cơ chế bù giờ:** Sau khi xe cứu thương chạy qua khỏi tầm quan sát của camera $3\text{ giây}$, nếu trên vỉa hè vẫn còn học sinh đang đứng chờ, hệ thống sẽ tự động kích hoạt bù lại một chu kỳ đèn xanh qua đường đầy đủ cho học sinh.
+### 3. TÌNH HUỐNG 3: XE CỨU THƯƠNG / XE CỨU HỎA KHẨN CẤP ĐẾN (EMERGENCY PREEMPTION VỚI PHA CHUYỂN TIẾP AN TOÀN)
+* **Bối cảnh thực tế:** Trong khi học sinh đang chuẩn bị qua đường (hoặc đang bước dở qua đường), một chiếc xe cứu thương (hoặc xe chữa cháy) hú còi tiến nhanh về phía ngã tư.
+* **Cơ chế ngắt ưu tiên bảo toàn sinh mạng (Emergency Preemption with Safe Clearance Interval):**
+  - Mắt camera AI lập tức nhận dạng được hình dáng đặc trưng của xe cứu thương (`2_Ambulance_Emergency`) với độ tin cậy $Confidence \ge 85\%$.
+  - **Trường hợp 1 (Đường đang ở TH1 - Đường vắng):** Cần Barie giữ nguyên $0^\circ$, đèn ô tô duy trì XANH LIÊN TỤC để xe cứu thương phóng qua ngã tư với thời gian chờ bằng 0.
+  - **Trường hợp 2 (Hệ thống đang ở TH2 - Học sinh đang qua đường):** Để triệt tiêu rủi ro cần Barie hạ đập trúng người hoặc xe phóng qua khi học sinh còn ở giữa lòng đường, hệ thống kích hoạt **Pha chuyển tiếp an toàn khẩn cấp (Emergency Clearance Interval 2 – 3 giây)**:
+    + Còi chip Buzzer lập tức phát âm thanh báo động dồn dập, đồng thời đèn đi bộ nhấp nháy **ĐỎ** liên tục cảnh báo các em học sinh đang ở dưới lòng đường nhanh chóng rảo bước lên vỉa hè an toàn.
+    + Trong 2–3 giây này, cần Barie ở mép vỉa hè vẫn giữ mở để không chặn lối thoát lên vỉa hè của học sinh, đèn ô tô vẫn giữ ĐỎ chặn dòng xe.
+    + Ngay sau khi hết 2–3 giây chuyển tiếp an toàn (học sinh đã lên vỉa hè an toàn), cần Barie mới từ từ hạ xuống chốt góc $0^\circ$, đèn đi bộ chuyển ĐỎ, và đèn ô tô bật **XANH KHẨN CẤP** để xe cứu thương lưu thông an toàn tuyệt đối.
 
----
+* **Hoạt động của sa bàn & Thuyết minh trình diễn:**
+  - Bạn Vũ Ngọc An Đông cầm mô hình xe cứu thương đồ chơi đẩy nhanh vào làn đường.
+  - Bạn Đông thuyết minh tự tin: *"Đột nhiên có xe cứu thương tới... Camera AI lập tức nhận diện xe ưu tiên. Để đảm bảo an toàn tuyệt đối, hệ thống kích hoạt còi báo động khẩn cấp 3 giây cho các bạn học sinh dưới đường nhanh chóng bước lên vỉa hè, sau đó Barie mới nhẹ nhàng đóng sập chốt 0 độ và đèn xe bật xanh khẩn cấp cho xe cứu thương phóng qua ngã tư an toàn tuyệt đối ạ!"*
 
 ### 4. TÌNH HUỐNG 4: SỰ CỐ MẤT NHẬN DIỆN AI $\to$ NÚT BẤM CƠ HỌC FAILSAFE
 * **Bối cảnh thực tế:** Vào ngày thời tiết mưa lớn, sương mù dày đặc làm mờ ống kính camera, hoặc ánh đèn rọi sân khấu tại hội trường thi đấu chiếu thẳng vào mắt webcam khiến AI không đạt ngưỡng tin cậy $85\%$.

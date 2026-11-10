@@ -52,16 +52,19 @@ Dựa trên các nghiên cứu về an toàn giao thông học đường và th�
 Hệ thống được thiết kế cấp nguồn hoàn toàn qua cổng USB 5V (từ Laptop hoặc Củ sạc dự phòng 5V-2A), đảm bảo điện áp cực thấp ($< 5\text{V}$), an toàn tuyệt đối chống cháy nổ và điện giật cho học sinh tiểu học.
 
 ### Bảng cân bằng dòng điện và công suất tiêu thụ tối đa:
-| STT | Thiết bị / Linh kiện | Điện áp (V) | Dòng tĩnh (mA) | Dòng đỉnh Peak (mA) | Công suất cực đại (W) | Ghi chú kỹ thuật |
+| STT | Phân nhánh & Thiết bị / Linh kiện | Điện áp (V) | Dòng tĩnh (mA) | Dòng đỉnh Peak (mA) | Công suất đỉnh (W) | Ghi chú an toàn & kỹ thuật |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- |
-| 1 | Mạch vi điều khiển Arduino Nano | 5.0 V | 20 mA | 30 mA | 0.15 W | Chip ATmega328P |
-| 2 | Cụm LED giao thông ô tô (Đỏ, Vàng, Xanh) | 5.0 V | 0 mA | 20 mA | 0.10 W | Trở hạn dòng $220\ \Omega$, chỉ 1 đèn sáng/thời điểm |
-| 3 | Cụm LED người đi bộ (Đỏ, Xanh) | 5.0 V | 0 mA | 20 mA | 0.10 W | Trở hạn dòng $220\ \Omega$ |
-| 4 | Động cơ Servo mini SG90 (Nâng hạ Barie) | 5.0 V | 10 mA | 220 mA | 1.10 W | Chỉ ăn dòng đỉnh trong $1.35\text{s}$ lúc xoay góc |
-| 5 | Còi chip Buzzer mini cảnh báo âm thanh | 5.0 V | 0 mA | 25 mA | 0.12 W | Phát nhịp ngắt quãng $0.5\text{s}$ |
+| **A** | **NHÁNH 1: CỔNG USB 1 LAPTOP (MẠCH ĐIỀU KHIỂN & CHẤP HÀNH)** | | | | | **Giới hạn USB 2.0: 500 mA** |
+| 1 | Mạch vi điều khiển Arduino Nano (ATmega328P) | 5.0 V | 20 mA | 30 mA | 0.15 W | Cấp nguồn qua cáp USB Mini-B |
+| 2 | Cụm 3 đèn LED giao thông ô tô (Đỏ, Vàng, Xanh) | 5.0 V | 20 mA | 20 mA | 0.10 W | Trở hạn dòng 220Ω, luôn có 1 đèn sáng |
+| 3 | Cụm 2 đèn LED người đi bộ (Đỏ, Xanh) | 5.0 V | 20 mA | 20 mA | 0.10 W | Trở hạn dòng 220Ω, luôn có 1 đèn sáng |
+| 4 | Động cơ Servo mini SG90 (Nâng hạ Barie) | 5.0 V | 10 mA | 220 mA | 1.10 W | Ăn dòng đỉnh 1.35s; **gắn tụ hóa 470µF/16V chống sụt áp** |
+| 5 | Còi chip Buzzer mini cảnh báo âm thanh | 5.0 V | 0 mA | 25 mA | 0.12 W | Phát nhịp ngắt quãng 0.5s |
 | 6 | Nút bấm cơ học dự phòng (Failsafe Button) | 5.0 V | 0 mA | 1 mA | 0.005 W | Trở kéo lên nội bộ Input Pullup |
-| 7 | Mắt Webcam USB Mini rời | 5.0 V | 100 mA | 150 mA | 0.75 W | Cắm cổng USB riêng trên Laptop |
-| | **TỔNG CỘNG MẠCH ARDUINO & CHẤP HÀNH** | **5.0 V** | **~30 mA** | **~316 mA** | **~1.58 W** | **Nằm gọn trong chuẩn USB 2.0 (500mA)** |
+| | **TIỂU KẾT NHÁNH 1 (ARDUINO & CHẤP HÀNH)** | **5.0 V** | **~70 mA** | **~316 mA** | **~1.58 W** | **Nằm sâu dưới trần 500 mA của Cổng USB 1** |
+| **B** | **NHÁNH 2: CỔNG USB 2 LAPTOP (MẮT WEBCAM AI)** | | | | | **Cổng USB độc lập trên Laptop** |
+| 7 | Mắt Webcam USB Mini rời (Đầu cần vươn 12cm) | 5.0 V | 100 mA | 150 mA | 0.75 W | Cắm trực tiếp cổng USB 2, truyền video 720p |
+| | **TỔNG CỘNG HỆ THỐNG TOÀN TẢI** | **5.0 V** | **~170 mA** | **~466 mA** | **~2.33 W** | **Tách 2 cổng USB riêng biệt, triệt tiêu 100% sụt áp chip CH340** | |
 
 > **Đánh giá an toàn điện:**
 > Cổng USB 2.0 của máy tính có khả năng cấp dòng $500\text{ mA}$, cổng USB 3.0 cấp $900\text{ mA}$. Tổng dòng đỉnh của mạch chỉ là $316\text{ mA}$ ($< 65\%$ công suất cổng). Mạch không bị sụt áp, không gây reset Arduino và không làm nóng dây dẫn.

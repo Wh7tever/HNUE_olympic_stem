@@ -267,21 +267,24 @@ def create_document():
     add_body_p('Hệ thống được thiết kế vận hành hoàn toàn ở điện áp cực thấp 5V DC lấy trực tiếp từ cổng USB máy tính hoặc củ sạc dự phòng 5V-2A, triệt tiêu hoàn toàn nguy cơ cháy nổ hay điện giật đối với học sinh tiểu học.')
     
     t_power = doc.add_table(rows=1, cols=6)
-    p_headers = ['STT', 'Thiết bị / Linh kiện', 'Điện áp (V)', 'Dòng tĩnh (mA)', 'Dòng đỉnh (mA)', 'Công suất đỉnh (W)']
+    p_headers = ['STT', 'Phân nhánh & Thiết bị', 'Điện áp', 'Dòng tĩnh', 'Dòng đỉnh', 'Công suất']
     p_data = [
-        ['1', 'Mạch vi điều khiển Arduino Nano', '5.0 V', '20 mA', '30 mA', '0.15 W'],
-        ['2', 'Cụm 3 đèn LED giao thông ô tô', '5.0 V', '0 mA', '20 mA', '0.10 W'],
-        ['3', 'Cụm 2 đèn LED người đi bộ', '5.0 V', '0 mA', '20 mA', '0.10 W'],
-        ['4', 'Động cơ Servo SG90 (Nâng hạ Barie)', '5.0 V', '10 mA', '220 mA', '1.10 W'],
+        ['A', 'NHÁNH 1: CỔNG USB 1 (ARDUINO & CHẤP HÀNH)', '5.0 V', '--', '--', 'Trần 500mA'],
+        ['1', 'Mạch Arduino Nano (ATmega328P)', '5.0 V', '20 mA', '30 mA', '0.15 W'],
+        ['2', 'Cụm 3 LED xe ô tô (luôn có 1 đèn sáng)', '5.0 V', '20 mA', '20 mA', '0.10 W'],
+        ['3', 'Cụm 2 LED đi bộ (luôn có 1 đèn sáng)', '5.0 V', '20 mA', '20 mA', '0.10 W'],
+        ['4', 'Động cơ Servo SG90 (kèm tụ 470µF bù sụt áp)', '5.0 V', '10 mA', '220 mA', '1.10 W'],
         ['5', 'Còi chip Buzzer mini báo âm thanh', '5.0 V', '0 mA', '25 mA', '0.12 W'],
         ['6', 'Nút bấm cơ học Failsafe + Trở kéo', '5.0 V', '0 mA', '1 mA', '0.005 W'],
-        ['7', 'Mắt Webcam USB Mini rời', '5.0 V', '100 mA', '150 mA', '0.75 W'],
-        ['--', 'TỔNG CỘNG HỆ THỐNG MẠCH', '5.0 V', '~30 mA', '~316 mA', '< 1.60 W']
+        ['--', 'TIỂU KẾT NHÁNH 1 (ARDUINO & SA BÀN)', '5.0 V', '~70 mA', '~316 mA', '~1.58 W'],
+        ['B', 'NHÁNH 2: CỔNG USB 2 (MẮT WEBCAM AI)', '5.0 V', '--', '--', 'Độc lập'],
+        ['7', 'Webcam USB Mini rời (cắm thẳng Laptop)', '5.0 V', '100 mA', '150 mA', '0.75 W'],
+        ['==', 'TỔNG CỘNG TOÀN HỆ THỐNG TOÀN TẢI', '5.0 V', '~170 mA', '~466 mA', '~2.33 W']
     ]
     p_aligns = [WD_ALIGN_PARAGRAPH.CENTER, WD_ALIGN_PARAGRAPH.LEFT, WD_ALIGN_PARAGRAPH.CENTER, WD_ALIGN_PARAGRAPH.CENTER, WD_ALIGN_PARAGRAPH.CENTER, WD_ALIGN_PARAGRAPH.CENTER]
     format_table(t_power, [1.2, 5.5, 2.3, 2.4, 2.4, 2.2], p_headers, p_data, p_aligns)
 
-    add_body_p('Đánh giá an toàn kỹ thuật: Tổng cường độ dòng điện đỉnh của toàn bộ mạch điều khiển là 316 mA, nằm sâu dưới ngưỡng trần an toàn của cổng USB 2.0 tiêu chuẩn (500 mA) và cổng USB 3.0 (900 mA). Hệ thống vận hành liên tục êm ái, hoàn toàn không bị hiện tượng sụt áp, không làm nóng vi điều khiển hay dây dẫn.')
+    add_body_p('Đánh giá an toàn kỹ thuật: Hệ thống phân bổ nguồn điện thông minh trên 2 cổng USB độc lập của Laptop. Nhánh 1 (Arduino + cơ cấu chấp hành) ăn dòng đỉnh 316 mA (< 500 mA), có thêm tụ hóa 470µF/16V mắc song song tại chân nguồn Servo SG90 để bù sụt áp tức thời khi động cơ khởi động, bảo vệ chip nạp CH340 không bao giờ bị reset. Nhánh 2 (Webcam USB) cắm cổng riêng ăn dòng đỉnh 150 mA (< 500 mA). Tổng công suất toàn tải 2.33 W vận hành êm ái, an toàn tuyệt đối cho học sinh tiểu học.')
 
     add_sec_heading('IV. THIẾT KẾ CƠ KHÍ VÀ BỐ TRÍ MÔ HÌNH SA BÀN (PHƯƠNG ÁN 1)')
     add_body_p('Sau khi phản biện toàn diện các hạn chế của việc sử dụng camera tích hợp trên viền màn hình laptop (góc nhìn bị cố định, thao tác cồng kềnh, thiếu tính chân thực), đội thi Marie Curie chốt triển khai theo Phương án 1 tối ưu:')
