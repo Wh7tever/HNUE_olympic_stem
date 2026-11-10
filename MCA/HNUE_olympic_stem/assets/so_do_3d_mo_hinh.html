@@ -121,7 +121,7 @@
 
   <div class="camera-presets">
     <button class="cam-btn" onclick="setCameraView('overview')">📷 Toàn Cảnh Sa Bàn (3D)</button>
-    <button class="cam-btn" onclick="setCameraView('webcam')">🎯 Góc Nhìn Mắt AI (45°)</button>
+    <button class="cam-btn" onclick="setCameraView('webcam')">🎯 Góc Nhìn Mắt AI (Soi Cả Xe & Học Sinh)</button>
     <button class="cam-btn" onclick="setCameraView('barie')">🚧 Cận Cảnh Barie & Nút Failsafe</button>
   </div>
 
@@ -226,92 +226,63 @@
       scene.add(zMesh);
     }
 
-    // 2. CỔNG TRƯỜNG MARIE CURIE ACADEMY THEO ĐÚNG ẢNH THỰC TẾ (Cổng vòm đất nung)
+    // 2. CỔNG TRƯỜNG MARIE CURIE TỐI GIẢN FORMEX (Dễ làm thực tế, không che khuất Barie & Học sinh)
     const gateGroup = new THREE.Group();
-    gateGroup.position.set(-2, 1.5, 27);
+    gateGroup.position.set(-2, 1.5, 28);
 
-    const terracottaMat = new THREE.MeshStandardMaterial({
-      color: 0xbf573f, // Màu cam đất nung đặc trưng của Marie Curie Academy
-      roughness: 0.85,
-      metalness: 0.05
+    const gateMat = new THREE.MeshStandardMaterial({
+      color: 0xbf573f, // Màu cam đất nung Marie Curie
+      roughness: 0.6
     });
 
-    // Tạo khối tường vòm chính (Grand Arch)
-    const archShape = new THREE.Shape();
-    archShape.moveTo(-16, 0);
-    archShape.lineTo(18, 0);
-    archShape.lineTo(18, 22);
-    archShape.lineTo(12, 24);
-    archShape.lineTo(-14, 23);
-    archShape.lineTo(-16, 18);
-    archShape.closePath();
+    // 2 Trụ cột Formex vuông vức (dễ cắt dán thủ công bằng dao rọc giấy)
+    const pillarGeo = new THREE.BoxGeometry(3.0, 18, 3.0);
+    const pillarL = new THREE.Mesh(pillarGeo, gateMat);
+    pillarL.position.set(-14, 9, 0);
+    gateGroup.add(pillarL);
 
-    // Khoét vòm cổng chính (R = 7, tâm x = -4, y = 7)
-    const archHole = new THREE.Path();
-    archHole.moveTo(-11, 0);
-    archHole.lineTo(-11, 7);
-    archHole.absarc(-4, 7, 7, Math.PI, 0, true);
-    archHole.lineTo(3, 0);
-    archHole.closePath();
-    archShape.holes.push(archHole);
+    const pillarR = new THREE.Mesh(pillarGeo, gateMat);
+    pillarR.position.set(12, 9, 0);
+    gateGroup.add(pillarR);
 
-    // Khoét vòm cửa sổ phụ bên phải (R = 2.5, tâm x = 11, y = 6)
-    const winHole = new THREE.Path();
-    winHole.moveTo(8.5, 3.5);
-    winHole.lineTo(8.5, 6);
-    winHole.absarc(11, 6, 2.5, Math.PI, 0, true);
-    winHole.lineTo(13.5, 3.5);
-    winHole.closePath();
-    archShape.holes.push(winHole);
+    // Thanh ngang xà cổng phía trên
+    const beamGeo = new THREE.BoxGeometry(29, 3.5, 3.2);
+    const beam = new THREE.Mesh(beamGeo, gateMat);
+    beam.position.set(-1, 19.5, 0);
+    gateGroup.add(beam);
 
-    const extrudeSettings = { depth: 3.5, bevelEnabled: true, bevelSegments: 3, steps: 1, bevelSize: 0.2, bevelThickness: 0.2 };
-    const gateWall = new THREE.Mesh(new THREE.ExtrudeGeometry(archShape, extrudeSettings), terracottaMat);
-    gateWall.castShadow = true;
-    gateWall.receiveShadow = true;
-    gateGroup.add(gateWall);
-
-    // Cổng sắt xếp lồng bên trong vòm chính
-    const ironGateMat = new THREE.MeshStandardMaterial({ color: 0x334155, metalness: 0.7, roughness: 0.3 });
-    for (let gx = -10.5; gx <= 2.5; gx += 1.2) {
-      const bar = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 10, 8), ironGateMat);
-      bar.position.set(gx, 5, 1.8);
-      gateGroup.add(bar);
-    }
-
-    // Biển chữ nổi kim loại vàng "MARIE CURIE ACADEMY" trên mặt tường
+    // Biển tên trường "MARIE CURIE" chữ vàng nổi
     const signCanvas = document.createElement('canvas');
     signCanvas.width = 512;
-    signCanvas.height = 256;
+    signCanvas.height = 128;
     const sCtx = signCanvas.getContext('2d');
     sCtx.fillStyle = '#bf573f';
-    sCtx.fillRect(0, 0, 512, 256);
+    sCtx.fillRect(0, 0, 512, 128);
     sCtx.font = '900 48px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-    sCtx.fillStyle = '#fbbf24'; // Màu vàng kim loại
+    sCtx.fillStyle = '#fbbf24'; // Màu vàng nổi bật
     sCtx.textAlign = 'center';
     sCtx.textBaseline = 'middle';
-    sCtx.fillText('MARIE CURIE', 256, 85);
-    sCtx.font = '900 42px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-    sCtx.fillText('ACADEMY', 256, 155);
+    sCtx.fillText('MARIE CURIE ACADEMY', 256, 64);
     const signTex = new THREE.CanvasTexture(signCanvas);
     const signPlate = new THREE.Mesh(
-      new THREE.PlaneGeometry(7.5, 3.8),
-      new THREE.MeshStandardMaterial({ map: signTex, roughness: 0.4, metalness: 0.3 })
+      new THREE.PlaneGeometry(24, 3.0),
+      new THREE.MeshStandardMaterial({ map: signTex, roughness: 0.3 })
     );
-    signPlate.position.set(11, 13.5, 3.8);
+    signPlate.position.set(-1, 19.5, 1.7);
     gateGroup.add(signPlate);
 
     scene.add(gateGroup);
 
-    // 3. CỘT ĐÈN GIAO THÔNG CHÍNH (Cao 25cm, Cần vươn chuẩn 12cm theo hồ sơ)
+    // 3. CỘT ĐÈN GIAO THÔNG & CAMERA GIÁM SÁT TOÀN CẢNH (Cao 28cm tại góc đón xe)
     const mainPoleGroup = new THREE.Group();
-    mainPoleGroup.position.set(12, 0, -22);
+    mainPoleGroup.position.set(24, 0, -22);
 
     const poleMat = new THREE.MeshStandardMaterial({ color: 0x475569, metalness: 0.4 });
-    const mainPole = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 1.0, 25, 16), poleMat);
-    mainPole.position.y = 12.5;
+    const mainPole = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 1.0, 28, 16), poleMat);
+    mainPole.position.y = 14;
     mainPoleGroup.add(mainPole);
 
-    // Cần vươn dài đúng 12cm (từ z = 0 vươn ra z = 12 trong hệ trục cột)
+    // Cần vươn ngang mang đèn xe
     const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 12, 16), poleMat);
     arm.rotation.x = Math.PI / 2;
     arm.position.set(0, 24, 6);
@@ -340,13 +311,13 @@
     mainPoleGroup.add(carGreenLed);
     scene.add(mainPoleGroup);
 
-    // 4. WEBCAM USB MINI & CHÙM TIA FOV (Neo đỉnh nón chuẩn tại ống kính (12, 24, -10))
-    const camWorldPos = new THREE.Vector3(12, 24, -10);
-    const targetCrosswalkPos = new THREE.Vector3(0, 0.5, 10); // Hướng thẳng vào vùng vạch kẻ đường & học sinh
+    // 4. WEBCAM USB MINI & CHÙM TIA FOV RỘNG (Góc chéo 38° bao quát CẢ xe trên đường và học sinh trên vỉa hè)
+    const camWorldPos = new THREE.Vector3(24, 27, -22);
+    const targetIntersectionPos = new THREE.Vector3(3, 2, 8); // Hướng vào tâm giao thoa ngã tư
 
     const webcamGroup = new THREE.Group();
     webcamGroup.position.copy(camWorldPos);
-    webcamGroup.lookAt(targetCrosswalkPos);
+    webcamGroup.lookAt(targetIntersectionPos);
 
     const camBody = new THREE.Mesh(
       new THREE.BoxGeometry(2.2, 1.6, 2.0),
@@ -362,9 +333,9 @@
     lens.position.z = 1.1;
     webcamGroup.add(lens);
 
-    // Dịch tâm hình nón sao cho ĐỈNH NÓN nằm đúng tại ống kính Webcam (0,0,1.2)
-    const fovHeight = 36;
-    const fovGeo = new THREE.ConeGeometry(16, fovHeight, 24, 1, true);
+    // Hình nón quét AI mở rộng góc 70 độ bao quát cả làn xe lẫn vỉa hè học sinh
+    const fovHeight = 44;
+    const fovGeo = new THREE.ConeGeometry(24, fovHeight, 24, 1, true);
     fovGeo.translate(0, -fovHeight / 2, 0); // Đưa đỉnh nón về gốc (0,0,0)
     fovGeo.rotateX(-Math.PI / 2);           // Xoay trục nón chiếu dọc theo trục +Z của camera
     const fovMat = new THREE.MeshBasicMaterial({
@@ -832,8 +803,8 @@
         camera.position.set(70, 75, 90);
         controls.target.set(0, 5, 0);
       } else if (preset === 'webcam') {
-        camera.position.set(13, 25, -11);
-        controls.target.copy(targetCrosswalkPos);
+        camera.position.set(24, 27, -22);
+        controls.target.set(3, 2, 8);
       } else if (preset === 'barie') {
         camera.position.set(-16, 12, 36);
         controls.target.set(-6, 6, 22);
