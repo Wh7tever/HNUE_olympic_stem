@@ -369,7 +369,7 @@ def build_master_unified_document():
     add_body_p(doc, "Lòng đường xe chạy: 40cm sa bàn tương ứng 8 mét thực tế (chuẩn đường 2 làn xe trước cổng trường tiểu học).", bold_prefix="• ")
     add_body_p(doc, "Vỉa hè người đi bộ: Mỗi bên 10cm tương ứng 2 mét vỉa hè thực tế.", bold_prefix="• ")
     add_body_p(doc, "Cột đèn giao thông: Cao 25cm (tương ứng 5m thực tế); cần vươn ngang 12cm (tương ứng 2.4m thực tế).", bold_prefix="• ")
-    add_body_p(doc, "Thanh cần Barie: Dài 22cm siêu nhẹ (< 3g), chắn trọn vẹn bề rộng 15cm của lối đi bộ sang đường.", bold_prefix="• ")
+    add_body_p(doc, "Quy cách và hướng lắp đặt Rào chắn Barie học sinh: Động cơ Servo SG90 được gắn cố định tại mép vỉa hè trường học, ngay trước đầu vạch sang đường ngựa vằn. Cần Barie balsa dài 22cm dán sọc đỏ - trắng: Khi Đóng (0°), cần hạ nằm ngang song song mép vỉa hè tạo thành rào chắn vật lý ngăn học sinh tràn từ vỉa hè xuống lòng đường; lòng đường xe chạy hoàn toàn thông suốt không bị vướng. Khi Mở (90°), servo nâng cần dựng đứng lên trời để mở lối cho học sinh bước qua vạch sang đường an toàn trong 15 giây.", bold_prefix="• ")
 
     add_heading_2(doc, "3.2. Công thức tính thời gian chu kỳ đèn đi bộ 15 giây")
     add_body_p(doc, "Dựa trên các nghiên cứu về thể chất học sinh tiểu học Việt Nam lứa tuổi 9 - 10 tuổi (Lớp 4 - 5):")
