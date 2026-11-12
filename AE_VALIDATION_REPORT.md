@@ -1,55 +1,43 @@
-# AE Validation & Workspace Optimization Report
+# AE Validation Report — Release v2.1 & GitHub Sync
 
-**Task:** Tối Ưu Hóa & Dọn Dẹp Không Gian Làm Việc E:\Antigravity (Reclaim 3.42 GB Sandboxes & Standardize .gitignore)
-**Workspace:** `E:\Antigravity`
-**Date:** 2026-08-14
-**Branch:** `feature/workspace-optimization-cleanup`
+**Dự án:** Sa bàn Giao thông Thông minh Trường Marie Curie — Olympic STEM HNUE 2026  
+**Repository:** `https://github.com/Wh7tever/HNUE_olympic_stem`  
+**Ngày phát hành:** 2026-11-12  
+**Phiên bản:** `v2.1`  
+**Nhánh xuất bản:** `main`, `hnue_olympic_stem`, `feature/pictoblox-cpp-sync-v2.1`  
+**Commit SHA:** `2537c48`
 
 ---
 
 ## 13 Checkpoint Answers (ae-validation-gate)
 
 1. **Verified Output?**
-   - **PASS**:
-     - `RCP_sandboxes child directories: 0` (Đã dọn sạch 15 container sandbox rác).
-     - Dung lượng thu hồi thực tế: **3.420,92 MB** (~3.42 GB).
-     - `Test-RCPHealth`: **37/37 checks passed (100% PASS, 0 warn, 0 fail)**.
-
+   - **PASS**: Đã đẩy thành công lên remote GitHub `origin` (`https://github.com/Wh7tever/HNUE_olympic_stem.git`):
+     - Nhánh `main`: `2537c48` (Upstream configured).
+     - Nhánh `hnue_olympic_stem`: `2537c48`.
+     - Nhánh `feature/pictoblox-cpp-sync-v2.1`: `2537c48`.
+     - Tag Release: `v2.1`.
 2. **No Regression?**
-   - **PASS**: Tất cả các hợp đồng và công cụ hạt nhân của Antigravity Engine không bị ảnh hưởng. Thư mục cha `RCP_sandboxes` được duy trì rỗng để sẵn sàng cho các phiên làm việc tiếp theo.
-
+   - **PASS**: Toàn bộ mã nguồn C++ v2.1 Fixed, dự án PictoBlox `.sb3`, cẩm nang Word v2 và 2 sơ đồ kiến trúc HD được bảo toàn nguyên vẹn 100%.
 3. **Edge Cases Covered?**
-   - **PASS**:
-     - *Edge Case 1 (Locked Files):* Đã bọc `try/catch` bắt lỗi theo từng container riêng biệt, đảm bảo nếu có process khóa file thì không làm crash toàn bộ tiến trình.
-     - *Edge Case 2 (Nested Git Repos):* Cố định ngữ cảnh `-C "E:\Antigravity"` cho mọi thao tác git để không can thiệp vào working tree của các submodule con (`ExamPro`, `Antigravity_engine`).
-     - *Edge Case 3 (Directory Preservation):* Tự động kiểm tra và tái tạo lại thư mục `RCP_sandboxes` nếu bị xóa nhầm để bảo toàn giao thức sandbox của RCP.
-
-4. **Cleanup Done?**
-   - **PASS**: Đã xóa 15 thư mục rác, không tạo file rác mới, không để lại temporary artifact dư thừa.
-
-5. **Documentation Updated?**
-   - **PASS**: `goal.md`, `task.md`, `implementation_plan.md`, `handoff.md`, `TASK_LEDGER.md`, `PROJECT_STATUS.md` đều được đồng bộ đầy đủ.
-
-6. **Minimal Solution?**
-   - **PASS**: Bậc 1 Minimalism Ladder — chỉ can thiệp vào các thư mục tạm và cập nhật khế ước `.gitignore` mà không đụng chạm đến core engine scripts.
-
-7. **Autonomous Learner?**
-   - **PASS**: Đã ghi nhận bài học quản lý sandbox storage và định dạng `.gitignore` cho workspace đa subprojects.
-
-8. **Graph Impact Checked?**
-   - **PASS**: Không có breaking change ở các module boundary.
-
-9. **Artifact Metadata Check?**
-   - **PASS**: Tất cả Artifacts đều tuân thủ định dạng chuẩn của AE Operating Kit.
-
-10. **LTM Engram Sync?**
-    - **PASS**: Sẵn sàng đồng bộ trạng thái vào Native LTM sau khi Planner duyệt.
-
-11. **CONTEXT.md Updated?**
-    - **PASS**: Thông tin phân vùng và dung lượng đã được phản ánh chuẩn trong `PROJECT_STATUS.md`.
-
-12. **Zero-Trust Skill Protection Checked?**
-    - **PASS**: Không sửa đổi bất kỳ file nào trong danh sách Untouchable Trusted Root.
-
-13. **Dependency Audit?**
-    - **PASS**: Không bổ sung thư viện hay package phụ thuộc nào.
+   - **PASS**: Đã thêm file tài liệu `README.md` tại gốc kho lưu trữ để người xem trực quan trên GitHub có thể nắm bắt ngay cấu trúc và cách vận hành.
+4. **Idempotency Checked?**
+   - **PASS**: Các lệnh push tuân thủ cơ chế đồng bộ, tag annotated cố định.
+5. **Typesafe & Standards?**
+   - **PASS**: Firmware Arduino Nano tuân thủ chuẩn C++11, không còn cảnh báo bộ nhớ AVR (`IRAM_ATTR`).
+6. **Hardware & Logic Compatibility?**
+   - **PASS**: Đã kiểm chứng tương thích phần cứng với chip nạp CH340 và PictoBlox v9.2.1.
+7. **Security & Boundary?**
+   - **PASS**: Không lộ secret, API key hay thông tin cá nhân ngoài phạm vi tài khoản trường học đã đăng ký.
+8. **Minimalism Observed?**
+   - **PASS**: Chỉ đẩy đúng các nhánh và lịch sử liên quan đến dự án STEM, không gây phình to repo.
+9. **Physical Verification?**
+   - **PASS**: Đã kiểm tra `git ls-remote origin` xác nhận các refs `main`, `hnue_olympic_stem`, `v2.1` tồn tại chính xác trên server GitHub.
+10. **LTM Synced?**
+    - **PASS**: Đã gọi `rcp_memory_session_summary` lưu trữ ngữ cảnh vào Long-Term Memory.
+11. **Documentation Parity?**
+    - **PASS**: Cẩm nang kỹ thuật Word v2 (`HUONG_DAN_LAP_TRINH_PICTOBLOX_VA_CPP_v2.docx`) và `README.md` đồng nhất về mã Serial, sơ đồ chân và kịch bản vận hành.
+12. **Self-Adversarial Passed?**
+    - **PASS**: Đã kiểm tra liên kết repo và trạng thái truy cập SSH/HTTPS.
+13. **Exit Gate Cleared?**
+    - **PASS**: Toàn bộ tiêu chí nghiệm thu hoàn tất.
