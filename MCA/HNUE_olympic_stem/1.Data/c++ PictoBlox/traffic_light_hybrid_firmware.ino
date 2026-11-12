@@ -3,7 +3,7 @@
    DỰ ÁN STEM: HỆ THỐNG ĐÈN GIAO THÔNG HỌC ĐƯỜNG THÔNG MINH MARIE CURIE
    CUỘC THI: HNUE OLYMPIC STEM 2026 - BẢNG TIỂU HỌC
    ---------------------------------------------------------------------------------------
-   MÔ-ĐUN: FIRMWARE LAI ĐA TẦNG (HYBRID C++ & PICTOBLOX SERIAL CONTROLLER)
+   MÔ-ĐUN: FIRMWARE LAI ĐA TẦNG (HYBRID C++ & PICTOBLOX SERIAL CONTROLLER) - BẢN V2.1 FIXED
    Tác giả: Nhóm học sinh STEM Trường Tiểu học, THCS và THPT Marie Curie Thái Bình
    Vi điều khiển: Arduino Nano v3.0 (ATmega328P) + Nano Sensor Shield v3.0
    ---------------------------------------------------------------------------------------
@@ -22,8 +22,8 @@
 
 #include <Servo.h>
 
-// 1. ĐỊNH NGHĨA CHÂN NGOẠI VI
-const int PIN_BTN_FAILSAFE = 2;   // Ngắt ngoài INT0
+// 1. ĐỊNH NGHĨA CHÂN NGOẠI VI (CHUẨN SHIELD V3.0 GVS)
+const int PIN_BTN_FAILSAFE = 2;   // Ngắt ngoài INT0 (Input Pullup)
 const int PIN_PED_RED      = 6;   // LED Đi bộ Đỏ
 const int PIN_PED_GREEN    = 7;   // LED Đi bộ Xanh
 const int PIN_BUZZER       = 8;   // Còi Buzzer 5V
@@ -36,28 +36,30 @@ const int PIN_CAR_RED      = 12;  // LED Ô tô Đỏ
 const int BARIE_CLOSED_ANGLE = 0;   // 0 độ: Nằm ngang chắn lối người đi bộ trên vỉa hè
 const int BARIE_OPEN_ANGLE   = 90;  // 90 độ: Dựng đứng mở lối cho học sinh qua đường
 
-// 3. ĐỊNH NGHĨA 5 TRẠNG THÁI MÁY FSM (FINITE STATE MACHINE)
+// 3. ĐỊNH NGHĨA 6 TRẠNG THÁI MÁY FSM (FINITE STATE MACHINE)
 enum SystemState {
-  STATE_NORMAL_IDLE,       // TH1: Đường vắng - Xe chạy Xanh liên tục, Đi bộ Đỏ, Barie Đóng
-  STATE_CAR_YELLOW_TRANS,  // Chuyển tiếp: Đèn xe Vàng 3 giây cảnh báo dừng xe
-  STATE_PEDESTRIAN_CROSS,  // TH2: Học sinh qua đường - Xe Đỏ, Đi bộ Xanh, Barie Mở 90° (15s)
-  STATE_EMERGENCY_CLEAR,   // Chuyển tiếp dọn đường khẩn cấp: 2.5s khi có xe cứu thương
-  STATE_AMBULANCE_PASS,    // TH3: Xe cứu thương ưu tiên - Xe Xanh, Đi bộ Đỏ, Barie Đóng, Còi hú
-  STATE_WATCHDOG_SAFE      // TH5: An toàn tự hành khi mất kết nối USB máy tính
+  STATE_NORMAL_IDLE,       // TH1: Đường vắng - Xe Xanh, Đi bộ Đỏ, Barie Đóng (0°)
+  STATE_CAR_YELLOW_TRANS,  // Chuyển tiếp: Đèn xe Vàng 3 giây cảnh báo giảm tốc
+  STATE_PEDESTRIAN_CROSS,  // TH2 & TH4: Học sinh qua đường / Failsafe - Xe Đỏ, Đi bộ Xanh, Barie Mở (90°)
+  STATE_EMERGENCY_CLEAR,   // Chuyển tiếp dọn đường khẩn cấp 2.5s khi có xe cứu thương
+  STATE_AMBULANCE_PASS,    // TH3: Xe cứu thương ưu tiên - Xe Xanh, Đi bộ Đỏ, Barie Đóng (0°), Còi hú
+  STATE_WATCHDOG_SAFE      // TH5: Tự hành nháy vàng khi mất kết nối USB > 5s
 };
 
 // 4. BIẾN TOÀN CỤC & ĐIỀU KHIỂN THỜI GIAN (MILLIS KHÔNG BLOCKING)
 SystemState currentState = STATE_NORMAL_IDLE;
 Servo barieServo;
 
-volatile bool failsafePressed = false; // Cờ báo ngắt cứng Failsafe
+volatile bool failsafePressed = false;
+volatile unsigned long lastInterruptTime = 0;
+
 unsigned long stateStartTime = 0;
 unsigned long lastHeartbeatTime = 0;
 unsigned long lastBuzzerToggleTime = 0;
 bool buzzerState = false;
 
-// 5. NGUYÊN MẪU HÀM
-void IRAM_ATTR handleFailsafeInterrupt();
+// 5. NGUYÊN MẪU HÀM (Đã loại bỏ IRAM_ATTR để tương thích 100% với vi điều khiển ATmega328P)
+void handleFailsafeInterrupt();
 void setTrafficLights(bool carG, bool carY, bool carR, bool pedG, bool pedR, int servoAngle);
 void enterState(SystemState newState);
 void processSerialCommands();
@@ -75,149 +77,160 @@ void setup() {
   pinMode(PIN_PED_RED, OUTPUT);
   pinMode(PIN_BUZZER, OUTPUT);
 
-  // Cấu hình ngắt phần cứng Failsafe INT0
+  // Cấu hình ngắt ngoài phần cứng INT0 trên chân D2
   pinMode(PIN_BTN_FAILSAFE, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(PIN_BTN_FAILSAFE), handleFailsafeInterrupt, FALLING);
 
-  // Khởi tạo Servo Barie
+  // Khởi tạo Servo Barie về trạng thái đóng 0 độ
   barieServo.attach(PIN_SERVO);
   barieServo.write(BARIE_CLOSED_ANGLE);
 
-  // Khởi tạo giao tiếp Serial với máy tính (PictoBlox / Laptop Web Serial)
+  // Khởi tạo giao tiếp Serial ở baudrate 9600 tiêu chuẩn (non-blocking)
   Serial.begin(9600);
-  while (!Serial) { ; } // Chờ kết nối Serial nếu cần
 
-  // Chuyển sang trạng thái ban đầu: Đường vắng
+  // Chuyển sang trạng thái ban đầu: Đường vắng an toàn
   enterState(STATE_NORMAL_IDLE);
   lastHeartbeatTime = millis();
 
-  Serial.println(F("{\"status\":\"ONLINE\",\"mode\":\"HYBRID_DUAL_TIER\",\"firmware\":\"v2.0\"}"));
+  // Phát tín hiệu chào đón định dạng JSON cho giao diện máy tính
+  Serial.println(F("{\"status\":\"ONLINE\",\"mode\":\"HYBRID_DUAL_TIER\",\"firmware\":\"v2.1_FIXED\"}"));
 }
 
 // =========================================================================================
-// HÀM NGẮT CỨNG PHẦN CỨNG INT0 (CHẠY NGAY TRONG < 1 MICRO-GIÂY KHI BẤM NÚT D2)
+// HÀM NGẮT CỨNG PHẦN CỨNG INT0 (CHỐNG DỘI PHÍM CHUẨN TRONG KHỐI IF)
 // =========================================================================================
 void handleFailsafeInterrupt() {
-  static unsigned long lastInterruptTime = 0;
   unsigned long interruptTime = millis();
-  // Chống rung phím cơ học 200ms (Hardware Debounce)
+  // Chống rung phím cơ học 200ms: Cập nhật lastInterruptTime BÊN TRONG khối if
   if (interruptTime - lastInterruptTime > 200) {
     failsafePressed = true;
+    lastInterruptTime = interruptTime;
   }
-  lastInterruptTime = interruptTime;
 }
 
 // =========================================================================================
 // VÒNG LẶP CHÍNH (LOOP) - NON-BLOCKING DETERMINISTIC
 // =========================================================================================
 void loop() {
-  // 1. Xử lý cờ ngắt cứng Failsafe
+  // 1. Ưu tiên số 1: Xử lý cờ ngắt cứng Failsafe (D2) tức thời trong mọi trạng thái
   if (failsafePressed) {
     failsafePressed = false;
+    lastHeartbeatTime = millis(); // Nuôi nhịp sống để Watchdog không can thiệp khi đang cứu hộ
     Serial.println(F("{\"event\":\"FAILSAFE_TRIGGERED\",\"source\":\"INT0_PIN_D2\"}"));
-    if (currentState == STATE_NORMAL_IDLE || currentState == STATE_WATCHDOG_SAFE) {
-      enterState(STATE_CAR_YELLOW_TRANS);
-    }
+    
+    // Cưỡng bức chuyển thẳng sang chế độ học sinh qua đường: Xe ĐỎ, Đi bộ XANH, Barie mở 90°
+    enterState(STATE_PEDESTRIAN_CROSS);
+    digitalWrite(PIN_BUZZER, HIGH);
+    buzzerState = true;
+    lastBuzzerToggleTime = millis();
   }
 
-  // 2. Tiếp nhận và bóc tách gói tin Serial từ PictoBlox / AI Web
+  // 2. Tiếp nhận và bóc tách gói tin Serial từ PictoBlox
   processSerialCommands();
 
-  // 3. Cập nhật máy trạng thái FSM theo thời gian
+  // 3. Cập nhật máy trạng thái FSM theo thời gian thực
   updateFSM();
 
-  // 4. Bảo vệ Watchdog: Tự động chuyển chế độ độc lập an toàn nếu mất tín hiệu USB > 5s
-  if (millis() - lastHeartbeatTime > 5000 && currentState != STATE_WATCHDOG_SAFE) {
+  // 4. Bảo vệ Watchdog: Tự động chuyển chế độ tự hành an toàn nếu mất USB > 5s
+  if (millis() - lastHeartbeatTime > 5000 &&
+      currentState != STATE_WATCHDOG_SAFE &&
+      currentState != STATE_PEDESTRIAN_CROSS) {
     enterState(STATE_WATCHDOG_SAFE);
     Serial.println(F("{\"warning\":\"WATCHDOG_TIMEOUT\",\"action\":\"AUTONOMOUS_SAFE_MODE\"}"));
   }
 }
 
 // =========================================================================================
-// XỬ LÝ LỆNH SERIAL TỪ PICTOBLOX (LỆNH KÝ TỰ HOẶC BYTE)
+// XỬ LÝ LỆNH SERIAL TỪ PICTOBLOX (LỆNH KÝ TỰ HOẶC BYTE ASCII)
 // =========================================================================================
 void processSerialCommands() {
   while (Serial.available() > 0) {
     char cmd = Serial.read();
-    lastHeartbeatTime = millis(); // Nuôi Watchdog nhịp sống còn
+    if (cmd == '\n' || cmd == '\r' || cmd == ' ') continue; // Bỏ qua ký tự trắng
 
-    // Ký tự '1' hoặc byte 0x51: PictoBlox gửi khi AI thấy Học sinh qua đường
+    lastHeartbeatTime = millis(); // Nuôi nhịp sống còn Watchdog
+
+    // Ký tự '1' (0x51): AI nhận diện Học sinh vẫy tay xin qua đường
     if (cmd == '1' || cmd == 0x51) {
-      if (currentState == STATE_NORMAL_IDLE) {
-        enterState(STATE_CAR_YELLOW_TRANS);
-      }
-    }
-    // Ký tự '2' hoặc byte 0x52: PictoBlox gửi khi AI thấy Xe Cứu Thương Ưu Tiên
-    else if (cmd == '2' || cmd == 0x52) {
-      if (currentState == STATE_PEDESTRIAN_CROSS) {
-        // Nếu học sinh đang đi dở, chuyển qua dọn đường an toàn 2.5s trước khi mở đường xe
-        enterState(STATE_EMERGENCY_CLEAR);
-      } else if (currentState != STATE_AMBULANCE_PASS) {
-        enterState(STATE_AMBULANCE_PASS);
-      }
-    }
-    // Ký tự '0' hoặc byte 0x50: PictoBlox gửi khi Đường vắng (Normal)
-    else if (cmd == '0' || cmd == 0x50) {
-      if (currentState == STATE_AMBULANCE_PASS || currentState == STATE_WATCHDOG_SAFE) {
-        enterState(STATE_NORMAL_IDLE);
-      }
-    }
-    // Ký tự '4' hoặc byte 0x54: Kích hoạt nút bấm khẩn cấp qua phần mềm
-    else if (cmd == '4' || cmd == 0x54) {
       if (currentState == STATE_NORMAL_IDLE || currentState == STATE_WATCHDOG_SAFE) {
         enterState(STATE_CAR_YELLOW_TRANS);
       }
     }
-    // Ký tự 'H' hoặc byte 0x55: Heartbeat nuôi nhịp sống
+    // Ký tự '2' (0x52): AI nhận diện Xe cứu thương khẩn cấp
+    else if (cmd == '2' || cmd == 0x52) {
+      if (currentState == STATE_PEDESTRIAN_CROSS) {
+        // Đang có người đi qua: Chuyển sang dọn đường khẩn cấp 2.5s trước khi mở luồng xe
+        enterState(STATE_EMERGENCY_CLEAR);
+      } else if (currentState != STATE_AMBULANCE_PASS && currentState != STATE_EMERGENCY_CLEAR) {
+        enterState(STATE_AMBULANCE_PASS);
+      } else if (currentState == STATE_AMBULANCE_PASS) {
+        stateStartTime = millis(); // Gia hạn thời gian nếu xe cứu thương vẫn trong vùng camera
+      }
+    }
+    // Ký tự '0' (0x50): Đường vắng (Chỉ thoát chế độ cứu thương sau tối thiểu 3 giây chống nhiễu)
+    else if (cmd == '0' || cmd == 0x50) {
+      if (currentState == STATE_WATCHDOG_SAFE) {
+        enterState(STATE_NORMAL_IDLE);
+      } else if (currentState == STATE_AMBULANCE_PASS && (millis() - stateStartTime >= 3000)) {
+        enterState(STATE_NORMAL_IDLE);
+      }
+    }
+    // Ký tự '4' (0x54): Kích hoạt nút khẩn cấp từ phần mềm
+    else if (cmd == '4' || cmd == 0x54) {
+      enterState(STATE_PEDESTRIAN_CROSS);
+    }
+    // Ký tự 'H' (0x55): Gói tin Heartbeat duy trì kết nối từ PictoBlox
     else if (cmd == 'H' || cmd == 0x55) {
-      // Đã cập nhật lastHeartbeatTime ở trên
+      // Đã cập nhật lastHeartbeatTime ở đầu vòng lặp
     }
   }
 }
 
 // =========================================================================================
-// CẬP NHẬT TRẠNG THÁI FSM THEO THỜI GIAN
+// CẬP NHẬT TRẠNG THÁI FSM THEO THỜI GIAN THỰC (NON-BLOCKING)
 // =========================================================================================
 void updateFSM() {
   unsigned long elapsed = millis() - stateStartTime;
 
   switch (currentState) {
     case STATE_NORMAL_IDLE:
-      // Giữ xe Xanh liên tục, Đi bộ Đỏ, Barie Đóng
+      // Đường vắng thông suốt: Xe Xanh, Đi bộ Đỏ, Barie Đóng (0°)
       break;
 
     case STATE_CAR_YELLOW_TRANS:
-      // Đèn vàng cảnh báo 3 giây (3000ms)
+      // Đèn vàng cảnh báo ô tô giảm tốc trong 3 giây
       if (elapsed >= 3000) {
         enterState(STATE_PEDESTRIAN_CROSS);
       }
       break;
 
     case STATE_PEDESTRIAN_CROSS:
-      // Chu kỳ đi bộ 15 giây (15000ms):
-      // - 12 giây đầu: Còi bíp nhịp thưa (500ms)
-      // - 3 giây cuối: Còi bíp nhịp dồn dập (200ms) giục học sinh bước nhanh
+      // Học sinh qua đường trong 15 giây: Xe Đỏ, Đi bộ Xanh, Barie Mở 90°
+      // 12 giây đầu: Còi bíp nhịp thưa (chu kỳ 500ms)
       if (elapsed < 12000) {
         if (millis() - lastBuzzerToggleTime >= 500) {
           lastBuzzerToggleTime = millis();
           buzzerState = !buzzerState;
           digitalWrite(PIN_BUZZER, buzzerState ? HIGH : LOW);
         }
-      } else if (elapsed < 15000) {
+      } 
+      // 3 giây cuối: Còi bíp dồn dập (chu kỳ 200ms) hối thúc khẩn trương
+      else if (elapsed < 15000) {
         if (millis() - lastBuzzerToggleTime >= 200) {
           lastBuzzerToggleTime = millis();
           buzzerState = !buzzerState;
           digitalWrite(PIN_BUZZER, buzzerState ? HIGH : LOW);
         }
-      } else {
-        // Hết 15 giây đi bộ -> Trở về bình thường
+      } 
+      // Hết 15 giây an toàn: Tắt còi và quay về trạng thái đường vắng
+      else {
         digitalWrite(PIN_BUZZER, LOW);
         enterState(STATE_NORMAL_IDLE);
       }
       break;
 
     case STATE_EMERGENCY_CLEAR:
-      // Còi hú dồn dập, nháy đèn đỏ đi bộ nhắc dọn đường trong 2.5 giây (2500ms)
+      // Dọn đường khẩn cấp 2.5s: Nháy còi và đèn đi bộ đỏ cảnh báo
       if (millis() - lastBuzzerToggleTime >= 150) {
         lastBuzzerToggleTime = millis();
         buzzerState = !buzzerState;
@@ -230,16 +243,15 @@ void updateFSM() {
       break;
 
     case STATE_AMBULANCE_PASS:
-      // Còi kêu liên tục cảnh báo xe cứu thương chạy qua
+      // Xe cứu thương đi qua: Còi hú liên tục, xe Xanh thông suốt
       digitalWrite(PIN_BUZZER, HIGH);
-      // Nếu sau 8 giây không có lệnh giữ tiếp thì hoàn trả giao thông
       if (elapsed >= 8000) {
         enterState(STATE_NORMAL_IDLE);
       }
       break;
 
     case STATE_WATCHDOG_SAFE:
-      // Mất tín hiệu máy tính: Nhấp nháy đèn vàng ô tô tần số 1Hz để đảm bảo an toàn
+      // Chế độ tự hành mất kết nối: Nháy đèn vàng ô tô tần số 1Hz (500ms)
       if (millis() - lastBuzzerToggleTime >= 500) {
         lastBuzzerToggleTime = millis();
         buzzerState = !buzzerState;
@@ -250,46 +262,42 @@ void updateFSM() {
 }
 
 // =========================================================================================
-// CHUYỂN TRẠNG THÁI & ĐIỀU KHIỂN CHÂN PHẦN CỨNG ĐỒNG BỘ
+// CHUYỂN TRẠNG THÁI & THIẾT LẬP PHẦN CỨNG ĐỒNG BỘ
 // =========================================================================================
 void enterState(SystemState newState) {
   currentState = newState;
   stateStartTime = millis();
-  digitalWrite(PIN_BUZZER, LOW); // Tắt còi trước khi đổi trạng thái
+  lastBuzzerToggleTime = millis();
+  buzzerState = false;
+  digitalWrite(PIN_BUZZER, LOW);
 
   switch (currentState) {
     case STATE_NORMAL_IDLE:
-      // Xe Xanh (D10=1, D11=0, D12=0), Đi bộ Đỏ (D6=1, D7=0), Barie Đóng (0 độ)
       setTrafficLights(HIGH, LOW, LOW, LOW, HIGH, BARIE_CLOSED_ANGLE);
       Serial.println(F("{\"state\":\"IDLE_CAR_GREEN\",\"ped\":\"RED\",\"barie\":\"CLOSED\"}"));
       break;
 
     case STATE_CAR_YELLOW_TRANS:
-      // Xe Vàng (D10=0, D11=1, D12=0), Đi bộ Đỏ (D6=1, D7=0), Barie Đóng (0 độ)
       setTrafficLights(LOW, HIGH, LOW, LOW, HIGH, BARIE_CLOSED_ANGLE);
       Serial.println(F("{\"state\":\"CAR_YELLOW_WARNING\",\"ped\":\"RED\",\"barie\":\"CLOSED\"}"));
       break;
 
     case STATE_PEDESTRIAN_CROSS:
-      // Xe Đỏ (D10=0, D11=0, D12=1), Đi bộ Xanh (D6=0, D7=1), Barie Mở (90 độ)
       setTrafficLights(LOW, LOW, HIGH, HIGH, LOW, BARIE_OPEN_ANGLE);
       Serial.println(F("{\"state\":\"PEDESTRIAN_CROSSING\",\"car\":\"RED\",\"barie\":\"OPEN\"}"));
       break;
 
     case STATE_EMERGENCY_CLEAR:
-      // Xe Đỏ dừng tạm, Barie hạ nhanh về 0 độ chắn lối vào
       setTrafficLights(LOW, LOW, HIGH, LOW, HIGH, BARIE_CLOSED_ANGLE);
       Serial.println(F("{\"state\":\"EMERGENCY_CLEARANCE\",\"ped\":\"CLEARING\",\"barie\":\"CLOSING\"}"));
       break;
 
     case STATE_AMBULANCE_PASS:
-      // Xe Xanh ưu tiên (D10=1, D11=0, D12=0), Đi bộ Đỏ (D6=1, D7=0), Barie Đóng (0 độ)
       setTrafficLights(HIGH, LOW, LOW, LOW, HIGH, BARIE_CLOSED_ANGLE);
       Serial.println(F("{\"state\":\"AMBULANCE_PRIORITY\",\"car\":\"GREEN\",\"barie\":\"CLOSED\"}"));
       break;
 
     case STATE_WATCHDOG_SAFE:
-      // Nháy đèn Vàng an toàn, Đi bộ Đỏ, Barie Đóng
       setTrafficLights(LOW, LOW, LOW, LOW, HIGH, BARIE_CLOSED_ANGLE);
       Serial.println(F("{\"state\":\"WATCHDOG_STANDALONE\",\"car\":\"FLASH_YELLOW\",\"barie\":\"CLOSED\"}"));
       break;
@@ -297,7 +305,7 @@ void enterState(SystemState newState) {
 }
 
 // =========================================================================================
-// HÀM GHI ĐỒNG LOẠT TRẠNG THÁI CÁC CHÂN TÍN HIỆU
+// ĐIỀU KHIỂN ĐỒNG THỜI TOÀN BỘ CỤM ĐÈN VÀ ĐỘNG CƠ BARIE
 // =========================================================================================
 void setTrafficLights(bool carG, bool carY, bool carR, bool pedG, bool pedR, int servoAngle) {
   digitalWrite(PIN_CAR_GREEN, carG);
