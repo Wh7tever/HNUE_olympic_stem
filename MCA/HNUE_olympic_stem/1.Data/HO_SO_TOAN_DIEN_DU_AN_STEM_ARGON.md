@@ -3,7 +3,7 @@
 > **Bản đệ trình thẩm định kỹ thuật toàn diện (Technical Dossier for Argon Review)**  
 > **Đơn vị chủ trì:** Trường Tiểu học, THCS và THPT Marie Curie Thái Bình  
 > **Cuộc thi:** HNUE STEM OLYMPIC 2026 — Trường Đại học Sư phạm Hà Nội (05 - 06/12/2026)  
-> **Bảng thi đấu:** Bảng Tiểu học (Khối 4 – 5) | **Mô hình:** Kiến trúc lai Hybrid (PictoBlox AI + Arduino C++ v2.1 Fixed)  
+> **Bảng thi đấu:** Bảng Tiểu học (Khối 4 – 5) | **Mô hình:** Kiến trúc lai Hybrid (PictoBlox AI + Arduino C++ v2.2 Production)  
 > **Trạng thái:** Combat-Ready | Turnkey Delivery | PASS 100% Verification Gates
 
 ---
@@ -116,7 +116,7 @@ Dự án ứng dụng mô hình **Kiến trúc Lai Đa Tầng (Decoupled Hybrid 
 
 ## 5. MÁY TRẠNG THÁI HỮU HẠN FSM & GIẢI THUẬT AN TOÀN TỨC THỜI
 
-Firmware C++ v2.1 Fixed vận hành dựa trên máy trạng thái FSM 6 pha hoàn toàn không dùng hàm `delay()` gây treo hệ thống:
+Firmware C++ v2.2 Production vận hành dựa trên máy trạng thái FSM 6 pha hoàn toàn không dùng hàm `delay()` gây treo hệ thống:
 
 ```mermaid
 stateDiagram-v2
@@ -130,12 +130,12 @@ stateDiagram-v2
     STATE_EMERGENCY_CLEAR --> STATE_AMBULANCE_PASS : Hết 2.5s dọn ngã tư
     STATE_AMBULANCE_PASS --> STATE_NORMAL_IDLE : Hết 8s cứu thương qua
     
-    STATE_NORMAL_IDLE --> STATE_PEDESTRIAN_CROSS : Bấm nút Failsafe D2 (Ngắt INT0 < 1µs)
+    STATE_NORMAL_IDLE --> STATE_CAR_YELLOW_TRANS : Bấm nút Failsafe D2 (Chuyển tiếp Đèn Vàng 3s an toàn)
     STATE_NORMAL_IDLE --> STATE_WATCHDOG_SAFE : Mất kết nối USB > 5s
     STATE_WATCHDOG_SAFE --> STATE_NORMAL_IDLE : Phục hồi kết nối Serial
 ```
 
-### Các tính năng kỹ thuật cốt lõi trong Firmware v2.1 Fixed:
+### Các tính năng kỹ thuật cốt lõi trong Firmware v2.2 Production:
 1. **Loại bỏ 100% macro `IRAM_ATTR`:** Khắc phục triệt để lỗi biên dịch trên trình biên dịch AVR-GCC của Arduino Nano ATmega328P (macro này vốn dành riêng cho kiến trúc ESP8266/ESP32).
 2. **Debounce phần cứng trong ISR:** Bộ lọc thời gian chống rung tiếp điểm cơ học của nút bấm nút D2:
    ```cpp
@@ -214,7 +214,7 @@ Bảng kê kinh phí chi tiết tuân thủ nghiêm ngặt quy chế Ban Tổ ch
 * **Phút 00:00 – 01:00 (60s) — Em Phạm Hữu Đạt mở đầu:**
   > *"Kính thưa Ban Giám khảo và các Thầy Cô! Chúng con là Đội tuyển STEM Marie Curie. Hằng ngày đến trường, chúng con chứng kiến nhiều bạn nhỏ phải luống cuống băng qua đường giữa dòng xe đông đúc, trong khi xe cứu thương lại bị tắc nghẽn bởi những cột đèn đỏ cứng nhắc. Để giải quyết vấn đề đó, hôm nay chúng con mang đến giải pháp: 'Hệ Thống Sa Bàn Giao Thông Học Đường Thông Minh Tích Hợp Thị Giác AI và Cơ Chế Bảo Vệ Kép'. Dự án của chúng con được chế tạo hoàn toàn từ bìa carton sóng tái chế, que kem gỗ và bo mạch điều khiển an toàn với chi phí chỉ hơn 300 nghìn đồng!"*
 * **Phút 01:00 – 02:30 (90s) — Em Vũ Minh Quang thuyết minh Kỹ thuật & Toán học:**
-  > *"Thưa Thầy Cô, sa bàn của chúng con được thiết kế theo đúng tỷ lệ xích 1:20. Toàn bộ hệ thống mạch điện sử dụng bo mạch Arduino Nano kết hợp đế mở rộng Shield v3.0 với giắc cắm 3 chân chống tuột dây. Dựa trên công thức Toán học: $T = s/v + t_{đệm} = 8m/0.8m/s + 5s$, chúng con tính ra thời gian đèn xanh cho học sinh qua đường là đúng 15 giây. Khi học sinh qua đường, Servo SG90 kéo cần Barie mở dựng đứng 90 độ, đồng thời còi bíp thưa 500ms và dồn dập 200ms ở 3 giây cuối để giục các bạn khẩn trương. Đặc biệt, nếu hệ thống máy tính gặp sự cố, nút bấm cơ học Failsafe D2 sử dụng ngắt phần cứng sẽ lập tức bật đèn đỏ ô tô và mở Barie trong 1 phần triệu giây mà không cần qua máy tính ạ!"*
+  > *"Thưa Thầy Cô, sa bàn của chúng con được thiết kế theo đúng tỷ lệ xích 1:20. Toàn bộ hệ thống mạch điện sử dụng bo mạch Arduino Nano kết hợp đế mở rộng Shield v3.0 với giắc cắm 3 chân chống tuột dây. Dựa trên công thức Toán học: $T = s/v + t_{đệm} = 8m/0.8m/s + 5s$, chúng con tính ra thời gian đèn xanh cho học sinh qua đường là đúng 15 giây. Khi học sinh qua đường, Servo SG90 kéo cần Barie mở dựng đứng 90 độ, đồng thời còi bíp thưa 500ms và dồn dập 200ms ở 3 giây cuối để giục các bạn khẩn trương. Đặc biệt, nếu hệ thống máy tính gặp sự cố, nút bấm khẩn cấp D2 được nối trực tiếp vào bộ não vi điều khiển Arduino. Khi bấm nút, hệ thống lập tức chuyển đèn vàng dừng xe an toàn rồi mở rào chắn cho học sinh qua đường, kể cả khi máy tính bị tắt ạ!"*
 * **Phút 02:30 – 04:00 (90s) — Em Vũ Ngọc An Đông biểu diễn Sa bàn & AI:**
   > *"Kính thưa Ban Giám khảo, đây là phần mềm PictoBlox tích hợp mô hình AI Google Teachable Machine do chính 3 chúng con huấn luyện. Mô hình chạy hoàn toàn Offline trên máy tính. Con xin phép biểu diễn 2 tình huống đặc biệt:*  
   > *(1) Khi con cầm mô hình bạn học sinh giơ tay xin đường: AI nhận diện độ tin cậy trên 85%, đèn ô tô chuyển Vàng 3 giây cảnh báo rồi chuyển Đỏ, Barie mở 90 độ cho học sinh qua đường.*  
@@ -232,7 +232,7 @@ Bảng kê kinh phí chi tiết tuân thủ nghiêm ngặt quy chế Ban Tổ ch
 
 #### ❓ Câu 2 (Hội đồng Xã hội / An toàn): *"Nếu máy tính bị sập nguồn, camera bị mờ hoặc rút dây cáp thì ngã tư có bị tê liệt không?"*
 👉 **Trả lời (Em Vũ Minh Quang):**  
-*"Dạ hoàn toàn KHÔNG Ạ! Hệ thống của chúng con có 2 tầng bảo vệ độc lập: Thứ nhất, nút bấm cơ học Failsafe D2 tại vỉa hè sử dụng ngắt cứng phần cứng INT0 dưới 1 micro-giây để cưỡng bức mở Barie ngay lập tức mà không cần máy tính. Thứ hai, nếu mất kết nối máy tính quá 5 giây, mạch Arduino Nano sẽ tự động kích hoạt chế độ Watchdog, chuyển toàn bộ ngã tư về trạng thái Đèn Vàng nhấp nháy 1Hz cảnh báo giảm tốc độ ạ!"*
+*"Dạ hoàn toàn KHÔNG Ạ! Hệ thống của chúng con có 2 tầng bảo vệ độc lập: Thứ nhất, nút bấm khẩn cấp D2 tại vỉa hè được nối trực tiếp vào bộ não vi điều khiển Arduino. Khi bấm nút, mạch lập tức chuyển đèn vàng dừng xe an toàn và mở rào chắn ngay cả khi máy tính bị tắt. Thứ hai, nếu mất kết nối máy tính quá 5 giây, mạch Arduino Nano sẽ tự động kích hoạt chế độ Watchdog, chuyển toàn bộ ngã tư về trạng thái Đèn Vàng nhấp nháy 1Hz cảnh báo giảm tốc độ ạ!"*
 
 #### ❓ Câu 3 (Hội đồng Toán học): *"Tại sao các con lại để thời gian qua đường là 15 giây mà không phải là 30 giây hay 1 phút?"*
 👉 **Trả lời (Em Vũ Minh Quang):**  
@@ -278,7 +278,7 @@ Bảng kê kinh phí chi tiết tuân thủ nghiêm ngặt quy chế Ban Tổ ch
 
 ### Bước 2: Chuẩn bị trước giờ thi 15 phút tại bàn đấu HNUE
 1. Đặt sa bàn $60\text{cm} \times 80\text{cm}$ ngay ngắn giữa bàn thi đấu $0.6\text{m} \times 1.2\text{m}$.
-2. Cắm cáp Mini-USB của Nano và cáp Webcam vào cổng USB laptop.
+2. Cắm cáp Mini-USB của Nano và cáp Webcam vào 2 cổng USB riêng biệt trên 2 cạnh Laptop (hoặc cắm nguồn phụ cho USB Hub) để chống sụt áp dòng khởi động của Servo.
 3. Mở phần mềm PictoBlox v9.2.1 $\to$ Chọn `File` $\to$ `Load from your computer` $\to$ Mở tệp `du_an_sa_ban_pictoblox.sb3`.
 4. Bấm menu `Connect` $\to$ `Serial Port` $\to$ Chọn cổng COM của Arduino Nano.
 5. Kiểm tra góc quét camera: Đảm bảo nhìn rõ toàn cảnh vạch qua đường và làn xe chạy.
@@ -297,7 +297,7 @@ Toàn bộ gói sản phẩm hoàn thiện được lưu trữ đồng bộ tạ
 | `HO_SO_TOAN_DIEN_DU_AN_STEM_OLYMPIC_2026.docx` | Microsoft Word (1.8 MB) | Bản thuyết minh khoa học chính thức nộp Hội đồng Giám khảo ĐH Sư phạm Hà Nội. |
 | `anh_3d_mo_hinh_stem_render_photoreal.png` | Ảnh HD (1.4 MB) | Phối cảnh 3D không gian sa bàn ngã tư cổng trường chuẩn tỷ lệ 1:20. |
 | `so_do_3d_ky_thuat.png` & `so_do_3d_mo_hinh.html` | Ảnh & Web 3D | Bản vẽ cơ khí bóc tách góc quét camera và bán kính quay Barie. |
-| `c++ PictoBlox/traffic_light_hybrid_firmware.ino` | C++ Arduino (14.7 KB) | Firmware vi điều khiển v2.1 Fixed (Zero IRAM_ATTR, Instant D2 Failsafe). |
+| `c++ PictoBlox/traffic_light_hybrid_firmware.ino` | C++ Arduino (14.7 KB) | Firmware vi điều khiển v2.2 Production (Zero IRAM_ATTR, Instant D2 Failsafe). |
 | `c++ PictoBlox/du_an_sa_ban_pictoblox.sb3` | PictoBlox 3.0 (3.2 KB) | Dự án khối lệnh trực quan cho học sinh (Sprite SaBan_MarieCurie & AI Blocks). |
 | `c++ PictoBlox/HUONG_DAN_LAP_TRINH_PICTOBLOX_VA_CPP_v2.docx` | Microsoft Word (323 KB) | Cẩm nang bàn giao công nghệ và hướng dẫn học sinh tiểu học lập trình. |
 | `c++ PictoBlox/so_do_khoi_lenh_pictoblox.png` | Ảnh HD 1600px | Sơ đồ thuật toán khối lệnh PictoBlox logic AI. |
