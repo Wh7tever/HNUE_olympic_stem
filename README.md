@@ -1,7 +1,7 @@
-# 🚦 Hệ Thống Sa Bàn Giao Thông Thông Minh — Marie Curie Academy (MCA)
+﻿# 🚦 Hệ Thống Sa Bàn Giao Thông Thông Minh — Marie Curie Academy (MCA)
 > **Dự án tham dự Cuộc thi Olympic STEM 2026 — Trường Đại học Sư phạm Hà Nội (HNUE)**  
 > **Bảng thi:** Tiểu học | **Mô hình:** Kiến trúc lai Hybrid (PictoBlox AI + Vi điều khiển C++ Arduino Nano)  
-> **Phiên bản:** `v2.2 Release` (Turnkey Hardware BOM & Electrical Audit Verified)
+> **Phiên bản:** `v2.6 Final Release` (Turnkey Hardware BOM & Electrical Audit Verified)
 
 ---
 
@@ -20,17 +20,33 @@ Dự án sa bàn giao thông thông minh là giải pháp công nghệ giáo d�
 
 ---
 
-## 📂 Cấu Trúc Thư Mục Dữ Liệu (`MCA/HNUE_olympic_stem/1.Data/c++ PictoBlox`)
+## 📂 Cấu Trúc Thư Mục Dữ Liệu & Hồ Sơ (`1.Data`)
 
-Toàn bộ gói sản phẩm hoàn thiện được lưu trữ tại đường dẫn `MCA/HNUE_olympic_stem/1.Data/c++ PictoBlox/`:
+Toàn bộ gói sản phẩm hoàn thiện được phân khu chuyên nghiệp tại thư mục `1.Data/` và `src/`:
 
-| Tên Tệp Tin | Định Dạng | Mô Tả Kỹ Thuật |
-| :--- | :--- | :--- |
-| `traffic_light_hybrid_firmware.ino` | C++ / Arduino | Firmware vi điều khiển v2.1 Fixed: Đã loại bỏ hoàn toàn `IRAM_ATTR` gây lỗi trên AVR, chuẩn hóa chân GPIO Nano (D2-D12), Failsafe tức thì, Baudrate 9600. |
-| `du_an_sa_ban_pictoblox.sb3` | PictoBlox / Scratch 3.0 | Dự án khối lệnh trực quan cho học sinh Tiểu học: Chứa sprite hoạt động `SaBan_MarieCurie`, biến bảng điều khiển và khối Teachable Machine. |
-| `HUONG_DAN_LAP_TRINH_PICTOBLOX_VA_CPP_v2.docx` | Microsoft Word (323 KB) | Cẩm nang kỹ thuật bàn giao chính thức: Bản đồ Serial lệnh `0/1/2`, sơ đồ đấu nối chân Nano, hướng dẫn huấn luyện Teachable Machine và 9 câu hỏi đáp sự cố thực địa. |
-| `so_do_khoi_lenh_pictoblox.png` | Ảnh HD (1600x1100) | Sơ đồ khối logic chương trình PictoBlox: Chu trình quét camera, phân loại AI, gửi Serial và cập nhật UI sa bàn. |
-| `so_do_kien_truc_lai_hybrid.png` | Ảnh HD (1600x1050) | Sơ đồ kiến trúc luồng dữ liệu 2 tầng: Tầng Nhận diện AI trên PC và Tầng Chấp hành Thời gian thực trên Arduino Nano. |
+### 1. `1.Data/1. Huong dan cua Ban to chuc/`
+* `1272_DHPSHN_NVSP.pdf`: Công văn hướng dẫn chính thức từ Trường ĐH Sư phạm Hà Nội.
+* `thông tin.docx`: Thông tin chi tiết về thể lệ, biểu mẫu và quy chế thi Olympic STEM 2026.
+
+### 2. `1.Data/2. Ho so/` (Bộ 5 Văn Kiện Thuyết Minh Đạt Chuẩn Thẩm Định Quốc Gia)
+* `HO_SO_TOAN_DIEN_DU_AN_STEM_OLYMPIC_2026.docx` (2.18 MB): Bản thuyết minh hoàn chỉnh 15 trang, chuẩn thể thức văn bản, phụ lục ảnh thực tế sa bàn và ma trận rủi ro.
+* `HUONG_DAN_LAP_TRINH_PICTOBLOX_VA_CPP_v2.docx` (526 KB): Cẩm nang kỹ thuật chuyển giao, bản đồ mã Serial, 9 câu hỏi đáp và kịch bản thuyết trình phân vai 5 phút.
+* `SO_TAY_KY_THUAT_VA_NHAT_KY_THUC_HANH.docx` (51 KB): Sổ tay kỹ thuật (Engineering Notebook) ghi nhật ký 5 bước quy trình thiết kế kỹ thuật (Ask -> Imagine -> Plan -> Create -> Improve).
+* `DANH_SACH_MUA_SAM_LINH_KIEN_THUC_TE.docx` (50 KB): Bảng kê chi phí 19 hạng mục (389.000 VNĐ sa bàn & gói backup 430.000 VNĐ).
+* `MA_TRAN_BO_CUC_POSTER_80cmx180cm.docx` (43 KB): Bản thiết kế nội dung và ma trận phân khu poster triển lãm khổ đứng 80cm x 180cm.
+
+### 3. `1.Data/3. Phan mem & Ma nguon Hybrid/` & `src/` (Mã Nguồn Sẵn Sàng Vận Hành)
+* `traffic_light_hybrid_firmware.ino` / `src/traffic_light_arduino.ino`: Firmware C++ v2.3 Final cho Arduino Nano (Non-blocking FSM 6 trạng thái, Soft-ramp Servo 3°/20ms, chống giật nguồn khởi động `write(0)` trước `attach()`, ngắt ngoài D2 khử dội 300ms, Watchdog tự hành 1Hz theo QCVN 41:2019).
+* `test_hardware_diagnostic.ino` / `src/test_hardware_diagnostic.ino`: Công cụ chẩn đoán phần cứng tự động qua Serial Console (Test LED, Còi Buzzer phím 3/'B', Servo Barie, Nút Failsafe).
+* `du_an_sa_ban_pictoblox.sb3`: Dự án khối lệnh PictoBlox tích hợp Google Teachable Machine kèm bộ lọc chu kỳ debounce chống nhiễu khung hình.
+* `src/ai_traffic_web_controller.html`: Bảng điều khiển Web giám sát thời gian thực kết nối Web Serial API.
+
+### 4. `1.Data/4. Hinh anh & So do 3D/` & `assets/`
+* `anh_3d_mo_hinh_stem_render_photoreal.png`: Ảnh render 3D phối cảnh sa bàn chân thực.
+* `so_do_3d_ky_thuat.png` / `assets/so_do_3d_ky_thuat.svg`: Sơ đồ kỹ thuật lắp ráp và nối dây vi điều khiển.
+* `so_do_3d_mo_hinh.html`: Mô hình 3D tương tác trực quan bằng Three.js.
+* `so_do_khoi_lenh_pictoblox.png`: Sơ đồ thuật toán khối lệnh PictoBlox AI.
+* `so_do_kien_truc_lai_hybrid.png`: Sơ đồ kiến trúc 2 tầng Hybrid Architecture.
 
 ---
 
@@ -108,3 +124,4 @@ Toàn bộ gói sản phẩm hoàn thiện được lưu trữ tại đường d
 * **Đội tuyển tham dự:** Olympic STEM HNUE 2026 — Trường Đại học Sư phạm Hà Nội
 * **Tác giả:** Thầy cô & Học sinh Đội tuyển STEM MCA
 * **Hỗ trợ kỹ thuật & Kiểm toán:** Antigravity Engine (AE) Standard Architecture
+
