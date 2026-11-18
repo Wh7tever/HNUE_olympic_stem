@@ -36,9 +36,14 @@ const int PIN_CAR_RED      = 12;
 
 Servo testServo;
 volatile bool btnPressed = false;
+volatile unsigned long lastBtnTime = 0;
 
 void onButtonInterrupt() {
-  btnPressed = true;
+  unsigned long now = millis();
+  if (now - lastBtnTime > 500) {
+    btnPressed = true;
+    lastBtnTime = now;
+  }
 }
 
 void setup() {
@@ -72,13 +77,14 @@ void loop() {
   // Bắt sự kiện ấn nút Failsafe bất kỳ lúc nào
   if (btnPressed) {
     btnPressed = false;
-    Serial.println(F("\n>>> [XÁC NHẬN] Nút bấm Failsafe (D2) hoạt động TỐT! (Đã kích hoạt ngắt) <<<"));
-    // Nháy tất cả đèn và kêu còi 1 nhịp ngắn để phản hồi
-    digitalWrite(PIN_BUZZER, HIGH);
-    setAllLEDs(HIGH);
-    delay(200);
-    digitalWrite(PIN_BUZZER, LOW);
-    setAllLEDs(LOW);
+    if (digitalRead(PIN_BTN_FAILSAFE) == LOW) {
+      Serial.println(F("\n>>> [XÁC NHẬN] Nút bấm Failsafe (D2) hoạt động TỐT! (Đã chạm GND kích hoạt) <<<"));
+      digitalWrite(PIN_BUZZER, HIGH);
+      setAllLEDs(HIGH);
+      delay(200);
+      digitalWrite(PIN_BUZZER, LOW);
+      setAllLEDs(LOW);
+    }
   }
 }
 
