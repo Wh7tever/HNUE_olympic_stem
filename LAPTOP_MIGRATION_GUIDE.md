@@ -16,7 +16,7 @@ Thầy/cô có thể chọn **1 trong 2 cách** sau:
    git clone https://github.com/Wh7tever/HNUE_olympic_stem.git
    cd HNUE_olympic_stem
    ```
-3. Mở thư mục này trong **Antigravity** trên Laptop. AI của Antigravity sẽ đọc ngay tệp `CONTEXT.md` và hiểu toàn bộ dự án mà không cần giải thích lại.
+3. Mở thư mục này trong **Antigravity** trên Laptop. AI của Antigravity sẽ đọc ngay tệp `CONTEXT.md` và `AGENTS.md` để hiểu toàn bộ dự án mà không cần giải thích lại.
 
 ### Cách B: Qua Ổ Cứng Di Động / USB
 1. Toàn bộ thư mục dự án đã được nén sẵn thành tệp:  
@@ -26,7 +26,26 @@ Thầy/cô có thể chọn **1 trong 2 cách** sau:
 
 ---
 
-## 2. Các Phần Mềm Cần Cài Trên Laptop
+## 2. Kích Hoạt "Bộ Não" Antigravity Engine (AE) Trên Laptop
+
+Thầy/cô **KHÔNG CẦN LO LẮNG** việc Laptop chưa có AE vì tôi đã thiết kế **2 tầng kích hoạt sẵn**:
+
+### 🌟 Tầng 1: Tự Động Kích Hoạt Theo Dự Án (Không cần cài gì cả!)
+- Trong thư mục gốc của dự án đã có sẵn tệp **`AGENTS.md`**.
+- Tệp này đã được nhúng sẵn **12 Điều Răn của Hiến Pháp AE** và toàn bộ thông số phần cứng / quy tắc kỹ thuật nghiêm ngặt.
+- Ngay khi thầy/cô mở thư mục dự án trên Antigravity của Laptop, AI trên Laptop sẽ **tự động đọc tệp này và ngay lập tức trở thành Antigravity Engine** chuẩn mực, không bao giờ phỏng đoán hay hallucinate!
+
+### 🚀 Tầng 2: Cài Đặt Trọn Bộ 30+ Skills Của AE Lên Toàn Bộ Laptop (1-Click)
+Nếu thầy/cô muốn Laptop có trọn vẹn toàn bộ hệ sinh thái AE (bao gồm 30+ skills như phản biện đối kháng, kiểm toán code, quản lý ngữ cảnh, TDD...):
+1. Tìm tệp **`AE_FULL_SETUP_FOR_LAPTOP.zip`** (đã có trong ổ E hoặc trong thư mục dự án).
+2. Giải nén tệp này ra.
+3. Nhấp đúp chuột vào tệp: **`Cai-Dat-AE-Cho-Laptop.bat`**.
+4. Script sẽ tự động cài Hiến pháp AE và toàn bộ Skills vào thư mục cấu hình `%USERPROFILE%\.gemini\config\` của Laptop trong 2 giây!
+5. Khởi động lại Antigravity trên Laptop là xong 100%.
+
+---
+
+## 3. Các Phần Mềm Cần Cài Trên Laptop
 
 1. **Driver CH340 / USB Serial:**  
    - Đa số Windows 10/11 tự nhận driver khi cắm Arduino Nano.  
@@ -38,7 +57,7 @@ Thầy/cô có thể chọn **1 trong 2 cách** sau:
 
 ---
 
-## 3. Cách Kết Nối Phần Cứng Trên Laptop
+## 4. Cách Kết Nối Phần Cứng Trên Laptop
 
 1. **Cắm cáp USB:** Cắm đầu cáp USB Mini vào Arduino Nano, đầu kia cắm vào cổng USB của Laptop.
 2. **Kiểm tra cổng COM:**
@@ -47,12 +66,12 @@ Thầy/cô có thể chọn **1 trong 2 cách** sau:
 3. **Thông số nạp & giao tiếp đã chuẩn hóa:**
    - **Board:** Arduino Nano
    - **Processor:** ATmega328P (Old Bootloader)
-   - **Baudrate nạp:** `57600`
-   - **Baudrate giao tiếp:** `9600`
+   - **Baudrate nạp:** `57600 baud`
+   - **Baudrate giao tiếp:** `9600 baud`
 
 ---
 
-## 4. Kịch Bản Biểu Diễn 5 Tình Huống Trước Ban Giám Khảo
+## 5. Kịch Bản Biểu Diễn 5 Tình Huống Trước Ban Giám Khảo
 
 | Tình huống | Thao tác trên Laptop / Sa bàn | Phản ứng trên Sa bàn |
 | :--- | :--- | :--- |
